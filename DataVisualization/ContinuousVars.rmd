@@ -12,7 +12,7 @@ library(ggplot2)
 setwd('C:/Users/Administrator/Documents/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/employment')
 
 employDisability <- read.table(file = "employDisability.csv", sep = ",", header=TRUE)
-employEDUCATION <- read.table(file = "employEDUCATION.csv", sep = ",", header=TRUE)
+employEDUCATION <- read.csv(file = "employEDUCATION.csv")
 employmentByAge <- read.table(file = "employmentByAge.csv", sep = ",", header=TRUE)
 employmentByRACE <- read.table(file = "employmentByRACE.csv", sep = ",", header=TRUE)
 employPoverty <- read.table(file = "employPoverty.csv", sep = ",", header=TRUE)
@@ -39,7 +39,6 @@ ggplot(data = employDisability,aes(x = year,y = UnemploymentRate)) + geom_line(s
 
 ```{r Employment by Education Plots}
 #Problem with Data Read
-employEDUCATION <- employEDUCATION[,2:5]
 employEDUCATION
 
 employEDUCATION$Label = as.factor(employEDUCATION$Label)
