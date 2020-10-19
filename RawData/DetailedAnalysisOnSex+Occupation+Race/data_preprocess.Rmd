@@ -1,0 +1,38 @@
+---
+title: "data_preprocessing"
+author: "Tracy"
+date: "10/19/2020"
+output: html_document
+---
+
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+race = read.csv(file = 'race.csv')
+race$X <- NULL
+colnames(race)
+```
+
+```{r}
+race.long <-
+  race %>% pivot_longer(cols = !c("Label", "race", "year"), names_to = "borough", values_to = "population")
+```
+
+```{r}
+race.long$Label <- as.factor(race.long$Label)
+race.long$race <- as.factor(race.long$race)
+race.long$year <- as.factor(race.long$year)
+race.long$borough <- as.factor(race.long$borough)
+```
+
+
+```{r,fig.width=20}
+#
+ggplot(data = race.long[race.long$Label=="Total:",])+
+  facet_wrap(~borough)+ 
+  geom_line(aes(x = year,y = population, group = race, color = race ),size = 1)
+```
+

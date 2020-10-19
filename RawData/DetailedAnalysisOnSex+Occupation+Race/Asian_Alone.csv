@@ -1,0 +1,731 @@
+,"Bronx County, New York","Kings County, New York",Label,"New York County, New York","Queens County, New York","Richmond County, New York / Estimate",race,year
+0,22160,121664,Total:,98647,248187,16530.0,Asian Alone,2010
+1,12283,66638,Male:,44989,135390,8822.0,Asian Alone,2010
+2,3201,15689,"Management, business, science, and arts occupations:",28593,41250,4012.0,Asian Alone,2010
+3,1103,5399,"Management, business, and financial occupations:",12780,19782,1419.0,Asian Alone,2010
+4,458,3330,Management occupations,7144,11371,719.0,Asian Alone,2010
+5,645,2069,Business and financial operations occupations,5636,8411,700.0,Asian Alone,2010
+6,902,3650,"Computer, engineering, and science occupations:",5665,8594,820.0,Asian Alone,2010
+7,544,2635,Computer and mathematical occupations,3904,6097,472.0,Asian Alone,2010
+8,271,872,Architecture and engineering occupations,402,1773,298.0,Asian Alone,2010
+9,87,143,"Life, physical, and social science occupations",1359,724,50.0,Asian Alone,2010
+10,525,4319,"Education, legal, community service, arts, and media occupations:",7061,6744,717.0,Asian Alone,2010
+11,118,340,Community and social service occupations,306,1405,0.0,Asian Alone,2010
+12,0,395,Legal occupations,2117,1199,69.0,Asian Alone,2010
+13,407,1893,"Education, training, and library occupations",1438,1700,462.0,Asian Alone,2010
+14,0,1691,"Arts, design, entertainment, sports, and media occupations",3200,2440,186.0,Asian Alone,2010
+15,671,2321,Healthcare practitioners and technical occupations:,3087,6130,1056.0,Asian Alone,2010
+16,514,1775,Health diagnosing and treating practitioners and other technical occupations,2746,4658,921.0,Asian Alone,2010
+17,157,546,Health technologists and technicians,341,1472,135.0,Asian Alone,2010
+18,3083,18449,Service occupations:,5275,24910,1681.0,Asian Alone,2010
+19,48,755,Healthcare support occupations,142,2581,370.0,Asian Alone,2010
+20,798,908,Protective service occupations:,219,3185,119.0,Asian Alone,2010
+21,658,536,"Fire fighting and prevention, and other protective service workers including supervisors",219,1831,119.0,Asian Alone,2010
+22,140,372,Law enforcement workers including supervisors,0,1354,0.0,Asian Alone,2010
+23,1472,14646,Food preparation and serving related occupations,3934,13650,952.0,Asian Alone,2010
+24,533,1491,Building and grounds cleaning and maintenance occupations,376,2458,50.0,Asian Alone,2010
+25,232,649,Personal care and service occupations,604,3036,190.0,Asian Alone,2010
+26,2414,13445,Sales and office occupations:,7763,32315,1109.0,Asian Alone,2010
+27,1262,6869,Sales and related occupations,5507,20826,573.0,Asian Alone,2010
+28,1152,6576,Office and administrative support occupations,2256,11489,536.0,Asian Alone,2010
+29,1711,6884,"Natural resources, construction, and maintenance occupations:",1140,11516,1118.0,Asian Alone,2010
+30,103,0,"Farming, fishing, and forestry occupations",0,126,86.0,Asian Alone,2010
+31,1143,5662,Construction and extraction occupations,977,7498,713.0,Asian Alone,2010
+32,465,1222,"Installation, maintenance, and repair occupations",163,3892,319.0,Asian Alone,2010
+33,1874,12171,"Production, transportation, and material moving occupations:",2218,25399,902.0,Asian Alone,2010
+34,403,4353,Production occupations,558,6827,222.0,Asian Alone,2010
+35,1185,6338,Transportation occupations,1307,16827,520.0,Asian Alone,2010
+36,286,1480,Material moving occupations,353,1745,160.0,Asian Alone,2010
+37,9877,55026,Female:,53658,112797,7708.0,Asian Alone,2010
+38,4631,16622,"Management, business, science, and arts occupations:",32276,39172,3144.0,Asian Alone,2010
+39,1363,4783,"Management, business, and financial occupations:",14014,14141,1081.0,Asian Alone,2010
+40,618,2023,Management occupations,6885,6367,565.0,Asian Alone,2010
+41,745,2760,Business and financial operations occupations,7129,7774,516.0,Asian Alone,2010
+42,230,1331,"Computer, engineering, and science occupations:",3452,3429,74.0,Asian Alone,2010
+43,0,566,Computer and mathematical occupations,1100,1101,47.0,Asian Alone,2010
+44,51,468,Architecture and engineering occupations,620,485,0.0,Asian Alone,2010
+45,179,297,"Life, physical, and social science occupations",1732,1843,27.0,Asian Alone,2010
+46,1235,6481,"Education, legal, community service, arts, and media occupations:",9740,11153,373.0,Asian Alone,2010
+47,0,936,Community and social service occupations,672,894,152.0,Asian Alone,2010
+48,112,647,Legal occupations,1746,1444,0.0,Asian Alone,2010
+49,782,2109,"Education, training, and library occupations",2929,4916,189.0,Asian Alone,2010
+50,341,2789,"Arts, design, entertainment, sports, and media occupations",4393,3899,32.0,Asian Alone,2010
+51,1803,4027,Healthcare practitioners and technical occupations:,5070,10449,1616.0,Asian Alone,2010
+52,1512,3209,Health diagnosing and treating practitioners and other technical occupations,4636,7683,1531.0,Asian Alone,2010
+53,291,818,Health technologists and technicians,434,2766,85.0,Asian Alone,2010
+54,2207,15856,Service occupations:,7680,31815,2039.0,Asian Alone,2010
+55,334,4681,Healthcare support occupations,2029,6449,406.0,Asian Alone,2010
+56,75,0,Protective service occupations:,109,858,33.0,Asian Alone,2010
+57,0,0,"Fire fighting and prevention, and other protective service workers including supervisors",109,794,33.0,Asian Alone,2010
+58,75,0,Law enforcement workers including supervisors,0,64,0.0,Asian Alone,2010
+59,173,4249,Food preparation and serving related occupations,1676,5781,396.0,Asian Alone,2010
+60,835,2371,Building and grounds cleaning and maintenance occupations,1210,3074,150.0,Asian Alone,2010
+61,790,4555,Personal care and service occupations,2656,15653,1054.0,Asian Alone,2010
+62,2652,16489,Sales and office occupations:,11113,35951,2311.0,Asian Alone,2010
+63,1206,6498,Sales and related occupations,4934,14449,1100.0,Asian Alone,2010
+64,1446,9991,Office and administrative support occupations,6179,21502,1211.0,Asian Alone,2010
+65,0,555,"Natural resources, construction, and maintenance occupations:",0,445,0.0,Asian Alone,2010
+66,0,298,"Farming, fishing, and forestry occupations",0,0,0.0,Asian Alone,2010
+67,0,218,Construction and extraction occupations,0,336,0.0,Asian Alone,2010
+68,0,39,"Installation, maintenance, and repair occupations",0,109,0.0,Asian Alone,2010
+69,387,5504,"Production, transportation, and material moving occupations:",2589,5414,214.0,Asian Alone,2010
+70,387,4391,Production occupations,1794,4145,214.0,Asian Alone,2010
+71,0,95,Transportation occupations,112,493,0.0,Asian Alone,2010
+72,0,1018,Material moving occupations,683,776,0.0,Asian Alone,2010
+0,19823,125204,Total:,97458,250735,18001.0,Asian Alone,2011
+1,11265,66752,Male:,47292,139027,10116.0,Asian Alone,2011
+2,3056,16346,"Management, business, science, and arts occupations:",27578,42293,3894.0,Asian Alone,2011
+3,544,6029,"Management, business, and financial occupations:",13478,17059,1615.0,Asian Alone,2011
+4,280,3095,Management occupations,6393,10106,909.0,Asian Alone,2011
+5,264,2934,Business and financial operations occupations,7085,6953,706.0,Asian Alone,2011
+6,941,4817,"Computer, engineering, and science occupations:",3892,11872,627.0,Asian Alone,2011
+7,556,2867,Computer and mathematical occupations,2313,8325,323.0,Asian Alone,2011
+8,83,1609,Architecture and engineering occupations,685,2760,199.0,Asian Alone,2011
+9,302,341,"Life, physical, and social science occupations",894,787,105.0,Asian Alone,2011
+10,722,3564,"Education, legal, community service, arts, and media occupations:",6964,7539,519.0,Asian Alone,2011
+11,174,152,Community and social service occupations,33,1088,225.0,Asian Alone,2011
+12,45,291,Legal occupations,1487,262,0.0,Asian Alone,2011
+13,207,740,"Education, training, and library occupations",3403,3177,215.0,Asian Alone,2011
+14,296,2381,"Arts, design, entertainment, sports, and media occupations",2041,3012,79.0,Asian Alone,2011
+15,849,1936,Healthcare practitioners and technical occupations:,3244,5823,1133.0,Asian Alone,2011
+16,519,1360,Health diagnosing and treating practitioners and other technical occupations,2888,4113,794.0,Asian Alone,2011
+17,330,576,Health technologists and technicians,356,1710,339.0,Asian Alone,2011
+18,2519,19700,Service occupations:,7245,25166,1336.0,Asian Alone,2011
+19,17,976,Healthcare support occupations,402,1234,381.0,Asian Alone,2011
+20,190,1019,Protective service occupations:,84,2187,71.0,Asian Alone,2011
+21,143,671,"Fire fighting and prevention, and other protective service workers including supervisors",33,1440,71.0,Asian Alone,2011
+22,47,348,Law enforcement workers including supervisors,51,747,0.0,Asian Alone,2011
+23,1614,14639,Food preparation and serving related occupations,5338,14207,336.0,Asian Alone,2011
+24,443,1615,Building and grounds cleaning and maintenance occupations,668,3853,266.0,Asian Alone,2011
+25,255,1451,Personal care and service occupations,753,3685,282.0,Asian Alone,2011
+26,1632,11660,Sales and office occupations:,8373,33494,2896.0,Asian Alone,2011
+27,713,6519,Sales and related occupations,5416,21157,2195.0,Asian Alone,2011
+28,919,5141,Office and administrative support occupations,2957,12337,701.0,Asian Alone,2011
+29,1489,7305,"Natural resources, construction, and maintenance occupations:",898,10446,645.0,Asian Alone,2011
+30,0,53,"Farming, fishing, and forestry occupations",0,22,202.0,Asian Alone,2011
+31,636,4875,Construction and extraction occupations,711,6463,225.0,Asian Alone,2011
+32,853,2377,"Installation, maintenance, and repair occupations",187,3961,218.0,Asian Alone,2011
+33,2569,11741,"Production, transportation, and material moving occupations:",3198,27628,1345.0,Asian Alone,2011
+34,956,2408,Production occupations,388,5519,563.0,Asian Alone,2011
+35,1613,7573,Transportation occupations,2036,19556,782.0,Asian Alone,2011
+36,0,1760,Material moving occupations,774,2553,0.0,Asian Alone,2011
+37,8558,58452,Female:,50166,111708,7885.0,Asian Alone,2011
+38,3797,21987,"Management, business, science, and arts occupations:",31604,42603,3390.0,Asian Alone,2011
+39,502,7408,"Management, business, and financial occupations:",12314,14688,1003.0,Asian Alone,2011
+40,266,3157,Management occupations,5726,5577,407.0,Asian Alone,2011
+41,236,4251,Business and financial operations occupations,6588,9111,596.0,Asian Alone,2011
+42,114,1486,"Computer, engineering, and science occupations:",3456,4260,156.0,Asian Alone,2011
+43,44,987,Computer and mathematical occupations,1763,2411,26.0,Asian Alone,2011
+44,0,316,Architecture and engineering occupations,118,571,101.0,Asian Alone,2011
+45,70,183,"Life, physical, and social science occupations",1575,1278,29.0,Asian Alone,2011
+46,1682,7001,"Education, legal, community service, arts, and media occupations:",12139,10882,475.0,Asian Alone,2011
+47,330,406,Community and social service occupations,504,1476,76.0,Asian Alone,2011
+48,156,982,Legal occupations,2631,533,22.0,Asian Alone,2011
+49,905,3076,"Education, training, and library occupations",3151,6660,354.0,Asian Alone,2011
+50,291,2537,"Arts, design, entertainment, sports, and media occupations",5853,2213,23.0,Asian Alone,2011
+51,1499,6092,Healthcare practitioners and technical occupations:,3695,12773,1756.0,Asian Alone,2011
+52,1245,4576,Health diagnosing and treating practitioners and other technical occupations,3052,10995,1480.0,Asian Alone,2011
+53,254,1516,Health technologists and technicians,643,1778,276.0,Asian Alone,2011
+54,2800,17724,Service occupations:,6848,26616,2096.0,Asian Alone,2011
+55,1255,4053,Healthcare support occupations,1251,6262,997.0,Asian Alone,2011
+56,0,417,Protective service occupations:,0,351,0.0,Asian Alone,2011
+57,0,362,"Fire fighting and prevention, and other protective service workers including supervisors",0,351,0.0,Asian Alone,2011
+58,0,55,Law enforcement workers including supervisors,0,0,0.0,Asian Alone,2011
+59,172,4937,Food preparation and serving related occupations,2379,5415,416.0,Asian Alone,2011
+60,618,1953,Building and grounds cleaning and maintenance occupations,1297,2645,201.0,Asian Alone,2011
+61,755,6364,Personal care and service occupations,1921,11943,482.0,Asian Alone,2011
+62,1174,14204,Sales and office occupations:,10320,35999,1967.0,Asian Alone,2011
+63,350,5745,Sales and related occupations,4136,16013,791.0,Asian Alone,2011
+64,824,8459,Office and administrative support occupations,6184,19986,1176.0,Asian Alone,2011
+65,0,109,"Natural resources, construction, and maintenance occupations:",326,484,196.0,Asian Alone,2011
+66,0,69,"Farming, fishing, and forestry occupations",0,117,0.0,Asian Alone,2011
+67,0,0,Construction and extraction occupations,220,332,196.0,Asian Alone,2011
+68,0,40,"Installation, maintenance, and repair occupations",106,35,0.0,Asian Alone,2011
+69,787,4428,"Production, transportation, and material moving occupations:",1068,6006,236.0,Asian Alone,2011
+70,748,3720,Production occupations,735,4435,81.0,Asian Alone,2011
+71,0,85,Transportation occupations,0,305,155.0,Asian Alone,2011
+72,39,623,Material moving occupations,333,1266,0.0,Asian Alone,2011
+0,21721,128863,Total:,104260,253033,,Asian Alone,2012
+1,13183,66158,Male:,46776,140344,,Asian Alone,2012
+2,3000,18146,"Management, business, science, and arts occupations:",26534,47747,,Asian Alone,2012
+3,758,7311,"Management, business, and financial occupations:",12187,20536,,Asian Alone,2012
+4,271,3793,Management occupations,6327,12551,,Asian Alone,2012
+5,487,3518,Business and financial operations occupations,5860,7985,,Asian Alone,2012
+6,996,4381,"Computer, engineering, and science occupations:",4422,12467,,Asian Alone,2012
+7,603,2560,Computer and mathematical occupations,3134,8110,,Asian Alone,2012
+8,232,1345,Architecture and engineering occupations,445,3229,,Asian Alone,2012
+9,161,476,"Life, physical, and social science occupations",843,1128,,Asian Alone,2012
+10,878,4008,"Education, legal, community service, arts, and media occupations:",6026,8984,,Asian Alone,2012
+11,115,241,Community and social service occupations,780,1615,,Asian Alone,2012
+12,71,450,Legal occupations,894,885,,Asian Alone,2012
+13,692,1733,"Education, training, and library occupations",1263,3342,,Asian Alone,2012
+14,0,1584,"Arts, design, entertainment, sports, and media occupations",3089,3142,,Asian Alone,2012
+15,368,2446,Healthcare practitioners and technical occupations:,3899,5760,,Asian Alone,2012
+16,289,2012,Health diagnosing and treating practitioners and other technical occupations,3899,3624,,Asian Alone,2012
+17,79,434,Health technologists and technicians,0,2136,,Asian Alone,2012
+18,2990,16845,Service occupations:,5947,25064,,Asian Alone,2012
+19,234,393,Healthcare support occupations,233,1693,,Asian Alone,2012
+20,122,1163,Protective service occupations:,187,2796,,Asian Alone,2012
+21,79,511,"Fire fighting and prevention, and other protective service workers including supervisors",65,2004,,Asian Alone,2012
+22,43,652,Law enforcement workers including supervisors,122,792,,Asian Alone,2012
+23,1544,11961,Food preparation and serving related occupations,4058,15273,,Asian Alone,2012
+24,959,1549,Building and grounds cleaning and maintenance occupations,249,2683,,Asian Alone,2012
+25,131,1779,Personal care and service occupations,1220,2619,,Asian Alone,2012
+26,3357,13936,Sales and office occupations:,10211,30102,,Asian Alone,2012
+27,2256,8120,Sales and related occupations,6294,17588,,Asian Alone,2012
+28,1101,5816,Office and administrative support occupations,3917,12514,,Asian Alone,2012
+29,1526,5631,"Natural resources, construction, and maintenance occupations:",654,12744,,Asian Alone,2012
+30,0,179,"Farming, fishing, and forestry occupations",0,0,,Asian Alone,2012
+31,1008,3670,Construction and extraction occupations,269,8746,,Asian Alone,2012
+32,518,1782,"Installation, maintenance, and repair occupations",385,3998,,Asian Alone,2012
+33,2310,11600,"Production, transportation, and material moving occupations:",3430,24687,,Asian Alone,2012
+34,472,2785,Production occupations,631,4583,,Asian Alone,2012
+35,1556,7669,Transportation occupations,2146,18306,,Asian Alone,2012
+36,282,1146,Material moving occupations,653,1798,,Asian Alone,2012
+37,8538,62705,Female:,57484,112689,,Asian Alone,2012
+38,2968,22439,"Management, business, science, and arts occupations:",37571,43372,,Asian Alone,2012
+39,925,9094,"Management, business, and financial occupations:",15062,17082,,Asian Alone,2012
+40,305,4371,Management occupations,7336,8943,,Asian Alone,2012
+41,620,4723,Business and financial operations occupations,7726,8139,,Asian Alone,2012
+42,457,2087,"Computer, engineering, and science occupations:",3580,3313,,Asian Alone,2012
+43,277,924,Computer and mathematical occupations,1603,2071,,Asian Alone,2012
+44,49,695,Architecture and engineering occupations,704,397,,Asian Alone,2012
+45,131,468,"Life, physical, and social science occupations",1273,845,,Asian Alone,2012
+46,467,7326,"Education, legal, community service, arts, and media occupations:",13128,10835,,Asian Alone,2012
+47,0,482,Community and social service occupations,677,1142,,Asian Alone,2012
+48,0,334,Legal occupations,3190,1143,,Asian Alone,2012
+49,435,3291,"Education, training, and library occupations",3601,6304,,Asian Alone,2012
+50,32,3219,"Arts, design, entertainment, sports, and media occupations",5660,2246,,Asian Alone,2012
+51,1119,3932,Healthcare practitioners and technical occupations:,5801,12142,,Asian Alone,2012
+52,944,3099,Health diagnosing and treating practitioners and other technical occupations,5435,9779,,Asian Alone,2012
+53,175,833,Health technologists and technicians,366,2363,,Asian Alone,2012
+54,2338,18220,Service occupations:,6377,28701,,Asian Alone,2012
+55,209,4864,Healthcare support occupations,2090,5629,,Asian Alone,2012
+56,154,99,Protective service occupations:,0,437,,Asian Alone,2012
+57,154,74,"Fire fighting and prevention, and other protective service workers including supervisors",0,287,,Asian Alone,2012
+58,0,25,Law enforcement workers including supervisors,0,150,,Asian Alone,2012
+59,575,4904,Food preparation and serving related occupations,1480,5838,,Asian Alone,2012
+60,491,1281,Building and grounds cleaning and maintenance occupations,851,3699,,Asian Alone,2012
+61,909,7072,Personal care and service occupations,1956,13098,,Asian Alone,2012
+62,2779,16592,Sales and office occupations:,10780,32698,,Asian Alone,2012
+63,1647,7821,Sales and related occupations,5286,15594,,Asian Alone,2012
+64,1132,8771,Office and administrative support occupations,5494,17104,,Asian Alone,2012
+65,0,62,"Natural resources, construction, and maintenance occupations:",122,279,,Asian Alone,2012
+66,0,27,"Farming, fishing, and forestry occupations",0,0,,Asian Alone,2012
+67,0,0,Construction and extraction occupations,122,86,,Asian Alone,2012
+68,0,35,"Installation, maintenance, and repair occupations",0,193,,Asian Alone,2012
+69,453,5392,"Production, transportation, and material moving occupations:",2634,7639,,Asian Alone,2012
+70,177,4642,Production occupations,2251,5952,,Asian Alone,2012
+71,0,36,Transportation occupations,383,576,,Asian Alone,2012
+72,276,714,Material moving occupations,0,1111,,Asian Alone,2012
+0,21959,137634,Total:,107524,272432,17423.0,Asian Alone,2013
+1,12205,72710,Male:,49574,149843,9765.0,Asian Alone,2013
+2,3994,23155,"Management, business, science, and arts occupations:",31686,50141,4307.0,Asian Alone,2013
+3,1492,9866,"Management, business, and financial occupations:",17429,20989,1747.0,Asian Alone,2013
+4,1119,5702,Management occupations,8433,12398,839.0,Asian Alone,2013
+5,373,4164,Business and financial operations occupations,8996,8591,908.0,Asian Alone,2013
+6,754,7093,"Computer, engineering, and science occupations:",7240,13935,769.0,Asian Alone,2013
+7,376,4593,Computer and mathematical occupations,4924,9292,376.0,Asian Alone,2013
+8,312,2020,Architecture and engineering occupations,307,3065,318.0,Asian Alone,2013
+9,66,480,"Life, physical, and social science occupations",2009,1578,75.0,Asian Alone,2013
+10,309,4013,"Education, legal, community service, arts, and media occupations:",3916,8978,799.0,Asian Alone,2013
+11,23,401,Community and social service occupations,0,1316,326.0,Asian Alone,2013
+12,0,504,Legal occupations,813,1003,0.0,Asian Alone,2013
+13,184,942,"Education, training, and library occupations",1229,3247,39.0,Asian Alone,2013
+14,102,2166,"Arts, design, entertainment, sports, and media occupations",1874,3412,434.0,Asian Alone,2013
+15,1439,2183,Healthcare practitioners and technical occupations:,3101,6239,992.0,Asian Alone,2013
+16,1107,1939,Health diagnosing and treating practitioners and other technical occupations,2590,3869,716.0,Asian Alone,2013
+17,332,244,Health technologists and technicians,511,2370,276.0,Asian Alone,2013
+18,3960,17780,Service occupations:,5426,27390,1490.0,Asian Alone,2013
+19,302,899,Healthcare support occupations,800,1841,450.0,Asian Alone,2013
+20,448,855,Protective service occupations:,387,3926,171.0,Asian Alone,2013
+21,250,577,"Fire fighting and prevention, and other protective service workers including supervisors",360,3564,41.0,Asian Alone,2013
+22,198,278,Law enforcement workers including supervisors,27,362,130.0,Asian Alone,2013
+23,1818,13293,Food preparation and serving related occupations,2883,14835,664.0,Asian Alone,2013
+24,538,1545,Building and grounds cleaning and maintenance occupations,893,3446,205.0,Asian Alone,2013
+25,854,1188,Personal care and service occupations,463,3342,0.0,Asian Alone,2013
+26,1584,14043,Sales and office occupations:,10140,34999,1723.0,Asian Alone,2013
+27,1111,8491,Sales and related occupations,6127,22264,892.0,Asian Alone,2013
+28,473,5552,Office and administrative support occupations,4013,12735,831.0,Asian Alone,2013
+29,799,6211,"Natural resources, construction, and maintenance occupations:",517,11677,975.0,Asian Alone,2013
+30,0,0,"Farming, fishing, and forestry occupations",0,235,0.0,Asian Alone,2013
+31,524,4818,Construction and extraction occupations,360,7888,406.0,Asian Alone,2013
+32,275,1393,"Installation, maintenance, and repair occupations",157,3554,569.0,Asian Alone,2013
+33,1868,11521,"Production, transportation, and material moving occupations:",1805,25636,1270.0,Asian Alone,2013
+34,344,2866,Production occupations,652,6964,434.0,Asian Alone,2013
+35,1499,6498,Transportation occupations,936,16159,781.0,Asian Alone,2013
+36,25,2157,Material moving occupations,217,2513,55.0,Asian Alone,2013
+37,9754,64924,Female:,57950,122589,7658.0,Asian Alone,2013
+38,4922,25078,"Management, business, science, and arts occupations:",37462,48768,4906.0,Asian Alone,2013
+39,1051,8273,"Management, business, and financial occupations:",17235,17554,1501.0,Asian Alone,2013
+40,386,2876,Management occupations,7244,8030,842.0,Asian Alone,2013
+41,665,5397,Business and financial operations occupations,9991,9524,659.0,Asian Alone,2013
+42,334,2096,"Computer, engineering, and science occupations:",3794,5777,370.0,Asian Alone,2013
+43,68,1602,Computer and mathematical occupations,2892,3751,329.0,Asian Alone,2013
+44,0,222,Architecture and engineering occupations,269,831,0.0,Asian Alone,2013
+45,266,272,"Life, physical, and social science occupations",633,1195,41.0,Asian Alone,2013
+46,1292,9888,"Education, legal, community service, arts, and media occupations:",9892,13377,947.0,Asian Alone,2013
+47,60,783,Community and social service occupations,763,1100,144.0,Asian Alone,2013
+48,199,792,Legal occupations,1715,1630,0.0,Asian Alone,2013
+49,845,4281,"Education, training, and library occupations",3713,6432,723.0,Asian Alone,2013
+50,188,4032,"Arts, design, entertainment, sports, and media occupations",3701,4215,80.0,Asian Alone,2013
+51,2245,4821,Healthcare practitioners and technical occupations:,6541,12060,2088.0,Asian Alone,2013
+52,2017,4018,Health diagnosing and treating practitioners and other technical occupations,6148,9341,1737.0,Asian Alone,2013
+53,228,803,Health technologists and technicians,393,2719,351.0,Asian Alone,2013
+54,2223,17774,Service occupations:,7789,32842,1019.0,Asian Alone,2013
+55,834,6496,Healthcare support occupations,2603,6361,509.0,Asian Alone,2013
+56,26,0,Protective service occupations:,0,884,0.0,Asian Alone,2013
+57,26,0,"Fire fighting and prevention, and other protective service workers including supervisors",0,810,0.0,Asian Alone,2013
+58,0,0,Law enforcement workers including supervisors,0,74,0.0,Asian Alone,2013
+59,386,3336,Food preparation and serving related occupations,1767,7554,139.0,Asian Alone,2013
+60,225,1884,Building and grounds cleaning and maintenance occupations,996,4006,150.0,Asian Alone,2013
+61,752,6058,Personal care and service occupations,2423,14037,221.0,Asian Alone,2013
+62,2141,16506,Sales and office occupations:,10959,34624,1498.0,Asian Alone,2013
+63,1344,8595,Sales and related occupations,4662,15812,236.0,Asian Alone,2013
+64,797,7911,Office and administrative support occupations,6297,18812,1262.0,Asian Alone,2013
+65,0,368,"Natural resources, construction, and maintenance occupations:",0,508,0.0,Asian Alone,2013
+66,0,0,"Farming, fishing, and forestry occupations",0,0,0.0,Asian Alone,2013
+67,0,216,Construction and extraction occupations,0,224,0.0,Asian Alone,2013
+68,0,152,"Installation, maintenance, and repair occupations",0,284,0.0,Asian Alone,2013
+69,468,5198,"Production, transportation, and material moving occupations:",1740,5847,235.0,Asian Alone,2013
+70,338,4552,Production occupations,1587,4974,235.0,Asian Alone,2013
+71,130,182,Transportation occupations,70,340,0.0,Asian Alone,2013
+72,0,464,Material moving occupations,83,533,0.0,Asian Alone,2013
+0,24953,147945,Total:,108383,278267,18513.0,Asian Alone,2014
+1,13769,77363,Male:,49965,153040,9818.0,Asian Alone,2014
+2,4771,22450,"Management, business, science, and arts occupations:",33401,47799,3779.0,Asian Alone,2014
+3,1711,9416,"Management, business, and financial occupations:",18080,21653,1319.0,Asian Alone,2014
+4,1402,6169,Management occupations,11238,13864,985.0,Asian Alone,2014
+5,309,3247,Business and financial operations occupations,6842,7789,334.0,Asian Alone,2014
+6,1029,5261,"Computer, engineering, and science occupations:",7474,11755,981.0,Asian Alone,2014
+7,439,3745,Computer and mathematical occupations,5013,7577,761.0,Asian Alone,2014
+8,151,1187,Architecture and engineering occupations,1048,3387,220.0,Asian Alone,2014
+9,439,329,"Life, physical, and social science occupations",1413,791,0.0,Asian Alone,2014
+10,671,4790,"Education, legal, community service, arts, and media occupations:",5957,8091,789.0,Asian Alone,2014
+11,90,454,Community and social service occupations,137,1068,145.0,Asian Alone,2014
+12,0,345,Legal occupations,1657,1485,333.0,Asian Alone,2014
+13,404,1807,"Education, training, and library occupations",1129,1950,163.0,Asian Alone,2014
+14,177,2184,"Arts, design, entertainment, sports, and media occupations",3034,3588,148.0,Asian Alone,2014
+15,1360,2983,Healthcare practitioners and technical occupations:,1890,6300,690.0,Asian Alone,2014
+16,773,2085,Health diagnosing and treating practitioners and other technical occupations,1765,4814,650.0,Asian Alone,2014
+17,587,898,Health technologists and technicians,125,1486,40.0,Asian Alone,2014
+18,3452,20363,Service occupations:,6194,28210,1991.0,Asian Alone,2014
+19,283,962,Healthcare support occupations,61,861,196.0,Asian Alone,2014
+20,285,600,Protective service occupations:,525,3202,575.0,Asian Alone,2014
+21,65,492,"Fire fighting and prevention, and other protective service workers including supervisors",395,1783,301.0,Asian Alone,2014
+22,220,108,Law enforcement workers including supervisors,130,1419,274.0,Asian Alone,2014
+23,1557,15553,Food preparation and serving related occupations,4090,17145,487.0,Asian Alone,2014
+24,810,1526,Building and grounds cleaning and maintenance occupations,257,2327,623.0,Asian Alone,2014
+25,517,1722,Personal care and service occupations,1261,4675,110.0,Asian Alone,2014
+26,2549,16152,Sales and office occupations:,5701,31824,2499.0,Asian Alone,2014
+27,1822,10816,Sales and related occupations,3633,17854,1840.0,Asian Alone,2014
+28,727,5336,Office and administrative support occupations,2068,13970,659.0,Asian Alone,2014
+29,733,5410,"Natural resources, construction, and maintenance occupations:",1822,13705,357.0,Asian Alone,2014
+30,0,0,"Farming, fishing, and forestry occupations",0,0,0.0,Asian Alone,2014
+31,441,3891,Construction and extraction occupations,1376,8009,222.0,Asian Alone,2014
+32,292,1519,"Installation, maintenance, and repair occupations",446,5696,135.0,Asian Alone,2014
+33,2264,12988,"Production, transportation, and material moving occupations:",2847,31502,1192.0,Asian Alone,2014
+34,450,3316,Production occupations,1483,5471,477.0,Asian Alone,2014
+35,1780,8341,Transportation occupations,920,23046,524.0,Asian Alone,2014
+36,34,1331,Material moving occupations,444,2985,191.0,Asian Alone,2014
+37,11184,70582,Female:,58418,125227,8695.0,Asian Alone,2014
+38,4087,26166,"Management, business, science, and arts occupations:",37133,50780,3935.0,Asian Alone,2014
+39,882,8989,"Management, business, and financial occupations:",19546,18616,819.0,Asian Alone,2014
+40,551,4442,Management occupations,11092,8872,257.0,Asian Alone,2014
+41,331,4547,Business and financial operations occupations,8454,9744,562.0,Asian Alone,2014
+42,433,2741,"Computer, engineering, and science occupations:",2819,4158,382.0,Asian Alone,2014
+43,61,1529,Computer and mathematical occupations,1382,2340,300.0,Asian Alone,2014
+44,30,857,Architecture and engineering occupations,411,506,0.0,Asian Alone,2014
+45,342,355,"Life, physical, and social science occupations",1026,1312,82.0,Asian Alone,2014
+46,759,9718,"Education, legal, community service, arts, and media occupations:",10093,14217,1332.0,Asian Alone,2014
+47,0,1055,Community and social service occupations,535,1627,46.0,Asian Alone,2014
+48,71,1120,Legal occupations,2018,1739,39.0,Asian Alone,2014
+49,542,3896,"Education, training, and library occupations",3299,7256,810.0,Asian Alone,2014
+50,146,3647,"Arts, design, entertainment, sports, and media occupations",4241,3595,437.0,Asian Alone,2014
+51,2013,4718,Healthcare practitioners and technical occupations:,4675,13789,1402.0,Asian Alone,2014
+52,1770,3650,Health diagnosing and treating practitioners and other technical occupations,4023,10409,1167.0,Asian Alone,2014
+53,243,1068,Health technologists and technicians,652,3380,235.0,Asian Alone,2014
+54,3601,21091,Service occupations:,8005,34991,1886.0,Asian Alone,2014
+55,516,5731,Healthcare support occupations,2173,7044,560.0,Asian Alone,2014
+56,0,82,Protective service occupations:,43,219,79.0,Asian Alone,2014
+57,0,43,"Fire fighting and prevention, and other protective service workers including supervisors",43,219,36.0,Asian Alone,2014
+58,0,39,Law enforcement workers including supervisors,0,0,43.0,Asian Alone,2014
+59,471,4583,Food preparation and serving related occupations,2040,6176,432.0,Asian Alone,2014
+60,448,2126,Building and grounds cleaning and maintenance occupations,824,3553,152.0,Asian Alone,2014
+61,2166,8569,Personal care and service occupations,2925,17999,663.0,Asian Alone,2014
+62,3253,17417,Sales and office occupations:,11960,32840,2624.0,Asian Alone,2014
+63,2370,8101,Sales and related occupations,5537,14298,1472.0,Asian Alone,2014
+64,883,9316,Office and administrative support occupations,6423,18542,1152.0,Asian Alone,2014
+65,0,272,"Natural resources, construction, and maintenance occupations:",179,436,0.0,Asian Alone,2014
+66,0,0,"Farming, fishing, and forestry occupations",62,0,0.0,Asian Alone,2014
+67,0,87,Construction and extraction occupations,117,126,0.0,Asian Alone,2014
+68,0,185,"Installation, maintenance, and repair occupations",0,310,0.0,Asian Alone,2014
+69,243,5636,"Production, transportation, and material moving occupations:",1141,6180,250.0,Asian Alone,2014
+70,86,4984,Production occupations,1047,5108,211.0,Asian Alone,2014
+71,0,143,Transportation occupations,0,349,0.0,Asian Alone,2014
+72,157,509,Material moving occupations,94,723,39.0,Asian Alone,2014
+0,23418,155487,Total:,110609,288735,18219.0,Asian Alone,2015
+1,13451,80736,Male:,52905,158537,10225.0,Asian Alone,2015
+2,4923,26090,"Management, business, science, and arts occupations:",34133,50590,3763.0,Asian Alone,2015
+3,1626,9744,"Management, business, and financial occupations:",16879,22426,1331.0,Asian Alone,2015
+4,1270,6704,Management occupations,8888,13589,297.0,Asian Alone,2015
+5,356,3040,Business and financial operations occupations,7991,8837,1034.0,Asian Alone,2015
+6,1091,7512,"Computer, engineering, and science occupations:",7977,13604,965.0,Asian Alone,2015
+7,454,5352,Computer and mathematical occupations,4897,9338,370.0,Asian Alone,2015
+8,388,1447,Architecture and engineering occupations,1380,3381,367.0,Asian Alone,2015
+9,249,713,"Life, physical, and social science occupations",1700,885,228.0,Asian Alone,2015
+10,1137,5743,"Education, legal, community service, arts, and media occupations:",6330,8486,715.0,Asian Alone,2015
+11,170,318,Community and social service occupations,258,2021,239.0,Asian Alone,2015
+12,203,1068,Legal occupations,657,654,100.0,Asian Alone,2015
+13,611,1440,"Education, training, and library occupations",1392,3017,326.0,Asian Alone,2015
+14,153,2917,"Arts, design, entertainment, sports, and media occupations",4023,2794,50.0,Asian Alone,2015
+15,1069,3091,Healthcare practitioners and technical occupations:,2947,6074,752.0,Asian Alone,2015
+16,736,2064,Health diagnosing and treating practitioners and other technical occupations,2917,4816,540.0,Asian Alone,2015
+17,333,1027,Health technologists and technicians,30,1258,212.0,Asian Alone,2015
+18,3745,18308,Service occupations:,6300,29001,1356.0,Asian Alone,2015
+19,87,421,Healthcare support occupations,265,1733,311.0,Asian Alone,2015
+20,470,1477,Protective service occupations:,652,3703,414.0,Asian Alone,2015
+21,437,825,"Fire fighting and prevention, and other protective service workers including supervisors",652,1669,208.0,Asian Alone,2015
+22,33,652,Law enforcement workers including supervisors,0,2034,206.0,Asian Alone,2015
+23,2299,12584,Food preparation and serving related occupations,4535,17262,211.0,Asian Alone,2015
+24,471,2026,Building and grounds cleaning and maintenance occupations,307,3207,168.0,Asian Alone,2015
+25,418,1800,Personal care and service occupations,541,3096,252.0,Asian Alone,2015
+26,1848,14871,Sales and office occupations:,8365,33073,2613.0,Asian Alone,2015
+27,1098,7571,Sales and related occupations,5461,19996,1619.0,Asian Alone,2015
+28,750,7300,Office and administrative support occupations,2904,13077,994.0,Asian Alone,2015
+29,1016,8402,"Natural resources, construction, and maintenance occupations:",854,13480,699.0,Asian Alone,2015
+30,0,301,"Farming, fishing, and forestry occupations",0,292,97.0,Asian Alone,2015
+31,550,5746,Construction and extraction occupations,491,8390,400.0,Asian Alone,2015
+32,466,2355,"Installation, maintenance, and repair occupations",363,4798,202.0,Asian Alone,2015
+33,1919,13065,"Production, transportation, and material moving occupations:",3253,32393,1794.0,Asian Alone,2015
+34,642,2832,Production occupations,470,6790,341.0,Asian Alone,2015
+35,922,9253,Transportation occupations,2247,23510,1331.0,Asian Alone,2015
+36,355,980,Material moving occupations,536,2093,122.0,Asian Alone,2015
+37,9967,74751,Female:,57704,130198,7994.0,Asian Alone,2015
+38,4298,29716,"Management, business, science, and arts occupations:",36221,54021,3613.0,Asian Alone,2015
+39,754,12333,"Management, business, and financial occupations:",14326,18049,1225.0,Asian Alone,2015
+40,309,5916,Management occupations,7608,8459,419.0,Asian Alone,2015
+41,445,6417,Business and financial operations occupations,6718,9590,806.0,Asian Alone,2015
+42,910,2616,"Computer, engineering, and science occupations:",4127,4896,58.0,Asian Alone,2015
+43,550,1468,Computer and mathematical occupations,1888,3002,0.0,Asian Alone,2015
+44,0,365,Architecture and engineering occupations,769,679,0.0,Asian Alone,2015
+45,360,783,"Life, physical, and social science occupations",1470,1215,58.0,Asian Alone,2015
+46,929,9982,"Education, legal, community service, arts, and media occupations:",11591,15281,324.0,Asian Alone,2015
+47,58,640,Community and social service occupations,532,1072,179.0,Asian Alone,2015
+48,172,1452,Legal occupations,1738,1236,0.0,Asian Alone,2015
+49,526,4105,"Education, training, and library occupations",4633,7903,145.0,Asian Alone,2015
+50,173,3785,"Arts, design, entertainment, sports, and media occupations",4688,5070,0.0,Asian Alone,2015
+51,1705,4785,Healthcare practitioners and technical occupations:,6177,15795,2006.0,Asian Alone,2015
+52,1342,3763,Health diagnosing and treating practitioners and other technical occupations,5237,12510,1571.0,Asian Alone,2015
+53,363,1022,Health technologists and technicians,940,3285,435.0,Asian Alone,2015
+54,2174,22150,Service occupations:,7694,32768,1961.0,Asian Alone,2015
+55,686,7992,Healthcare support occupations,2078,7033,685.0,Asian Alone,2015
+56,0,147,Protective service occupations:,679,844,366.0,Asian Alone,2015
+57,0,147,"Fire fighting and prevention, and other protective service workers including supervisors",549,690,0.0,Asian Alone,2015
+58,0,0,Law enforcement workers including supervisors,130,154,366.0,Asian Alone,2015
+59,302,5985,Food preparation and serving related occupations,1649,4696,227.0,Asian Alone,2015
+60,362,1532,Building and grounds cleaning and maintenance occupations,555,4648,237.0,Asian Alone,2015
+61,824,6494,Personal care and service occupations,2733,15547,446.0,Asian Alone,2015
+62,3008,18075,Sales and office occupations:,12827,38494,2159.0,Asian Alone,2015
+63,1014,8237,Sales and related occupations,5550,16193,930.0,Asian Alone,2015
+64,1994,9838,Office and administrative support occupations,7277,22301,1229.0,Asian Alone,2015
+65,47,291,"Natural resources, construction, and maintenance occupations:",37,517,0.0,Asian Alone,2015
+66,0,0,"Farming, fishing, and forestry occupations",0,0,0.0,Asian Alone,2015
+67,0,169,Construction and extraction occupations,0,355,0.0,Asian Alone,2015
+68,47,122,"Installation, maintenance, and repair occupations",37,162,0.0,Asian Alone,2015
+69,440,4519,"Production, transportation, and material moving occupations:",925,4398,261.0,Asian Alone,2015
+70,381,3645,Production occupations,925,3034,208.0,Asian Alone,2015
+71,59,298,Transportation occupations,0,886,0.0,Asian Alone,2015
+72,0,576,Material moving occupations,0,478,53.0,Asian Alone,2015
+0,24106,156450,Total:,113435,294131,19851.0,Asian Alone,2016
+1,13489,80651,Male:,50793,160936,10130.0,Asian Alone,2016
+2,3984,27312,"Management, business, science, and arts occupations:",32512,52169,4992.0,Asian Alone,2016
+3,1148,10248,"Management, business, and financial occupations:",14859,22453,2421.0,Asian Alone,2016
+4,723,6979,Management occupations,8643,14376,1459.0,Asian Alone,2016
+5,425,3269,Business and financial operations occupations,6216,8077,962.0,Asian Alone,2016
+6,717,8124,"Computer, engineering, and science occupations:",7523,12380,1445.0,Asian Alone,2016
+7,565,5728,Computer and mathematical occupations,5778,7970,967.0,Asian Alone,2016
+8,53,1936,Architecture and engineering occupations,1271,3160,323.0,Asian Alone,2016
+9,99,460,"Life, physical, and social science occupations",474,1250,155.0,Asian Alone,2016
+10,1107,5957,"Education, legal, community service, arts, and media occupations:",5462,9591,322.0,Asian Alone,2016
+11,171,359,Community and social service occupations,231,1939,54.0,Asian Alone,2016
+12,108,704,Legal occupations,1942,1083,0.0,Asian Alone,2016
+13,727,2101,"Education, training, and library occupations",1567,4326,153.0,Asian Alone,2016
+14,101,2793,"Arts, design, entertainment, sports, and media occupations",1722,2243,115.0,Asian Alone,2016
+15,1012,2983,Healthcare practitioners and technical occupations:,4668,7745,804.0,Asian Alone,2016
+16,656,2059,Health diagnosing and treating practitioners and other technical occupations,4179,6120,654.0,Asian Alone,2016
+17,356,924,Health technologists and technicians,489,1625,150.0,Asian Alone,2016
+18,4122,16492,Service occupations:,5933,33161,2028.0,Asian Alone,2016
+19,536,1089,Healthcare support occupations,308,1793,316.0,Asian Alone,2016
+20,469,1212,Protective service occupations:,438,4570,57.0,Asian Alone,2016
+21,270,521,"Fire fighting and prevention, and other protective service workers including supervisors",438,3006,0.0,Asian Alone,2016
+22,199,691,Law enforcement workers including supervisors,0,1564,57.0,Asian Alone,2016
+23,1924,10712,Food preparation and serving related occupations,3914,19245,1174.0,Asian Alone,2016
+24,430,1741,Building and grounds cleaning and maintenance occupations,584,3611,377.0,Asian Alone,2016
+25,763,1738,Personal care and service occupations,689,3942,104.0,Asian Alone,2016
+26,2400,14389,Sales and office occupations:,7835,32016,1523.0,Asian Alone,2016
+27,1395,7964,Sales and related occupations,4909,16725,1012.0,Asian Alone,2016
+28,1005,6425,Office and administrative support occupations,2926,15291,511.0,Asian Alone,2016
+29,849,5972,"Natural resources, construction, and maintenance occupations:",1318,13331,631.0,Asian Alone,2016
+30,0,66,"Farming, fishing, and forestry occupations",0,158,0.0,Asian Alone,2016
+31,537,4490,Construction and extraction occupations,796,9010,266.0,Asian Alone,2016
+32,312,1416,"Installation, maintenance, and repair occupations",522,4163,365.0,Asian Alone,2016
+33,2134,16486,"Production, transportation, and material moving occupations:",3195,30259,956.0,Asian Alone,2016
+34,385,3469,Production occupations,1623,5586,148.0,Asian Alone,2016
+35,1469,11515,Transportation occupations,1572,22642,762.0,Asian Alone,2016
+36,280,1502,Material moving occupations,0,2031,46.0,Asian Alone,2016
+37,10617,75799,Female:,62642,133195,9721.0,Asian Alone,2016
+38,5324,30452,"Management, business, science, and arts occupations:",40629,48449,5578.0,Asian Alone,2016
+39,1885,11945,"Management, business, and financial occupations:",16646,15981,1930.0,Asian Alone,2016
+40,1378,6642,Management occupations,8778,7778,1015.0,Asian Alone,2016
+41,507,5303,Business and financial operations occupations,7868,8203,915.0,Asian Alone,2016
+42,474,3084,"Computer, engineering, and science occupations:",5653,3721,365.0,Asian Alone,2016
+43,240,1692,Computer and mathematical occupations,3176,2502,284.0,Asian Alone,2016
+44,29,899,Architecture and engineering occupations,0,671,0.0,Asian Alone,2016
+45,205,493,"Life, physical, and social science occupations",2477,548,81.0,Asian Alone,2016
+46,1186,10399,"Education, legal, community service, arts, and media occupations:",11670,14258,907.0,Asian Alone,2016
+47,76,694,Community and social service occupations,1000,2160,55.0,Asian Alone,2016
+48,0,866,Legal occupations,2749,1702,53.0,Asian Alone,2016
+49,818,4777,"Education, training, and library occupations",4085,7029,609.0,Asian Alone,2016
+50,292,4062,"Arts, design, entertainment, sports, and media occupations",3836,3367,190.0,Asian Alone,2016
+51,1779,5024,Healthcare practitioners and technical occupations:,6660,14489,2376.0,Asian Alone,2016
+52,1451,4179,Health diagnosing and treating practitioners and other technical occupations,6044,12059,2012.0,Asian Alone,2016
+53,328,845,Health technologists and technicians,616,2430,364.0,Asian Alone,2016
+54,2438,20682,Service occupations:,8424,36945,1170.0,Asian Alone,2016
+55,667,9052,Healthcare support occupations,2521,7619,357.0,Asian Alone,2016
+56,0,280,Protective service occupations:,0,526,0.0,Asian Alone,2016
+57,0,170,"Fire fighting and prevention, and other protective service workers including supervisors",0,428,0.0,Asian Alone,2016
+58,0,110,Law enforcement workers including supervisors,0,98,0.0,Asian Alone,2016
+59,336,4741,Food preparation and serving related occupations,1971,6080,42.0,Asian Alone,2016
+60,734,1699,Building and grounds cleaning and maintenance occupations,1508,3591,280.0,Asian Alone,2016
+61,701,4910,Personal care and service occupations,2424,19129,491.0,Asian Alone,2016
+62,2470,19277,Sales and office occupations:,11823,40603,2320.0,Asian Alone,2016
+63,1394,7767,Sales and related occupations,4686,18728,845.0,Asian Alone,2016
+64,1076,11510,Office and administrative support occupations,7137,21875,1475.0,Asian Alone,2016
+65,0,301,"Natural resources, construction, and maintenance occupations:",314,812,0.0,Asian Alone,2016
+66,0,31,"Farming, fishing, and forestry occupations",0,309,0.0,Asian Alone,2016
+67,0,62,Construction and extraction occupations,165,190,0.0,Asian Alone,2016
+68,0,208,"Installation, maintenance, and repair occupations",149,313,0.0,Asian Alone,2016
+69,385,5087,"Production, transportation, and material moving occupations:",1452,6386,653.0,Asian Alone,2016
+70,313,4040,Production occupations,1113,4432,628.0,Asian Alone,2016
+71,0,143,Transportation occupations,0,777,25.0,Asian Alone,2016
+72,72,904,Material moving occupations,339,1177,0.0,Asian Alone,2016
+0,25782,157908,Total:,119627,311177,,Asian Alone,2017
+1,15065,81231,Male:,56074,171461,,Asian Alone,2017
+2,3951,28563,"Management, business, science, and arts occupations:",34882,53555,,Asian Alone,2017
+3,1961,11391,"Management, business, and financial occupations:",16815,25489,,Asian Alone,2017
+4,1093,7068,Management occupations,9813,16509,,Asian Alone,2017
+5,868,4323,Business and financial operations occupations,7002,8980,,Asian Alone,2017
+6,504,7850,"Computer, engineering, and science occupations:",8964,14182,,Asian Alone,2017
+7,203,6225,Computer and mathematical occupations,5387,10855,,Asian Alone,2017
+8,115,1225,Architecture and engineering occupations,1252,2244,,Asian Alone,2017
+9,186,400,"Life, physical, and social science occupations",2325,1083,,Asian Alone,2017
+10,407,5575,"Education, legal, community service, arts, and media occupations:",6198,7109,,Asian Alone,2017
+11,85,621,Community and social service occupations,414,1109,,Asian Alone,2017
+12,0,377,Legal occupations,1705,900,,Asian Alone,2017
+13,322,1613,"Education, training, and library occupations",1479,2641,,Asian Alone,2017
+14,0,2964,"Arts, design, entertainment, sports, and media occupations",2600,2459,,Asian Alone,2017
+15,1079,3747,Healthcare practitioners and technical occupations:,2905,6775,,Asian Alone,2017
+16,656,3132,Health diagnosing and treating practitioners and other technical occupations,2564,4918,,Asian Alone,2017
+17,423,615,Health technologists and technicians,341,1857,,Asian Alone,2017
+18,3986,16241,Service occupations:,7913,34609,,Asian Alone,2017
+19,196,976,Healthcare support occupations,139,2538,,Asian Alone,2017
+20,828,911,Protective service occupations:,605,3003,,Asian Alone,2017
+21,293,178,"Fire fighting and prevention, and other protective service workers including supervisors",336,1595,,Asian Alone,2017
+22,535,733,Law enforcement workers including supervisors,269,1408,,Asian Alone,2017
+23,2032,10845,Food preparation and serving related occupations,4462,20909,,Asian Alone,2017
+24,508,1520,Building and grounds cleaning and maintenance occupations,1612,3908,,Asian Alone,2017
+25,422,1989,Personal care and service occupations,1095,4251,,Asian Alone,2017
+26,3020,15108,Sales and office occupations:,8337,34508,,Asian Alone,2017
+27,2066,7430,Sales and related occupations,4885,19865,,Asian Alone,2017
+28,954,7678,Office and administrative support occupations,3452,14643,,Asian Alone,2017
+29,749,6845,"Natural resources, construction, and maintenance occupations:",1829,16858,,Asian Alone,2017
+30,0,137,"Farming, fishing, and forestry occupations",0,73,,Asian Alone,2017
+31,469,4870,Construction and extraction occupations,1775,10882,,Asian Alone,2017
+32,280,1838,"Installation, maintenance, and repair occupations",54,5903,,Asian Alone,2017
+33,3359,14474,"Production, transportation, and material moving occupations:",3113,31931,,Asian Alone,2017
+34,688,3805,Production occupations,1366,5052,,Asian Alone,2017
+35,2287,8943,Transportation occupations,1452,24172,,Asian Alone,2017
+36,384,1726,Material moving occupations,295,2707,,Asian Alone,2017
+37,10717,76677,Female:,63553,139716,,Asian Alone,2017
+38,4158,32566,"Management, business, science, and arts occupations:",38954,54072,,Asian Alone,2017
+39,1120,11476,"Management, business, and financial occupations:",13662,18150,,Asian Alone,2017
+40,651,5869,Management occupations,7214,8807,,Asian Alone,2017
+41,469,5607,Business and financial operations occupations,6448,9343,,Asian Alone,2017
+42,154,3139,"Computer, engineering, and science occupations:",3717,3555,,Asian Alone,2017
+43,84,1785,Computer and mathematical occupations,2100,1691,,Asian Alone,2017
+44,0,541,Architecture and engineering occupations,874,1072,,Asian Alone,2017
+45,70,813,"Life, physical, and social science occupations",743,792,,Asian Alone,2017
+46,1324,11781,"Education, legal, community service, arts, and media occupations:",13648,16496,,Asian Alone,2017
+47,101,997,Community and social service occupations,834,2394,,Asian Alone,2017
+48,58,805,Legal occupations,1872,1130,,Asian Alone,2017
+49,1165,6398,"Education, training, and library occupations",5756,9855,,Asian Alone,2017
+50,0,3581,"Arts, design, entertainment, sports, and media occupations",5186,3117,,Asian Alone,2017
+51,1560,6170,Healthcare practitioners and technical occupations:,7927,15871,,Asian Alone,2017
+52,1331,5014,Health diagnosing and treating practitioners and other technical occupations,6719,12413,,Asian Alone,2017
+53,229,1156,Health technologists and technicians,1208,3458,,Asian Alone,2017
+54,3920,21936,Service occupations:,9392,39783,,Asian Alone,2017
+55,1808,7565,Healthcare support occupations,2914,9002,,Asian Alone,2017
+56,64,185,Protective service occupations:,85,1133,,Asian Alone,2017
+57,0,149,"Fire fighting and prevention, and other protective service workers including supervisors",85,592,,Asian Alone,2017
+58,64,36,Law enforcement workers including supervisors,0,541,,Asian Alone,2017
+59,342,4304,Food preparation and serving related occupations,1300,7801,,Asian Alone,2017
+60,259,997,Building and grounds cleaning and maintenance occupations,887,5639,,Asian Alone,2017
+61,1447,8885,Personal care and service occupations,4206,16208,,Asian Alone,2017
+62,2388,17436,Sales and office occupations:,12822,40779,,Asian Alone,2017
+63,1310,7966,Sales and related occupations,7099,17535,,Asian Alone,2017
+64,1078,9470,Office and administrative support occupations,5723,23244,,Asian Alone,2017
+65,0,204,"Natural resources, construction, and maintenance occupations:",456,400,,Asian Alone,2017
+66,0,85,"Farming, fishing, and forestry occupations",0,179,,Asian Alone,2017
+67,0,0,Construction and extraction occupations,456,137,,Asian Alone,2017
+68,0,119,"Installation, maintenance, and repair occupations",0,84,,Asian Alone,2017
+69,251,4535,"Production, transportation, and material moving occupations:",1929,4682,,Asian Alone,2017
+70,251,3434,Production occupations,1421,3157,,Asian Alone,2017
+71,0,224,Transportation occupations,92,591,,Asian Alone,2017
+72,0,877,Material moving occupations,416,934,,Asian Alone,2017
+0,25245,155112,Total:,117209,304406,24312.0,Asian Alone,2018
+1,14116,79242,Male:,51758,164773,12425.0,Asian Alone,2018
+2,4707,29043,"Management, business, science, and arts occupations:",38403,51575,5286.0,Asian Alone,2018
+3,1578,9365,"Management, business, and financial occupations:",18499,20966,1998.0,Asian Alone,2018
+4,1148,5278,Management occupations,13472,12324,959.0,Asian Alone,2018
+5,430,4087,Business and financial operations occupations,5027,8642,1039.0,Asian Alone,2018
+6,592,9380,"Computer, engineering, and science occupations:",11436,14956,1546.0,Asian Alone,2018
+7,452,6604,Computer and mathematical occupations,7881,9743,871.0,Asian Alone,2018
+8,115,1916,Architecture and engineering occupations,1554,4047,594.0,Asian Alone,2018
+9,25,860,"Life, physical, and social science occupations",2001,1166,81.0,Asian Alone,2018
+10,883,7746,"Education, legal, community service, arts, and media occupations:",5502,8660,815.0,Asian Alone,2018
+11,176,403,Community and social service occupations,260,1365,109.0,Asian Alone,2018
+12,92,1195,Legal occupations,1511,934,159.0,Asian Alone,2018
+13,300,2264,"Educational instruction, and library occupations",2179,3629,270.0,Asian Alone,2018
+14,315,3884,"Arts, design, entertainment, sports, and media occupations",1552,2732,277.0,Asian Alone,2018
+15,1654,2552,Healthcare practitioners and technical occupations:,2966,6993,927.0,Asian Alone,2018
+16,1151,2057,Health diagnosing and treating practitioners and other technical occupations,2715,4658,491.0,Asian Alone,2018
+17,503,495,Health technologists and technicians,251,2335,436.0,Asian Alone,2018
+18,4171,16359,Service occupations:,4206,27341,1966.0,Asian Alone,2018
+19,261,1630,Healthcare support occupations,374,2957,584.0,Asian Alone,2018
+20,833,1516,Protective service occupations:,444,3949,183.0,Asian Alone,2018
+21,421,845,"Firefighting and prevention, and other protective service workers including supervisors",352,2075,115.0,Asian Alone,2018
+22,412,671,Law enforcement workers including supervisors,92,1874,68.0,Asian Alone,2018
+23,2190,10792,Food preparation and serving related occupations,2223,13692,891.0,Asian Alone,2018
+24,516,1638,Building and grounds cleaning and maintenance occupations,505,3272,279.0,Asian Alone,2018
+25,371,783,Personal care and service occupations,660,3471,29.0,Asian Alone,2018
+26,2575,12093,Sales and office occupations:,5774,32337,2390.0,Asian Alone,2018
+27,1887,7543,Sales and related occupations,4008,18797,745.0,Asian Alone,2018
+28,688,4550,Office and administrative support occupations,1766,13540,1645.0,Asian Alone,2018
+29,642,6462,"Natural resources, construction, and maintenance occupations:",827,13643,712.0,Asian Alone,2018
+30,0,0,"Farming, fishing, and forestry occupations",0,0,0.0,Asian Alone,2018
+31,304,4653,Construction and extraction occupations,744,9026,385.0,Asian Alone,2018
+32,338,1809,"Installation, maintenance, and repair occupations",83,4617,327.0,Asian Alone,2018
+33,2021,15285,"Production, transportation, and material moving occupations:",2548,39877,2071.0,Asian Alone,2018
+34,374,2253,Production occupations,536,5284,648.0,Asian Alone,2018
+35,1500,11281,Transportation occupations,1064,30739,1281.0,Asian Alone,2018
+36,147,1751,Material moving occupations,948,3854,142.0,Asian Alone,2018
+37,11129,75870,Female:,65451,139633,11887.0,Asian Alone,2018
+38,5213,32594,"Management, business, science, and arts occupations:",41417,55825,5200.0,Asian Alone,2018
+39,1604,12372,"Management, business, and financial occupations:",16636,21470,1846.0,Asian Alone,2018
+40,564,6664,Management occupations,7895,9413,767.0,Asian Alone,2018
+41,1040,5708,Business and financial operations occupations,8741,12057,1079.0,Asian Alone,2018
+42,420,3333,"Computer, engineering, and science occupations:",5795,4066,427.0,Asian Alone,2018
+43,148,2181,Computer and mathematical occupations,3061,2208,267.0,Asian Alone,2018
+44,48,702,Architecture and engineering occupations,841,769,0.0,Asian Alone,2018
+45,224,450,"Life, physical, and social science occupations",1893,1089,160.0,Asian Alone,2018
+46,1438,11371,"Education, legal, community service, arts, and media occupations:",13358,12210,853.0,Asian Alone,2018
+47,419,944,Community and social service occupations,388,884,185.0,Asian Alone,2018
+48,126,1086,Legal occupations,2294,1281,291.0,Asian Alone,2018
+49,893,4612,"Educational instruction, and library occupations",5009,6624,213.0,Asian Alone,2018
+50,0,4729,"Arts, design, entertainment, sports, and media occupations",5667,3421,164.0,Asian Alone,2018
+51,1751,5518,Healthcare practitioners and technical occupations:,5628,18079,2074.0,Asian Alone,2018
+52,1386,3535,Health diagnosing and treating practitioners and other technical occupations,5110,13013,1918.0,Asian Alone,2018
+53,365,1983,Health technologists and technicians,518,5066,156.0,Asian Alone,2018
+54,3438,21623,Service occupations:,8242,40006,3141.0,Asian Alone,2018
+55,1500,11233,Healthcare support occupations,3062,15453,926.0,Asian Alone,2018
+56,126,224,Protective service occupations:,58,792,44.0,Asian Alone,2018
+57,0,42,"Firefighting and prevention, and other protective service workers including supervisors",58,631,44.0,Asian Alone,2018
+58,126,182,Law enforcement workers including supervisors,0,161,0.0,Asian Alone,2018
+59,835,3837,Food preparation and serving related occupations,1890,7771,902.0,Asian Alone,2018
+60,58,1727,Building and grounds cleaning and maintenance occupations,1132,4383,508.0,Asian Alone,2018
+61,919,4602,Personal care and service occupations,2100,11607,761.0,Asian Alone,2018
+62,2038,17898,Sales and office occupations:,14305,36756,2949.0,Asian Alone,2018
+63,771,7339,Sales and related occupations,7133,17223,948.0,Asian Alone,2018
+64,1267,10559,Office and administrative support occupations,7172,19533,2001.0,Asian Alone,2018
+65,0,406,"Natural resources, construction, and maintenance occupations:",455,368,0.0,Asian Alone,2018
+66,0,0,"Farming, fishing, and forestry occupations",0,29,0.0,Asian Alone,2018
+67,0,406,Construction and extraction occupations,455,200,0.0,Asian Alone,2018
+68,0,0,"Installation, maintenance, and repair occupations",0,139,0.0,Asian Alone,2018
+69,440,3349,"Production, transportation, and material moving occupations:",1032,6678,597.0,Asian Alone,2018
+70,405,2556,Production occupations,801,4230,597.0,Asian Alone,2018
+71,0,218,Transportation occupations,103,1038,0.0,Asian Alone,2018
+72,35,575,Material moving occupations,128,1410,0.0,Asian Alone,2018
+0,25415,156344,Total:,117691,300826,26529.0,Asian Alone,2019
+1,13611,79255,Male:,54989,156862,13498.0,Asian Alone,2019
+2,4023,28396,"Management, business, science, and arts occupations:",36282,56179,5397.0,Asian Alone,2019
+3,1606,11316,"Management, business, and financial occupations:",18079,24654,1919.0,Asian Alone,2019
+4,940,6310,Management occupations,10578,14934,1126.0,Asian Alone,2019
+5,666,5006,Business and financial operations occupations,7501,9720,793.0,Asian Alone,2019
+6,415,8439,"Computer, engineering, and science occupations:",7697,13368,1214.0,Asian Alone,2019
+7,383,6203,Computer and mathematical occupations,5299,9514,774.0,Asian Alone,2019
+8,32,1824,Architecture and engineering occupations,1023,3181,294.0,Asian Alone,2019
+9,0,412,"Life, physical, and social science occupations",1375,673,146.0,Asian Alone,2019
+10,958,5648,"Education, legal, community service, arts, and media occupations:",6429,9560,1021.0,Asian Alone,2019
+11,304,215,Community and social service occupations,81,2040,426.0,Asian Alone,2019
+12,0,498,Legal occupations,1989,907,27.0,Asian Alone,2019
+13,391,1558,"Educational instruction, and library occupations",1805,2951,384.0,Asian Alone,2019
+14,263,3377,"Arts, design, entertainment, sports, and media occupations",2554,3662,184.0,Asian Alone,2019
+15,1044,2993,Healthcare practitioners and technical occupations:,4077,8597,1243.0,Asian Alone,2019
+16,969,1883,Health diagnosing and treating practitioners and other technical occupations,3705,5204,813.0,Asian Alone,2019
+17,75,1110,Health technologists and technicians,372,3393,430.0,Asian Alone,2019
+18,3433,18901,Service occupations:,7745,29052,2654.0,Asian Alone,2019
+19,649,2695,Healthcare support occupations,1209,2548,664.0,Asian Alone,2019
+20,932,1180,Protective service occupations:,244,5640,318.0,Asian Alone,2019
+21,700,668,"Firefighting and prevention, and other protective service workers including supervisors",191,3339,140.0,Asian Alone,2019
+22,232,512,Law enforcement workers including supervisors,53,2301,178.0,Asian Alone,2019
+23,1194,12513,Food preparation and serving related occupations,4948,13485,906.0,Asian Alone,2019
+24,408,1277,Building and grounds cleaning and maintenance occupations,183,2828,585.0,Asian Alone,2019
+25,250,1236,Personal care and service occupations,1161,4551,181.0,Asian Alone,2019
+26,2314,12238,Sales and office occupations:,7491,26121,2412.0,Asian Alone,2019
+27,1843,8103,Sales and related occupations,5137,15508,1386.0,Asian Alone,2019
+28,471,4135,Office and administrative support occupations,2354,10613,1026.0,Asian Alone,2019
+29,509,6615,"Natural resources, construction, and maintenance occupations:",260,14268,1043.0,Asian Alone,2019
+30,0,0,"Farming, fishing, and forestry occupations",0,0,0.0,Asian Alone,2019
+31,149,4740,Construction and extraction occupations,216,10248,779.0,Asian Alone,2019
+32,360,1875,"Installation, maintenance, and repair occupations",44,4020,264.0,Asian Alone,2019
+33,3332,13105,"Production, transportation, and material moving occupations:",3211,31242,1992.0,Asian Alone,2019
+34,755,2062,Production occupations,1043,6138,185.0,Asian Alone,2019
+35,2513,9776,Transportation occupations,1725,22206,1498.0,Asian Alone,2019
+36,64,1267,Material moving occupations,443,2898,309.0,Asian Alone,2019
+37,11804,77089,Female:,62702,143964,13031.0,Asian Alone,2019
+38,5113,35617,"Management, business, science, and arts occupations:",44163,59618,5963.0,Asian Alone,2019
+39,1243,12975,"Management, business, and financial occupations:",21556,21428,1609.0,Asian Alone,2019
+40,648,6660,Management occupations,10653,11435,819.0,Asian Alone,2019
+41,595,6315,Business and financial operations occupations,10903,9993,790.0,Asian Alone,2019
+42,623,4218,"Computer, engineering, and science occupations:",6421,5505,481.0,Asian Alone,2019
+43,452,2828,Computer and mathematical occupations,3843,3815,481.0,Asian Alone,2019
+44,0,946,Architecture and engineering occupations,481,642,0.0,Asian Alone,2019
+45,171,444,"Life, physical, and social science occupations",2097,1048,0.0,Asian Alone,2019
+46,845,11245,"Education, legal, community service, arts, and media occupations:",9871,14705,1210.0,Asian Alone,2019
+47,153,865,Community and social service occupations,696,1664,334.0,Asian Alone,2019
+48,0,1081,Legal occupations,2206,974,0.0,Asian Alone,2019
+49,645,5055,"Educational instruction, and library occupations",2902,7228,739.0,Asian Alone,2019
+50,47,4244,"Arts, design, entertainment, sports, and media occupations",4067,4839,137.0,Asian Alone,2019
+51,2402,7179,Healthcare practitioners and technical occupations:,6315,17980,2663.0,Asian Alone,2019
+52,2208,5562,Health diagnosing and treating practitioners and other technical occupations,5956,14038,2030.0,Asian Alone,2019
+53,194,1617,Health technologists and technicians,359,3942,633.0,Asian Alone,2019
+54,3845,22483,Service occupations:,7644,43837,3731.0,Asian Alone,2019
+55,1349,13034,Healthcare support occupations,3878,16647,1698.0,Asian Alone,2019
+56,368,144,Protective service occupations:,264,1231,425.0,Asian Alone,2019
+57,290,54,"Firefighting and prevention, and other protective service workers including supervisors",264,830,425.0,Asian Alone,2019
+58,78,90,Law enforcement workers including supervisors,0,401,0.0,Asian Alone,2019
+59,637,4485,Food preparation and serving related occupations,1591,7147,467.0,Asian Alone,2019
+60,597,1714,Building and grounds cleaning and maintenance occupations,362,5191,294.0,Asian Alone,2019
+61,894,3106,Personal care and service occupations,1549,13621,847.0,Asian Alone,2019
+62,2240,15140,Sales and office occupations:,10099,33607,2869.0,Asian Alone,2019
+63,1146,8356,Sales and related occupations,4678,15683,1217.0,Asian Alone,2019
+64,1094,6784,Office and administrative support occupations,5421,17924,1652.0,Asian Alone,2019
+65,0,259,"Natural resources, construction, and maintenance occupations:",0,415,204.0,Asian Alone,2019
+66,0,0,"Farming, fishing, and forestry occupations",0,0,0.0,Asian Alone,2019
+67,0,160,Construction and extraction occupations,0,415,0.0,Asian Alone,2019
+68,0,99,"Installation, maintenance, and repair occupations",0,0,204.0,Asian Alone,2019
+69,606,3590,"Production, transportation, and material moving occupations:",796,6487,264.0,Asian Alone,2019
+70,535,2350,Production occupations,586,4524,126.0,Asian Alone,2019
+71,71,602,Transportation occupations,0,827,0.0,Asian Alone,2019
+72,0,638,Material moving occupations,210,1136,138.0,Asian Alone,2019
