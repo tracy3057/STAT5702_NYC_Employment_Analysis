@@ -1,0 +1,23 @@
+---
+title: "Cleveland Dot Plots"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r Data}
+library(ggplot2)
+library(forcats)
+
+AggregateData <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/AggregateClevelandDotPlotData.csv')
+
+AggregateData$Occupations <- as.factor(AggregateData$Occupations)
+
+ggplot(AggregateData, aes(NumEmps, reorder(Occupations,NumEmps))) +
+geom_point() + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation NYC')
+```
+
+```{r Aggregate Cleveland Dot Plot}
+```
