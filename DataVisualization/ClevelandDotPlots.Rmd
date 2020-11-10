@@ -11,13 +11,39 @@ knitr::opts_chunk$set(echo = TRUE)
 library(ggplot2)
 library(forcats)
 
-AggregateData <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/AggregateClevelandDotPlotData.csv')
+#AggregateData <- read.csv('C:/Users/Administrator/Desktop/columbia/5702/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/AggregateClevelandDotPlotData.csv') #TracyPath
+AggregateData <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/AggregateClevelandDotPlotData.csv') #EugenioPath
 
+AggregateYearlyData <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/YearlyAggregateClevelandDotPlotData.csv')
+
+GenderData <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/GenderClevelandDotPlotData.csv')
+
+GenderData
+```
+
+```{r Aggregate Cleveland Dot Plot}
 AggregateData$Occupations <- as.factor(AggregateData$Occupations)
 
 ggplot(AggregateData, aes(NumEmps, reorder(Occupations,NumEmps))) +
 geom_point() + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation NYC')
 ```
 
-```{r Aggregate Cleveland Dot Plot}
+```{r Aggregate Yearly Cleveland Dot Plot}
+AggregateYearlyData$Occupations <- as.factor(AggregateData$Occupations)
+AggregateYearlyData$year <- as.ordered(AggregateYearlyData$year)
+
+
+ggplot(AggregateYearlyData, aes(NumEmps, reorder(Occupations,NumEmps))) +
+geom_point() + facet_wrap(~AggregateYearlyData$year) + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation NYC')
+
+ggplot(AggregateYearlyData) +
+geom_point(aes(NumEmps, reorder(Occupations,NumEmps), color = year)) + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation NYC') 
+```
+
+
+```{r Gender Cleveland Dot Plot}
+GenderData$Occupations <- as.factor(GenderData$Occupations)
+GenderData$Gender <- as.factor(GenderData$Gender)
+
+ggplot(GenderData, aes(NumEmps,fct_reorder2(Occupations,Gender=='Female',NumEmps, .desc=FALSE),color = Gender)) + geom_point()
 ```
