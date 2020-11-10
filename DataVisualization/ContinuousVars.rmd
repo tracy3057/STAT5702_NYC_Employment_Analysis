@@ -5,14 +5,16 @@ output: pdf_document
 
 ```{r Imports}
 library(tidyverse)
+library(dplyr)
 library(ggplot2)
 ```
+
 ```{r Data}
 
-setwd('C:/Users/Administrator/Documents/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/employment')
+setwd('/Users/eugeniobeaufrand/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/employment')
 
 employDisability <- read.table(file = "employDisability.csv", sep = ",", header=TRUE)
-employEDUCATION <- read.csv(file = "employEDUCATION.csv")
+employEDUCATION <- read.table(file = "employEDUCATION.csv", sep = ",", header=TRUE)
 employmentByAge <- read.table(file = "employmentByAge.csv", sep = ",", header=TRUE)
 employmentByRACE <- read.table(file = "employmentByRACE.csv", sep = ",", header=TRUE)
 employPoverty <- read.table(file = "employPoverty.csv", sep = ",", header=TRUE)
@@ -71,7 +73,7 @@ ggplot(data = employPoverty,aes(year,Total)) + geom_line(size = 1, col = 'black'
 ggplot(data = employPoverty,aes(x = year,y = UnemploymentRate)) + geom_line(size = 1, col = 'black') + xlab('Year') + ylab('Unemployment (Percent)') + scale_x_continuous(breaks = seq(2010,2019)) + geom_point(size = 2.5, col = 'royalblue3')
 ```
 
-```{r JobType Plots, fig.width=14}
+```{r JobType Plots}
 #Interested in getting unemployment rates for this 
 JobType
 
@@ -79,7 +81,3 @@ JobType$Label = as.factor(JobType$Label)
 ggplot(data = JobType) + geom_line(aes(x = year,y = Total, group = Label, colour = Label), size = 1) + xlab('Year') + ylab('Number unemployed') + ylim(0,1250000) + scale_x_continuous(breaks = seq(2010,2019))
 
 ```
-
-
-
-
