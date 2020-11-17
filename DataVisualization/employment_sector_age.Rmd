@@ -1,0 +1,58 @@
+---
+title: "EmploymentSector"
+output: html_document
+---
+```{r Imports}
+library(tidyverse)
+library(ggplot2)
+```
+```{r Data}
+
+setwd('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/employment')
+
+employDisability <- read.table(file = "employDisability.csv", sep = ",", header=TRUE)
+employEDUCATION <- read.csv(file = "employEDUCATION.csv")
+employmentByAge <- read.table(file = "employmentByAge.csv", sep = ",", header=TRUE)
+employmentByRACE <- read.table(file = "employmentByRACE.csv", sep = ",", header=TRUE)
+employPoverty <- read.table(file = "employPoverty.csv", sep = ",", header=TRUE)
+JobType <- read.table(file = "JobType.csv", sep = ",", header=TRUE)
+```
+```{r Preview Data}
+employDisability 
+employEDUCATION 
+employmentByAge 
+employmentByRACE 
+employPoverty
+JobType 
+```
+
+```{r Sector Plots}
+
+JobType2010 <- JobType[JobType$year == 2010,]
+JobType2011 <- JobType[JobType$year == 2011,]
+JobType2012 <- JobType[JobType$year == 2012,]
+JobType2013 <- JobType[JobType$year == 2013,]
+JobType2014 <- JobType[JobType$year == 2014,]
+JobType2015 <- JobType[JobType$year == 2015,]
+JobType2016 <- JobType[JobType$year == 2016,]
+JobType2017 <- JobType[JobType$year == 2017,]
+JobType2018 <- JobType[JobType$year == 2018,]
+JobType2019 <- JobType[JobType$year == 2019,]
+
+ggplot(data = JobType2010[2:nrow(JobType2010),], aes(x=Label,y=Total)) + geom_bar(stat = 'identity') + scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+ggplot(data = JobType2011[2:nrow(JobType2011),], aes(x=Label,y=Total)) + geom_bar(stat = 'identity') + scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+ggplot(data = JobType2012[2:nrow(JobType2012),], aes(x=Label,y=Total)) + geom_bar(stat = 'identity') + scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+ggplot(data = JobType2013[2:nrow(JobType2013),], aes(x=Label,y=Total)) + geom_bar(stat = 'identity') + scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+ggplot(data = JobType2014[2:nrow(JobType2014),], aes(x=Label,y=Total)) + geom_bar(stat = 'identity') + scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+ggplot(data = JobType2015[2:nrow(JobType2015),], aes(x=Label,y=Total)) + geom_bar(stat = 'identity') + scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+ggplot(data = JobType2016[2:nrow(JobType2016),], aes(x=Label,y=Total)) + geom_bar(stat = 'identity') + scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+ggplot(data = JobType2017[2:nrow(JobType2017),], aes(x=Label,y=Total)) + geom_bar(stat = 'identity') + scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+ggplot(data = JobType2018[2:nrow(JobType2018),], aes(x=Label,y=Total)) + geom_bar(stat = 'identity') + scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+ggplot(data = JobType2019[2:nrow(JobType2019),], aes(x=Label,y=Total)) + geom_bar(stat = 'identity') + scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+
+```
+
+
+
+
+
