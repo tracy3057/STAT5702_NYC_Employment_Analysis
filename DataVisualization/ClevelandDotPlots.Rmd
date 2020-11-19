@@ -10,7 +10,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r Data}
 library(ggplot2)
 library(forcats)
-library(dplyr)
 
 #AggregateData <- read.csv('C:/Users/Administrator/Desktop/columbia/5702/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/AggregateClevelandDotPlotData.csv') #TracyPath
 AggregateData <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/AggregateClevelandDotPlotData.csv') #EugenioPath
@@ -38,12 +37,6 @@ ggplot(AggregateYearlyData, aes(NumEmps, reorder(Occupations,NumEmps))) +
 geom_point() + facet_wrap(~AggregateYearlyData$year) + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation NYC')
 
 ggplot(AggregateYearlyData) +
-geom_point(aes(NumEmps, reorder(Occupations,NumEmps), color = year)) + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation NYC') 
-
-TrimmedAggregateYearlyData <- AggregateYearlyData 
-
-
-ggplot(TrimmedAggregateYearlyData  %>%  filter(AggregateYearlyData$year == 2010 | AggregateYearlyData$year == 2015 | AggregateYearlyData$year == 2019)) +
 geom_point(aes(NumEmps, reorder(Occupations,NumEmps), color = year)) + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation NYC') 
 ```
 

@@ -11,10 +11,7 @@ library(ggplot2)
 
 ```{r Data}
 
-setwd('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/employment')
-
-
-
+setwd('/Users/eugeniobeaufrand/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/employment')
 
 employDisability <- read.table(file = "employDisability.csv", sep = ",", header=TRUE)
 employEDUCATION <- read.table(file = "employEDUCATION.csv", sep = ",", header=TRUE)
