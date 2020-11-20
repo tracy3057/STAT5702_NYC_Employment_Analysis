@@ -8,22 +8,22 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r Data}
-library(ggplot2)
-library(forcats)
+library(tidyverse)
+
 
 #AggregateData <- read.csv('C:/Users/Administrator/Desktop/columbia/5702/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/AggregateClevelandDotPlotData.csv') #TracyPath
-AggregateData <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/AggregateClevelandDotPlotData.csv') #EugenioPath
+AggregateData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/AggregateClevelandDotPlotData.csv') #EugenioPath
 
-AggregateYearlyData <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/YearlyAggregateClevelandDotPlotData.csv')
+AggregateYearlyData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/YearlyAggregateClevelandDotPlotData.csv')
 
-GenderData <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/GenderClevelandDotPlotData.csv')
+GenderData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/GenderClevelandDotPlotData.csv')
 
 GenderData
 ```
 
+
 ```{r Aggregate Cleveland Dot Plot}
 AggregateData$Occupations <- as.factor(AggregateData$Occupations)
-
 ggplot(AggregateData, aes(NumEmps, reorder(Occupations,NumEmps))) +
 geom_point() + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation NYC')
 ```
@@ -33,17 +33,224 @@ AggregateYearlyData$Occupations <- as.factor(AggregateData$Occupations)
 AggregateYearlyData$year <- as.ordered(AggregateYearlyData$year)
 
 
-ggplot(AggregateYearlyData, aes(NumEmps, reorder(Occupations,NumEmps))) +
-geom_point() + facet_wrap(~AggregateYearlyData$year) + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation NYC')
+TrimmedAggregateYearlyData <- AggregateYearlyData[AggregateYearlyData$year == "2010" | AggregateYearlyData$year == "2015" | AggregateYearlyData$year == "2019",]
 
-ggplot(AggregateYearlyData) +
+ggplot(TrimmedAggregateYearlyData) +
 geom_point(aes(NumEmps, reorder(Occupations,NumEmps), color = year)) + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation NYC') 
 ```
+
+```{r,fig.width=}
+# add variance to TrimmedAggregateYearlyData
+TrimmedAggregateYearlyData$X <- NULL
+TrimmedAggregateYearlyData.wide <- pivot_wider(TrimmedAggregateYearlyData,names_from = year, values_from = NumEmps)
+
+
+TrimmedAggregateYearlyData.wide$variance <- with(TrimmedAggregateYearlyData.wide, abs(TrimmedAggregateYearlyData.wide$'2019' - TrimmedAggregateYearlyData.wide$'2010'))
+
+TrimmedAggregateYearlyData.tidy <- pivot_longer(TrimmedAggregateYearlyData.wide, cols = c(2:4), names_to = "year", values_to = "NumEmps")
+
+write.csv(TrimmedAggregateYearlyData.tidy,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/TrimmedAggregateYearlyDataWithVariance.csv", row.names = FALSE)
+# draw cleveland dot plot according to variance
+
+YearlyDataWithVariance <- read_csv("/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/TrimmedAggregateYearlyDataWithVariance.csv")
+YearlyDataWithVariance$year <- as.factor(TrimmedAggregateYearlyData.tidy$year)
+YearlyDataWithVariance$Occupations <- as.factor(TrimmedAggregateYearlyData.tidy$Occupations)
+
+
+
+ggplot(YearlyDataWithVariance, aes(NumEmps, reorder(Occupations, variance), color = year)) + geom_point()  +
+geom_point(aes(NumEmps, reorder(Occupations,NumEmps), color = year)) + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation for differenyt years in NYC') 
+```
+## Top 3 and Last 3 in variations
+
+### Top 3
+1. Management Occupations
+This occupation did not have the most employed people, while it had the greatest variation and was in an increasing trend. In year 2010, the number of employed for this group ranked the 3rd, while in 2015, the rank became the 2nd and in 2019, the ranking became the 1st.
+2. Office and administrative support occupations
+The number of employer in this occupation increased a little bit from 2010 to 2015, while draped a lot from 2015 to 2019. In year 2010 and year 2015, the number of employer still ranked the 1st for this occupation, while in 2019, it only ranked the 2nd.
+3. Healthcare support occupations
+The number of employed for this group was also in an increasing trend, but the number of employees was not as high as the previous two occupations.
+
+### Last 3
+1. Installation, maintenance, and repair occupations
+This group varied the least between 2010 and 2019. Although it was not the occupation with low number of employees, it had the smallest variation in number of employees.
+2. Farming, fishing, and forestry occupations
+This group had the smallest number of employees and its variation of number of employees was also small.
+3. Law enforcement workers including supervisors
+This group also had small number of employees and variation of number of employees at the same time.
+
+
+## Three different groups of occupations
+From the plot above, we can divide all occupations into three catogories. The first group is in a monotonous increasing trend, the second group is in a monotonous decreasing trend, and the third group do not have a monotonous trend in number of employed people by years. 
+
+### Monotonous Increasing
+We have 14 kinds of occupations in this group:
+1. Management Occupations
+2. Healthcare support occupations
+3. Business and financial operations occupations
+4. Computer and mathematical occupations
+5. Education, training and library occupations
+6. Art, design, entertainment, sports and media occupations
+7. Health, design and treating practitioners and other technical occupations
+8. Construction and extraction occupations
+9. Architecture and engineering occupations
+10. Fire fighting and prevention, and other protective service workers including supervisors
+11. Community and social service occupations
+12. Life, physical, and social service occupations
+13. Law enforcement workers including supervisors
+14. Farming, fishing and forestry occupations
+
+### Monotonous Decreasing
+We have only one kind of occupations in this group:
+1. Production occupations
+
+### Not monotonous
+We have 10 kinds of occupations in this group:
+1. Office and administrative support occupations
+2. Food preparation and serving related occupations
+3. Transportation occupations
+4. Material moving occupations
+5. Health technologists and technicians
+6. Personal care and service occupations
+7. Building and grounds cleaning and maintenance occupations
+8. Sales and related occupations
+9. Legal occupations
+10. Installation, maintenance, and repair occupations
+
+We further study on the group that does not a monotonous trend.
+
+```{r, fig.height=15}
+NotMonotonous <- AggregateYearlyData[AggregateYearlyData$Occupations == "Office and administrative support occupations" |
+                                    AggregateYearlyData$Occupations == "Food preparation and serving related occupations" |
+                                    AggregateYearlyData$Occupations == "Transportation occupations"|
+                                    AggregateYearlyData$Occupations == "Material moving occupations"|
+                                    AggregateYearlyData$Occupations == "Health technologists and technicians"|
+                                    AggregateYearlyData$Occupations == "Personal care and service occupations"|
+                                    AggregateYearlyData$Occupations == "Building and grounds cleaning and maintenance occupations"|
+                                    AggregateYearlyData$Occupations == "Sales and related occupations"|
+                                    AggregateYearlyData$Occupations == "Legal occupations"|
+                                    AggregateYearlyData$Occupations == "Installation, maintenance, and repair occupations",]
+NotMonotonous$year <- as.character(NotMonotonous$year)
+NotMonotonous$Occupations <- factor(NotMonotonous$Occupations,levels = c("Office and administrative support occupations",
+                                                                         "Food preparation and serving related occupations",
+                                                                         "Transportation occupations",
+                                                                         "Material moving occupations",
+                                                                         "Health technologists and technicians",
+                                                                         "Personal care and service occupations",
+                                                                         "Building and grounds cleaning and maintenance occupations",
+                                                                         "Sales and related occupations",
+                                                                         "Legal occupations",
+                                                                         "Installation, maintenance, and repair occupations"))
+
+ggplot(NotMonotonous,aes(year,NumEmps)) +
+  geom_point(color = "light blue", size = 10) +
+  facet_wrap(~Occupations,ncol=2,scales = "free_y") +
+    theme(axis.text=element_text(size=30),
+      axis.title=element_text(size=40,face="bold"),
+        strip.text.x = element_text(
+        size = 35, face = "bold.italic"
+        ),
+      strip.text.y = element_text(
+        size = 35, color = "red", face = "bold.italic"
+        ),
+      plot.title = element_text(size = 50, face = "bold"))+
+  ylab('NumEmps') + xlab('Occupations') + ggtitle('Number Employed by Occupations for Different Occupations in NYC')
+```
+From the plot above, we can discover that these occupations did not have a monotonous trend and the changing patterns were different as well.
+1. Office and administrative support occupations
+For this group of occupation, the number of employed maintained at a high level before 2017, while from 2017 to 2019, the number of employees dropped dramatically.
+2. Food preparation and serving related occupations
+For this group of occupation=, the peak of the number of employed appeared in 2015.
+3. Transportation occupations
+Generally speaking, the number of employed for this group was in an increasing trend. However, from 2018 to 2019, there was a subtle drop, which is the reason that the number of employed in 2019 was smaller than that in 2015.
+4. Material moving occupations
+For this occupation, the number of employed dropped a little bit from 2010 to 2011, then increased from 2011 to 2012. Afterwards, the number of employees started to decrease again until 2016. Then it had a sudden increase from 2016 to 2018 and maintained at a high level in 2019 with a subtle decrease.
+5. Health technologists and technicians
+The number of employed maintained at a relatively low value from 2010 to 2013 for this group, then it started to increase until 2015 and maintained at a high level afterwards. However, there was a very low value in 2016, and it seems that there’s a pattern that one year of high value in number of employees will accompanied by a relatively low value for the next year within the years between 2015 to 2019.
+6. Personal care and service occupations
+Generally speaking, the number of employed in this group was in an increasing trend from 2010 to 2016, then it dropped a little from 2016 to 2017 and dropped a lot from 2017 to 2018, accompanied by a subtle drop from 2018 to 2019.
+7. Building and grounds cleaning and maintenance occupations
+Form 2010 to 2012, the number of employed people was in a decreasing trend, then the number increased a lot from 2012 to 2013 and continued to decrease from 2013 to 2016. Then it continued to increase for a little bit again from 2016 to 2017, but returned to a dropping trend from 2017 to 2019.
+8. Sales and related occupations
+The number of employed increased a lot from 2010 to 2011 for this group. Then within the year range from 2011 to 2016, the number remained at a high value, with two relatively low values in 2013 and 2015. However, the number of employed dropped a lot from 2016 to 2018, accompanied by a subtle increase from 2018 to 2019.
+9. Legal occupations
+Generally speaking, the number of employed for this group was relatively stable, the changing pattern was in the shape of a wave. The two troughs were in year 2013 and 2018 and the two crests were in year 2012 and 2016.
+10. Installation, maintenance and repair occupations
+The number of employed for this group was relatively stable as well and the changing pattern was also like the shape of a wave. The trough were in year 2016 and the two crests were in year 2013 and 2015.
 
 
 ```{r Gender Cleveland Dot Plot}
 GenderData$Occupations <- as.factor(GenderData$Occupations)
 GenderData$Gender <- as.factor(GenderData$Gender)
-
-ggplot(GenderData, aes(NumEmps,fct_reorder2(Occupations,Gender=='Female',NumEmps, .desc=FALSE),color = Gender)) + geom_point()
+ggplot(GenderData, aes(NumEmps,fct_reorder2(Occupations,Gender=='Female',NumEmps, .desc=FALSE),color = Gender)) + geom_point() +
+  ylab('NumEmps') + xlab('Occupations') + ggtitle('Nember Employed by Occupations for different genders in NYC')
 ```
+
+From the figure above, we can see that for some occupations, there are huge distinctions between male occupations and female occupations, while for other some other occupations, there is no huge difference between the number employed of male and female. Therefore, we draw a stacked bar chart with propositions of Male and Female in each occupation to see which occupations have huge relation to gender.
+
+```{r,fig.height=18}
+GenderData$X <- NULL
+GenderData.wide <- pivot_wider(GenderData, names_from = "Gender", values_from = "NumEmps")
+GenderData.wide$variance <- with(GenderData.wide,abs(Male - Female))
+GenderData.tidy <- pivot_longer(GenderData.wide, cols = c("Female","Male"), names_to = "Gender", values_to = "NumEmps")
+
+GenderData.tidy <- GenderData.tidy %>% 
+  group_by(Occupations) %>% 
+  mutate(prop = NumEmps/sum(NumEmps)) %>%
+  ungroup()
+
+ggplot(GenderData.tidy,aes(x = fct_reorder2(Occupations,Gender == "Female",prop,.desc=FALSE), y=prop,fill=Gender)) + 
+  geom_bar(position='fill', stat='identity')+
+  ylab('prop') + xlab('Occupations') + ggtitle('Gender Proposition of Employed by Occupations')+
+  theme(axis.text=element_text(size = 40, angle = 90, vjust = 0.5, hjust=1),
+        axis.title=element_text(size=50,face="bold"),
+        plot.title = element_text(size = 60, face = "bold"))
+```
+
+
+From this plot, we can list the top ten occupations with high percentages of male and the top 10 occupations with high percentages of female.
+## Top 10 occupations for male
+1. Construction and extraction occupations
+2. Installation, maintenance and repair occupations
+3. Transportation occupations
+4. Material moving occupations
+5. Architecture and engineering occupations
+6. Fire fighting and prevention, and other protective service workers including supervisors
+7. Computer and mathematical occupations
+8. Law enforcement workers including supervisors
+9. Farming, fishing and forestry occupations
+10. Food preparation and serving related occupations
+
+## Top 10 occupations for female
+1. Healthcare support occupations
+2. Personal care and service occupations
+3. Health, design and treating practitioners and other technical occupations
+4. Education, training and library occupations
+5. Health technologists and technicians
+6. Community and social service occupations
+7. Office and administrative support occupations
+8. Life, physical, and social service occupations
+9. Business and financial operations occupations
+10. Legal occupations
+
+Besides, we want to see if there's a relation between gender and the variation of number employed by years. Therefore, we draw a bar chart of variance of different occupations in year 2010 and year 2019, and use different color of bars to represent whether this occupation is male-dominated or demale-dominated.
+```{r,fig.height=15}
+GenderData.tidy$MaleDominate <- ifelse(
+  ( 
+        (GenderData.tidy$Gender == "Female" & GenderData.tidy$prop < 0.5) |
+        (GenderData.tidy$Gender == "Male" & GenderData.tidy$prop > 0.5)
+    ),
+  1,
+  0
+)
+
+ggplot(GenderData.tidy,aes(x=fct_reorder(Occupations, variance,.desc = T), y = variance)) +
+  geom_col(fill = ifelse(GenderData.tidy$MaleDominate == 1,"orange","green"))+
+    theme(axis.text=element_text(size=30,angle = 90, vjust = 0.5, hjust=1),
+      axis.title=element_text(size=40,face="bold"),
+      plot.title = element_text(size = 50, face = "bold"))+
+  ylab('variance') + xlab('Occupations') + ggtitle('Variance of Number Employer by Occupations')
+```
+
+From this plot, we can discover that, for the top 10 occupations with greatest variances, there are 5 male-dominated occupations and 5 female-dominated occupations. However, for other occupations, the majority of them are male dominated.
+
