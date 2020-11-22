@@ -1,0 +1,29 @@
+---
+title: "BoxPlots.Rmd"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r Imports}
+library(tidyverse)
+library(RCurl)
+```
+
+```{r Data}
+
+YearlyCleveland <- read.csv(text = getURL('https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/YearlyAggregateClevelandDotPlotData.csv'))
+
+```
+
+```{r Yearly BoxPlots}
+YearlyCleveland
+ggplot(YearlyCleveland) +
+  geom_boxplot(aes(x = YearlyCleveland$NumEmps, y = reorder(x = YearlyCleveland$Occupations,YearlyCleveland$NumEmps)),
+               color = "black", fill = "dark red", alpha = 0.7) + 
+  ggtitle("Boxplot with different Species_size") +
+  xlab("Species_size")
+
+```
