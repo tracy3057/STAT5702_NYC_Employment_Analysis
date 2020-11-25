@@ -1,0 +1,29 @@
+```{r}
+library(tidyverse)
+
+NewSalary <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/salary/NewSalary.csv')
+NewSalary$Occupations <- as.factor(NewSalary)
+NewSalary$Gender <- as.factor(NewSalary$Gender)
+NewSalary$Boroughs <- as.factor(NewSalary$Boroughs)
+NewSalary$year <- as.factor(NewSalary$year)
+NewSalary$year_range <- as.factor(NewSalary$year_range)
+```
+# Analyze on salary variation according to different years
+```{r}
+ggplot(NewSalary) +
+  geom_point(aes(Salary_year, reorder(Occupations,Salary_year), color = year_range)) + ylab('Occupation') + xlab('Salary') + 
+  ggtitle('Salaries of Different Occupations in NYC')
+```
+
+# Analyze on salary difference according to different counties
+```{r}
+ggplot(NewSalary) +
+  geom_point(aes(Salary_county, reorder(Occupations,Salary_county), color = Boroughs)) + ylab('Occupation') + xlab('Salary') + 
+  ggtitle('Salaries of Different Occupations in NYC')
+```
+# Analyze on salary difference according to different genders
+```{r}
+ggplot(NewSalary) +
+  geom_point(aes(Salary_gender, reorder(Occupations,Salary_gender), color = Gender)) + ylab('Occupation') + xlab('Salary') + 
+  ggtitle('Salaries of Different Occupations in NYC')
+```

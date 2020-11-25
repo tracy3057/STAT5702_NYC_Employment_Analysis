@@ -1,0 +1,105 @@
+```{r}
+library(tidyverse)
+
+YearlySalaryData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/occupation_salary/salary.csv')
+
+YearlySalaryData$X <- NULL
+
+YearlySalaryData$Occupations <- as.factor(YearlySalaryData$Occupations)
+YearlySalaryData$Gender <- as.factor(YearlySalaryData$Gender)
+YearlySalaryData$year <- as.character(YearlySalaryData$year)
+
+YearlySalaryData <- rename(YearlySalaryData,
+       "Bronx County" = Bronx.County..New.York,
+       "Kings County" = Kings.County..New.York,
+       "New York County" = New.York.County..New.York,
+       "Queens County" = Queens.County..New.York,
+       "Richmond County" = Richmond.County..New.York)
+
+YearlySalaryData$`Bronx County` <- as.numeric(YearlySalaryData$`Bronx County`)
+YearlySalaryData$`New York County`  <- as.numeric(YearlySalaryData$`New York County`)
+
+YearlySalaryData.tidy <- pivot_longer(YearlySalaryData, cols = c("Bronx County", "Kings County", "New York County", "Queens County", "Richmond County"), names_to = "Boroughs", values_to = "Salary")
+
+RangedYearlySalaryData <- YearlySalaryData.tidy
+
+RangedYearlySalaryData[RangedYearlySalaryData$year=="2010","year"] ="year2010"
+RangedYearlySalaryData[RangedYearlySalaryData$year=="2011","year"] ="year2011"
+RangedYearlySalaryData[RangedYearlySalaryData$year=="2012","year"] ="year2012"
+RangedYearlySalaryData[RangedYearlySalaryData$year=="2013","year"] ="year2013"
+RangedYearlySalaryData[RangedYearlySalaryData$year=="2014","year"] ="year2014"
+RangedYearlySalaryData[RangedYearlySalaryData$year=="2015","year"] ="year2015"
+RangedYearlySalaryData[RangedYearlySalaryData$year=="2016","year"] ="year2016"
+RangedYearlySalaryData[RangedYearlySalaryData$year=="2017","year"] ="year2017"
+RangedYearlySalaryData[RangedYearlySalaryData$year=="2018","year"] ="year2018"
+RangedYearlySalaryData[RangedYearlySalaryData$year=="2019","year"] ="year2019"
+
+
+
+RangedYearlySalaryData.wide <- pivot_wider(RangedYearlySalaryData,names_from = "year",values_from = "Salary")
+
+
+RangedYearlySalaryData.wide  <- RangedYearlySalaryData.wide %>%
+  mutate(year2010_2013 = (as.integer(year2010) +as.integer(year2011)+as.integer(year2012)+as.integer(year2013))/4)
+RangedYearlySalaryData.wide  <- RangedYearlySalaryData.wide %>%
+  mutate(year2014_2016 = (as.integer(year2014)+as.integer(year2015)+as.integer(year2016))/3)
+RangedYearlySalaryData.wide  <- RangedYearlySalaryData.wide %>%
+  mutate(year2017_2019 = (as.integer(year2017)+as.integer(year2018)+as.integer(year2019))/3)
+
+YearlySalaryData_avg<- pivot_longer(RangedYearlySalaryData.wide, cols = c("year2010","year2011","year2012","year2013","year2014","year2015","year2016","year2017","year2018","year2019"),names_to = "year",values_to = "Salary")
+
+YearlySalaryData_avg <- pivot_longer(YearlySalaryData_avg, cols = c("year2010_2013","year2014_2016","year2017_2019"),names_to = "year_range",values_to = "Salary_avg")
+
+YearlySalaryData_avg <- YearlySalaryData_avg[(YearlySalaryData_avg[,"year"] == "year2010" & YearlySalaryData_avg[,"year_range"] == "year2010_2013") |
+                                              (YearlySalaryData_avg[,"year"] == "year2011" & YearlySalaryData_avg[,"year_range"] == "year2010_2013") |
+                                              (YearlySalaryData_avg[,"year"] == "year2012" & YearlySalaryData_avg[,"year_range"] == "year2010_2013") |
+                                              (YearlySalaryData_avg[,"year"] == "year2013" & YearlySalaryData_avg[,"year_range"] == "year2010_2013") |
+                                              (YearlySalaryData_avg[,"year"] == "year2014" & YearlySalaryData_avg[,"year_range"] == "year2014_2016") |
+                                              (YearlySalaryData_avg[,"year"] == "year2015" & YearlySalaryData_avg[,"year_range"] == "year2014_2016") |
+                                              (YearlySalaryData_avg[,"year"] == "year2016" & YearlySalaryData_avg[,"year_range"] == "year2014_2016") |
+                                              (YearlySalaryData_avg[,"year"] == "year2017" & YearlySalaryData_avg[,"year_range"] == "year2017_2019") |
+                                              (YearlySalaryData_avg[,"year"] == "year2018" & YearlySalaryData_avg[,"year_range"] == "year2017_2019") |
+                                              (YearlySalaryData_avg[,"year"] == "year2019" & YearlySalaryData_avg[,"year_range"] == "year2017_2019"),]
+  
+
+#ggplot(YearlySalaryData_avg) +
+#geom_point(aes(Salary_avg, reorder(Occupations,Salary_avg), color = year_range)) + ylab('Occupation') + xlab('Salary') + #ggtitle('Salaries of Different Occupations in NYC')
+ 
+```
+
+# Analyze on salary variation according to different years
+
+```{r}
+# different boroughs
+RichmondData <- YearlySalaryData_avg[YearlySalaryData_avg[,"Boroughs"] == "Richmond County",1:6]
+BronxData <- YearlySalaryData_avg[YearlySalaryData_avg[,"Boroughs"] == "Bronx County",1:6]
+KingsData <- YearlySalaryData_avg[YearlySalaryData_avg[,"Boroughs"] == "Kings County",1:6]
+NewYorkData <- YearlySalaryData_avg[YearlySalaryData_avg[,"Boroughs"] == "New York County",1:6]
+QueensData <- YearlySalaryData_avg[YearlySalaryData_avg[,"Boroughs"] == "Queens County",1:6]
+```
+
+```{r}
+# to csv
+write.csv(YearlySalaryData_avg,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/salary/salary_raw.csv", row.names = FALSE)
+write.csv(RichmondData,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/salary/RichmondData.csv", row.names = FALSE)
+write.csv(BronxData,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/salary/BronxData.csv", row.names = FALSE)
+write.csv(KingsData,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/salary/KingsData.csv", row.names = FALSE)
+write.csv(NewYorkData,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/salary/NewYorkData.csv", row.names = FALSE)
+write.csv(QueensData,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/salary/QueensData.csv", row.names = FALSE)
+
+```
+
+```{r}
+# 5 occupations and 2 genders, so divide by 10
+YearlySalaryData_avg$year_range <- as.factor(YearlySalaryData_avg$year_range)
+YearlySalaryData_avg <- YearlySalaryData_avg %>% 
+  group_by(Occupations, year_range) %>% 
+  mutate(avg_county = (sum(Salary_avg)/10)) %>%
+  ungroup()
+
+#ggplot(YearlySalaryData_avg) +
+#geom_point(aes(avg_county, reorder(Occupations,avg_county), color = year_range)) + ylab('Occupation') + xlab('Salary') + #ggtitle('Salaries of Different Occupations by Different years in NYC')
+```
+
+
+

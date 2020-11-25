@@ -96,8 +96,9 @@ write.csv(TrimmedAggregateYearlyData.tidy,"/Users/tracy/Desktop/STAT5702_NYC_Emp
 YearlyDataWithVariance <- read_csv("/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/TrimmedAggregateYearlyDataWithVariance.csv")
 YearlyDataWithVariance$year <- as.factor(TrimmedAggregateYearlyData.tidy$year)
 YearlyDataWithVariance$Occupations <- as.factor(TrimmedAggregateYearlyData.tidy$Occupations)
-YearlyDataWithVariance <- YearlyDataWithVariance %>% mutate(variance_pct = variance/NumEmps)
-
+YearlyDataWithVariance <- YearlyDataWithVariance %>% 
+  group_by(Occupations) %>%
+  mutate(variance_pct = (variance/sum(NumEmps))/3)
 
 ggplot(YearlyDataWithVariance, aes(NumEmps, reorder(Occupations, variance_pct), color = year)) + geom_point()  +
 geom_point(aes(NumEmps, reorder(Occupations,NumEmps), color = year)) + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation for differenyt years in NYC') 
@@ -249,9 +250,6 @@ From this boxplot, we notice that some occupations are with outliers, which mean
 7. Farming, fishing and forestry occupations
 
 ```{r Gender Cleveland Dot Plot}
-GenderData$Occupations <- as.factor(GenderData$Occupations)
-GenderData$Gender <- as.factor(GenderData$Gender)
-
 GenderData <- GenderData %>% mutate(NumEmps_avg = NumEmps/10)
 
 ggplot(GenderData, aes(NumEmps_avg,fct_reorder2(Occupations,Gender=='Female',NumEmps_avg, .desc=FALSE),color = Gender)) + geom_point() +
@@ -262,6 +260,10 @@ From the figure above, we can see that for some occupations, there are huge dist
 
 ```{r,fig.height=18}
 GenderData$X <- NULL
+
+GenderData$Occupations <- as.factor(GenderData$Occupations)
+GenderData$Gender <- as.factor(GenderData$Gender)
+
 GenderData.wide <- pivot_wider(GenderData, names_from = "Gender", values_from = "NumEmps")
 GenderData.wide$variance <- with(GenderData.wide,abs(Male - Female))
 GenderData.tidy <- pivot_longer(GenderData.wide, cols = c("Female","Male"), names_to = "Gender", values_to = "NumEmps")
@@ -271,7 +273,7 @@ GenderData.tidy <- GenderData.tidy %>%
   mutate(prop = NumEmps/sum(NumEmps)) %>%
   ungroup()
 
-GenderData.tidy <- GenderData.tidy %>% mutate(variance_pct = variance/NumEmps)
+GenderData.tidy <- GenderData.tidy %>% mutate(variance_pct = variance/sum(NumEmps))
 
 ggplot(GenderData.tidy,aes(x = fct_reorder2(Occupations,Gender == "Female",prop,.desc=FALSE), y=prop,fill=Gender)) + 
   geom_bar(position='fill', stat='identity')+
@@ -323,13 +325,14 @@ ggplot(GenderData.tidy,aes(x=fct_reorder(Occupations, variance_pct,.desc = T), y
     theme(axis.text=element_text(size=30,angle = 90, vjust = 0.5, hjust=1),
       axis.title=element_text(size=40,face="bold"),
       plot.title = element_text(size = 50, face = "bold"))+
-  ylab('variance') + xlab('Occupations') + ggtitle('Variance of Number Employer by Occupations')
+  ylab('variance_pct') + xlab('Occupations') + ggtitle('Variance of Number Employer by Occupations')
 
 ```
 
 From this plot, we can discover that, for the top 10 occupations with greatest variances, there are 5 male-dominated occupations and 5 female-dominated occupations. However, for other occupations, the majority of them are male dominated.
 
 ```{r,fig.height=15}
+# the variance is the variance by year
 TotalData <- merge(YearlyDataWithVariance,GenderData.tidy[c(1,7)],by="Occupations")
 
 ggplot(TotalData,aes(x=fct_reorder(Occupations, variance_pct,.desc = T), y = variance_pct)) +
