@@ -126,6 +126,7 @@ It is also very important to analyze on the variations of salaries of different 
 
 ```{r}
 # add variance to NewSalary
+# occupation, year, Salary_YearlyAvg
 NewSalaryWithVariance <- NewSalary %>% select(1, 4, 11)
 NewSalaryWithVariance <- unique(NewSalaryWithVariance)
 
@@ -206,10 +207,10 @@ CountySalary <- CountySalary %>%
 CountySalary$index <- ifelse(CountySalary$Salary_county == CountySalary$MaxValue, "Max Salary", 
                              ifelse(CountySalary$Salary_county == CountySalary$MinValue, "Min Salary", 0))
 
-CountySalary <- CountySalary[CountySalary$index == "Max Salary" | CountySalary$index == "Min Salary",]
-CountySalary <- CountySalary %>% select(1,2,6) 
+CountySalary2 <- CountySalary[CountySalary$index == "Max Salary" | CountySalary$index == "Min Salary",]
+CountySalary2 <- CountySalary2 %>% select(1,2,6) 
 
-CountySalary %>%
+CountySalary2 %>%
 group_by(Boroughs, index) %>%
 summarize(count=n()) %>%
 ggplot(aes(fill=index,y=count, x=Boroughs)) +
@@ -222,12 +223,68 @@ ggtitle("Distribution of the Highest and Lowest wages in different Counties")
 To see whether there are changes of the distribution of highest and lowest wages in different countries, we draw a stacked bar chart by years. We use different colors to represent different counties.
 
 ```{r}
-CountyYearlySalary <- NewSalary %>% select(1, 3, 9)
-```
+CountyYearlySalary <- NewSalary %>% select(1, 3, 4, 12)
+CountyYearlySalary <- unique(CountyYearlySalary)
 
+CountyYearlySalary <- CountyYearlySalary %>% 
+  group_by(Occupations, year) %>% 
+  mutate(MinValue = min(Salary_CountyYear), MaxValue = max(Salary_CountyYear)) %>%
+  ungroup()
+
+CountyYearlySalary$index <- ifelse(CountyYearlySalary$Salary_CountyYear == CountyYearlySalary$MaxValue, "Max Salary", 
+                             ifelse(CountyYearlySalary$Salary_CountyYear == CountyYearlySalary$MinValue, "Min Salary", 0))
+
+CountyYearlySalary <- CountyYearlySalary[CountyYearlySalary$index == "Max Salary" | CountyYearlySalary$index == "Min Salary",]
+CountyYearlySalary <- CountyYearlySalary %>% select(1,2,3,7) 
+CountyYearlySalary$index <- as.factor(CountyYearlySalary$index)
+
+summary <- CountyYearlySalary %>%
+  group_by(index,year,Boroughs) %>%
+  summarize(count=n()) %>%
+  mutate(prop = count/sum(count))
+
+ggplot(data = summary, aes(fill=Boroughs, x=year, y=prop)) +
+           geom_bar(position='fill', stat='identity') +
+           facet_wrap(~index, ncol=1)
+```
+As can be seen in this plot, from the perspective of each year alone, the situation is slightly different from the overall average, which is reflected in the following aspects.
+
+### For the max salary
+In the overall trend, maximum salary for all occupations do not lie in Bronx County and Kings County. However, as can be seen from the stacked bar chart, in year 2010, 2012, 2013 and 2014, there are some occupations with highest salary in Bronx County. Also, except for year 2014 and year 2017, there are some occupations with highest salary in Kings County.
+### For the min salary
+In the overall trend, minimum salary for all occupations od not lie in Queens County and Richmond County. However, as can be seen from the stacked bar chart, except for year 2013, there are some occupations with lowest salary in Queens County. Also, except for year 2018, there are some occupations with lowest salary in Richmond County.
 
 ## Variations in salaries between different counties
-use the biggest 3 counties to minus the smallest one, divide by the salary of the smallest one and then add them up.
+We also discover that the variations among different boroughs for different occupations are different. Therefore, we use a bar chart to order the degree of variance among different boroughs for all types of occupations. For each occupation, we use the salary in five counties to minus the smallest salary, add them up and divide the sum by 5. Then, we  divide the value by the smallest salary to represent the variance of each occupation.
+
+```{r,fig.height=15}
+CountySalary3 <- CountySalary %>% select(1:4)
+CountySalary3$variance <- with(CountySalary3, Salary_county - MinValue)
+
+CountySalary3 <- CountySalary3 %>% 
+  group_by(Occupations) %>% 
+  mutate(variance_pct = (sum(variance)/5)/MinValue) %>%
+  ungroup() %>% select(1,6) %>% unique()
+
+ggplot(CountySalary3,aes(x=fct_reorder(Occupations, variance_pct,.desc = T), y = variance_pct)) +
+  geom_col(fill ="light blue")+
+    theme(axis.text=element_text(size=30,angle = 90, vjust = 0.5, hjust=1),
+      axis.title=element_text(size=40,face="bold"),
+      plot.title = element_text(size = 50, face = "bold"))+
+  ylab('variance_pct') + xlab('Occupations') + ggtitle('Variance of Salary in Different Boroughs by Occupations')
+```
+### Top 5 in Variation
+1. Sales and related occupation
+2. Legal occupations
+3. Management occupations
+4. Farming, fishing, and forestry occupations
+5. Arts, design, entertainment, sports, and media occupations
+### Last 5 in Variation
+1. Personal care and service occupations
+2. Health technologists and technicians
+3. Community and social service occupations
+4. Food preparation and serving related occupations
+5. Life, physical, and social science occupations
 
 
 # Analyze on salary difference according to different genders
@@ -236,3 +293,5 @@ ggplot(NewSalary) +
   geom_point(aes(Salary_gender, reorder(Occupations,Salary_gender), color = Gender)) + ylab('Occupation') + xlab('Salary') + 
   ggtitle('Salaries of Different Occupations of Different Genders in NYC')
 ```
+1. a bar chart to compare the variance
+2. for the occupations with top 6 variance, analyze whether the difference is always big in all the 10 years.
