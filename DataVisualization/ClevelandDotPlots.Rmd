@@ -80,7 +80,7 @@ geom_point(aes(NumEmps_avg, reorder(Occupations,NumEmps_avg), color = year_range
 ```
 
 
-```{r,fig.width=}
+```{r}
 # add variance to TrimmedAggregateYearlyData
 TrimmedAggregateYearlyData$X <- NULL
 TrimmedAggregateYearlyData.wide <- pivot_wider(TrimmedAggregateYearlyData,names_from = year, values_from = NumEmps)
