@@ -1,5 +1,6 @@
 ```{r}
 library(tidyverse)
+library(mosaic)
 
 NewSalary <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/salary/NewSalary.csv')
 NewSalary$Occupations <- as.factor(NewSalary$Occupations)
@@ -293,5 +294,96 @@ ggplot(NewSalary) +
   geom_point(aes(Salary_gender, reorder(Occupations,Salary_gender), color = Gender)) + ylab('Occupation') + xlab('Salary') + 
   ggtitle('Salaries of Different Occupations of Different Genders in NYC')
 ```
-1. a bar chart to compare the variance
-2. for the occupations with top 6 variance, analyze whether the difference is always big in all the 10 years.
+As can be seen in this Cleveland dot plot, the salaries of some occupations varies a lot between different genders, while some other occupations have similar salaries for two genders. Also, for some kinds of occupations, male have higher salaries and for other kinds of occupations, woman have higher salaries. To have a deeper understanding of these characteristics, we have a deeper analysis on salaries for different genders in different occupations.
+## Salaries Variance between Genders
+We use a bar chart to order the salary variance between genders for different occupations. To quantify the difference, we divide the income difference between male and female by the average salary of the occupation.
+```{r}
+GenderSalary <- NewSalary %>% select(1, 2, 10,13)
+GenderSalary <- unique(GenderSalary)
+
+GenderSalary <- pivot_wider(GenderSalary, names_from = "Gender", values_from = "Salary_gender")
+GenderSalary$variance <- with(GenderSalary, Male - Female)
+
+GenderSalary <- GenderSalary %>% 
+  mutate(variance_pct = variance/Salary_occupation)
+
+ggplot(GenderSalary,aes(x=fct_reorder(Occupations, abs(variance_pct)), y = variance_pct)) +
+  geom_col(fill = "light blue")+
+  coord_flip()+
+    theme(axis.text=element_text(),
+      axis.title=element_text(face="bold"),
+      plot.title = element_text(face = "bold"))+ xlab('variance_pct') + ylab('Occupations') + ggtitle('Variance of Salaries for Different Genders')
+
+```
+## General Characteristics of Salaries Variance between Genders
+From the horizontal bar chart above, we discover the following characteristics.
+For most of the occupations, male employees have higher salaries than female employees. Female employees only have higher salaries in 4 kinds of occupations among the 25 kinds of occupations, namely, Construction and extraction occupations, Installation, maintenance, and repair occupations, Community and social service occupations, and Transportation occupations.
+
+## Top 5 and Last 5 in Variance
+
+### Top 5
+1. Sales and related occupations
+2. Building and grounds cleaning and maintenance occupations
+3. Material moving occupations
+4. Production occupations
+5. Personal care and service occupations
+
+### Last 5
+1. Transportation occupations
+2. Office and administrative support occupations
+3. Community and social service occupations
+4. Installation, maintenance, and repair occupations
+5. Computer and mathematical occupations
+
+## Relation between Size and Stability of Gender Salary Difference
+We also want to analyze about the stability of the distinction between genders itself, to see if there is a relation between the size and the stability of the variance.
+
+```{r,fig.height=15}
+BigVarInGender <- NewSalary
+
+BigVarInGender$year <- as.character(BigVarInGender$year)
+
+BigVarInGender <- BigVarInGender %>% select(1,2,4,11,14) %>% unique()
+
+BigVarInGender <- pivot_wider(BigVarInGender, names_from = "Gender", values_from = "Salary_GenderYear")
+BigVarInGender$variance <- with(BigVarInGender, abs(Male - Female)) 
+
+BigVarInGender <- BigVarInGender %>% 
+  mutate(variance_pct = variance/Salary_YearlyAvg)
+
+ggplot(BigVarInGender) +
+  geom_boxplot(aes(x = reorder(Occupations, -variance_pct, FUN = median), y = variance_pct),
+               color = "black", fill = "dark red", alpha = 0.7) + 
+  ggtitle("Boxplots with Number of Employed for Different Occupations") +
+  xlab("occupations")+
+  theme(axis.text=element_text(size = 40, angle = 90, vjust = 0.5, hjust=1),
+        axis.title=element_text(size=50,face="bold"),
+        plot.title = element_text(size = 60, face = "bold"))
+```
+However, there's no clear connections between the size and stability of variance.
+
+## Relation between Number of Employed Difference and Salary Difference in Gender
+Intuitively, the gender composition of employees in a profession is related to the level of wages for changing gender. We want to analyze if this intuition makes sense. THerefore, we use two categorical variables to represent the two characteristics, namely "Gender Distribution" and "Salary Distribution". For the category of "Gender Distribution", there are two values, Male-dominated, which means there are more male employees in this occupation than female employees, and Female-dominated, which means there are more female employees in this occupation than male employees. For the category of "Salary Distribution", we also set two values, Male-higher, which means male employees have higher salary in this occupation, and Female-higher, which means female employees have higher salary in this occupation. Then, we draw a mosaic plot to measure the relation.
+```{r}
+TidyGenderData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/salary/TidyGenderData.csv')
+TidyGenderData <- TidyGenderData %>% select(1,8) %>% unique()
+
+GenderSalary$Salary_Distribution <- ifelse(
+  ( 
+        (GenderSalary$variance_pct > 0) 
+    ),
+  "Male-higher",
+  "Female-higher"
+)
+
+GenderSalary2 <- GenderSalary %>% select(1,8) %>% unique()
+
+GenderNumSal <- merge(TidyGenderData,GenderSalary2,by="Occupations")
+
+colors <- tibble('0' = "#8461c1", '1' = "#5e3c99")
+
+mosaic(Gender.Distribution ~ Salary_Distribution, direction = "v", GenderNumSal, highlighting_fill = c(colors$'0', colors$'1'),
+       main = "mosaic plot of `Gender Distribution` and `Salary Distribution`")
+
+```
+From this mosaic plot, we can see that salary distribution is related to gender composition. However, the characteristic of this connection is against tuition. We tend to think that in the "Female-higher" salary distribution group, there will be more female-dominated occupations, and in the "Male-higher" salary distribution group, there will be more male-dominated occupations. However, the conclusion from the plot is opposite against our tuition.

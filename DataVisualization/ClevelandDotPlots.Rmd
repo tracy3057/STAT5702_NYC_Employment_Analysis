@@ -281,6 +281,7 @@ ggplot(GenderData.tidy,aes(x = fct_reorder2(Occupations,Gender == "Female",prop,
   theme(axis.text=element_text(size = 40, angle = 90, vjust = 0.5, hjust=1),
         axis.title=element_text(size=50,face="bold"),
         plot.title = element_text(size = 60, face = "bold"))
+
 ```
 
 
@@ -311,17 +312,19 @@ From this plot, we can list the top ten occupations with high percentages of mal
 
 Besides, we want to see if there's a relation between gender and the variation of number employed by years. Therefore, we draw a bar chart of variance of different occupations in year 2010 and year 2019, and use different color of bars to represent whether this occupation is male-dominated or demale-dominated.
 ```{r,fig.height=15}
-GenderData.tidy$MaleDominate <- ifelse(
+GenderData.tidy$`Gender Distribution` <- ifelse(
   ( 
         (GenderData.tidy$Gender == "Female" & GenderData.tidy$prop < 0.5) |
         (GenderData.tidy$Gender == "Male" & GenderData.tidy$prop > 0.5)
     ),
-  1,
-  0
+  "Male-dominated",
+  "Female-dominated"
 )
 
+write.csv(GenderData.tidy,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/salary/TidyGenderData.csv", row.names = FALSE)
+
 ggplot(GenderData.tidy,aes(x=fct_reorder(Occupations, variance_pct,.desc = T), y = variance_pct)) +
-  geom_col(fill = ifelse(GenderData.tidy$MaleDominate == 1,"orange","green"))+
+  geom_col(fill = ifelse(GenderData.tidy$`Gender Distribution` == "Male-dominated","orange","green"))+
     theme(axis.text=element_text(size=30,angle = 90, vjust = 0.5, hjust=1),
       axis.title=element_text(size=40,face="bold"),
       plot.title = element_text(size = 50, face = "bold"))+
