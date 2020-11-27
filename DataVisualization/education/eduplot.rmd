@@ -1,0 +1,22 @@
+```{r}
+library(tidyverse)
+
+Education <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/education/Education.csv')
+Salary_edu <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/salary/NewSalary.csv')
+NumEmp_edu <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/YearlyAggregateClevelandDotPlotData.csv')
+
+Education$X <- NULL
+NumEmp_edu$X <- NULL
+```
+
+```{r}
+BronxEducation <- Education %>% select(1,5,6,7,20)
+BronxSalary <- Salary_edu %>% select(2,3,4,12,14) %>% unique()
+
+BronxEducation$Education_Level <- as.factor(BronxEducation$Education_Level)
+BronxEducation$year <- as.factor(BronxEducation$year)
+
+BronxEducation <- BronxEducation %>% pivot_longer(cols = !c(Education_Level,year),names_to = "Location_Gender", values_to = "count")
+```
+
+
