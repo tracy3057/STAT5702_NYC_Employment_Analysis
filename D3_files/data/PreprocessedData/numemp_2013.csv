@@ -1,26 +1,26 @@
-Occupations,NumEmps,year
-Management occupations,623345.0,2013
-Business and financial operations occupations,366764.0,2013
-Computer and mathematical occupations,156797.0,2013
-Architecture and engineering occupations,51193.0,2013
-"Life, physical, and social science occupations",49862.0,2013
-Community and social service occupations,122204.0,2013
-Legal occupations,132560.0,2013
-"Education, training, and library occupations",420555.0,2013
-"Arts, design, entertainment, sports, and media occupations",346127.0,2013
-Health diagnosing and treating practitioners and other technical occupations,215899.0,2013
-Health technologists and technicians,66923.0,2013
-Healthcare support occupations,270652.0,2013
-"Fire fighting and prevention, and other protective service workers including supervisors",105423.0,2013
-Law enforcement workers including supervisors,54208.0,2013
-Food preparation and serving related occupations,366800.0,2013
-Building and grounds cleaning and maintenance occupations,314297.0,2013
-Personal care and service occupations,285323.0,2013
-Sales and related occupations,645353.0,2013
-Office and administrative support occupations,758967.0,2013
-"Farming, fishing, and forestry occupations",4093.0,2013
-Construction and extraction occupations,274792.0,2013
-"Installation, maintenance, and repair occupations",125470.0,2013
-Production occupations,168698.0,2013
-Transportation occupations,249087.0,2013
-Material moving occupations,93078.0,2013
+Occupations,NumEmps
+Management occupations,623345.0
+Business and financial operations occupations,366764.0
+Computer and mathematical occupations,156797.0
+Architecture and engineering occupations,51193.0
+"Life, physical, and social science occupations",49862.0
+Community and social service occupations,122204.0
+Legal occupations,132560.0
+"Education, training, and library occupations",420555.0
+"Arts, design, entertainment, sports, and media occupations",346127.0
+Health diagnosing and treating practitioners and other technical occupations,215899.0
+Health technologists and technicians,66923.0
+Healthcare support occupations,270652.0
+"Fire fighting and prevention, and other protective service workers including supervisors",105423.0
+Law enforcement workers including supervisors,54208.0
+Food preparation and serving related occupations,366800.0
+Building and grounds cleaning and maintenance occupations,314297.0
+Personal care and service occupations,285323.0
+Sales and related occupations,645353.0
+Office and administrative support occupations,758967.0
+"Farming, fishing, and forestry occupations",4093.0
+Construction and extraction occupations,274792.0
+"Installation, maintenance, and repair occupations",125470.0
+Production occupations,168698.0
+Transportation occupations,249087.0
+Material moving occupations,93078.0
