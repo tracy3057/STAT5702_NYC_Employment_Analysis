@@ -1,0 +1,390 @@
+```{r}
+library(tidyverse)
+library(mosaic)
+library(vcd)
+
+NewSalary <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Salary/NewSalary.csv')
+NewSalary$Occupations <- as.factor(NewSalary$Occupations)
+NewSalary$Gender <- as.factor(NewSalary$Gender)
+NewSalary$Boroughs <- as.factor(NewSalary$Boroughs)
+NewSalary$year <- as.factor(NewSalary$year)
+NewSalary$year_range <- as.factor(NewSalary$year_range)
+```
+# Analyze on salary variation according to different years
+```{r}
+ggplot(NewSalary) +
+  geom_point(aes(Salary_year, reorder(Occupations,Salary_avg), color = year_range)) + ylab('Occupation') + xlab('Salary') + 
+  ggtitle('Salaries of Different Occupations of Different Times in NYC')
+```
+## Top 3 and Last 3 Occupations in Salary
+
+### Top 3
+1. Legal occupations
+This occupation is in an monotonous increasing trend in salary, and the increasing speed is also becoming faster.
+2. Health diagnosing and treating practitioners and other technical occupations
+This occupation also has a monotonous increasing trend in salary.
+3. Computer and mathematical occupations
+The salary variation trend of this group is similar to the previous two groups.
+
+### Last 3
+1. Food preparation and serving related occupations
+This occupation has the lowest salary within the year range between 2010 and 2013. However, its salary is in an increasing trend by years.
+2. Farming, fishing, and forestry occupations
+The salary for this occupation decreased first and then increased. However, it did not reach the salary level to the year range from 2010 to 2013 even after increasing.
+3. Personal care and service occupations
+The salary trend for this occupation also decreased first and then increased. Different from the occupation of farming, fishing, and forestry occupations, the salary only dropped a little bit first and then increased a lot. Therefore, generally speaking, the salary of this occupation increased.
+
+## Different trends by years
+Usually, we tend to think salaries should have increasing trends by years. From the plot, however, we can discover the salaries do not have an increasing trend for all types of occupations. Among all types of occupations, only two types of occupations have lower salaries in the year range from 2017 to 2019 than in the year range from 2010 to 2013, namely, farming, fishing and forestry occupations and healthcare support occupations. Generally speaking, there are two different trends of salaries, namely, a monotonous increasing trend, which includes 18 occupations, and the trend that first decreases then increases, which includes 7 occupations.
+
+### Monotonous Increase
+There are kinds of occupations in this trend group.
+1. Legal occupations
+2. Health diagnosing and treating practitioners and other technical occupations
+3. Computer and mathematical occupations
+4. Management occupations
+5. Business and financial operations occupations
+6. Architecture and engineering occupations
+7. Arts, design, entertainment, sports, and media occupations
+8. Education, training, and library occupations
+9. Installation, maintenance, and repair occupations
+10. Community and social service occupations
+11. Construction and extraction occupations
+12. Office and administrative support occupations
+13. Sales and related occupations
+14. Transportation occupations
+15. Production occupations
+16. Building and grounds cleaning and maintenance occupations
+17. Material moving occupations
+18. Food preparation and serving related occupations
+
+### First Decrease Then Increase
+1. Law enforcement workers including supervisors
+2. Life, physical, and social science occupations
+3. Health technologists and technicians
+4. Fire fighting and prevention, and other protective service workers including supervisors
+5. Healthcare support occupations
+6. Personal care and service occupations
+7. Farming, fishing, and forestry occupations
+
+In this category, the salaries of some occupations decreased a lot and then increased a little, which makes these categories have a decreasing trend in general. However, for other occupations, the salaries decreased a little first and then increased a lot. For these occupations, they are in an increasing trend in general. To learn more about the exact changing trends of salaries in this group, we draw scatter plots to analyze the trends of these occupations in detail.
+
+### Detailed Analysis on "First Decrease Then Increase" Occupations
+```{r,fig.height=15}
+NotMonotonous <- NewSalary[NewSalary$Occupations == "Law enforcement workers including supervisors" |
+                                    NewSalary$Occupations == "Life, physical, and social science occupations"|
+                                    NewSalary$Occupations == "Health technologists and technicians"|
+                                    NewSalary$Occupations == "Fire fighting and prevention, and other protective service workers including supervisors"|
+                                    NewSalary$Occupations == "Healthcare support occupations"|
+                                    NewSalary$Occupations == "Personal care and service occupations"|
+                                    NewSalary$Occupations == "Farming, fishing, and forestry occupations",]
+
+NotMonotonous$year <- as.character(NotMonotonous$year)
+
+NotMonotonous$Occupations <- factor(NotMonotonous$Occupations,levels = c("Law enforcement workers including supervisors",
+                                                                         "Life, physical, and social science occupations",
+                                                                         "Health technologists and technicians",
+                                                                         "Fire fighting and prevention, and other protective service workers including supervisors",
+                                                                         "Healthcare support occupations",
+                                                                         "Personal care and service occupations",
+                                                                         "Farming, fishing, and forestry occupations"))
+
+ggplot(NotMonotonous,aes(year,Salary_YearlyAvg)) +
+  geom_point(color = "light blue", size = 10) +
+  facet_wrap(~Occupations,ncol=2,scales = "free_y") +
+    theme(axis.text=element_text(size=30),
+      axis.title=element_text(size=40,face="bold"),
+        strip.text.x = element_text(
+        size = 35, face = "bold.italic"
+        ),
+      strip.text.y = element_text(
+        size = 35, color = "red", face = "bold.italic"
+        ),
+      plot.title = element_text(size = 50, face = "bold"))+
+  ylab('Salary') + xlab('Occupations') + ggtitle('Salaries of Different Years by Occupations in NYC')
+```
+From the above plots, we see both the variations in salaries and the general trends for these occupations.
+1. Law enforcement workers including supervisors
+For this occupation, the salary is in the trend of a wave. The crests are in year 2011, year 2015, and year 2019. The troughs are in year 2012 and year 2016. Besides, there are two special points for this occupation.
+a) The salary dropped a lot from 2015 to 2016, and then returned to normal quickly from 2016 to 2017.
+b) The salary was in an decreasing trend from 2017 to 2018, but it did not continue to decrease, instead, it increased a lot from year 2018 to 2019.
+2. Life, physical, and social science occupations
+For this occupation, the salary is in also in the trend of a wave. At the same time, it is in an increasing trend in general. The crests are in year 2013 and 2018. The troughs are in year 2012 and 2014.
+3. Health technologists and technicians
+From year 2010 to 2013, the salary of this occupation grew slightly at a steady rate. However, from 2014 to 2015, the salary had a sudden drop. After that, the salary started to increase at a higher rate.
+4. Fire fighting and prevention, and other protective service workers including supervisors
+The salary of this group is in a waving trend and remains at a certain level in general. The crests are in 2012, 2013 and 2017, and the troughs are in 2011 and 2016. However, there is a special point for this occupation.
+a) The salary had a sudden increase from year 2016 to year 2017.
+5. Healthcare support occupations
+Generally speaking, the salary trend is in a decreasing trend. The crests occurred in year 2010, 2013, and 2015. The troughs occured in year 2014 and 2017.
+6. Personal care and service occupations
+Generally speaking, the salary of this occupation is in an increasing trend. It remained relatively stable before 2015, after that, the salary increased at a relatively high speed.
+7. Farming, fishing, and forestry occupations
+For this occupation, it salary increased a little from 2011 to 2012, and then began to decrease at a high speed from 2012 to 2014. After that, the salary recovered at a lower but steady speed.
+
+## Variance Percentages
+
+It is also very important to analyze on the variations of salaries of different occupations. Because different occupations have different base wages, sometimes it might be more meaningful to calculate the percentage of wage fluctuations in wages. Here, we use the average wages to represent the wage of different occupations.
+
+```{r}
+# add variance to NewSalary
+# occupation, year, Salary_YearlyAvg
+NewSalaryWithVariance <- NewSalary %>% select(1, 4, 11)
+NewSalaryWithVariance <- unique(NewSalaryWithVariance)
+
+NewSalaryWithVariance.wide <- pivot_wider(NewSalaryWithVariance, names_from = year, values_from = Salary_YearlyAvg)
+
+NewSalaryWithVariance.wide$variance <- with(NewSalaryWithVariance.wide, year2019 - year2010)
+
+NewSalaryWithVariance.tidy <- pivot_longer(NewSalaryWithVariance.wide, cols = c(2:11), names_to = "year", values_to = "Salary_YearlyAvg")
+
+write.csv(NewSalaryWithVariance.tidy,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Salary/NewSalaryWithVariance.csv", row.names = FALSE)
+# draw cleveland dot plot according to variance
+
+NewSalaryWithVariance <- read_csv("/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Salary/NewSalaryWithVariance.csv")
+NewSalaryWithVariance$year <- as.factor(NewSalaryWithVariance$year)
+NewSalaryWithVariance$Occupations <- as.factor(NewSalaryWithVariance$Occupations)
+NewSalaryWithVariance <- NewSalaryWithVariance %>% 
+  group_by(Occupations) %>%
+  mutate(variance_pct = (variance/sum(Salary_YearlyAvg))/3)
+
+ggplot(NewSalaryWithVariance,aes(x=fct_reorder(Occupations, abs(variance_pct)), y = variance_pct)) +
+  geom_col(fill = "light blue")+
+  coord_flip()+
+    theme(axis.text=element_text(),
+      axis.title=element_text(face="bold"),
+      plot.title = element_text(face = "bold"))+ xlab('variance_pct') + ylab('Occupations') + ggtitle('Variance of Salaries')
+```
+As we can see from the above plot, we can discover that the majority of these occupations have positive variances in the past decade. Only two of these categories have negative variances. Among all occupations, the occupation of Construction and extraction occupations has the biggest variation in salary from 2010 to 2019, and the occupation of Healthcare support occupations has smallest variation in salary from 2010 to 2019.
+
+## Boxplot
+In order to see the salary variances of the 25 occupations in detail, we draw boxplotx to make comparisions.
+```{r,fig.width=15,fig.height=15}
+ggplot(NewSalaryWithVariance) +
+  geom_boxplot(aes(x = reorder(Occupations, -Salary_YearlyAvg, FUN = median), y = Salary_YearlyAvg),
+               color = "black", fill = "dark red", alpha = 0.7) + 
+  ggtitle("Boxplots with Number of Employed for Different Occupations") +
+  xlab("occupations")+
+  theme(axis.text=element_text(size = 40, angle = 90, vjust = 0.5, hjust=1),
+        axis.title=element_text(size=50,face="bold"),
+        plot.title = element_text(size = 60, face = "bold"))
+```
+
+
+
+# Analyze on salary difference according to different counties
+```{r}
+ggplot(NewSalary) +
+  geom_point(aes(Salary_county, reorder(Occupations,Salary_county), color = Boroughs)) + ylab('Occupation') + xlab('Salary') + 
+  ggtitle('Salaries of Different Occupations of Different Counties in NYC')
+```
+As can be seen in this plot, for different occupations, the counties with the highest and lowest wages in each occupation are different. For the majority of the occupations, the highest salaries are in New York County and their lowest salaries are in Bronx County. The detailed distribution is shown in the following table statistics. 
+
+## General Distribution of the Highest and Lowest Wages in Different Counties
+
+Boroughs | With the lowest wage | With the highest wage
+------------- | ------------- | -------------
+Bronx County | Legal occupations, Health diagnosing and treating practitioners and other technical occupations, Computer and mathematical occupations, Management occupations, Business and financial operations occupations, Architecture and engineering occupations, Life, physical, and social science occupations, Arts, design, entertainment, sports, and media occupations, Health technologists and technicians, Education, training, and library occupations, Installation, maintenance, and repair occupations, Community and social service occupations, Construction and extraction occupations, Office and administrative support occupations, Sales and related occupations, Transportation occupations, Fire fighting and prevention, and other protective service workers including supervisors, Production occupations, Building and grounds cleaning and maintenance occupations, Personal care and service occupations, Food preparation and serving related occupations | 
+Kings County | Law enforcement workers including supervisors  |
+New York County | Healthcare support occupations, Material moving occupations, Farming, fishing, and forestry occupations | Legal occupations, Health diagnosing and treating practitioners and other technical occupations, Computer and mathematical occupations, Management occupations, Arts, design, entertainment, sports, and media occupations, Health technologists and technicians, Education, training, and library occupations, Community and social service occupations, Office and administrative support occupations, Sales and related occupations, Food preparation and serving related occupations
+Queens County |  | Farming, fishing, and forestry occupations
+Richmond County |  | Law enforcement workers including supervisors, Business and financial operations occupations, Architecture and engineering occupations, Life, physical, and social science occupations, Installation, maintenance, and repair occupations, Construction and extraction occupations, Transportation occupations, Fire fighting and prevention, and other protective service workers including supervisors, Production occupations, Building and grounds cleaning and maintenance occupations, Material moving occupations, Personal care and service occupations
+
+As can be seen in the above table, we discover the following characteristics.
+1) The majority of the highest salaries occur in New York County, many of them also appears in Richmond County, one of them appear in Queens County and none of them appear in Kings County or Bronx County.
+2) Most of the lowest salaries appear in Bronx County. There are also several occupations with the lowest salaries in New York County and one occupation with its lowest salary in Kings County, which is the occupation of Law enforcement workers including supervisors.
+3) The occupations with the lowest salaries in New York County tend to be the occupations with relatively low incomes.
+
+Next, we draw a bar chart to reflect the specific distribution data of the highest and lowest wages in different counties (the average of all years).
+```{r}
+# use 0 or 1 to mark the boroughs with min and max
+CountySalary <- NewSalary %>% select(1, 3, 9)
+CountySalary <- unique(CountySalary)
+
+CountySalary <- CountySalary %>% 
+  group_by(Occupations) %>% 
+  mutate(MinValue = min(Salary_county), MaxValue = max(Salary_county)) %>%
+  ungroup()
+
+CountySalary$index <- ifelse(CountySalary$Salary_county == CountySalary$MaxValue, "Max Salary", 
+                             ifelse(CountySalary$Salary_county == CountySalary$MinValue, "Min Salary", 0))
+
+CountySalary2 <- CountySalary[CountySalary$index == "Max Salary" | CountySalary$index == "Min Salary",]
+CountySalary2 <- CountySalary2 %>% select(1,2,6) 
+
+CountySalary2 %>%
+group_by(Boroughs, index) %>%
+summarize(count=n()) %>%
+ggplot(aes(fill=index,y=count, x=Boroughs)) +
+geom_bar(position="dodge2",stat="identity") +
+xlab("Boroughs")+
+ylab("Count")+
+ggtitle("Distribution of the Highest and Lowest wages in different Counties")
+```
+## Distribution of the Highest and Lowest Wages in Different Counties by Years
+To see whether there are changes of the distribution of highest and lowest wages in different countries, we draw a stacked bar chart by years. We use different colors to represent different counties.
+
+```{r}
+CountyYearlySalary <- NewSalary %>% select(1, 3, 4, 12)
+CountyYearlySalary <- unique(CountyYearlySalary)
+
+CountyYearlySalary <- CountyYearlySalary %>% 
+  group_by(Occupations, year) %>% 
+  mutate(MinValue = min(Salary_CountyYear), MaxValue = max(Salary_CountyYear)) %>%
+  ungroup()
+
+CountyYearlySalary$index <- ifelse(CountyYearlySalary$Salary_CountyYear == CountyYearlySalary$MaxValue, "Max Salary", 
+                             ifelse(CountyYearlySalary$Salary_CountyYear == CountyYearlySalary$MinValue, "Min Salary", 0))
+
+CountyYearlySalary <- CountyYearlySalary[CountyYearlySalary$index == "Max Salary" | CountyYearlySalary$index == "Min Salary",]
+CountyYearlySalary <- CountyYearlySalary %>% select(1,2,3,7) 
+CountyYearlySalary$index <- as.factor(CountyYearlySalary$index)
+
+summary <- CountyYearlySalary %>%
+  group_by(index,year,Boroughs) %>%
+  summarize(count=n()) %>%
+  mutate(prop = count/sum(count))
+
+ggplot(data = summary, aes(fill=Boroughs, x=year, y=prop)) +
+           geom_bar(position='fill', stat='identity') +
+           facet_wrap(~index, ncol=1)
+```
+As can be seen in this plot, from the perspective of each year alone, the situation is slightly different from the overall average, which is reflected in the following aspects.
+
+### For the max salary
+In the overall trend, maximum salary for all occupations do not lie in Bronx County and Kings County. However, as can be seen from the stacked bar chart, in year 2010, 2012, 2013 and 2014, there are some occupations with highest salary in Bronx County. Also, except for year 2014 and year 2017, there are some occupations with highest salary in Kings County.
+### For the min salary
+In the overall trend, minimum salary for all occupations od not lie in Queens County and Richmond County. However, as can be seen from the stacked bar chart, except for year 2013, there are some occupations with lowest salary in Queens County. Also, except for year 2018, there are some occupations with lowest salary in Richmond County.
+
+## Variations in salaries between different counties
+We also discover that the variations among different boroughs for different occupations are different. Therefore, we use a bar chart to order the degree of variance among different boroughs for all types of occupations. For each occupation, we use the salary in five counties to minus the smallest salary, add them up and divide the sum by 5. Then, we  divide the value by the smallest salary to represent the variance of each occupation.
+
+```{r,fig.height=15}
+CountySalary3 <- CountySalary %>% select(1:4)
+CountySalary3$variance <- with(CountySalary3, Salary_county - MinValue)
+
+CountySalary3 <- CountySalary3 %>% 
+  group_by(Occupations) %>% 
+  mutate(variance_pct = (sum(variance)/5)/MinValue) %>%
+  ungroup() %>% select(1,6) %>% unique()
+
+ggplot(CountySalary3,aes(x=fct_reorder(Occupations, variance_pct,.desc = T), y = variance_pct)) +
+  geom_col(fill ="light blue")+
+    theme(axis.text=element_text(size=30,angle = 90, vjust = 0.5, hjust=1),
+      axis.title=element_text(size=40,face="bold"),
+      plot.title = element_text(size = 50, face = "bold"))+
+  ylab('variance_pct') + xlab('Occupations') + ggtitle('Variance of Salary in Different Boroughs by Occupations')
+```
+### Top 5 in Variation
+1. Sales and related occupation
+2. Legal occupations
+3. Management occupations
+4. Farming, fishing, and forestry occupations
+5. Arts, design, entertainment, sports, and media occupations
+### Last 5 in Variation
+1. Personal care and service occupations
+2. Health technologists and technicians
+3. Community and social service occupations
+4. Food preparation and serving related occupations
+5. Life, physical, and social science occupations
+
+
+# Analyze on salary difference according to different genders
+```{r}
+ggplot(NewSalary) +
+  geom_point(aes(Salary_gender, reorder(Occupations,Salary_gender), color = Gender)) + ylab('Occupation') + xlab('Salary') + 
+  ggtitle('Salaries of Different Occupations of Different Genders in NYC')
+```
+As can be seen in this Cleveland dot plot, the salaries of some occupations varies a lot between different genders, while some other occupations have similar salaries for two genders. Also, for some kinds of occupations, male have higher salaries and for other kinds of occupations, woman have higher salaries. To have a deeper understanding of these characteristics, we have a deeper analysis on salaries for different genders in different occupations.
+## Salaries Variance between Genders
+We use a bar chart to order the salary variance between genders for different occupations. To quantify the difference, we divide the income difference between male and female by the average salary of the occupation.
+```{r}
+GenderSalary <- NewSalary %>% select(1, 2, 10,13)
+GenderSalary <- unique(GenderSalary)
+
+GenderSalary <- pivot_wider(GenderSalary, names_from = "Gender", values_from = "Salary_gender")
+GenderSalary$variance <- with(GenderSalary, Male - Female)
+
+GenderSalary <- GenderSalary %>% 
+  mutate(variance_pct = variance/Salary_occupation)
+
+ggplot(GenderSalary,aes(x=fct_reorder(Occupations, abs(variance_pct)), y = variance_pct)) +
+  geom_col(fill = "light blue")+
+  coord_flip()+
+    theme(axis.text=element_text(),
+      axis.title=element_text(face="bold"),
+      plot.title = element_text(face = "bold"))+ xlab('variance_pct') + ylab('Occupations') + ggtitle('Variance of Salaries for Different Genders')
+
+```
+## General Characteristics of Salaries Variance between Genders
+From the horizontal bar chart above, we discover the following characteristics.
+For most of the occupations, male employees have higher salaries than female employees. Female employees only have higher salaries in 4 kinds of occupations among the 25 kinds of occupations, namely, Construction and extraction occupations, Installation, maintenance, and repair occupations, Community and social service occupations, and Transportation occupations.
+
+## Top 5 and Last 5 in Variance
+
+### Top 5
+1. Sales and related occupations
+2. Building and grounds cleaning and maintenance occupations
+3. Material moving occupations
+4. Production occupations
+5. Personal care and service occupations
+
+### Last 5
+1. Transportation occupations
+2. Office and administrative support occupations
+3. Community and social service occupations
+4. Installation, maintenance, and repair occupations
+5. Computer and mathematical occupations
+
+## Relation between Size and Stability of Gender Salary Difference
+We also want to analyze about the stability of the distinction between genders itself, to see if there is a relation between the size and the stability of the variance.
+
+```{r,fig.height=15}
+BigVarInGender <- NewSalary
+
+BigVarInGender$year <- as.character(BigVarInGender$year)
+
+BigVarInGender <- BigVarInGender %>% select(1,2,4,11,14) %>% unique()
+
+BigVarInGender <- pivot_wider(BigVarInGender, names_from = "Gender", values_from = "Salary_GenderYear")
+BigVarInGender$variance <- with(BigVarInGender, abs(Male - Female)) 
+
+BigVarInGender <- BigVarInGender %>% 
+  mutate(variance_pct = variance/Salary_YearlyAvg)
+
+ggplot(BigVarInGender) +
+  geom_boxplot(aes(x = reorder(Occupations, -variance_pct, FUN = median), y = variance_pct),
+               color = "black", fill = "dark red", alpha = 0.7) + 
+  ggtitle("Boxplots with Number of Employed for Different Occupations") +
+  xlab("occupations")+
+  theme(axis.text=element_text(size = 40, angle = 90, vjust = 0.5, hjust=1),
+        axis.title=element_text(size=50,face="bold"),
+        plot.title = element_text(size = 60, face = "bold"))
+```
+However, there's no clear connections between the size and stability of variance.
+
+## Relation between Number of Employed Difference and Salary Difference in Gender
+Intuitively, the gender composition of employees in a profession is related to the level of wages for changing gender. We want to analyze if this intuition makes sense. THerefore, we use two categorical variables to represent the two characteristics, namely "Gender Distribution" and "Salary Distribution". For the category of "Gender Distribution", there are two values, Male-dominated, which means there are more male employees in this occupation than female employees, and Female-dominated, which means there are more female employees in this occupation than male employees. For the category of "Salary Distribution", we also set two values, Male-higher, which means male employees have higher salary in this occupation, and Female-higher, which means female employees have higher salary in this occupation. Then, we draw a mosaic plot to measure the relation.
+```{r}
+TidyGenderData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Salary/TidyGenderData.csv')
+TidyGenderData <- TidyGenderData %>% select(1,8) %>% unique()
+
+GenderSalary$Salary_Distribution <- ifelse(
+  ( 
+        (GenderSalary$variance_pct > 0) 
+    ),
+  "Male-higher",
+  "Female-higher"
+)
+
+GenderSalary2 <- GenderSalary %>% select(1,7) %>% unique()
+
+GenderNumSal <- merge(TidyGenderData,GenderSalary2,by="Occupations")
+
+colors <- tibble('0' = "#8461c1", '1' = "#5e3c99")
+
+mosaic(Gender.Distribution ~ Salary_Distribution, direction = "v", GenderNumSal, highlighting_fill = c(colors$'0', colors$'1'),
+       main = "mosaic plot of `Gender Distribution` and `Salary Distribution`")
+
+```
+From this mosaic plot, we can see that salary distribution is related to gender composition. However, the characteristic of this connection is against tuition. We tend to think that in the "Female-higher" salary distribution group, there will be more female-dominated occupations, and in the "Male-higher" salary distribution group, there will be more male-dominated occupations. However, the conclusion from the plot is opposite against our tuition.

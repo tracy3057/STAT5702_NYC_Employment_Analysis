@@ -1,0 +1,134 @@
+---
+title: "DataPreprocessing"
+author: "Tracy"
+date: "10/9/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
+
+
+```{r}
+# change 'numeric' and 'character' values into 'factor'
+JobType$Label <- as_factor(JobType$Label)
+JobType$year <- as_factor(JobType$year)
+```
+
+```{r,fig.width=15}
+# ggplot(JobType[which(JobType$Label=='Civilian employed population 16 years and over'),], aes(year, Total)) +
+#  geom_bar(stat = "identity")
+ggplot(JobType,aes(year, Total)) +
+  facet_wrap(~ Label,scales = "free")+
+  geom_point()
+```
+```{r}
+employmentByAge$Label <- as_factor(employmentByAge$Label)
+employmentByAge$year <- as_factor(employmentByAge$year)
+```
+
+```{r,fig.width=15}
+ggplot(employmentByAge,aes(year, Total)) +
+  facet_wrap(~ Label,scales = "free")+
+  geom_point()
+```
+```{r}
+employmentByRACE$Label <- as_factor(employmentByRACE$Label)
+employmentByRACE$year <- as_factor(employmentByRACE$year)
+```
+
+```{r,fig.width=15}
+ggplot(employmentByRACE,aes(year, Total)) +
+  facet_wrap(~ Label,scales = "free_y")+
+  geom_point()
+```
+
+```{r}
+employEDUCATION$Label <- as_factor(employEDUCATION$Label)
+employEDUCATION$year <- as_factor(employEDUCATION$year)
+```
+
+```{r,fig.width=10}
+ggplot(employEDUCATION,aes(year, Total)) +
+  facet_wrap(~ Label)+
+  geom_point()
+```
+
+```{r}
+employPorverty$Label <- as_factor(employPorverty$Label)
+employPorverty$year <- as_factor(employPorverty$year)
+```
+
+```{r,fig.width=6}
+ggplot(employPorverty,aes(year, Total)) +
+  geom_point()
+```
+
+```{r}
+employSex$Label <- as_factor(employSex$Label)
+employSex$year <- as_factor(employSex$year)
+```
+
+```{r,fig.width=10}
+ggplot(employSex,aes(year, Total)) +
+  facet_wrap(~ Label)+
+  geom_point()
+```
+
+```{r}
+employDisability$Label <- as_factor(employDisability$Label)
+employDisability$year <- as_factor(employDisability$year)
+```
+
+```{r,fig.width=6}
+ggplot(employDisability,aes(year,UnemploymentRate)) +
+  geom_point()
+```
+
+```{r}
+NYCpopulation$Borough <- as_factor(NYCpopulation$Borough)
+NYCpopulation$Borough <- as_factor(NYCpopulation$Borough)
+
+tidy_NYCpopulation = pivot_longer(NYCpopulation,cols = !c("Borough", "Age"),names_to="year",values_to="people")
+head(tidy_NYCpopulation,10)
+```
+
+```{r,fig.width=20}
+ggplot(tidy_NYCpopulation[which(tidy_NYCpopulation$Borough=='NYC Total'),],aes(year,people)) +
+  facet_wrap( ~ Age, scales = "free")+
+  geom_point()
+```
+
+```{r}
+NewEconomicGrowth$Label <- as_factor(NewEconomicGrowth$year)
+
+NewEconomicGrowth$USAPayrollGrowth <- as.numeric(sub("%","",NewEconomicGrowth$USAPayrollGrowth))/100
+
+NewEconomicGrowth$USAPayrollGrowth <- as.numeric(NewEconomicGrowth$USAPayrollGrowth)
+```
+
+```{r,fig.width=20}
+ggplot(NewEconomicGrowth,aes(year,USAPayrollGrowth)) +
+  geom_point()
+```
+
+```{r}
+tidy_USAgdp = pivot_longer(USAgdp,cols = !c("X", "Country.Name","Country.Code"),names_to="year",values_to="people")
+head(tidy_USAgdp,10)
+
+```
+
+```{r,fig.width=20}
+ggplot(tidy_USAgdp,aes(year,people)) +
+  geom_point()
+```
+
+
+
+
