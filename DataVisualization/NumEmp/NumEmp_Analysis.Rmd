@@ -10,12 +10,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r Data}
 library(tidyverse)
 
-#AggregateData <- read.csv('C:/Users/Administrator/Desktop/columbia/5702/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/AggregateClevelandDotPlotData.csv') #TracyPath
-AggregateData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/AggregateClevelandDotPlotData.csv') #EugenioPath
+AggregateData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/aggregate_cleveland.csv') #EugenioPath
 
-AggregateYearlyData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/YearlyAggregateClevelandDotPlotData.csv')
+AggregateYearlyData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/yearly_cleveland.csv')
 
-GenderData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/GenderClevelandDotPlotData.csv')
+GenderData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/gender_cleveland.csv')
 
 GenderData
 ```
