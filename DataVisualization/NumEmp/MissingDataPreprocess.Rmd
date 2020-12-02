@@ -5,22 +5,46 @@ date: "11/16/2020"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-```{r imports}
+```{r}
+# install packages
+library(tidyverse)
 library(mi)
 library(RCurl)
 ```
 
-```{r visualizing missing data}
-Data <- RaceData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/numemp_03.csv"))
-Data$X <- NULL
-Data$Label <- NULL
-Data$race <- NULL
-Data$year <- NULL
-x <- missing_data.frame(Data)
+
+```{r visualizing missing data,fig.height=10}
+# read in file with missing values and preprocess the dataset by setting categories
+Data_with_missings <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/numemp_occupations.csv"))
+
+Data_with_missings$X <- NULL
+Data_with_missings <- Data_with_missings %>% rename("Bronx" = "Bronx.County..New.York",
+                        "Kings" = "Kings.County..New.York",
+                        "NY" = "New.York.County..New.York",
+                        "Queens" = "Queens.County..New.York",
+                        "Richmond" = "Richmond.County..New.York")
+
+Data_with_missings[Data_with_missings$race=="Asian Alone", "race"] <- "Asian"
+Data_with_missings[Data_with_missings$race=="BLACK OR AFRICAN AMERICAN ALONE", "race"] <- "African"
+Data_with_missings[Data_with_missings$race=="HISPANIC OR LATINO", "race"] <- "Hispanic"
+Data_with_missings[Data_with_missings$race=="Some Other Race Alone", "race"] <- "Other"
+Data_with_missings[Data_with_missings$race=="Two or More Races", "race"] <- "Avove2"
+Data_with_missings[Data_with_missings$race=="White Alone", "race"] <- "White"
+Data_with_missings[Data_with_missings$race=="White Alone", "race"] <- "White"
+Data_with_missings[Data_with_missings$race=="White Alone", "race"] <- "White"
+Data_with_missings[Data_with_missings$race=="WHITE ALONE NOT HISPANIC OR LATINO", "race"] <- "White_not_Hisp."
+
+
+Data_with_missings <-Data_with_missings %>% pivot_longer(cols = !c("Occupations","year","race","Gender"),names_to = "County",values_to = "NumEmp")
+Data_with_missings$category <- paste(Data_with_missings$County,"_",Data_with_missings$race) 
+Data_with_missings <-Data_with_missings %>% select(1,2,4,6,7) %>% unique()
+Data_with_missings<- pivot_wider(Data_with_missings,names_from = category, values_from = NumEmp)
+Data_with_missings <- Data_with_missings %>% select(c(4:38))
+Data_with_missings <- as.data.frame(Data_with_missings)
+
+# use the mi package to analyze missing values
+x <- missing_data.frame(Data_with_missings)
 image(x)
 ```
+
 
