@@ -67,3 +67,20 @@ parcoords(YearBoroughData.wide,
           ),
           withD3 = TRUE) 
 ```
+
+```{r Race and Gender by Occupation}
+PropsByOccupation <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/PropsByOccupation.csv')
+
+parcoords(PropsByOccupation,
+          rownames = F,
+          brushMode = "1D-axes",
+          reorderable = T,
+          queue = T,
+          color = list(
+            colorBy = "boroughs",
+            colorScale = "scaleOrdinal",
+            colorScheme = "schemeCategory10"
+          ),
+          withD3 = TRUE) 
+
+```
