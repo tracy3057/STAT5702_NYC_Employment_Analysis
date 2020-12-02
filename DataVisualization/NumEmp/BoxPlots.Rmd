@@ -14,7 +14,7 @@ library(RCurl)
 
 ```{r Data}
 
-YearlyCleveland <- read.csv(text = getURL('https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/yearly_cleveland.csv'))
+YearlyCleveland <- read.csv(text = getURL('https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/Occupation_Yearly.csv'))
 
 ```
 
