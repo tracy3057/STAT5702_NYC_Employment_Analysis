@@ -1,0 +1,101 @@
+,Gender,Boroughs,year,Salary_CountyGender
+0,Male,Bronx County,year2010,1027104.0
+1,Male,Bronx County,year2011,1029826.0
+2,Male,Bronx County,year2012,992817.0
+3,Male,Bronx County,year2013,1014644.0
+4,Male,Bronx County,year2014,992161.0
+5,Male,Bronx County,year2015,999404.0
+6,Male,Bronx County,year2016,1025672.0
+7,Male,Bronx County,year2017,1036390.0
+8,Male,Bronx County,year2018,1104602.0
+9,Male,Bronx County,year2019,1186587.0
+250,Female,Bronx County,year2010,877637.0
+251,Female,Bronx County,year2011,777553.0
+252,Female,Bronx County,year2012,942151.0
+253,Female,Bronx County,year2013,931609.0
+254,Female,Bronx County,year2014,911700.0
+255,Female,Bronx County,year2015,867427.0
+256,Female,Bronx County,year2016,855854.0
+257,Female,Bronx County,year2017,964764.0
+258,Female,Bronx County,year2018,942385.0
+259,Female,Bronx County,year2019,1045915.0
+500,Male,Queens County,year2010,1073763.0
+501,Male,Queens County,year2011,1113154.0
+502,Male,Queens County,year2012,1124568.0
+503,Male,Queens County,year2013,1155175.0
+504,Male,Queens County,year2014,1106927.0
+505,Male,Queens County,year2015,1179010.0
+506,Male,Queens County,year2016,1191114.0
+507,Male,Queens County,year2017,1272911.0
+508,Male,Queens County,year2018,1287268.0
+509,Male,Queens County,year2019,1318765.0
+750,Female,Queens County,year2010,973733.3333333334
+751,Female,Queens County,year2011,1002251.0
+752,Female,Queens County,year2012,1022020.0
+753,Female,Queens County,year2013,1001189.0
+754,Female,Queens County,year2014,998751.0
+755,Female,Queens County,year2015,1003520.0
+756,Female,Queens County,year2016,1006151.0
+757,Female,Queens County,year2017,1068608.0
+758,Female,Queens County,year2018,1131536.0
+759,Female,Queens County,year2019,1159982.0
+1000,Male,Kings County,year2010,1110656.0
+1001,Male,Kings County,year2011,1078796.0
+1002,Male,Kings County,year2012,1105549.0
+1003,Male,Kings County,year2013,1082759.0
+1004,Male,Kings County,year2014,1116685.0
+1005,Male,Kings County,year2015,1193253.0
+1006,Male,Kings County,year2016,1213772.0
+1007,Male,Kings County,year2017,1231279.0
+1008,Male,Kings County,year2018,1356124.0
+1009,Male,Kings County,year2019,1384767.0
+1250,Female,Kings County,year2010,930423.0
+1251,Female,Kings County,year2011,1014637.0
+1252,Female,Kings County,year2012,986303.0
+1253,Female,Kings County,year2013,1026974.3333333334
+1254,Female,Kings County,year2014,954149.0
+1255,Female,Kings County,year2015,1011579.5
+1256,Female,Kings County,year2016,1027993.0
+1257,Female,Kings County,year2017,1100297.0
+1258,Female,Kings County,year2018,1151462.0
+1259,Female,Kings County,year2019,1212924.0
+1500,Male,New York County,year2010,1388041.0
+1501,Male,New York County,year2011,1358638.0
+1502,Male,New York County,year2012,1398456.0
+1503,Male,New York County,year2013,1474685.0
+1504,Male,New York County,year2014,1390985.0
+1505,Male,New York County,year2015,1492317.0
+1506,Male,New York County,year2016,1491534.0
+1507,Male,New York County,year2017,1537626.0
+1508,Male,New York County,year2018,1640505.0
+1509,Male,New York County,year2019,1750050.0
+1750,Female,New York County,year2010,1032709.0
+1751,Female,New York County,year2011,1138263.0
+1752,Female,New York County,year2012,1190087.0
+1753,Female,New York County,year2013,1155562.0
+1754,Female,New York County,year2014,1227499.0
+1755,Female,New York County,year2015,1190636.0
+1756,Female,New York County,year2016,1271186.0
+1757,Female,New York County,year2017,1311471.0
+1758,Female,New York County,year2018,1460356.0
+1759,Female,New York County,year2019,1440628.0
+2000,Male,Richmond County,year2010,1379909.5
+2001,Male,Richmond County,year2011,1362023.5
+2002,Male,Richmond County,year2012,1328852.5
+2003,Male,Richmond County,year2013,1437224.5
+2004,Male,Richmond County,year2014,1324127.5833333333
+2005,Male,Richmond County,year2015,1364162.5833333333
+2006,Male,Richmond County,year2016,1388418.5833333333
+2007,Male,Richmond County,year2017,1470227.8333333333
+2008,Male,Richmond County,year2018,1678798.8333333333
+2009,Male,Richmond County,year2019,1503952.8333333333
+2250,Female,Richmond County,year2010,1061814.9166666665
+2251,Female,Richmond County,year2011,1092856.5833333333
+2252,Female,Richmond County,year2012,991089.9166666666
+2253,Female,Richmond County,year2013,1217076.25
+2254,Female,Richmond County,year2014,1056688.625
+2255,Female,Richmond County,year2015,1132424.625
+2256,Female,Richmond County,year2016,1167949.625
+2257,Female,Richmond County,year2017,1202854.6666666665
+2258,Female,Richmond County,year2018,1255928.6666666665
+2259,Female,Richmond County,year2019,1196893.6666666665
