@@ -1,0 +1,12 @@
+```{r}
+library(tidyverse)
+```
+
+
+```{r}
+AggregateYearlyData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/Occupation_Yearly.csv')
+AggregateYearlyData$X <- NULL
+AggregateYearlyData.wide <- AggregateYearlyData %>% pivot_wider(names_from = year, values_from = YearlyNumEmp)
+write_csv(AggregateYearlyData.wide,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/AggregateYearlyData.wide.csv")
+```
+
