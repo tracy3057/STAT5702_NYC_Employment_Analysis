@@ -1,0 +1,176 @@
+,Occupations,race,MeanNumEmpbyRace
+0,Management occupations,Asian Alone,51997.1
+5,Business and financial operations occupations,Asian Alone,43884.475
+10,Computer and mathematical occupations,Asian Alone,25993.4
+15,Architecture and engineering occupations,Asian Alone,7804.75
+20,"Life, physical, and social science occupations",Asian Alone,6499.35
+25,Community and social service occupations,Asian Alone,5577.775
+30,Legal occupations,Asian Alone,7682.625
+35,"Education, training, and library occupations",Asian Alone,23288.35
+40,"Arts, design, entertainment, sports, and media occupations",Asian Alone,20710.0
+45,Health diagnosing and treating practitioners and other technical occupations,Asian Alone,34869.025
+50,Health technologists and technicians,Asian Alone,8984.025
+55,Healthcare support occupations,Asian Alone,24484.05
+60,"Fire fighting and prevention, and other protective service workers including supervisors",Asian Alone,4465.425
+65,Law enforcement workers including supervisors,Asian Alone,2598.05
+70,Food preparation and serving related occupations,Asian Alone,48766.45
+75,Building and grounds cleaning and maintenance occupations,Asian Alone,13638.925
+80,Personal care and service occupations,Asian Alone,31581.125
+85,Sales and related occupations,Asian Alone,66329.325
+90,Office and administrative support occupations,Asian Alone,61647.725
+95,"Farming, fishing, and forestry occupations",Asian Alone,343.225
+100,Construction and extraction occupations,Asian Alone,15679.5
+105,"Installation, maintenance, and repair occupations",Asian Alone,7497.175
+110,Production occupations,Asian Alone,20741.55
+115,Transportation occupations,Asian Alone,35488.075
+120,Material moving occupations,Asian Alone,6767.275
+2500,Management occupations,BLACK OR AFRICAN AMERICAN ALONE,54302.6
+2505,Business and financial operations occupations,BLACK OR AFRICAN AMERICAN ALONE,33746.3
+2510,Computer and mathematical occupations,BLACK OR AFRICAN AMERICAN ALONE,12372.5
+2515,Architecture and engineering occupations,BLACK OR AFRICAN AMERICAN ALONE,4676.5
+2520,"Life, physical, and social science occupations",BLACK OR AFRICAN AMERICAN ALONE,2981.6
+2525,Community and social service occupations,BLACK OR AFRICAN AMERICAN ALONE,34395.5
+2530,Legal occupations,BLACK OR AFRICAN AMERICAN ALONE,8726.7
+2535,"Education, training, and library occupations",BLACK OR AFRICAN AMERICAN ALONE,49246.3
+2540,"Arts, design, entertainment, sports, and media occupations",BLACK OR AFRICAN AMERICAN ALONE,15563.6
+2545,Health diagnosing and treating practitioners and other technical occupations,BLACK OR AFRICAN AMERICAN ALONE,32166.6
+2550,Health technologists and technicians,BLACK OR AFRICAN AMERICAN ALONE,21601.5
+2555,Healthcare support occupations,BLACK OR AFRICAN AMERICAN ALONE,91910.1
+2560,"Fire fighting and prevention, and other protective service workers including supervisors",BLACK OR AFRICAN AMERICAN ALONE,34778.2
+2565,Law enforcement workers including supervisors,BLACK OR AFRICAN AMERICAN ALONE,14939.7
+2570,Food preparation and serving related occupations,BLACK OR AFRICAN AMERICAN ALONE,34734.3
+2575,Building and grounds cleaning and maintenance occupations,BLACK OR AFRICAN AMERICAN ALONE,46143.1
+2580,Personal care and service occupations,BLACK OR AFRICAN AMERICAN ALONE,52722.2
+2585,Sales and related occupations,BLACK OR AFRICAN AMERICAN ALONE,75549.0
+2590,Office and administrative support occupations,BLACK OR AFRICAN AMERICAN ALONE,132464.3
+2595,"Farming, fishing, and forestry occupations",BLACK OR AFRICAN AMERICAN ALONE,266.1
+2600,Construction and extraction occupations,BLACK OR AFRICAN AMERICAN ALONE,31857.3
+2605,"Installation, maintenance, and repair occupations",BLACK OR AFRICAN AMERICAN ALONE,19155.5
+2610,Production occupations,BLACK OR AFRICAN AMERICAN ALONE,16399.5
+2615,Transportation occupations,BLACK OR AFRICAN AMERICAN ALONE,52803.5
+2620,Material moving occupations,BLACK OR AFRICAN AMERICAN ALONE,16416.5
+5000,Management occupations,HISPANIC OR LATINO,62202.2
+5005,Business and financial operations occupations,HISPANIC OR LATINO,28606.8
+5010,Computer and mathematical occupations,HISPANIC OR LATINO,11667.5
+5015,Architecture and engineering occupations,HISPANIC OR LATINO,5328.2
+5020,"Life, physical, and social science occupations",HISPANIC OR LATINO,3880.9
+5025,Community and social service occupations,HISPANIC OR LATINO,18007.3
+5030,Legal occupations,HISPANIC OR LATINO,8714.6
+5035,"Education, training, and library occupations",HISPANIC OR LATINO,46020.9
+5040,"Arts, design, entertainment, sports, and media occupations",HISPANIC OR LATINO,22973.6
+5045,Health diagnosing and treating practitioners and other technical occupations,HISPANIC OR LATINO,13966.5
+5050,Health technologists and technicians,HISPANIC OR LATINO,12056.7
+5055,Healthcare support occupations,HISPANIC OR LATINO,61398.8
+5060,"Fire fighting and prevention, and other protective service workers including supervisors",HISPANIC OR LATINO,20015.0
+5065,Law enforcement workers including supervisors,HISPANIC OR LATINO,10229.2
+5070,Food preparation and serving related occupations,HISPANIC OR LATINO,103035.4
+5075,Building and grounds cleaning and maintenance occupations,HISPANIC OR LATINO,97083.0
+5080,Personal care and service occupations,HISPANIC OR LATINO,64233.7
+5085,Sales and related occupations,HISPANIC OR LATINO,99116.4
+5090,Office and administrative support occupations,HISPANIC OR LATINO,131105.4
+5095,"Farming, fishing, and forestry occupations",HISPANIC OR LATINO,1493.8
+5100,Construction and extraction occupations,HISPANIC OR LATINO,76814.1
+5105,"Installation, maintenance, and repair occupations",HISPANIC OR LATINO,24607.1
+5110,Production occupations,HISPANIC OR LATINO,43894.1
+5115,Transportation occupations,HISPANIC OR LATINO,62174.3
+5120,Material moving occupations,HISPANIC OR LATINO,28112.9
+7500,Management occupations,Some Other Race Alone,25651.4
+7505,Business and financial operations occupations,Some Other Race Alone,11263.7
+7510,Computer and mathematical occupations,Some Other Race Alone,4392.1
+7515,Architecture and engineering occupations,Some Other Race Alone,1961.9
+7520,"Life, physical, and social science occupations",Some Other Race Alone,975.4
+7525,Community and social service occupations,Some Other Race Alone,7672.1
+7530,Legal occupations,Some Other Race Alone,3037.4
+7535,"Education, training, and library occupations",Some Other Race Alone,19804.5
+7540,"Arts, design, entertainment, sports, and media occupations",Some Other Race Alone,7962.6
+7545,Health diagnosing and treating practitioners and other technical occupations,Some Other Race Alone,5309.8
+7550,Health technologists and technicians,Some Other Race Alone,5465.3
+7555,Healthcare support occupations,Some Other Race Alone,36257.1
+7560,"Fire fighting and prevention, and other protective service workers including supervisors",Some Other Race Alone,9798.6
+7565,Law enforcement workers including supervisors,Some Other Race Alone,3863.2
+7570,Food preparation and serving related occupations,Some Other Race Alone,58527.5
+7575,Building and grounds cleaning and maintenance occupations,Some Other Race Alone,53933.3
+7580,Personal care and service occupations,Some Other Race Alone,35796.0
+7585,Sales and related occupations,Some Other Race Alone,52006.4
+7590,Office and administrative support occupations,Some Other Race Alone,62922.5
+7595,"Farming, fishing, and forestry occupations",Some Other Race Alone,825.5
+7600,Construction and extraction occupations,Some Other Race Alone,43728.6
+7605,"Installation, maintenance, and repair occupations",Some Other Race Alone,13681.4
+7610,Production occupations,Some Other Race Alone,24315.0
+7615,Transportation occupations,Some Other Race Alone,34432.4
+7620,Material moving occupations,Some Other Race Alone,15483.1
+10000,Management occupations,Two or More Races,10904.85
+10005,Business and financial operations occupations,Two or More Races,6373.85
+10010,Computer and mathematical occupations,Two or More Races,3397.275
+10015,Architecture and engineering occupations,Two or More Races,1200.625
+10020,"Life, physical, and social science occupations",Two or More Races,944.325
+10025,Community and social service occupations,Two or More Races,2375.325
+10030,Legal occupations,Two or More Races,2156.925
+10035,"Education, training, and library occupations",Two or More Races,7356.875
+10040,"Arts, design, entertainment, sports, and media occupations",Two or More Races,5500.45
+10045,Health diagnosing and treating practitioners and other technical occupations,Two or More Races,3452.55
+10050,Health technologists and technicians,Two or More Races,1592.1
+10055,Healthcare support occupations,Two or More Races,6262.625
+10060,"Fire fighting and prevention, and other protective service workers including supervisors",Two or More Races,2325.85
+10065,Law enforcement workers including supervisors,Two or More Races,901.525
+10070,Food preparation and serving related occupations,Two or More Races,7330.45
+10075,Building and grounds cleaning and maintenance occupations,Two or More Races,5639.8
+10080,Personal care and service occupations,Two or More Races,5367.2
+10085,Sales and related occupations,Two or More Races,11442.25
+10090,Office and administrative support occupations,Two or More Races,15033.125
+10095,"Farming, fishing, and forestry occupations",Two or More Races,76.5
+10100,Construction and extraction occupations,Two or More Races,3784.6
+10105,"Installation, maintenance, and repair occupations",Two or More Races,2575.575
+10110,Production occupations,Two or More Races,3032.15
+10115,Transportation occupations,Two or More Races,5201.3
+10120,Material moving occupations,Two or More Races,2011.175
+12500,Management occupations,White Alone,243644.2
+12505,Business and financial operations occupations,White Alone,135346.5
+12510,Computer and mathematical occupations,White Alone,57889.7
+12515,Architecture and engineering occupations,White Alone,22508.8
+12520,"Life, physical, and social science occupations",White Alone,21860.8
+12525,Community and social service occupations,White Alone,30888.5
+12530,Legal occupations,White Alone,59148.7
+12535,"Education, training, and library occupations",White Alone,149622.6
+12540,"Arts, design, entertainment, sports, and media occupations",White Alone,138795.5
+12545,Health diagnosing and treating practitioners and other technical occupations,White Alone,69929.8
+12550,Health technologists and technicians,White Alone,17220.4
+12555,Healthcare support occupations,White Alone,42517.4
+12560,"Fire fighting and prevention, and other protective service workers including supervisors",White Alone,22002.6
+12565,Law enforcement workers including supervisors,White Alone,15414.7
+12570,Food preparation and serving related occupations,White Alone,81835.7
+12575,Building and grounds cleaning and maintenance occupations,White Alone,58042.8
+12580,Personal care and service occupations,White Alone,62553.8
+12585,Sales and related occupations,White Alone,184545.1
+12590,Office and administrative support occupations,White Alone,202403.0
+12595,"Farming, fishing, and forestry occupations",White Alone,1205.4
+12600,Construction and extraction occupations,White Alone,73354.1
+12605,"Installation, maintenance, and repair occupations",White Alone,28240.8
+12610,Production occupations,White Alone,38484.8
+12615,Transportation occupations,White Alone,52534.3
+12620,Material moving occupations,White Alone,20789.4
+15000,Management occupations,WHITE ALONE NOT HISPANIC OR LATINO,214433.3
+15005,Business and financial operations occupations,WHITE ALONE NOT HISPANIC OR LATINO,121699.1
+15010,Computer and mathematical occupations,WHITE ALONE NOT HISPANIC OR LATINO,52231.7
+15015,Architecture and engineering occupations,WHITE ALONE NOT HISPANIC OR LATINO,19720.4
+15020,"Life, physical, and social science occupations",WHITE ALONE NOT HISPANIC OR LATINO,19613.1
+15025,Community and social service occupations,WHITE ALONE NOT HISPANIC OR LATINO,24630.2
+15030,Legal occupations,WHITE ALONE NOT HISPANIC OR LATINO,54371.5
+15035,"Education, training, and library occupations",WHITE ALONE NOT HISPANIC OR LATINO,130431.1
+15040,"Arts, design, entertainment, sports, and media occupations",WHITE ALONE NOT HISPANIC OR LATINO,126243.5
+15045,Health diagnosing and treating practitioners and other technical occupations,WHITE ALONE NOT HISPANIC OR LATINO,62941.5
+15050,Health technologists and technicians,WHITE ALONE NOT HISPANIC OR LATINO,12435.8
+15055,Healthcare support occupations,WHITE ALONE NOT HISPANIC OR LATINO,25992.2
+15060,"Fire fighting and prevention, and other protective service workers including supervisors",WHITE ALONE NOT HISPANIC OR LATINO,14816.1
+15065,Law enforcement workers including supervisors,WHITE ALONE NOT HISPANIC OR LATINO,10675.0
+15070,Food preparation and serving related occupations,WHITE ALONE NOT HISPANIC OR LATINO,47053.5
+15075,Building and grounds cleaning and maintenance occupations,WHITE ALONE NOT HISPANIC OR LATINO,24495.1
+15080,Personal care and service occupations,WHITE ALONE NOT HISPANIC OR LATINO,41601.0
+15085,Sales and related occupations,WHITE ALONE NOT HISPANIC OR LATINO,147939.7
+15090,Office and administrative support occupations,WHITE ALONE NOT HISPANIC OR LATINO,151439.2
+15095,"Farming, fishing, and forestry occupations",WHITE ALONE NOT HISPANIC OR LATINO,654.0
+15100,Construction and extraction occupations,WHITE ALONE NOT HISPANIC OR LATINO,45205.4
+15105,"Installation, maintenance, and repair occupations",WHITE ALONE NOT HISPANIC OR LATINO,19080.3
+15110,Production occupations,WHITE ALONE NOT HISPANIC OR LATINO,22219.9
+15115,Transportation occupations,WHITE ALONE NOT HISPANIC OR LATINO,30392.9
+15120,Material moving occupations,WHITE ALONE NOT HISPANIC OR LATINO,11065.0

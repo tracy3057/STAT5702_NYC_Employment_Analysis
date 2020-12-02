@@ -1,0 +1,1251 @@
+,Occupations,year,County,YearlyNumEmpbyCounty
+0,Management occupations,2010,"Bronx County, New York",42200.5
+1,Management occupations,2010,"Kings County, New York",132032.0
+2,Management occupations,2010,"New York County, New York",221198.0
+3,Management occupations,2010,"Queens County, New York",125286.0
+4,Management occupations,2010,"Richmond County, New York",34435.5
+5,Business and financial operations occupations,2010,"Bronx County, New York",23358.75
+6,Business and financial operations occupations,2010,"Kings County, New York",70856.0
+7,Business and financial operations occupations,2010,"New York County, New York",152064.0
+8,Business and financial operations occupations,2010,"Queens County, New York",76888.0
+9,Business and financial operations occupations,2010,"Richmond County, New York",18700.5
+10,Computer and mathematical occupations,2010,"Bronx County, New York",8008.25
+11,Computer and mathematical occupations,2010,"Kings County, New York",41643.0
+12,Computer and mathematical occupations,2010,"New York County, New York",41474.0
+13,Computer and mathematical occupations,2010,"Queens County, New York",29692.0
+14,Computer and mathematical occupations,2010,"Richmond County, New York",9019.0
+15,Architecture and engineering occupations,2010,"Bronx County, New York",3549.75
+16,Architecture and engineering occupations,2010,"Kings County, New York",18163.0
+17,Architecture and engineering occupations,2010,"New York County, New York",14960.0
+18,Architecture and engineering occupations,2010,"Queens County, New York",12635.0
+19,Architecture and engineering occupations,2010,"Richmond County, New York",4918.5
+20,"Life, physical, and social science occupations",2010,"Bronx County, New York",4338.5
+21,"Life, physical, and social science occupations",2010,"Kings County, New York",9613.0
+22,"Life, physical, and social science occupations",2010,"New York County, New York",25816.0
+23,"Life, physical, and social science occupations",2010,"Queens County, New York",9580.0
+24,"Life, physical, and social science occupations",2010,"Richmond County, New York",1219.0
+25,Community and social service occupations,2010,"Bronx County, New York",22254.5
+26,Community and social service occupations,2010,"Kings County, New York",41450.0
+27,Community and social service occupations,2010,"New York County, New York",27160.0
+28,Community and social service occupations,2010,"Queens County, New York",26318.0
+29,Community and social service occupations,2010,"Richmond County, New York",5790.5
+30,Legal occupations,2010,"Bronx County, New York",8451.25
+31,Legal occupations,2010,"Kings County, New York",35118.0
+32,Legal occupations,2010,"New York County, New York",72089.0
+33,Legal occupations,2010,"Queens County, New York",18265.0
+34,Legal occupations,2010,"Richmond County, New York",5635.0
+35,"Education, training, and library occupations",2010,"Bronx County, New York",43506.0
+36,"Education, training, and library occupations",2010,"Kings County, New York",119701.0
+37,"Education, training, and library occupations",2010,"New York County, New York",117235.0
+38,"Education, training, and library occupations",2010,"Queens County, New York",88592.0
+39,"Education, training, and library occupations",2010,"Richmond County, New York",29344.0
+40,"Arts, design, entertainment, sports, and media occupations",2010,"Bronx County, New York",12210.5
+41,"Arts, design, entertainment, sports, and media occupations",2010,"Kings County, New York",96359.0
+42,"Arts, design, entertainment, sports, and media occupations",2010,"New York County, New York",142626.0
+43,"Arts, design, entertainment, sports, and media occupations",2010,"Queens County, New York",40890.0
+44,"Arts, design, entertainment, sports, and media occupations",2010,"Richmond County, New York",5332.5
+45,Health diagnosing and treating practitioners and other technical occupations,2010,"Bronx County, New York",18490.0
+46,Health diagnosing and treating practitioners and other technical occupations,2010,"Kings County, New York",50800.0
+47,Health diagnosing and treating practitioners and other technical occupations,2010,"New York County, New York",60778.0
+48,Health diagnosing and treating practitioners and other technical occupations,2010,"Queens County, New York",48646.0
+49,Health diagnosing and treating practitioners and other technical occupations,2010,"Richmond County, New York",19772.5
+50,Health technologists and technicians,2010,"Bronx County, New York",11831.0
+51,Health technologists and technicians,2010,"Kings County, New York",21653.0
+52,Health technologists and technicians,2010,"New York County, New York",7472.0
+53,Health technologists and technicians,2010,"Queens County, New York",20054.0
+54,Health technologists and technicians,2010,"Richmond County, New York",5789.0
+55,Healthcare support occupations,2010,"Bronx County, New York",64303.5
+56,Healthcare support occupations,2010,"Kings County, New York",91559.0
+57,Healthcare support occupations,2010,"New York County, New York",28748.0
+58,Healthcare support occupations,2010,"Queens County, New York",57824.0
+59,Healthcare support occupations,2010,"Richmond County, New York",11564.5
+60,"Fire fighting and prevention, and other protective service workers including supervisors",2010,"Bronx County, New York",24561.0
+61,"Fire fighting and prevention, and other protective service workers including supervisors",2010,"Kings County, New York",30191.0
+62,"Fire fighting and prevention, and other protective service workers including supervisors",2010,"New York County, New York",11061.0
+63,"Fire fighting and prevention, and other protective service workers including supervisors",2010,"Queens County, New York",28211.0
+64,"Fire fighting and prevention, and other protective service workers including supervisors",2010,"Richmond County, New York",10808.5
+65,Law enforcement workers including supervisors,2010,"Bronx County, New York",7740.75
+66,Law enforcement workers including supervisors,2010,"Kings County, New York",15597.0
+67,Law enforcement workers including supervisors,2010,"New York County, New York",5646.0
+68,Law enforcement workers including supervisors,2010,"Queens County, New York",19855.0
+69,Law enforcement workers including supervisors,2010,"Richmond County, New York",8535.5
+70,Food preparation and serving related occupations,2010,"Bronx County, New York",54913.75
+71,Food preparation and serving related occupations,2010,"Kings County, New York",90988.0
+72,Food preparation and serving related occupations,2010,"New York County, New York",66930.0
+73,Food preparation and serving related occupations,2010,"Queens County, New York",114436.0
+74,Food preparation and serving related occupations,2010,"Richmond County, New York",9701.0
+75,Building and grounds cleaning and maintenance occupations,2010,"Bronx County, New York",72420.5
+76,Building and grounds cleaning and maintenance occupations,2010,"Kings County, New York",80253.0
+77,Building and grounds cleaning and maintenance occupations,2010,"New York County, New York",40049.0
+78,Building and grounds cleaning and maintenance occupations,2010,"Queens County, New York",96755.0
+79,Building and grounds cleaning and maintenance occupations,2010,"Richmond County, New York",9930.5
+80,Personal care and service occupations,2010,"Bronx County, New York",58263.75
+81,Personal care and service occupations,2010,"Kings County, New York",71727.0
+82,Personal care and service occupations,2010,"New York County, New York",49703.0
+83,Personal care and service occupations,2010,"Queens County, New York",83655.0
+84,Personal care and service occupations,2010,"Richmond County, New York",10920.5
+85,Sales and related occupations,2010,"Bronx County, New York",85078.25
+86,Sales and related occupations,2010,"Kings County, New York",160418.0
+87,Sales and related occupations,2010,"New York County, New York",172612.0
+88,Sales and related occupations,2010,"Queens County, New York",169102.0
+89,Sales and related occupations,2010,"Richmond County, New York",34281.0
+90,Office and administrative support occupations,2010,"Bronx County, New York",122314.0
+91,Office and administrative support occupations,2010,"Kings County, New York",243742.0
+92,Office and administrative support occupations,2010,"New York County, New York",134593.0
+93,Office and administrative support occupations,2010,"Queens County, New York",224264.0
+94,Office and administrative support occupations,2010,"Richmond County, New York",54898.5
+95,"Farming, fishing, and forestry occupations",2010,"Bronx County, New York",1173.0
+96,"Farming, fishing, and forestry occupations",2010,"Kings County, New York",571.0
+97,"Farming, fishing, and forestry occupations",2010,"New York County, New York",752.0
+98,"Farming, fishing, and forestry occupations",2010,"Queens County, New York",1022.0
+99,"Farming, fishing, and forestry occupations",2010,"Richmond County, New York",86.0
+100,Construction and extraction occupations,2010,"Bronx County, New York",47536.0
+101,Construction and extraction occupations,2010,"Kings County, New York",79344.0
+102,Construction and extraction occupations,2010,"New York County, New York",17704.0
+103,Construction and extraction occupations,2010,"Queens County, New York",108649.0
+104,Construction and extraction occupations,2010,"Richmond County, New York",22816.5
+105,"Installation, maintenance, and repair occupations",2010,"Bronx County, New York",20014.75
+106,"Installation, maintenance, and repair occupations",2010,"Kings County, New York",33601.0
+107,"Installation, maintenance, and repair occupations",2010,"New York County, New York",7555.0
+108,"Installation, maintenance, and repair occupations",2010,"Queens County, New York",40989.0
+109,"Installation, maintenance, and repair occupations",2010,"Richmond County, New York",9648.5
+110,Production occupations,2010,"Bronx County, New York",36142.0
+111,Production occupations,2010,"Kings County, New York",57731.0
+112,Production occupations,2010,"New York County, New York",23519.0
+113,Production occupations,2010,"Queens County, New York",66484.0
+114,Production occupations,2010,"Richmond County, New York",9669.5
+115,Transportation occupations,2010,"Bronx County, New York",52322.5
+116,Transportation occupations,2010,"Kings County, New York",61214.0
+117,Transportation occupations,2010,"New York County, New York",25540.0
+118,Transportation occupations,2010,"Queens County, New York",86237.0
+119,Transportation occupations,2010,"Richmond County, New York",14721.0
+120,Material moving occupations,2010,"Bronx County, New York",17702.75
+121,Material moving occupations,2010,"Kings County, New York",32208.0
+122,Material moving occupations,2010,"New York County, New York",15055.0
+123,Material moving occupations,2010,"Queens County, New York",30484.0
+124,Material moving occupations,2010,"Richmond County, New York",6911.5
+250,Management occupations,2011,"Bronx County, New York",39984.5
+251,Management occupations,2011,"Kings County, New York",135423.0
+252,Management occupations,2011,"New York County, New York",215183.0
+253,Management occupations,2011,"Queens County, New York",118951.0
+254,Management occupations,2011,"Richmond County, New York",29326.5
+255,Business and financial operations occupations,2011,"Bronx County, New York",22908.75
+256,Business and financial operations occupations,2011,"Kings County, New York",75806.0
+257,Business and financial operations occupations,2011,"New York County, New York",159192.0
+258,Business and financial operations occupations,2011,"Queens County, New York",73012.0
+259,Business and financial operations occupations,2011,"Richmond County, New York",16139.5
+260,Computer and mathematical occupations,2011,"Bronx County, New York",7385.25
+261,Computer and mathematical occupations,2011,"Kings County, New York",44936.0
+262,Computer and mathematical occupations,2011,"New York County, New York",33754.0
+263,Computer and mathematical occupations,2011,"Queens County, New York",34941.0
+264,Computer and mathematical occupations,2011,"Richmond County, New York",8594.0
+265,Architecture and engineering occupations,2011,"Bronx County, New York",3961.75
+266,Architecture and engineering occupations,2011,"Kings County, New York",20241.0
+267,Architecture and engineering occupations,2011,"New York County, New York",17427.0
+268,Architecture and engineering occupations,2011,"Queens County, New York",14643.0
+269,Architecture and engineering occupations,2011,"Richmond County, New York",6382.5
+270,"Life, physical, and social science occupations",2011,"Bronx County, New York",3662.5
+271,"Life, physical, and social science occupations",2011,"Kings County, New York",11328.0
+272,"Life, physical, and social science occupations",2011,"New York County, New York",31514.0
+273,"Life, physical, and social science occupations",2011,"Queens County, New York",8451.0
+274,"Life, physical, and social science occupations",2011,"Richmond County, New York",1444.0
+275,Community and social service occupations,2011,"Bronx County, New York",20173.5
+276,Community and social service occupations,2011,"Kings County, New York",31750.0
+277,Community and social service occupations,2011,"New York County, New York",23403.0
+278,Community and social service occupations,2011,"Queens County, New York",23866.0
+279,Community and social service occupations,2011,"Richmond County, New York",5423.5
+280,Legal occupations,2011,"Bronx County, New York",5844.25
+281,Legal occupations,2011,"Kings County, New York",31938.0
+282,Legal occupations,2011,"New York County, New York",81578.0
+283,Legal occupations,2011,"Queens County, New York",17735.0
+284,Legal occupations,2011,"Richmond County, New York",8308.0
+285,"Education, training, and library occupations",2011,"Bronx County, New York",45070.0
+286,"Education, training, and library occupations",2011,"Kings County, New York",122136.0
+287,"Education, training, and library occupations",2011,"New York County, New York",100781.0
+288,"Education, training, and library occupations",2011,"Queens County, New York",87006.0
+289,"Education, training, and library occupations",2011,"Richmond County, New York",31148.0
+290,"Arts, design, entertainment, sports, and media occupations",2011,"Bronx County, New York",12291.5
+291,"Arts, design, entertainment, sports, and media occupations",2011,"Kings County, New York",103165.0
+292,"Arts, design, entertainment, sports, and media occupations",2011,"New York County, New York",151225.0
+293,"Arts, design, entertainment, sports, and media occupations",2011,"Queens County, New York",41465.0
+294,"Arts, design, entertainment, sports, and media occupations",2011,"Richmond County, New York",6707.5
+295,Health diagnosing and treating practitioners and other technical occupations,2011,"Bronx County, New York",17527.0
+296,Health diagnosing and treating practitioners and other technical occupations,2011,"Kings County, New York",52403.0
+297,Health diagnosing and treating practitioners and other technical occupations,2011,"New York County, New York",50633.0
+298,Health diagnosing and treating practitioners and other technical occupations,2011,"Queens County, New York",55731.0
+299,Health diagnosing and treating practitioners and other technical occupations,2011,"Richmond County, New York",17815.5
+300,Health technologists and technicians,2011,"Bronx County, New York",11616.0
+301,Health technologists and technicians,2011,"Kings County, New York",19495.0
+302,Health technologists and technicians,2011,"New York County, New York",8060.0
+303,Health technologists and technicians,2011,"Queens County, New York",22988.0
+304,Health technologists and technicians,2011,"Richmond County, New York",6104.0
+305,Healthcare support occupations,2011,"Bronx County, New York",63879.5
+306,Healthcare support occupations,2011,"Kings County, New York",97964.0
+307,Healthcare support occupations,2011,"New York County, New York",24859.0
+308,Healthcare support occupations,2011,"Queens County, New York",58461.0
+309,Healthcare support occupations,2011,"Richmond County, New York",12772.5
+310,"Fire fighting and prevention, and other protective service workers including supervisors",2011,"Bronx County, New York",28377.0
+311,"Fire fighting and prevention, and other protective service workers including supervisors",2011,"Kings County, New York",29052.0
+312,"Fire fighting and prevention, and other protective service workers including supervisors",2011,"New York County, New York",12025.0
+313,"Fire fighting and prevention, and other protective service workers including supervisors",2011,"Queens County, New York",29738.0
+314,"Fire fighting and prevention, and other protective service workers including supervisors",2011,"Richmond County, New York",10350.5
+315,Law enforcement workers including supervisors,2011,"Bronx County, New York",8916.75
+316,Law enforcement workers including supervisors,2011,"Kings County, New York",13022.0
+317,Law enforcement workers including supervisors,2011,"New York County, New York",3767.0
+318,Law enforcement workers including supervisors,2011,"Queens County, New York",15019.0
+319,Law enforcement workers including supervisors,2011,"Richmond County, New York",13961.5
+320,Food preparation and serving related occupations,2011,"Bronx County, New York",63210.75
+321,Food preparation and serving related occupations,2011,"Kings County, New York",102421.0
+322,Food preparation and serving related occupations,2011,"New York County, New York",67328.0
+323,Food preparation and serving related occupations,2011,"Queens County, New York",132758.0
+324,Food preparation and serving related occupations,2011,"Richmond County, New York",10732.0
+325,Building and grounds cleaning and maintenance occupations,2011,"Bronx County, New York",68407.5
+326,Building and grounds cleaning and maintenance occupations,2011,"Kings County, New York",78837.0
+327,Building and grounds cleaning and maintenance occupations,2011,"New York County, New York",38801.0
+328,Building and grounds cleaning and maintenance occupations,2011,"Queens County, New York",96709.0
+329,Building and grounds cleaning and maintenance occupations,2011,"Richmond County, New York",11662.5
+330,Personal care and service occupations,2011,"Bronx County, New York",71668.75
+331,Personal care and service occupations,2011,"Kings County, New York",80634.0
+332,Personal care and service occupations,2011,"New York County, New York",52881.0
+333,Personal care and service occupations,2011,"Queens County, New York",81301.0
+334,Personal care and service occupations,2011,"Richmond County, New York",10413.5
+335,Sales and related occupations,2011,"Bronx County, New York",98033.25
+336,Sales and related occupations,2011,"Kings County, New York",163864.0
+337,Sales and related occupations,2011,"New York County, New York",173241.0
+338,Sales and related occupations,2011,"Queens County, New York",186306.0
+339,Sales and related occupations,2011,"Richmond County, New York",37745.0
+340,Office and administrative support occupations,2011,"Bronx County, New York",129945.0
+341,Office and administrative support occupations,2011,"Kings County, New York",222807.0
+342,Office and administrative support occupations,2011,"New York County, New York",146242.0
+343,Office and administrative support occupations,2011,"Queens County, New York",225589.0
+344,Office and administrative support occupations,2011,"Richmond County, New York",52223.5
+345,"Farming, fishing, and forestry occupations",2011,"Bronx County, New York",4794.0
+346,"Farming, fishing, and forestry occupations",2011,"Kings County, New York",1458.0
+347,"Farming, fishing, and forestry occupations",2011,"New York County, New York",570.0
+348,"Farming, fishing, and forestry occupations",2011,"Queens County, New York",1685.0
+349,"Farming, fishing, and forestry occupations",2011,"Richmond County, New York",202.0
+350,Construction and extraction occupations,2011,"Bronx County, New York",41558.0
+351,Construction and extraction occupations,2011,"Kings County, New York",77826.0
+352,Construction and extraction occupations,2011,"New York County, New York",19126.0
+353,Construction and extraction occupations,2011,"Queens County, New York",112155.0
+354,Construction and extraction occupations,2011,"Richmond County, New York",25173.5
+355,"Installation, maintenance, and repair occupations",2011,"Bronx County, New York",22716.75
+356,"Installation, maintenance, and repair occupations",2011,"Kings County, New York",34729.0
+357,"Installation, maintenance, and repair occupations",2011,"New York County, New York",10420.0
+358,"Installation, maintenance, and repair occupations",2011,"Queens County, New York",35726.0
+359,"Installation, maintenance, and repair occupations",2011,"Richmond County, New York",11072.5
+360,Production occupations,2011,"Bronx County, New York",30859.0
+361,Production occupations,2011,"Kings County, New York",58523.0
+362,Production occupations,2011,"New York County, New York",24262.0
+363,Production occupations,2011,"Queens County, New York",58156.0
+364,Production occupations,2011,"Richmond County, New York",8804.5
+365,Transportation occupations,2011,"Bronx County, New York",41191.5
+366,Transportation occupations,2011,"Kings County, New York",69740.0
+367,Transportation occupations,2011,"New York County, New York",30888.0
+368,Transportation occupations,2011,"Queens County, New York",77238.0
+369,Transportation occupations,2011,"Richmond County, New York",16009.0
+370,Material moving occupations,2011,"Bronx County, New York",17400.75
+371,Material moving occupations,2011,"Kings County, New York",26579.0
+372,Material moving occupations,2011,"New York County, New York",11619.0
+373,Material moving occupations,2011,"Queens County, New York",26789.0
+374,Material moving occupations,2011,"Richmond County, New York",5277.5
+500,Management occupations,2012,"Bronx County, New York",48510.5
+501,Management occupations,2012,"Kings County, New York",157775.0
+502,Management occupations,2012,"New York County, New York",234953.0
+503,Management occupations,2012,"Queens County, New York",131309.0
+504,Management occupations,2012,"Richmond County, New York",30890.0
+505,Business and financial operations occupations,2012,"Bronx County, New York",25277.75
+506,Business and financial operations occupations,2012,"Kings County, New York",77321.0
+507,Business and financial operations occupations,2012,"New York County, New York",155503.0
+508,Business and financial operations occupations,2012,"Queens County, New York",73809.0
+509,Business and financial operations occupations,2012,"Richmond County, New York",16902.875
+510,Computer and mathematical occupations,2012,"Bronx County, New York",9931.25
+511,Computer and mathematical occupations,2012,"Kings County, New York",43892.0
+512,Computer and mathematical occupations,2012,"New York County, New York",49190.0
+513,Computer and mathematical occupations,2012,"Queens County, New York",33071.0
+514,Computer and mathematical occupations,2012,"Richmond County, New York",9427.0
+515,Architecture and engineering occupations,2012,"Bronx County, New York",4209.75
+516,Architecture and engineering occupations,2012,"Kings County, New York",15814.0
+517,Architecture and engineering occupations,2012,"New York County, New York",16698.0
+518,Architecture and engineering occupations,2012,"Queens County, New York",16130.0
+519,Architecture and engineering occupations,2012,"Richmond County, New York",4625.25
+520,"Life, physical, and social science occupations",2012,"Bronx County, New York",3920.5
+521,"Life, physical, and social science occupations",2012,"Kings County, New York",12783.0
+522,"Life, physical, and social science occupations",2012,"New York County, New York",25081.0
+523,"Life, physical, and social science occupations",2012,"Queens County, New York",8587.0
+524,"Life, physical, and social science occupations",2012,"Richmond County, New York",2442.75
+525,Community and social service occupations,2012,"Bronx County, New York",19228.5
+526,Community and social service occupations,2012,"Kings County, New York",40464.0
+527,Community and social service occupations,2012,"New York County, New York",23799.0
+528,Community and social service occupations,2012,"Queens County, New York",26502.0
+529,Community and social service occupations,2012,"Richmond County, New York",6527.875
+530,Legal occupations,2012,"Bronx County, New York",5019.25
+531,Legal occupations,2012,"Kings County, New York",35565.0
+532,Legal occupations,2012,"New York County, New York",78158.0
+533,Legal occupations,2012,"Queens County, New York",21002.0
+534,Legal occupations,2012,"Richmond County, New York",6255.625
+535,"Education, training, and library occupations",2012,"Bronx County, New York",48162.0
+536,"Education, training, and library occupations",2012,"Kings County, New York",130260.0
+537,"Education, training, and library occupations",2012,"New York County, New York",102897.0
+538,"Education, training, and library occupations",2012,"Queens County, New York",95803.0
+539,"Education, training, and library occupations",2012,"Richmond County, New York",32874.25
+540,"Arts, design, entertainment, sports, and media occupations",2012,"Bronx County, New York",14179.5
+541,"Arts, design, entertainment, sports, and media occupations",2012,"Kings County, New York",106890.0
+542,"Arts, design, entertainment, sports, and media occupations",2012,"New York County, New York",149534.0
+543,"Arts, design, entertainment, sports, and media occupations",2012,"Queens County, New York",46766.0
+544,"Arts, design, entertainment, sports, and media occupations",2012,"Richmond County, New York",5109.0
+545,Health diagnosing and treating practitioners and other technical occupations,2012,"Bronx County, New York",19135.0
+546,Health diagnosing and treating practitioners and other technical occupations,2012,"Kings County, New York",52835.0
+547,Health diagnosing and treating practitioners and other technical occupations,2012,"New York County, New York",69554.0
+548,Health diagnosing and treating practitioners and other technical occupations,2012,"Queens County, New York",55972.0
+549,Health diagnosing and treating practitioners and other technical occupations,2012,"Richmond County, New York",15995.125
+550,Health technologists and technicians,2012,"Bronx County, New York",10156.0
+551,Health technologists and technicians,2012,"Kings County, New York",19240.0
+552,Health technologists and technicians,2012,"New York County, New York",11158.0
+553,Health technologists and technicians,2012,"Queens County, New York",22730.0
+554,Health technologists and technicians,2012,"Richmond County, New York",6497.125
+555,Healthcare support occupations,2012,"Bronx County, New York",58797.5
+556,Healthcare support occupations,2012,"Kings County, New York",95601.0
+557,Healthcare support occupations,2012,"New York County, New York",34246.0
+558,Healthcare support occupations,2012,"Queens County, New York",61379.0
+559,Healthcare support occupations,2012,"Richmond County, New York",10955.25
+560,"Fire fighting and prevention, and other protective service workers including supervisors",2012,"Bronx County, New York",23577.0
+561,"Fire fighting and prevention, and other protective service workers including supervisors",2012,"Kings County, New York",32230.0
+562,"Fire fighting and prevention, and other protective service workers including supervisors",2012,"New York County, New York",15813.0
+563,"Fire fighting and prevention, and other protective service workers including supervisors",2012,"Queens County, New York",29092.0
+564,"Fire fighting and prevention, and other protective service workers including supervisors",2012,"Richmond County, New York",11009.625
+565,Law enforcement workers including supervisors,2012,"Bronx County, New York",8077.75
+566,Law enforcement workers including supervisors,2012,"Kings County, New York",17328.0
+567,Law enforcement workers including supervisors,2012,"New York County, New York",6221.0
+568,Law enforcement workers including supervisors,2012,"Queens County, New York",19975.0
+569,Law enforcement workers including supervisors,2012,"Richmond County, New York",9324.25
+570,Food preparation and serving related occupations,2012,"Bronx County, New York",71511.75
+571,Food preparation and serving related occupations,2012,"Kings County, New York",98397.0
+572,Food preparation and serving related occupations,2012,"New York County, New York",60997.0
+573,Food preparation and serving related occupations,2012,"Queens County, New York",123803.0
+574,Food preparation and serving related occupations,2012,"Richmond County, New York",13030.25
+575,Building and grounds cleaning and maintenance occupations,2012,"Bronx County, New York",69101.5
+576,Building and grounds cleaning and maintenance occupations,2012,"Kings County, New York",81249.0
+577,Building and grounds cleaning and maintenance occupations,2012,"New York County, New York",29148.0
+578,Building and grounds cleaning and maintenance occupations,2012,"Queens County, New York",97891.0
+579,Building and grounds cleaning and maintenance occupations,2012,"Richmond County, New York",10482.625
+580,Personal care and service occupations,2012,"Bronx County, New York",60897.75
+581,Personal care and service occupations,2012,"Kings County, New York",82372.0
+582,Personal care and service occupations,2012,"New York County, New York",49883.0
+583,Personal care and service occupations,2012,"Queens County, New York",88788.0
+584,Personal care and service occupations,2012,"Richmond County, New York",14054.125
+585,Sales and related occupations,2012,"Bronx County, New York",91372.25
+586,Sales and related occupations,2012,"Kings County, New York",182074.0
+587,Sales and related occupations,2012,"New York County, New York",188072.0
+588,Sales and related occupations,2012,"Queens County, New York",162031.0
+589,Sales and related occupations,2012,"Richmond County, New York",37458.125
+590,Office and administrative support occupations,2012,"Bronx County, New York",126120.0
+591,Office and administrative support occupations,2012,"Kings County, New York",227787.0
+592,Office and administrative support occupations,2012,"New York County, New York",132269.0
+593,Office and administrative support occupations,2012,"Queens County, New York",236401.0
+594,Office and administrative support occupations,2012,"Richmond County, New York",56037.625
+595,"Farming, fishing, and forestry occupations",2012,"Bronx County, New York",1222.0
+596,"Farming, fishing, and forestry occupations",2012,"Kings County, New York",642.0
+597,"Farming, fishing, and forestry occupations",2012,"New York County, New York",662.0
+598,"Farming, fishing, and forestry occupations",2012,"Queens County, New York",1524.0
+599,"Farming, fishing, and forestry occupations",2012,"Richmond County, New York",48.125
+600,Construction and extraction occupations,2012,"Bronx County, New York",40741.0
+601,Construction and extraction occupations,2012,"Kings County, New York",84585.0
+602,Construction and extraction occupations,2012,"New York County, New York",19156.0
+603,Construction and extraction occupations,2012,"Queens County, New York",107728.0
+604,Construction and extraction occupations,2012,"Richmond County, New York",21874.0
+605,"Installation, maintenance, and repair occupations",2012,"Bronx County, New York",20220.75
+606,"Installation, maintenance, and repair occupations",2012,"Kings County, New York",31486.0
+607,"Installation, maintenance, and repair occupations",2012,"New York County, New York",9686.0
+608,"Installation, maintenance, and repair occupations",2012,"Queens County, New York",38448.0
+609,"Installation, maintenance, and repair occupations",2012,"Richmond County, New York",12504.375
+610,Production occupations,2012,"Bronx County, New York",32789.0
+611,Production occupations,2012,"Kings County, New York",56010.0
+612,Production occupations,2012,"New York County, New York",27537.0
+613,Production occupations,2012,"Queens County, New York",63440.0
+614,Production occupations,2012,"Richmond County, New York",8170.75
+615,Transportation occupations,2012,"Bronx County, New York",54245.5
+616,Transportation occupations,2012,"Kings County, New York",68510.0
+617,Transportation occupations,2012,"New York County, New York",28280.0
+618,Transportation occupations,2012,"Queens County, New York",92389.0
+619,Transportation occupations,2012,"Richmond County, New York",14011.375
+620,Material moving occupations,2012,"Bronx County, New York",24230.75
+621,Material moving occupations,2012,"Kings County, New York",24285.0
+622,Material moving occupations,2012,"New York County, New York",9276.0
+623,Material moving occupations,2012,"Queens County, New York",30741.0
+624,Material moving occupations,2012,"Richmond County, New York",7384.875
+750,Management occupations,2013,"Bronx County, New York",42676.5
+751,Management occupations,2013,"Kings County, New York",159350.0
+752,Management occupations,2013,"New York County, New York",257510.25
+753,Management occupations,2013,"Queens County, New York",131475.0
+754,Management occupations,2013,"Richmond County, New York",38759.5
+755,Business and financial operations occupations,2013,"Bronx County, New York",23456.75
+756,Business and financial operations occupations,2013,"Kings County, New York",84821.0
+757,Business and financial operations occupations,2013,"New York County, New York",157645.5
+758,Business and financial operations occupations,2013,"Queens County, New York",83445.0
+759,Business and financial operations occupations,2013,"Richmond County, New York",21586.5
+760,Computer and mathematical occupations,2013,"Bronx County, New York",8861.25
+761,Computer and mathematical occupations,2013,"Kings County, New York",49203.0
+762,Computer and mathematical occupations,2013,"New York County, New York",55505.625
+763,Computer and mathematical occupations,2013,"Queens County, New York",36144.0
+764,Computer and mathematical occupations,2013,"Richmond County, New York",8768.0
+765,Architecture and engineering occupations,2013,"Bronx County, New York",3055.75
+766,Architecture and engineering occupations,2013,"Kings County, New York",20041.0
+767,Architecture and engineering occupations,2013,"New York County, New York",12093.375
+768,Architecture and engineering occupations,2013,"Queens County, New York",13156.0
+769,Architecture and engineering occupations,2013,"Richmond County, New York",3490.5
+770,"Life, physical, and social science occupations",2013,"Bronx County, New York",4135.5
+771,"Life, physical, and social science occupations",2013,"Kings County, New York",12636.0
+772,"Life, physical, and social science occupations",2013,"New York County, New York",22790.125
+773,"Life, physical, and social science occupations",2013,"Queens County, New York",10038.0
+774,"Life, physical, and social science occupations",2013,"Richmond County, New York",790.0
+775,Community and social service occupations,2013,"Bronx County, New York",22430.5
+776,Community and social service occupations,2013,"Kings County, New York",39604.0
+777,Community and social service occupations,2013,"New York County, New York",27494.625
+778,Community and social service occupations,2013,"Queens County, New York",28504.0
+779,Community and social service occupations,2013,"Richmond County, New York",6423.5
+780,Legal occupations,2013,"Bronx County, New York",6757.25
+781,Legal occupations,2013,"Kings County, New York",35158.0
+782,Legal occupations,2013,"New York County, New York",63206.875
+783,Legal occupations,2013,"Queens County, New York",21882.0
+784,Legal occupations,2013,"Richmond County, New York",6870.0
+785,"Education, training, and library occupations",2013,"Bronx County, New York",47685.0
+786,"Education, training, and library occupations",2013,"Kings County, New York",134821.0
+787,"Education, training, and library occupations",2013,"New York County, New York",117090.375
+788,"Education, training, and library occupations",2013,"Queens County, New York",94927.0
+789,"Education, training, and library occupations",2013,"Richmond County, New York",30791.0
+790,"Arts, design, entertainment, sports, and media occupations",2013,"Bronx County, New York",15362.5
+791,"Arts, design, entertainment, sports, and media occupations",2013,"Kings County, New York",119215.0
+792,"Arts, design, entertainment, sports, and media occupations",2013,"New York County, New York",150126.25
+793,"Arts, design, entertainment, sports, and media occupations",2013,"Queens County, New York",55338.0
+794,"Arts, design, entertainment, sports, and media occupations",2013,"Richmond County, New York",8704.5
+795,Health diagnosing and treating practitioners and other technical occupations,2013,"Bronx County, New York",21441.0
+796,Health diagnosing and treating practitioners and other technical occupations,2013,"Kings County, New York",58887.0
+797,Health diagnosing and treating practitioners and other technical occupations,2013,"New York County, New York",65894.25
+798,Health diagnosing and treating practitioners and other technical occupations,2013,"Queens County, New York",53475.0
+799,Health diagnosing and treating practitioners and other technical occupations,2013,"Richmond County, New York",18476.5
+800,Health technologists and technicians,2013,"Bronx County, New York",11638.0
+801,Health technologists and technicians,2013,"Kings County, New York",23054.0
+802,Health technologists and technicians,2013,"New York County, New York",8584.5
+803,Health technologists and technicians,2013,"Queens County, New York",20242.0
+804,Health technologists and technicians,2013,"Richmond County, New York",4652.0
+805,Healthcare support occupations,2013,"Bronx County, New York",68148.5
+806,Healthcare support occupations,2013,"Kings County, New York",100510.0
+807,Healthcare support occupations,2013,"New York County, New York",29023.625
+808,Healthcare support occupations,2013,"Queens County, New York",65247.0
+809,Healthcare support occupations,2013,"Richmond County, New York",12763.5
+810,"Fire fighting and prevention, and other protective service workers including supervisors",2013,"Bronx County, New York",22053.0
+811,"Fire fighting and prevention, and other protective service workers including supervisors",2013,"Kings County, New York",31596.0
+812,"Fire fighting and prevention, and other protective service workers including supervisors",2013,"New York County, New York",13711.75
+813,"Fire fighting and prevention, and other protective service workers including supervisors",2013,"Queens County, New York",29639.0
+814,"Fire fighting and prevention, and other protective service workers including supervisors",2013,"Richmond County, New York",10395.5
+815,Law enforcement workers including supervisors,2013,"Bronx County, New York",8479.75
+816,Law enforcement workers including supervisors,2013,"Kings County, New York",14038.0
+817,Law enforcement workers including supervisors,2013,"New York County, New York",3073.875
+818,Law enforcement workers including supervisors,2013,"Queens County, New York",18332.0
+819,Law enforcement workers including supervisors,2013,"Richmond County, New York",11438.5
+820,Food preparation and serving related occupations,2013,"Bronx County, New York",68378.75
+821,Food preparation and serving related occupations,2013,"Kings County, New York",103185.0
+822,Food preparation and serving related occupations,2013,"New York County, New York",64602.5
+823,Food preparation and serving related occupations,2013,"Queens County, New York",122747.0
+824,Food preparation and serving related occupations,2013,"Richmond County, New York",12545.0
+825,Building and grounds cleaning and maintenance occupations,2013,"Bronx County, New York",74512.5
+826,Building and grounds cleaning and maintenance occupations,2013,"Kings County, New York",81041.0
+827,Building and grounds cleaning and maintenance occupations,2013,"New York County, New York",42765.5
+828,Building and grounds cleaning and maintenance occupations,2013,"Queens County, New York",104158.0
+829,Building and grounds cleaning and maintenance occupations,2013,"Richmond County, New York",15307.5
+830,Personal care and service occupations,2013,"Bronx County, New York",59319.75
+831,Personal care and service occupations,2013,"Kings County, New York",81308.0
+832,Personal care and service occupations,2013,"New York County, New York",55238.25
+833,Personal care and service occupations,2013,"Queens County, New York",80969.0
+834,Personal care and service occupations,2013,"Richmond County, New York",12525.5
+835,Sales and related occupations,2013,"Bronx County, New York",89750.25
+836,Sales and related occupations,2013,"Kings County, New York",169839.0
+837,Sales and related occupations,2013,"New York County, New York",185816.5
+838,Sales and related occupations,2013,"Queens County, New York",171197.0
+839,Sales and related occupations,2013,"Richmond County, New York",35465.0
+840,Office and administrative support occupations,2013,"Bronx County, New York",132314.0
+841,Office and administrative support occupations,2013,"Kings County, New York",224988.0
+842,Office and administrative support occupations,2013,"New York County, New York",131463.625
+843,Office and administrative support occupations,2013,"Queens County, New York",224238.0
+844,Office and administrative support occupations,2013,"Richmond County, New York",55030.5
+845,"Farming, fishing, and forestry occupations",2013,"Bronx County, New York",120.0
+846,"Farming, fishing, and forestry occupations",2013,"Kings County, New York",736.0
+847,"Farming, fishing, and forestry occupations",2013,"New York County, New York",0.0
+848,"Farming, fishing, and forestry occupations",2013,"Queens County, New York",3237.0
+849,"Farming, fishing, and forestry occupations",2013,"Richmond County, New York",0.0
+850,Construction and extraction occupations,2013,"Bronx County, New York",41281.0
+851,Construction and extraction occupations,2013,"Kings County, New York",87644.0
+852,Construction and extraction occupations,2013,"New York County, New York",20283.5
+853,Construction and extraction occupations,2013,"Queens County, New York",105168.0
+854,Construction and extraction occupations,2013,"Richmond County, New York",22626.5
+855,"Installation, maintenance, and repair occupations",2013,"Bronx County, New York",22166.75
+856,"Installation, maintenance, and repair occupations",2013,"Kings County, New York",34191.0
+857,"Installation, maintenance, and repair occupations",2013,"New York County, New York",11584.125
+858,"Installation, maintenance, and repair occupations",2013,"Queens County, New York",49745.0
+859,"Installation, maintenance, and repair occupations",2013,"Richmond County, New York",9484.5
+860,Production occupations,2013,"Bronx County, New York",31292.0
+861,Production occupations,2013,"Kings County, New York",52680.0
+862,Production occupations,2013,"New York County, New York",17020.75
+863,Production occupations,2013,"Queens County, New York",61588.0
+864,Production occupations,2013,"Richmond County, New York",8167.5
+865,Transportation occupations,2013,"Bronx County, New York",48688.5
+866,Transportation occupations,2013,"Kings County, New York",73348.0
+867,Transportation occupations,2013,"New York County, New York",28267.0
+868,Transportation occupations,2013,"Queens County, New York",84520.0
+869,Transportation occupations,2013,"Richmond County, New York",16976.0
+870,Material moving occupations,2013,"Bronx County, New York",25018.75
+871,Material moving occupations,2013,"Kings County, New York",25924.0
+872,Material moving occupations,2013,"New York County, New York",10476.625
+873,Material moving occupations,2013,"Queens County, New York",28671.0
+874,Material moving occupations,2013,"Richmond County, New York",4517.5
+1000,Management occupations,2014,"Bronx County, New York",59198.0
+1001,Management occupations,2014,"Kings County, New York",186125.0
+1002,Management occupations,2014,"New York County, New York",267605.25
+1003,Management occupations,2014,"Queens County, New York",144489.0
+1004,Management occupations,2014,"Richmond County, New York",28308.0
+1005,Business and financial operations occupations,2014,"Bronx County, New York",22498.0
+1006,Business and financial operations occupations,2014,"Kings County, New York",90826.0
+1007,Business and financial operations occupations,2014,"New York County, New York",168731.5
+1008,Business and financial operations occupations,2014,"Queens County, New York",73545.0
+1009,Business and financial operations occupations,2014,"Richmond County, New York",19252.0
+1010,Computer and mathematical occupations,2014,"Bronx County, New York",10016.0
+1011,Computer and mathematical occupations,2014,"Kings County, New York",51071.0
+1012,Computer and mathematical occupations,2014,"New York County, New York",51370.625
+1013,Computer and mathematical occupations,2014,"Queens County, New York",38898.0
+1014,Computer and mathematical occupations,2014,"Richmond County, New York",6466.0
+1015,Architecture and engineering occupations,2014,"Bronx County, New York",4279.0
+1016,Architecture and engineering occupations,2014,"Kings County, New York",20796.0
+1017,Architecture and engineering occupations,2014,"New York County, New York",17234.375
+1018,Architecture and engineering occupations,2014,"Queens County, New York",15743.0
+1019,Architecture and engineering occupations,2014,"Richmond County, New York",4793.0
+1020,"Life, physical, and social science occupations",2014,"Bronx County, New York",3310.0
+1021,"Life, physical, and social science occupations",2014,"Kings County, New York",12008.0
+1022,"Life, physical, and social science occupations",2014,"New York County, New York",26941.125
+1023,"Life, physical, and social science occupations",2014,"Queens County, New York",9274.0
+1024,"Life, physical, and social science occupations",2014,"Richmond County, New York",1680.0
+1025,Community and social service occupations,2014,"Bronx County, New York",21500.0
+1026,Community and social service occupations,2014,"Kings County, New York",41730.0
+1027,Community and social service occupations,2014,"New York County, New York",22606.625
+1028,Community and social service occupations,2014,"Queens County, New York",27524.0
+1029,Community and social service occupations,2014,"Richmond County, New York",7207.0
+1030,Legal occupations,2014,"Bronx County, New York",7977.0
+1031,Legal occupations,2014,"Kings County, New York",29989.0
+1032,Legal occupations,2014,"New York County, New York",73822.875
+1033,Legal occupations,2014,"Queens County, New York",24817.0
+1034,Legal occupations,2014,"Richmond County, New York",3511.0
+1035,"Education, training, and library occupations",2014,"Bronx County, New York",48498.0
+1036,"Education, training, and library occupations",2014,"Kings County, New York",139222.0
+1037,"Education, training, and library occupations",2014,"New York County, New York",108001.375
+1038,"Education, training, and library occupations",2014,"Queens County, New York",100907.0
+1039,"Education, training, and library occupations",2014,"Richmond County, New York",36709.0
+1040,"Arts, design, entertainment, sports, and media occupations",2014,"Bronx County, New York",12775.0
+1041,"Arts, design, entertainment, sports, and media occupations",2014,"Kings County, New York",121439.0
+1042,"Arts, design, entertainment, sports, and media occupations",2014,"New York County, New York",134033.25
+1043,"Arts, design, entertainment, sports, and media occupations",2014,"Queens County, New York",48533.0
+1044,"Arts, design, entertainment, sports, and media occupations",2014,"Richmond County, New York",10208.0
+1045,Health diagnosing and treating practitioners and other technical occupations,2014,"Bronx County, New York",17251.0
+1046,Health diagnosing and treating practitioners and other technical occupations,2014,"Kings County, New York",61767.0
+1047,Health diagnosing and treating practitioners and other technical occupations,2014,"New York County, New York",68717.25
+1048,Health diagnosing and treating practitioners and other technical occupations,2014,"Queens County, New York",51094.0
+1049,Health diagnosing and treating practitioners and other technical occupations,2014,"Richmond County, New York",23676.0
+1050,Health technologists and technicians,2014,"Bronx County, New York",16961.0
+1051,Health technologists and technicians,2014,"Kings County, New York",24105.0
+1052,Health technologists and technicians,2014,"New York County, New York",8424.5
+1053,Health technologists and technicians,2014,"Queens County, New York",24307.0
+1054,Health technologists and technicians,2014,"Richmond County, New York",8125.0
+1055,Healthcare support occupations,2014,"Bronx County, New York",66530.0
+1056,Healthcare support occupations,2014,"Kings County, New York",94985.0
+1057,Healthcare support occupations,2014,"New York County, New York",29899.625
+1058,Healthcare support occupations,2014,"Queens County, New York",57864.0
+1059,Healthcare support occupations,2014,"Richmond County, New York",12270.0
+1060,"Fire fighting and prevention, and other protective service workers including supervisors",2014,"Bronx County, New York",22739.0
+1061,"Fire fighting and prevention, and other protective service workers including supervisors",2014,"Kings County, New York",32061.0
+1062,"Fire fighting and prevention, and other protective service workers including supervisors",2014,"New York County, New York",12559.75
+1063,"Fire fighting and prevention, and other protective service workers including supervisors",2014,"Queens County, New York",24550.0
+1064,"Fire fighting and prevention, and other protective service workers including supervisors",2014,"Richmond County, New York",9169.0
+1065,Law enforcement workers including supervisors,2014,"Bronx County, New York",9376.0
+1066,Law enforcement workers including supervisors,2014,"Kings County, New York",13462.0
+1067,Law enforcement workers including supervisors,2014,"New York County, New York",4905.875
+1068,Law enforcement workers including supervisors,2014,"Queens County, New York",20126.0
+1069,Law enforcement workers including supervisors,2014,"Richmond County, New York",9658.0
+1070,Food preparation and serving related occupations,2014,"Bronx County, New York",81269.0
+1071,Food preparation and serving related occupations,2014,"Kings County, New York",107858.0
+1072,Food preparation and serving related occupations,2014,"New York County, New York",63199.5
+1073,Food preparation and serving related occupations,2014,"Queens County, New York",132731.0
+1074,Food preparation and serving related occupations,2014,"Richmond County, New York",13235.0
+1075,Building and grounds cleaning and maintenance occupations,2014,"Bronx County, New York",71426.0
+1076,Building and grounds cleaning and maintenance occupations,2014,"Kings County, New York",79872.0
+1077,Building and grounds cleaning and maintenance occupations,2014,"New York County, New York",43417.5
+1078,Building and grounds cleaning and maintenance occupations,2014,"Queens County, New York",101850.0
+1079,Building and grounds cleaning and maintenance occupations,2014,"Richmond County, New York",14043.0
+1080,Personal care and service occupations,2014,"Bronx County, New York",62292.0
+1081,Personal care and service occupations,2014,"Kings County, New York",85249.0
+1082,Personal care and service occupations,2014,"New York County, New York",53784.25
+1083,Personal care and service occupations,2014,"Queens County, New York",90302.0
+1084,Personal care and service occupations,2014,"Richmond County, New York",10899.0
+1085,Sales and related occupations,2014,"Bronx County, New York",89454.0
+1086,Sales and related occupations,2014,"Kings County, New York",183287.0
+1087,Sales and related occupations,2014,"New York County, New York",175980.5
+1088,Sales and related occupations,2014,"Queens County, New York",165369.0
+1089,Sales and related occupations,2014,"Richmond County, New York",37941.0
+1090,Office and administrative support occupations,2014,"Bronx County, New York",121205.0
+1091,Office and administrative support occupations,2014,"Kings County, New York",225179.0
+1092,Office and administrative support occupations,2014,"New York County, New York",139030.625
+1093,Office and administrative support occupations,2014,"Queens County, New York",233325.0
+1094,Office and administrative support occupations,2014,"Richmond County, New York",48361.0
+1095,"Farming, fishing, and forestry occupations",2014,"Bronx County, New York",323.0
+1096,"Farming, fishing, and forestry occupations",2014,"Kings County, New York",2865.0
+1097,"Farming, fishing, and forestry occupations",2014,"New York County, New York",418.0
+1098,"Farming, fishing, and forestry occupations",2014,"Queens County, New York",632.0
+1099,"Farming, fishing, and forestry occupations",2014,"Richmond County, New York",126.0
+1100,Construction and extraction occupations,2014,"Bronx County, New York",52603.0
+1101,Construction and extraction occupations,2014,"Kings County, New York",89646.0
+1102,Construction and extraction occupations,2014,"New York County, New York",26486.5
+1103,Construction and extraction occupations,2014,"Queens County, New York",104819.0
+1104,Construction and extraction occupations,2014,"Richmond County, New York",24777.0
+1105,"Installation, maintenance, and repair occupations",2014,"Bronx County, New York",22095.0
+1106,"Installation, maintenance, and repair occupations",2014,"Kings County, New York",29191.0
+1107,"Installation, maintenance, and repair occupations",2014,"New York County, New York",13333.125
+1108,"Installation, maintenance, and repair occupations",2014,"Queens County, New York",41271.0
+1109,"Installation, maintenance, and repair occupations",2014,"Richmond County, New York",8606.0
+1110,Production occupations,2014,"Bronx County, New York",31320.0
+1111,Production occupations,2014,"Kings County, New York",52031.0
+1112,Production occupations,2014,"New York County, New York",17759.75
+1113,Production occupations,2014,"Queens County, New York",60910.0
+1114,Production occupations,2014,"Richmond County, New York",7986.0
+1115,Transportation occupations,2014,"Bronx County, New York",67503.0
+1116,Transportation occupations,2014,"Kings County, New York",71145.0
+1117,Transportation occupations,2014,"New York County, New York",23741.0
+1118,Transportation occupations,2014,"Queens County, New York",103613.0
+1119,Transportation occupations,2014,"Richmond County, New York",14689.0
+1120,Material moving occupations,2014,"Bronx County, New York",14317.0
+1121,Material moving occupations,2014,"Kings County, New York",29952.0
+1122,Material moving occupations,2014,"New York County, New York",12753.625
+1123,Material moving occupations,2014,"Queens County, New York",27298.0
+1124,Material moving occupations,2014,"Richmond County, New York",6574.0
+1250,Management occupations,2015,"Bronx County, New York",58189.0
+1251,Management occupations,2015,"Kings County, New York",195008.0
+1252,Management occupations,2015,"New York County, New York",276177.0
+1253,Management occupations,2015,"Queens County, New York",147802.0
+1254,Management occupations,2015,"Richmond County, New York",33521.5
+1255,Business and financial operations occupations,2015,"Bronx County, New York",26191.0
+1256,Business and financial operations occupations,2015,"Kings County, New York",93876.0
+1257,Business and financial operations occupations,2015,"New York County, New York",154420.0
+1258,Business and financial operations occupations,2015,"Queens County, New York",84439.0
+1259,Business and financial operations occupations,2015,"Richmond County, New York",19612.5
+1260,Computer and mathematical occupations,2015,"Bronx County, New York",12832.0
+1261,Computer and mathematical occupations,2015,"Kings County, New York",51037.0
+1262,Computer and mathematical occupations,2015,"New York County, New York",55794.0
+1263,Computer and mathematical occupations,2015,"Queens County, New York",37564.0
+1264,Computer and mathematical occupations,2015,"Richmond County, New York",9117.0
+1265,Architecture and engineering occupations,2015,"Bronx County, New York",3160.0
+1266,Architecture and engineering occupations,2015,"Kings County, New York",19281.0
+1267,Architecture and engineering occupations,2015,"New York County, New York",17374.0
+1268,Architecture and engineering occupations,2015,"Queens County, New York",16108.0
+1269,Architecture and engineering occupations,2015,"Richmond County, New York",5123.5
+1270,"Life, physical, and social science occupations",2015,"Bronx County, New York",3795.0
+1271,"Life, physical, and social science occupations",2015,"Kings County, New York",15344.0
+1272,"Life, physical, and social science occupations",2015,"New York County, New York",30297.0
+1273,"Life, physical, and social science occupations",2015,"Queens County, New York",10334.0
+1274,"Life, physical, and social science occupations",2015,"Richmond County, New York",2170.0
+1275,Community and social service occupations,2015,"Bronx County, New York",23427.0
+1276,Community and social service occupations,2015,"Kings County, New York",39910.0
+1277,Community and social service occupations,2015,"New York County, New York",28459.0
+1278,Community and social service occupations,2015,"Queens County, New York",29089.0
+1279,Community and social service occupations,2015,"Richmond County, New York",5031.5
+1280,Legal occupations,2015,"Bronx County, New York",6593.0
+1281,Legal occupations,2015,"Kings County, New York",46170.0
+1282,Legal occupations,2015,"New York County, New York",63847.0
+1283,Legal occupations,2015,"Queens County, New York",26791.0
+1284,Legal occupations,2015,"Richmond County, New York",6446.0
+1285,"Education, training, and library occupations",2015,"Bronx County, New York",55583.0
+1286,"Education, training, and library occupations",2015,"Kings County, New York",145693.0
+1287,"Education, training, and library occupations",2015,"New York County, New York",109145.0
+1288,"Education, training, and library occupations",2015,"Queens County, New York",101367.0
+1289,"Education, training, and library occupations",2015,"Richmond County, New York",37137.0
+1290,"Arts, design, entertainment, sports, and media occupations",2015,"Bronx County, New York",13899.0
+1291,"Arts, design, entertainment, sports, and media occupations",2015,"Kings County, New York",126478.0
+1292,"Arts, design, entertainment, sports, and media occupations",2015,"New York County, New York",147324.0
+1293,"Arts, design, entertainment, sports, and media occupations",2015,"Queens County, New York",52580.0
+1294,"Arts, design, entertainment, sports, and media occupations",2015,"Richmond County, New York",5818.5
+1295,Health diagnosing and treating practitioners and other technical occupations,2015,"Bronx County, New York",21617.0
+1296,Health diagnosing and treating practitioners and other technical occupations,2015,"Kings County, New York",62122.0
+1297,Health diagnosing and treating practitioners and other technical occupations,2015,"New York County, New York",65479.0
+1298,Health diagnosing and treating practitioners and other technical occupations,2015,"Queens County, New York",59191.0
+1299,Health diagnosing and treating practitioners and other technical occupations,2015,"Richmond County, New York",17840.5
+1300,Health technologists and technicians,2015,"Bronx County, New York",16906.0
+1301,Health technologists and technicians,2015,"Kings County, New York",28341.0
+1302,Health technologists and technicians,2015,"New York County, New York",11607.0
+1303,Health technologists and technicians,2015,"Queens County, New York",26403.0
+1304,Health technologists and technicians,2015,"Richmond County, New York",8655.0
+1305,Healthcare support occupations,2015,"Bronx County, New York",68047.0
+1306,Healthcare support occupations,2015,"Kings County, New York",97996.0
+1307,Healthcare support occupations,2015,"New York County, New York",30493.0
+1308,Healthcare support occupations,2015,"Queens County, New York",65767.0
+1309,Healthcare support occupations,2015,"Richmond County, New York",9487.5
+1310,"Fire fighting and prevention, and other protective service workers including supervisors",2015,"Bronx County, New York",26080.0
+1311,"Fire fighting and prevention, and other protective service workers including supervisors",2015,"Kings County, New York",29158.0
+1312,"Fire fighting and prevention, and other protective service workers including supervisors",2015,"New York County, New York",14771.0
+1313,"Fire fighting and prevention, and other protective service workers including supervisors",2015,"Queens County, New York",28591.0
+1314,"Fire fighting and prevention, and other protective service workers including supervisors",2015,"Richmond County, New York",7926.5
+1315,Law enforcement workers including supervisors,2015,"Bronx County, New York",8657.0
+1316,Law enforcement workers including supervisors,2015,"Kings County, New York",15040.0
+1317,Law enforcement workers including supervisors,2015,"New York County, New York",5514.0
+1318,Law enforcement workers including supervisors,2015,"Queens County, New York",21766.0
+1319,Law enforcement workers including supervisors,2015,"Richmond County, New York",7647.5
+1320,Food preparation and serving related occupations,2015,"Bronx County, New York",79775.0
+1321,Food preparation and serving related occupations,2015,"Kings County, New York",113315.0
+1322,Food preparation and serving related occupations,2015,"New York County, New York",69890.0
+1323,Food preparation and serving related occupations,2015,"Queens County, New York",137447.0
+1324,Food preparation and serving related occupations,2015,"Richmond County, New York",13532.0
+1325,Building and grounds cleaning and maintenance occupations,2015,"Bronx County, New York",76008.0
+1326,Building and grounds cleaning and maintenance occupations,2015,"Kings County, New York",74476.0
+1327,Building and grounds cleaning and maintenance occupations,2015,"New York County, New York",39722.0
+1328,Building and grounds cleaning and maintenance occupations,2015,"Queens County, New York",97896.0
+1329,Building and grounds cleaning and maintenance occupations,2015,"Richmond County, New York",10587.5
+1330,Personal care and service occupations,2015,"Bronx County, New York",66339.0
+1331,Personal care and service occupations,2015,"Kings County, New York",86445.0
+1332,Personal care and service occupations,2015,"New York County, New York",56502.0
+1333,Personal care and service occupations,2015,"Queens County, New York",86704.0
+1334,Personal care and service occupations,2015,"Richmond County, New York",12645.5
+1335,Sales and related occupations,2015,"Bronx County, New York",93560.0
+1336,Sales and related occupations,2015,"Kings County, New York",172239.0
+1337,Sales and related occupations,2015,"New York County, New York",177868.0
+1338,Sales and related occupations,2015,"Queens County, New York",160379.0
+1339,Sales and related occupations,2015,"Richmond County, New York",35553.0
+1340,Office and administrative support occupations,2015,"Bronx County, New York",138817.0
+1341,Office and administrative support occupations,2015,"Kings County, New York",223985.0
+1342,Office and administrative support occupations,2015,"New York County, New York",136672.0
+1343,Office and administrative support occupations,2015,"Queens County, New York",235379.0
+1344,Office and administrative support occupations,2015,"Richmond County, New York",55585.5
+1345,"Farming, fishing, and forestry occupations",2015,"Bronx County, New York",2280.0
+1346,"Farming, fishing, and forestry occupations",2015,"Kings County, New York",1578.0
+1347,"Farming, fishing, and forestry occupations",2015,"New York County, New York",608.0
+1348,"Farming, fishing, and forestry occupations",2015,"Queens County, New York",1660.0
+1349,"Farming, fishing, and forestry occupations",2015,"Richmond County, New York",97.0
+1350,Construction and extraction occupations,2015,"Bronx County, New York",50740.0
+1351,Construction and extraction occupations,2015,"Kings County, New York",85229.0
+1352,Construction and extraction occupations,2015,"New York County, New York",20888.0
+1353,Construction and extraction occupations,2015,"Queens County, New York",112575.0
+1354,Construction and extraction occupations,2015,"Richmond County, New York",24394.5
+1355,"Installation, maintenance, and repair occupations",2015,"Bronx County, New York",25267.0
+1356,"Installation, maintenance, and repair occupations",2015,"Kings County, New York",34059.0
+1357,"Installation, maintenance, and repair occupations",2015,"New York County, New York",14524.0
+1358,"Installation, maintenance, and repair occupations",2015,"Queens County, New York",37290.0
+1359,"Installation, maintenance, and repair occupations",2015,"Richmond County, New York",12496.5
+1360,Production occupations,2015,"Bronx County, New York",30754.0
+1361,Production occupations,2015,"Kings County, New York",52688.0
+1362,Production occupations,2015,"New York County, New York",21107.0
+1363,Production occupations,2015,"Queens County, New York",60854.0
+1364,Production occupations,2015,"Richmond County, New York",6028.5
+1365,Transportation occupations,2015,"Bronx County, New York",57128.0
+1366,Transportation occupations,2015,"Kings County, New York",80626.0
+1367,Transportation occupations,2015,"New York County, New York",33217.0
+1368,Transportation occupations,2015,"Queens County, New York",100075.0
+1369,Transportation occupations,2015,"Richmond County, New York",17015.0
+1370,Material moving occupations,2015,"Bronx County, New York",16880.0
+1371,Material moving occupations,2015,"Kings County, New York",23243.0
+1372,Material moving occupations,2015,"New York County, New York",11978.0
+1373,Material moving occupations,2015,"Queens County, New York",27160.0
+1374,Material moving occupations,2015,"Richmond County, New York",4580.5
+1500,Management occupations,2016,"Bronx County, New York",61454.5
+1501,Management occupations,2016,"Kings County, New York",205224.0
+1502,Management occupations,2016,"New York County, New York",283039.0
+1503,Management occupations,2016,"Queens County, New York",154872.0
+1504,Management occupations,2016,"Richmond County, New York",33425.5
+1505,Business and financial operations occupations,2016,"Bronx County, New York",25819.75
+1506,Business and financial operations occupations,2016,"Kings County, New York",93088.0
+1507,Business and financial operations occupations,2016,"New York County, New York",162591.0
+1508,Business and financial operations occupations,2016,"Queens County, New York",81764.0
+1509,Business and financial operations occupations,2016,"Richmond County, New York",18088.5
+1510,Computer and mathematical occupations,2016,"Bronx County, New York",11113.25
+1511,Computer and mathematical occupations,2016,"Kings County, New York",59630.0
+1512,Computer and mathematical occupations,2016,"New York County, New York",59952.0
+1513,Computer and mathematical occupations,2016,"Queens County, New York",43564.0
+1514,Computer and mathematical occupations,2016,"Richmond County, New York",8248.0
+1515,Architecture and engineering occupations,2016,"Bronx County, New York",4825.75
+1516,Architecture and engineering occupations,2016,"Kings County, New York",22676.0
+1517,Architecture and engineering occupations,2016,"New York County, New York",16444.0
+1518,Architecture and engineering occupations,2016,"Queens County, New York",19008.0
+1519,Architecture and engineering occupations,2016,"Richmond County, New York",5811.5
+1520,"Life, physical, and social science occupations",2016,"Bronx County, New York",3278.5
+1521,"Life, physical, and social science occupations",2016,"Kings County, New York",15373.0
+1522,"Life, physical, and social science occupations",2016,"New York County, New York",28071.0
+1523,"Life, physical, and social science occupations",2016,"Queens County, New York",9790.0
+1524,"Life, physical, and social science occupations",2016,"Richmond County, New York",2204.0
+1525,Community and social service occupations,2016,"Bronx County, New York",21955.5
+1526,Community and social service occupations,2016,"Kings County, New York",42394.0
+1527,Community and social service occupations,2016,"New York County, New York",30430.0
+1528,Community and social service occupations,2016,"Queens County, New York",31642.0
+1529,Community and social service occupations,2016,"Richmond County, New York",6782.5
+1530,Legal occupations,2016,"Bronx County, New York",7212.25
+1531,Legal occupations,2016,"Kings County, New York",35545.0
+1532,Legal occupations,2016,"New York County, New York",78855.0
+1533,Legal occupations,2016,"Queens County, New York",23775.0
+1534,Legal occupations,2016,"Richmond County, New York",4835.0
+1535,"Education, training, and library occupations",2016,"Bronx County, New York",52209.0
+1536,"Education, training, and library occupations",2016,"Kings County, New York",136512.0
+1537,"Education, training, and library occupations",2016,"New York County, New York",93102.0
+1538,"Education, training, and library occupations",2016,"Queens County, New York",102051.0
+1539,"Education, training, and library occupations",2016,"Richmond County, New York",31353.0
+1540,"Arts, design, entertainment, sports, and media occupations",2016,"Bronx County, New York",15351.5
+1541,"Arts, design, entertainment, sports, and media occupations",2016,"Kings County, New York",141893.0
+1542,"Arts, design, entertainment, sports, and media occupations",2016,"New York County, New York",133450.0
+1543,"Arts, design, entertainment, sports, and media occupations",2016,"Queens County, New York",51028.0
+1544,"Arts, design, entertainment, sports, and media occupations",2016,"Richmond County, New York",5761.5
+1545,Health diagnosing and treating practitioners and other technical occupations,2016,"Bronx County, New York",21806.0
+1546,Health diagnosing and treating practitioners and other technical occupations,2016,"Kings County, New York",57804.0
+1547,Health diagnosing and treating practitioners and other technical occupations,2016,"New York County, New York",74917.0
+1548,Health diagnosing and treating practitioners and other technical occupations,2016,"Queens County, New York",61087.0
+1549,Health diagnosing and treating practitioners and other technical occupations,2016,"Richmond County, New York",21167.5
+1550,Health technologists and technicians,2016,"Bronx County, New York",14640.0
+1551,Health technologists and technicians,2016,"Kings County, New York",25081.0
+1552,Health technologists and technicians,2016,"New York County, New York",8608.0
+1553,Health technologists and technicians,2016,"Queens County, New York",23444.0
+1554,Health technologists and technicians,2016,"Richmond County, New York",7518.0
+1555,Healthcare support occupations,2016,"Bronx County, New York",74926.5
+1556,Healthcare support occupations,2016,"Kings County, New York",103249.0
+1557,Healthcare support occupations,2016,"New York County, New York",33276.0
+1558,Healthcare support occupations,2016,"Queens County, New York",60926.0
+1559,Healthcare support occupations,2016,"Richmond County, New York",11200.5
+1560,"Fire fighting and prevention, and other protective service workers including supervisors",2016,"Bronx County, New York",24883.0
+1561,"Fire fighting and prevention, and other protective service workers including supervisors",2016,"Kings County, New York",31312.0
+1562,"Fire fighting and prevention, and other protective service workers including supervisors",2016,"New York County, New York",9485.0
+1563,"Fire fighting and prevention, and other protective service workers including supervisors",2016,"Queens County, New York",27912.0
+1564,"Fire fighting and prevention, and other protective service workers including supervisors",2016,"Richmond County, New York",10785.5
+1565,Law enforcement workers including supervisors,2016,"Bronx County, New York",10487.75
+1566,Law enforcement workers including supervisors,2016,"Kings County, New York",15582.0
+1567,Law enforcement workers including supervisors,2016,"New York County, New York",3239.0
+1568,Law enforcement workers including supervisors,2016,"Queens County, New York",18157.0
+1569,Law enforcement workers including supervisors,2016,"Richmond County, New York",9555.5
+1570,Food preparation and serving related occupations,2016,"Bronx County, New York",86773.75
+1571,Food preparation and serving related occupations,2016,"Kings County, New York",103591.0
+1572,Food preparation and serving related occupations,2016,"New York County, New York",71695.0
+1573,Food preparation and serving related occupations,2016,"Queens County, New York",125937.0
+1574,Food preparation and serving related occupations,2016,"Richmond County, New York",10795.0
+1575,Building and grounds cleaning and maintenance occupations,2016,"Bronx County, New York",79031.5
+1576,Building and grounds cleaning and maintenance occupations,2016,"Kings County, New York",72103.0
+1577,Building and grounds cleaning and maintenance occupations,2016,"New York County, New York",38997.0
+1578,Building and grounds cleaning and maintenance occupations,2016,"Queens County, New York",97142.0
+1579,Building and grounds cleaning and maintenance occupations,2016,"Richmond County, New York",10211.5
+1580,Personal care and service occupations,2016,"Bronx County, New York",78346.75
+1581,Personal care and service occupations,2016,"Kings County, New York",82199.0
+1582,Personal care and service occupations,2016,"New York County, New York",59530.0
+1583,Personal care and service occupations,2016,"Queens County, New York",96767.0
+1584,Personal care and service occupations,2016,"Richmond County, New York",14844.5
+1585,Sales and related occupations,2016,"Bronx County, New York",90019.25
+1586,Sales and related occupations,2016,"Kings County, New York",182653.0
+1587,Sales and related occupations,2016,"New York County, New York",175956.0
+1588,Sales and related occupations,2016,"Queens County, New York",173338.0
+1589,Sales and related occupations,2016,"Richmond County, New York",36244.0
+1590,Office and administrative support occupations,2016,"Bronx County, New York",128409.0
+1591,Office and administrative support occupations,2016,"Kings County, New York",227758.0
+1592,Office and administrative support occupations,2016,"New York County, New York",140970.0
+1593,Office and administrative support occupations,2016,"Queens County, New York",225948.0
+1594,Office and administrative support occupations,2016,"Richmond County, New York",50257.5
+1595,"Farming, fishing, and forestry occupations",2016,"Bronx County, New York",526.0
+1596,"Farming, fishing, and forestry occupations",2016,"Kings County, New York",1315.0
+1597,"Farming, fishing, and forestry occupations",2016,"New York County, New York",154.0
+1598,"Farming, fishing, and forestry occupations",2016,"Queens County, New York",1600.0
+1599,"Farming, fishing, and forestry occupations",2016,"Richmond County, New York",154.0
+1600,Construction and extraction occupations,2016,"Bronx County, New York",44988.0
+1601,Construction and extraction occupations,2016,"Kings County, New York",83739.0
+1602,Construction and extraction occupations,2016,"New York County, New York",17976.0
+1603,Construction and extraction occupations,2016,"Queens County, New York",115772.0
+1604,Construction and extraction occupations,2016,"Richmond County, New York",26139.5
+1605,"Installation, maintenance, and repair occupations",2016,"Bronx County, New York",28031.75
+1606,"Installation, maintenance, and repair occupations",2016,"Kings County, New York",33801.0
+1607,"Installation, maintenance, and repair occupations",2016,"New York County, New York",11964.0
+1608,"Installation, maintenance, and repair occupations",2016,"Queens County, New York",39668.0
+1609,"Installation, maintenance, and repair occupations",2016,"Richmond County, New York",9157.5
+1610,Production occupations,2016,"Bronx County, New York",29798.0
+1611,Production occupations,2016,"Kings County, New York",47359.0
+1612,Production occupations,2016,"New York County, New York",20782.0
+1613,Production occupations,2016,"Queens County, New York",52587.0
+1614,Production occupations,2016,"Richmond County, New York",7024.5
+1615,Transportation occupations,2016,"Bronx County, New York",67472.5
+1616,Transportation occupations,2016,"Kings County, New York",80195.0
+1617,Transportation occupations,2016,"New York County, New York",28969.0
+1618,Transportation occupations,2016,"Queens County, New York",102989.0
+1619,Transportation occupations,2016,"Richmond County, New York",16103.0
+1620,Material moving occupations,2016,"Bronx County, New York",18119.75
+1621,Material moving occupations,2016,"Kings County, New York",26321.0
+1622,Material moving occupations,2016,"New York County, New York",6514.0
+1623,Material moving occupations,2016,"Queens County, New York",25595.0
+1624,Material moving occupations,2016,"Richmond County, New York",5974.5
+1750,Management occupations,2017,"Bronx County, New York",57412.5
+1751,Management occupations,2017,"Kings County, New York",212226.0
+1752,Management occupations,2017,"New York County, New York",273138.0
+1753,Management occupations,2017,"Queens County, New York",147787.0
+1754,Management occupations,2017,"Richmond County, New York",37217.5
+1755,Business and financial operations occupations,2017,"Bronx County, New York",28971.75
+1756,Business and financial operations occupations,2017,"Kings County, New York",99246.0
+1757,Business and financial operations occupations,2017,"New York County, New York",166441.0
+1758,Business and financial operations occupations,2017,"Queens County, New York",92851.0
+1759,Business and financial operations occupations,2017,"Richmond County, New York",20756.375
+1760,Computer and mathematical occupations,2017,"Bronx County, New York",9322.25
+1761,Computer and mathematical occupations,2017,"Kings County, New York",60726.0
+1762,Computer and mathematical occupations,2017,"New York County, New York",58181.0
+1763,Computer and mathematical occupations,2017,"Queens County, New York",46805.0
+1764,Computer and mathematical occupations,2017,"Richmond County, New York",9582.0
+1765,Architecture and engineering occupations,2017,"Bronx County, New York",5880.75
+1766,Architecture and engineering occupations,2017,"Kings County, New York",22596.0
+1767,Architecture and engineering occupations,2017,"New York County, New York",19622.0
+1768,Architecture and engineering occupations,2017,"Queens County, New York",16103.0
+1769,Architecture and engineering occupations,2017,"Richmond County, New York",5472.75
+1770,"Life, physical, and social science occupations",2017,"Bronx County, New York",3370.5
+1771,"Life, physical, and social science occupations",2017,"Kings County, New York",14815.0
+1772,"Life, physical, and social science occupations",2017,"New York County, New York",29205.0
+1773,"Life, physical, and social science occupations",2017,"Queens County, New York",7630.0
+1774,"Life, physical, and social science occupations",2017,"Richmond County, New York",1646.75
+1775,Community and social service occupations,2017,"Bronx County, New York",27409.5
+1776,Community and social service occupations,2017,"Kings County, New York",40048.0
+1777,Community and social service occupations,2017,"New York County, New York",30167.0
+1778,Community and social service occupations,2017,"Queens County, New York",32516.0
+1779,Community and social service occupations,2017,"Richmond County, New York",8160.375
+1780,Legal occupations,2017,"Bronx County, New York",5453.25
+1781,Legal occupations,2017,"Kings County, New York",40681.0
+1782,Legal occupations,2017,"New York County, New York",72901.0
+1783,Legal occupations,2017,"Queens County, New York",19503.0
+1784,Legal occupations,2017,"Richmond County, New York",5849.625
+1785,"Education, training, and library occupations",2017,"Bronx County, New York",53810.0
+1786,"Education, training, and library occupations",2017,"Kings County, New York",144175.0
+1787,"Education, training, and library occupations",2017,"New York County, New York",95088.0
+1788,"Education, training, and library occupations",2017,"Queens County, New York",100515.0
+1789,"Education, training, and library occupations",2017,"Richmond County, New York",35051.25
+1790,"Arts, design, entertainment, sports, and media occupations",2017,"Bronx County, New York",13546.5
+1791,"Arts, design, entertainment, sports, and media occupations",2017,"Kings County, New York",155346.0
+1792,"Arts, design, entertainment, sports, and media occupations",2017,"New York County, New York",144929.0
+1793,"Arts, design, entertainment, sports, and media occupations",2017,"Queens County, New York",47411.0
+1794,"Arts, design, entertainment, sports, and media occupations",2017,"Richmond County, New York",7379.5
+1795,Health diagnosing and treating practitioners and other technical occupations,2017,"Bronx County, New York",19373.0
+1796,Health diagnosing and treating practitioners and other technical occupations,2017,"Kings County, New York",64910.0
+1797,Health diagnosing and treating practitioners and other technical occupations,2017,"New York County, New York",74734.0
+1798,Health diagnosing and treating practitioners and other technical occupations,2017,"Queens County, New York",62442.0
+1799,Health diagnosing and treating practitioners and other technical occupations,2017,"Richmond County, New York",18319.625
+1800,Health technologists and technicians,2017,"Bronx County, New York",16315.0
+1801,Health technologists and technicians,2017,"Kings County, New York",25368.0
+1802,Health technologists and technicians,2017,"New York County, New York",10209.0
+1803,Health technologists and technicians,2017,"Queens County, New York",32842.0
+1804,Health technologists and technicians,2017,"Richmond County, New York",8221.125
+1805,Healthcare support occupations,2017,"Bronx County, New York",86185.5
+1806,Healthcare support occupations,2017,"Kings County, New York",97884.0
+1807,Healthcare support occupations,2017,"New York County, New York",36034.0
+1808,Healthcare support occupations,2017,"Queens County, New York",68355.0
+1809,Healthcare support occupations,2017,"Richmond County, New York",12704.75
+1810,"Fire fighting and prevention, and other protective service workers including supervisors",2017,"Bronx County, New York",28985.0
+1811,"Fire fighting and prevention, and other protective service workers including supervisors",2017,"Kings County, New York",30574.0
+1812,"Fire fighting and prevention, and other protective service workers including supervisors",2017,"New York County, New York",11683.0
+1813,"Fire fighting and prevention, and other protective service workers including supervisors",2017,"Queens County, New York",27284.0
+1814,"Fire fighting and prevention, and other protective service workers including supervisors",2017,"Richmond County, New York",8766.125
+1815,Law enforcement workers including supervisors,2017,"Bronx County, New York",8865.75
+1816,Law enforcement workers including supervisors,2017,"Kings County, New York",16392.0
+1817,Law enforcement workers including supervisors,2017,"New York County, New York",6192.0
+1818,Law enforcement workers including supervisors,2017,"Queens County, New York",18601.0
+1819,Law enforcement workers including supervisors,2017,"Richmond County, New York",12522.75
+1820,Food preparation and serving related occupations,2017,"Bronx County, New York",74025.75
+1821,Food preparation and serving related occupations,2017,"Kings County, New York",96801.0
+1822,Food preparation and serving related occupations,2017,"New York County, New York",75106.0
+1823,Food preparation and serving related occupations,2017,"Queens County, New York",125265.0
+1824,Food preparation and serving related occupations,2017,"Richmond County, New York",13342.25
+1825,Building and grounds cleaning and maintenance occupations,2017,"Bronx County, New York",79894.5
+1826,Building and grounds cleaning and maintenance occupations,2017,"Kings County, New York",69772.0
+1827,Building and grounds cleaning and maintenance occupations,2017,"New York County, New York",35481.0
+1828,Building and grounds cleaning and maintenance occupations,2017,"Queens County, New York",108791.0
+1829,Building and grounds cleaning and maintenance occupations,2017,"Richmond County, New York",11061.125
+1830,Personal care and service occupations,2017,"Bronx County, New York",70194.75
+1831,Personal care and service occupations,2017,"Kings County, New York",83978.0
+1832,Personal care and service occupations,2017,"New York County, New York",60528.0
+1833,Personal care and service occupations,2017,"Queens County, New York",97959.0
+1834,Personal care and service occupations,2017,"Richmond County, New York",11232.625
+1835,Sales and related occupations,2017,"Bronx County, New York",87672.25
+1836,Sales and related occupations,2017,"Kings County, New York",172564.0
+1837,Sales and related occupations,2017,"New York County, New York",170938.0
+1838,Sales and related occupations,2017,"Queens County, New York",161703.0
+1839,Sales and related occupations,2017,"Richmond County, New York",34298.125
+1840,Office and administrative support occupations,2017,"Bronx County, New York",150954.0
+1841,Office and administrative support occupations,2017,"Kings County, New York",228816.0
+1842,Office and administrative support occupations,2017,"New York County, New York",140491.0
+1843,Office and administrative support occupations,2017,"Queens County, New York",225543.0
+1844,Office and administrative support occupations,2017,"Richmond County, New York",51954.125
+1845,"Farming, fishing, and forestry occupations",2017,"Bronx County, New York",1447.0
+1846,"Farming, fishing, and forestry occupations",2017,"Kings County, New York",1636.0
+1847,"Farming, fishing, and forestry occupations",2017,"New York County, New York",712.0
+1848,"Farming, fishing, and forestry occupations",2017,"Queens County, New York",1592.0
+1849,"Farming, fishing, and forestry occupations",2017,"Richmond County, New York",66.125
+1850,Construction and extraction occupations,2017,"Bronx County, New York",47275.0
+1851,Construction and extraction occupations,2017,"Kings County, New York",88823.0
+1852,Construction and extraction occupations,2017,"New York County, New York",26364.0
+1853,Construction and extraction occupations,2017,"Queens County, New York",120166.0
+1854,Construction and extraction occupations,2017,"Richmond County, New York",24239.5
+1855,"Installation, maintenance, and repair occupations",2017,"Bronx County, New York",20030.75
+1856,"Installation, maintenance, and repair occupations",2017,"Kings County, New York",27591.0
+1857,"Installation, maintenance, and repair occupations",2017,"New York County, New York",16369.0
+1858,"Installation, maintenance, and repair occupations",2017,"Queens County, New York",43523.0
+1859,"Installation, maintenance, and repair occupations",2017,"Richmond County, New York",8451.875
+1860,Production occupations,2017,"Bronx County, New York",27125.0
+1861,Production occupations,2017,"Kings County, New York",43355.0
+1862,Production occupations,2017,"New York County, New York",28422.0
+1863,Production occupations,2017,"Queens County, New York",51811.0
+1864,Production occupations,2017,"Richmond County, New York",8226.25
+1865,Transportation occupations,2017,"Bronx County, New York",61070.5
+1866,Transportation occupations,2017,"Kings County, New York",84964.0
+1867,Transportation occupations,2017,"New York County, New York",26787.0
+1868,Transportation occupations,2017,"Queens County, New York",104536.0
+1869,Transportation occupations,2017,"Richmond County, New York",15849.375
+1870,Material moving occupations,2017,"Bronx County, New York",22587.75
+1871,Material moving occupations,2017,"Kings County, New York",25936.0
+1872,Material moving occupations,2017,"New York County, New York",10800.0
+1873,Material moving occupations,2017,"Queens County, New York",33554.0
+1874,Material moving occupations,2017,"Richmond County, New York",8024.375
+2000,Management occupations,2018,"Bronx County, New York",56230.0
+2001,Management occupations,2018,"Kings County, New York",192068.0
+2002,Management occupations,2018,"New York County, New York",267181.0
+2003,Management occupations,2018,"Queens County, New York",145403.0
+2004,Management occupations,2018,"Richmond County, New York",32486.5
+2005,Business and financial operations occupations,2018,"Bronx County, New York",24494.0
+2006,Business and financial operations occupations,2018,"Kings County, New York",118134.0
+2007,Business and financial operations occupations,2018,"New York County, New York",166251.0
+2008,Business and financial operations occupations,2018,"Queens County, New York",88904.0
+2009,Business and financial operations occupations,2018,"Richmond County, New York",21938.5
+2010,Computer and mathematical occupations,2018,"Bronx County, New York",14165.0
+2011,Computer and mathematical occupations,2018,"Kings County, New York",70974.0
+2012,Computer and mathematical occupations,2018,"New York County, New York",74313.0
+2013,Computer and mathematical occupations,2018,"Queens County, New York",42626.0
+2014,Computer and mathematical occupations,2018,"Richmond County, New York",10142.0
+2015,Architecture and engineering occupations,2018,"Bronx County, New York",2182.0
+2016,Architecture and engineering occupations,2018,"Kings County, New York",20275.0
+2017,Architecture and engineering occupations,2018,"New York County, New York",19353.0
+2018,Architecture and engineering occupations,2018,"Queens County, New York",22526.0
+2019,Architecture and engineering occupations,2018,"Richmond County, New York",3770.5
+2020,"Life, physical, and social science occupations",2018,"Bronx County, New York",3813.0
+2021,"Life, physical, and social science occupations",2018,"Kings County, New York",16687.0
+2022,"Life, physical, and social science occupations",2018,"New York County, New York",30922.0
+2023,"Life, physical, and social science occupations",2018,"Queens County, New York",11535.0
+2024,"Life, physical, and social science occupations",2018,"Richmond County, New York",2005.0
+2025,Community and social service occupations,2018,"Bronx County, New York",24046.0
+2026,Community and social service occupations,2018,"Kings County, New York",37078.0
+2027,Community and social service occupations,2018,"New York County, New York",20701.0
+2028,Community and social service occupations,2018,"Queens County, New York",25239.0
+2029,Community and social service occupations,2018,"Richmond County, New York",8125.5
+2030,Legal occupations,2018,"Bronx County, New York",8601.0
+2031,Legal occupations,2018,"Kings County, New York",41122.0
+2032,Legal occupations,2018,"New York County, New York",64111.0
+2033,Legal occupations,2018,"Queens County, New York",23531.0
+2034,Legal occupations,2018,"Richmond County, New York",4218.0
+2035,"Education, training, and library occupations",2018,"Bronx County, New York",49400.0
+2036,"Education, training, and library occupations",2018,"Kings County, New York",151506.0
+2037,"Education, training, and library occupations",2018,"New York County, New York",121447.0
+2038,"Education, training, and library occupations",2018,"Queens County, New York",95922.0
+2039,"Education, training, and library occupations",2018,"Richmond County, New York",33760.0
+2040,"Arts, design, entertainment, sports, and media occupations",2018,"Bronx County, New York",17539.0
+2041,"Arts, design, entertainment, sports, and media occupations",2018,"Kings County, New York",153866.0
+2042,"Arts, design, entertainment, sports, and media occupations",2018,"New York County, New York",125962.0
+2043,"Arts, design, entertainment, sports, and media occupations",2018,"Queens County, New York",51233.0
+2044,"Arts, design, entertainment, sports, and media occupations",2018,"Richmond County, New York",6866.5
+2045,Health diagnosing and treating practitioners and other technical occupations,2018,"Bronx County, New York",22714.0
+2046,Health diagnosing and treating practitioners and other technical occupations,2018,"Kings County, New York",65352.0
+2047,Health diagnosing and treating practitioners and other technical occupations,2018,"New York County, New York",65181.0
+2048,Health diagnosing and treating practitioners and other technical occupations,2018,"Queens County, New York",64789.0
+2049,Health diagnosing and treating practitioners and other technical occupations,2018,"Richmond County, New York",17269.5
+2050,Health technologists and technicians,2018,"Bronx County, New York",16270.0
+2051,Health technologists and technicians,2018,"Kings County, New York",25569.0
+2052,Health technologists and technicians,2018,"New York County, New York",9269.0
+2053,Health technologists and technicians,2018,"Queens County, New York",27310.0
+2054,Health technologists and technicians,2018,"Richmond County, New York",7588.0
+2055,Healthcare support occupations,2018,"Bronx County, New York",104365.0
+2056,Healthcare support occupations,2018,"Kings County, New York",114123.0
+2057,Healthcare support occupations,2018,"New York County, New York",42412.0
+2058,Healthcare support occupations,2018,"Queens County, New York",75661.0
+2059,Healthcare support occupations,2018,"Richmond County, New York",14734.5
+2060,"Fire fighting and prevention, and other protective service workers including supervisors",2018,"Bronx County, New York",26483.0
+2061,"Fire fighting and prevention, and other protective service workers including supervisors",2018,"Kings County, New York",31092.0
+2062,"Fire fighting and prevention, and other protective service workers including supervisors",2018,"New York County, New York",12434.0
+2063,"Fire fighting and prevention, and other protective service workers including supervisors",2018,"Queens County, New York",26609.0
+2064,"Fire fighting and prevention, and other protective service workers including supervisors",2018,"Richmond County, New York",12549.5
+2065,Law enforcement workers including supervisors,2018,"Bronx County, New York",10011.0
+2066,Law enforcement workers including supervisors,2018,"Kings County, New York",16759.0
+2067,Law enforcement workers including supervisors,2018,"New York County, New York",5337.0
+2068,Law enforcement workers including supervisors,2018,"Queens County, New York",19838.0
+2069,Law enforcement workers including supervisors,2018,"Richmond County, New York",8873.5
+2070,Food preparation and serving related occupations,2018,"Bronx County, New York",70854.0
+2071,Food preparation and serving related occupations,2018,"Kings County, New York",101100.0
+2072,Food preparation and serving related occupations,2018,"New York County, New York",65803.0
+2073,Food preparation and serving related occupations,2018,"Queens County, New York",125107.0
+2074,Food preparation and serving related occupations,2018,"Richmond County, New York",14555.0
+2075,Building and grounds cleaning and maintenance occupations,2018,"Bronx County, New York",74937.0
+2076,Building and grounds cleaning and maintenance occupations,2018,"Kings County, New York",72363.0
+2077,Building and grounds cleaning and maintenance occupations,2018,"New York County, New York",42927.0
+2078,Building and grounds cleaning and maintenance occupations,2018,"Queens County, New York",96231.0
+2079,Building and grounds cleaning and maintenance occupations,2018,"Richmond County, New York",11479.5
+2080,Personal care and service occupations,2018,"Bronx County, New York",52816.0
+2081,Personal care and service occupations,2018,"Kings County, New York",69732.0
+2082,Personal care and service occupations,2018,"New York County, New York",48348.0
+2083,Personal care and service occupations,2018,"Queens County, New York",76578.0
+2084,Personal care and service occupations,2018,"Richmond County, New York",13949.5
+2085,Sales and related occupations,2018,"Bronx County, New York",91363.0
+2086,Sales and related occupations,2018,"Kings County, New York",163116.0
+2087,Sales and related occupations,2018,"New York County, New York",154792.0
+2088,Sales and related occupations,2018,"Queens County, New York",149044.0
+2089,Sales and related occupations,2018,"Richmond County, New York",34268.0
+2090,Office and administrative support occupations,2018,"Bronx County, New York",117951.0
+2091,Office and administrative support occupations,2018,"Kings County, New York",204999.0
+2092,Office and administrative support occupations,2018,"New York County, New York",136643.0
+2093,Office and administrative support occupations,2018,"Queens County, New York",196579.0
+2094,Office and administrative support occupations,2018,"Richmond County, New York",47615.5
+2095,"Farming, fishing, and forestry occupations",2018,"Bronx County, New York",1072.0
+2096,"Farming, fishing, and forestry occupations",2018,"Kings County, New York",930.0
+2097,"Farming, fishing, and forestry occupations",2018,"New York County, New York",662.0
+2098,"Farming, fishing, and forestry occupations",2018,"Queens County, New York",446.0
+2099,"Farming, fishing, and forestry occupations",2018,"Richmond County, New York",52.0
+2100,Construction and extraction occupations,2018,"Bronx County, New York",45411.0
+2101,Construction and extraction occupations,2018,"Kings County, New York",89155.0
+2102,Construction and extraction occupations,2018,"New York County, New York",25482.0
+2103,Construction and extraction occupations,2018,"Queens County, New York",125011.0
+2104,Construction and extraction occupations,2018,"Richmond County, New York",25134.5
+2105,"Installation, maintenance, and repair occupations",2018,"Bronx County, New York",20148.0
+2106,"Installation, maintenance, and repair occupations",2018,"Kings County, New York",20248.0
+2107,"Installation, maintenance, and repair occupations",2018,"New York County, New York",8224.0
+2108,"Installation, maintenance, and repair occupations",2018,"Queens County, New York",38747.0
+2109,"Installation, maintenance, and repair occupations",2018,"Richmond County, New York",7912.5
+2110,Production occupations,2018,"Bronx County, New York",29078.0
+2111,Production occupations,2018,"Kings County, New York",40629.0
+2112,Production occupations,2018,"New York County, New York",22017.0
+2113,Production occupations,2018,"Queens County, New York",49489.0
+2114,Production occupations,2018,"Richmond County, New York",9348.5
+2115,Transportation occupations,2018,"Bronx County, New York",66079.0
+2116,Transportation occupations,2018,"Kings County, New York",80049.0
+2117,Transportation occupations,2018,"New York County, New York",26315.0
+2118,Transportation occupations,2018,"Queens County, New York",115624.0
+2119,Transportation occupations,2018,"Richmond County, New York",17341.0
+2120,Material moving occupations,2018,"Bronx County, New York",32926.0
+2121,Material moving occupations,2018,"Kings County, New York",36198.0
+2122,Material moving occupations,2018,"New York County, New York",19379.0
+2123,Material moving occupations,2018,"Queens County, New York",37456.0
+2124,Material moving occupations,2018,"Richmond County, New York",8982.5
+2250,Management occupations,2019,"Bronx County, New York",62136.0
+2251,Management occupations,2019,"Kings County, New York",214014.0
+2252,Management occupations,2019,"New York County, New York",282479.0
+2253,Management occupations,2019,"Queens County, New York",152700.0
+2254,Management occupations,2019,"Richmond County, New York",37211.5
+2255,Business and financial operations occupations,2019,"Bronx County, New York",25440.0
+2256,Business and financial operations occupations,2019,"Kings County, New York",113865.0
+2257,Business and financial operations occupations,2019,"New York County, New York",184096.0
+2258,Business and financial operations occupations,2019,"Queens County, New York",90034.0
+2259,Business and financial operations occupations,2019,"Richmond County, New York",24348.5
+2260,Computer and mathematical occupations,2019,"Bronx County, New York",10267.0
+2261,Computer and mathematical occupations,2019,"Kings County, New York",70455.0
+2262,Computer and mathematical occupations,2019,"New York County, New York",72262.0
+2263,Computer and mathematical occupations,2019,"Queens County, New York",47075.0
+2264,Computer and mathematical occupations,2019,"Richmond County, New York",12434.0
+2265,Architecture and engineering occupations,2019,"Bronx County, New York",6264.0
+2266,Architecture and engineering occupations,2019,"Kings County, New York",24379.0
+2267,Architecture and engineering occupations,2019,"New York County, New York",20382.0
+2268,Architecture and engineering occupations,2019,"Queens County, New York",20745.0
+2269,Architecture and engineering occupations,2019,"Richmond County, New York",3608.5
+2270,"Life, physical, and social science occupations",2019,"Bronx County, New York",2093.0
+2271,"Life, physical, and social science occupations",2019,"Kings County, New York",17696.0
+2272,"Life, physical, and social science occupations",2019,"New York County, New York",30367.0
+2273,"Life, physical, and social science occupations",2019,"Queens County, New York",9404.0
+2274,"Life, physical, and social science occupations",2019,"Richmond County, New York",2326.0
+2275,Community and social service occupations,2019,"Bronx County, New York",28279.0
+2276,Community and social service occupations,2019,"Kings County, New York",43201.0
+2277,Community and social service occupations,2019,"New York County, New York",26024.0
+2278,Community and social service occupations,2019,"Queens County, New York",27778.0
+2279,Community and social service occupations,2019,"Richmond County, New York",8439.5
+2280,Legal occupations,2019,"Bronx County, New York",6080.0
+2281,Legal occupations,2019,"Kings County, New York",46285.0
+2282,Legal occupations,2019,"New York County, New York",66038.0
+2283,Legal occupations,2019,"Queens County, New York",22719.0
+2284,Legal occupations,2019,"Richmond County, New York",6270.0
+2285,"Education, training, and library occupations",2019,"Bronx County, New York",46340.0
+2286,"Education, training, and library occupations",2019,"Kings County, New York",149268.0
+2287,"Education, training, and library occupations",2019,"New York County, New York",116607.0
+2288,"Education, training, and library occupations",2019,"Queens County, New York",110225.0
+2289,"Education, training, and library occupations",2019,"Richmond County, New York",37273.0
+2290,"Arts, design, entertainment, sports, and media occupations",2019,"Bronx County, New York",11896.0
+2291,"Arts, design, entertainment, sports, and media occupations",2019,"Kings County, New York",143244.0
+2292,"Arts, design, entertainment, sports, and media occupations",2019,"New York County, New York",131049.0
+2293,"Arts, design, entertainment, sports, and media occupations",2019,"Queens County, New York",55646.0
+2294,"Arts, design, entertainment, sports, and media occupations",2019,"Richmond County, New York",7510.5
+2295,Health diagnosing and treating practitioners and other technical occupations,2019,"Bronx County, New York",23905.0
+2296,Health diagnosing and treating practitioners and other technical occupations,2019,"Kings County, New York",65543.0
+2297,Health diagnosing and treating practitioners and other technical occupations,2019,"New York County, New York",70043.0
+2298,Health diagnosing and treating practitioners and other technical occupations,2019,"Queens County, New York",60834.0
+2299,Health diagnosing and treating practitioners and other technical occupations,2019,"Richmond County, New York",21151.5
+2300,Health technologists and technicians,2019,"Bronx County, New York",13735.0
+2301,Health technologists and technicians,2019,"Kings County, New York",29783.0
+2302,Health technologists and technicians,2019,"New York County, New York",12168.0
+2303,Health technologists and technicians,2019,"Queens County, New York",25852.0
+2304,Health technologists and technicians,2019,"Richmond County, New York",6920.0
+2305,Healthcare support occupations,2019,"Bronx County, New York",103772.0
+2306,Healthcare support occupations,2019,"Kings County, New York",117654.0
+2307,Healthcare support occupations,2019,"New York County, New York",44474.0
+2308,Healthcare support occupations,2019,"Queens County, New York",89578.0
+2309,Healthcare support occupations,2019,"Richmond County, New York",14762.5
+2310,"Fire fighting and prevention, and other protective service workers including supervisors",2019,"Bronx County, New York",31639.0
+2311,"Fire fighting and prevention, and other protective service workers including supervisors",2019,"Kings County, New York",29137.0
+2312,"Fire fighting and prevention, and other protective service workers including supervisors",2019,"New York County, New York",17824.0
+2313,"Fire fighting and prevention, and other protective service workers including supervisors",2019,"Queens County, New York",29417.0
+2314,"Fire fighting and prevention, and other protective service workers including supervisors",2019,"Richmond County, New York",12066.5
+2315,Law enforcement workers including supervisors,2019,"Bronx County, New York",10594.0
+2316,Law enforcement workers including supervisors,2019,"Kings County, New York",15785.0
+2317,Law enforcement workers including supervisors,2019,"New York County, New York",5985.0
+2318,Law enforcement workers including supervisors,2019,"Queens County, New York",17344.0
+2319,Law enforcement workers including supervisors,2019,"Richmond County, New York",11591.5
+2320,Food preparation and serving related occupations,2019,"Bronx County, New York",81056.0
+2321,Food preparation and serving related occupations,2019,"Kings County, New York",97779.0
+2322,Food preparation and serving related occupations,2019,"New York County, New York",69148.0
+2323,Food preparation and serving related occupations,2019,"Queens County, New York",122730.0
+2324,Food preparation and serving related occupations,2019,"Richmond County, New York",16502.0
+2325,Building and grounds cleaning and maintenance occupations,2019,"Bronx County, New York",76247.0
+2326,Building and grounds cleaning and maintenance occupations,2019,"Kings County, New York",65016.0
+2327,Building and grounds cleaning and maintenance occupations,2019,"New York County, New York",36854.0
+2328,Building and grounds cleaning and maintenance occupations,2019,"Queens County, New York",89892.0
+2329,Building and grounds cleaning and maintenance occupations,2019,"Richmond County, New York",12549.5
+2330,Personal care and service occupations,2019,"Bronx County, New York",47340.0
+2331,Personal care and service occupations,2019,"Kings County, New York",67149.0
+2332,Personal care and service occupations,2019,"New York County, New York",53292.0
+2333,Personal care and service occupations,2019,"Queens County, New York",77234.0
+2334,Personal care and service occupations,2019,"Richmond County, New York",8847.5
+2335,Sales and related occupations,2019,"Bronx County, New York",84164.0
+2336,Sales and related occupations,2019,"Kings County, New York",169608.0
+2337,Sales and related occupations,2019,"New York County, New York",170144.0
+2338,Sales and related occupations,2019,"Queens County, New York",149560.0
+2339,Sales and related occupations,2019,"Richmond County, New York",32451.0
+2340,Office and administrative support occupations,2019,"Bronx County, New York",109083.0
+2341,Office and administrative support occupations,2019,"Kings County, New York",186756.0
+2342,Office and administrative support occupations,2019,"New York County, New York",111342.0
+2343,Office and administrative support occupations,2019,"Queens County, New York",184671.0
+2344,Office and administrative support occupations,2019,"Richmond County, New York",42606.5
+2345,"Farming, fishing, and forestry occupations",2019,"Bronx County, New York",2408.0
+2346,"Farming, fishing, and forestry occupations",2019,"Kings County, New York",514.0
+2347,"Farming, fishing, and forestry occupations",2019,"New York County, New York",728.0
+2348,"Farming, fishing, and forestry occupations",2019,"Queens County, New York",1004.0
+2349,"Farming, fishing, and forestry occupations",2019,"Richmond County, New York",536.0
+2350,Construction and extraction occupations,2019,"Bronx County, New York",50280.0
+2351,Construction and extraction occupations,2019,"Kings County, New York",89476.0
+2352,Construction and extraction occupations,2019,"New York County, New York",22124.0
+2353,Construction and extraction occupations,2019,"Queens County, New York",115634.0
+2354,Construction and extraction occupations,2019,"Richmond County, New York",25913.5
+2355,"Installation, maintenance, and repair occupations",2019,"Bronx County, New York",19724.0
+2356,"Installation, maintenance, and repair occupations",2019,"Kings County, New York",29940.0
+2357,"Installation, maintenance, and repair occupations",2019,"New York County, New York",10594.0
+2358,"Installation, maintenance, and repair occupations",2019,"Queens County, New York",38296.0
+2359,"Installation, maintenance, and repair occupations",2019,"Richmond County, New York",11835.5
+2360,Production occupations,2019,"Bronx County, New York",35632.0
+2361,Production occupations,2019,"Kings County, New York",39615.0
+2362,Production occupations,2019,"New York County, New York",14833.0
+2363,Production occupations,2019,"Queens County, New York",53373.0
+2364,Production occupations,2019,"Richmond County, New York",6082.5
+2365,Transportation occupations,2019,"Bronx County, New York",62086.0
+2366,Transportation occupations,2019,"Kings County, New York",77396.0
+2367,Transportation occupations,2019,"New York County, New York",32714.0
+2368,Transportation occupations,2019,"Queens County, New York",94493.0
+2369,Transportation occupations,2019,"Richmond County, New York",16147.0
+2370,Material moving occupations,2019,"Bronx County, New York",35463.0
+2371,Material moving occupations,2019,"Kings County, New York",36549.0
+2372,Material moving occupations,2019,"New York County, New York",14094.0
+2373,Material moving occupations,2019,"Queens County, New York",37500.0
+2374,Material moving occupations,2019,"Richmond County, New York",9191.5

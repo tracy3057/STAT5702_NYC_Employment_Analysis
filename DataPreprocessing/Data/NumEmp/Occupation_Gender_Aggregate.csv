@@ -1,0 +1,51 @@
+,Occupations,Gender,MeanNumEmpbyGender
+0,Management occupations,Male,370754.625
+5,Business and financial operations occupations,Male,190892.05
+10,Computer and mathematical occupations,Male,125456.45
+15,Architecture and engineering occupations,Male,48768.25
+20,"Life, physical, and social science occupations",Male,24925.35
+25,Community and social service occupations,Male,39421.0
+30,Legal occupations,Male,73006.475
+35,"Education, training, and library occupations",Male,129584.8
+40,"Arts, design, entertainment, sports, and media occupations",Male,174258.725
+45,Health diagnosing and treating practitioners and other technical occupations,Male,66024.65
+50,Health technologists and technicians,Male,24628.5
+55,Healthcare support occupations,Male,30742.4
+60,"Fire fighting and prevention, and other protective service workers including supervisors",Male,81554.725
+65,Law enforcement workers including supervisors,Male,42593.7
+70,Food preparation and serving related occupations,Male,251175.6
+75,Building and grounds cleaning and maintenance occupations,Male,160279.7
+80,Personal care and service occupations,Male,82093.9
+85,Sales and related occupations,Male,333560.625
+90,Office and administrative support occupations,Male,252043.65
+95,"Farming, fishing, and forestry occupations",Male,3473.225
+100,Construction and extraction occupations,Male,281896.5
+105,"Installation, maintenance, and repair occupations",Male,109793.1
+110,Production occupations,Male,108919.8
+115,Transportation occupations,Male,246006.875
+120,Material moving occupations,Male,80462.525
+125,Management occupations,Female,292381.025
+130,Business and financial operations occupations,Female,190028.675
+135,Computer and mathematical occupations,Female,42487.725
+140,Architecture and engineering occupations,Female,14432.925
+145,"Life, physical, and social science occupations",Female,31830.125
+150,Community and social service occupations,Female,84125.7
+155,Legal occupations,Female,70831.975
+160,"Education, training, and library occupations",Female,296185.825
+165,"Arts, design, entertainment, sports, and media occupations",Female,163490.525
+170,Health diagnosing and treating practitioners and other technical occupations,Female,156611.125
+175,Health technologists and technicians,Female,54727.325
+180,Healthcare support occupations,Female,258079.875
+185,"Fire fighting and prevention, and other protective service workers including supervisors",Female,26647.05
+190,Law enforcement workers including supervisors,Female,16027.675
+195,Food preparation and serving related occupations,Female,130107.7
+200,Building and grounds cleaning and maintenance occupations,Female,138696.325
+205,Personal care and service occupations,Female,211761.125
+210,Sales and related occupations,Female,303367.55
+215,Office and administrative support occupations,Female,504971.6
+220,"Farming, fishing, and forestry occupations",Female,1391.3
+225,Construction and extraction occupations,Female,8527.1
+230,"Installation, maintenance, and repair occupations",Female,5044.75
+235,Production occupations,Female,60167.2
+240,Transportation occupations,Female,27019.9
+245,Material moving occupations,Female,20182.825
