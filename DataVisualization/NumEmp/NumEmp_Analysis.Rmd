@@ -21,13 +21,6 @@ GenderData$X <- NULL
 ```
 
 
-```{r Aggregate Cleveland Dot Plot}
-AggregateData$Occupations <- as.factor(AggregateData$Occupations)
-AggregateData <- AggregateData %>% mutate(NumEmps_avg = NumEmps/10)
-ggplot(AggregateData, aes(NumEmps_avg, reorder(Occupations,NumEmps_avg))) +
-geom_point() + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation NYC')
-```
-
 <---Analysis--->
 
 ```{r Aggregate Cleveland Dot Plot}
