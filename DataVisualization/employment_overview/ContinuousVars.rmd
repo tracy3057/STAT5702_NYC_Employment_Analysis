@@ -7,21 +7,17 @@ output: pdf_document
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
+library(RCurl)
 ```
 
 ```{r Data}
 
-setwd('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/employment')
-
-
-
-
-employDisability <- read.table(file = "employDisability.csv", sep = ",", header=TRUE)
-employEDUCATION <- read.table(file = "employEDUCATION.csv", sep = ",", header=TRUE)
-employmentByAge <- read.table(file = "employmentByAge.csv", sep = ",", header=TRUE)
-employmentByRACE <- read.table(file = "employmentByRACE.csv", sep = ",", header=TRUE)
-employPoverty <- read.table(file = "employPoverty.csv", sep = ",", header=TRUE)
-JobType <- read.table(file = "JobType.csv", sep = ",", header=TRUE)
+employDisability <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/employment/employDisability.csv"))
+employEDUCATION <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/employment/employEDUCATION.csv"))
+employmentByAge <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/employment/employmentByAge.csv"))
+employmentByRACE <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/employment/employmentByRACE.csv"))
+employPoverty <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/employment/employPoverty.csv"))
+JobType <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/employment/JobType.csv"))
 ```
 
 ```{r Preview Data}

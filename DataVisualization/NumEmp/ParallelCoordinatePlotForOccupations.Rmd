@@ -9,16 +9,24 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
+```{r imports}
 library(tidyverse)
 library(GGally)
 library("parcoords")
 library("d3r")
+library(RCurl)
+```
+
+```{r Data}
+#YearBoroughData <- read.csv(text = #getURL('https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumE#mp/yearly_cleveland.csv'))
+PropsByOccupation <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/PropsByOccupation.csv"))
+PropsOfGroupByOccupation <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/PropsOfGroupByOccupation.csv')
+PropsOfPropsRace <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/PropsOfPropsRace.csv')
 ```
 
 # Analyzing with 5 big occupation catogories
 ```{r,fig.width=6,fig.height=8}
-YearBoroughData <- read.csv("/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/OccupationByBigBorough.csv")
+YearBoroughData <- read.csv("/Users/tracy/Desktop/columbia/5702/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/OccupationByYearBorough.csv")
 YearBoroughData$X <- NULL
 
 YearBoroughData.tidy <- pivot_longer(YearBoroughData,cols = !c("Occupations","year"), names_to = "boroughs", values_to = "NumEmp")
@@ -47,7 +55,7 @@ From the plot above, we discover that
 # Analyzing with 25 small occupation catogories
   * There might be too many categories
 ```{r,fig.width=6,fig.height=8}
-YearBoroughData <- read.csv("/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/OccupationBySmallBorough.csv")
+YearBoroughData <- read.csv("/Users/tracy/Desktop/columbia/5702/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/OccupationByYearBorough_small.csv")
 YearBoroughData$X <- NULL
 
 YearBoroughData.tidy <- pivot_longer(YearBoroughData,cols = !c("Occupations","year"), names_to = "boroughs", values_to = "NumEmp")
@@ -69,7 +77,7 @@ parcoords(YearBoroughData.wide,
 ```
 
 ```{r Race and Gender by Occupation}
-PropsByOccupation <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/PropsByOccupation.csv')
+PropsByOccupation <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/PropsByOccupation.csv"))
 
 parcoords(PropsByOccupation,
           rownames = F,
@@ -83,4 +91,27 @@ parcoords(PropsByOccupation,
           ),
           withD3 = TRUE) 
 
-```
+PropsByOccupationRace <- PropsByOccupation[,1:5]
+PropsByOccupationRace
+PropsByOccupationRace %>% pivot_longer(!Occupation, names_to = 'race', values_to = 'proportion') %>%
+ggplot(., aes(fill = race, y = Occupation, x = proportion)) + geom_bar(position = 'stack',stat = 'identity')
+
+
+PropsOfGroupByOccupation <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/PropsOfGroupByOccupation.csv')
+
+parcoords(PropsOfGroupByOccupation,
+          rownames = F,
+          brushMode = "1D-axes",
+          reorderable = T,
+          queue = T,
+          color = list(
+            colorBy = "boroughs",
+            colorScale = "scaleOrdinal",
+            colorScheme = "schemeCategory10"
+          ),
+          withD3 = TRUE) 
+
+PropsOfPropsRace <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/PropsOfPropsRace.csv')
+
+PropsOfPropsRace %>% pivot_longer(!Occupation, names_to = 'race', values_to = 'proportion') %>%
+ggplot(., aes(fill = race, y = Occupation, x = proportion)) + geom_bar(position = 'stack',stat = 'identity')

@@ -9,10 +9,13 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r imports}
+library(mi)
+library(RCurl)
+```
 
 ```{r visualizing missing data}
-Data <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/numemp_03.csv')
-library(mi)
+Data <- RaceData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/numemp_03.csv"))
 Data$X <- NULL
 Data$Label <- NULL
 Data$race <- NULL

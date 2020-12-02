@@ -1,9 +1,12 @@
 ```{r}
 library(tidyverse)
+library(RCurl)
 
-Education <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/education/Education.csv')
-Salary_edu <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/education/salary_edu.csv')
-NumEmp_edu <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/numemp_sum_final.csv')
+Education <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/education/Education.csv"))
+
+Salary_edu <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/education/salary_edu.csv"))
+
+NumEmp_edu <-read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/numemp_sum_final.csv"))
 
 Education$X <- NULL
 NumEmp_edu$X <- NULL

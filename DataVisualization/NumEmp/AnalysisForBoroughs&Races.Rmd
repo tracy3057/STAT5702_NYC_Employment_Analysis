@@ -6,13 +6,19 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r Attaching Libraries}
+```{r imports}
 library(tidyverse)
+library(RCurl)
 ```
 
+```{r Data}
+BoroughData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/OccupationByBorough.csv"))
+RaceData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/OccupationByRace.csv"))
+```
 
 ```{r Barcharts for Different Boroughs, fig.height=20}
-BoroughData <- read.csv("/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/OccupationByBorough.csv")
+BoroughData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/OccupationByBorough.csv"))
+
 BoroughData$X <- NULL
 
 sum_bronx <- sum(BoroughData$Bronx_County)
@@ -76,7 +82,7 @@ o) Law enforcement workers including supervisors: Richmond has a higher percenta
 
 
 ```{r Barcharts for Different Races, fig.height=20}
-RaceData <- read.csv("/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/OccupationByRace.csv")
+RaceData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/OccupationByRace.csv"))
 RaceData$X <- NULL
 RaceData$Some_Other_Race_Alone <- NULL
 RaceData$Two_or_More_Races <- NULL

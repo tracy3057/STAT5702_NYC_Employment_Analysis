@@ -9,14 +9,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r Data}
 library(tidyverse)
+library(RCurl)
 
-AggregateData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/aggregate_cleveland.csv') #EugenioPath
+AggregateData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/aggregate_cleveland.csv"))
 
-AggregateYearlyData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/yearly_cleveland.csv')
+AggregateYearlyData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/yearly_cleveland.csv"))
 
-GenderData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/gender_cleveland.csv')
-
-GenderData
+GenderData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/gender_cleveland.csv"))
 ```
 
 
@@ -31,7 +30,7 @@ geom_point() + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Em
 
 ```{r Aggregate Yearly Cleveland Dot Plot}
 # plot by filtering 3 years
-AggregateYearlyData$Occupations <- as.factor(AggregateData$Occupations)
+AggregateYearlyData$Occupations <- as.factor(AggregateYearlyData$Occupations)
 AggregateYearlyData$year <- as.ordered(AggregateYearlyData$year)
 
 
@@ -258,7 +257,7 @@ ggplot(GenderData, aes(NumEmps_avg,fct_reorder2(Occupations,Gender=='Female',Num
 From the figure above, we can see that for some occupations, there are huge distinctions between male occupations and female occupations, while for other some other occupations, there is no huge difference between the number employed of male and female. Therefore, we draw a stacked bar chart with propositions of Male and Female in each occupation to see which occupations have huge relation to gender.
 
 ```{r,fig.height=18}
-GenderData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/GenderClevelandDotPlotData.csv')
+GenderData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/gender_cleveland.csv"))
 GenderData$X <- NULL
 
 GenderData$Occupations <- as.factor(GenderData$Occupations)

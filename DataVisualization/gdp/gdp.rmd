@@ -1,6 +1,8 @@
 ```{r}
 library(tidyverse)
-Salary_NumEmp <- read.csv("/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/gdp/NYCSalary_gdp.csv")
+library(RCurl)
+
+Salary_NumEmp <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/gdp/NYCSalary_gdp.csv"))
 Salary_NumEmp$X <- NULL
 ```
 

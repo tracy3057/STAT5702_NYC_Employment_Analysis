@@ -1,15 +1,20 @@
-```{r}
+```{r imports}
 library(tidyverse)
 library(mosaic)
 library(vcd)
+library(RCurl)
+```
 
-NewSalary <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Salary/NewSalary.csv')
+```{r Data}
+NewSalary <- RaceData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/Salary/NewSalary.csv"))
+
 NewSalary$Occupations <- as.factor(NewSalary$Occupations)
 NewSalary$Gender <- as.factor(NewSalary$Gender)
 NewSalary$Boroughs <- as.factor(NewSalary$Boroughs)
 NewSalary$year <- as.factor(NewSalary$year)
 NewSalary$year_range <- as.factor(NewSalary$year_range)
 ```
+
 # Analyze on salary variation according to different years
 ```{r}
 ggplot(NewSalary) +
