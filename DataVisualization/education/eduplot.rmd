@@ -6,7 +6,7 @@ Education <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057
 
 Salary_edu <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/education/salary_edu.csv"))
 
-NumEmp_edu <-read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/numemp_sum_final.csv"))
+NumEmp_edu <-read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/numemp_sum_races_combined.csv"))
 
 Education$X <- NULL
 NumEmp_edu$X <- NULL
