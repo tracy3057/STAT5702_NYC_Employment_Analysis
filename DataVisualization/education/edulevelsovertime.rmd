@@ -1,0 +1,30 @@
+---
+title: "EducationOverTime.Rmd"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r imports}
+library(RCurl)
+```
+
+```{r Data}
+Education <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/education/Education.csv"))
+PropBachelor <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/education/PropBachelor.csv"))
+PropBachelorByGender <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/education/PropBachelorByGender.csv"))
+```
+
+```{r Proportion College Educated Over Time}
+ggplot(data = PropBachelor,aes(Year,PropBachelor)) + geom_line(size = 1, col = 'black') + xlab('Year') + ylab('Proportion With Bachelors Degree') + scale_x_continuous(breaks = seq(2010,2019)) + geom_point(size = 2.5, col = 'royalblue3')
+```
+
+```{r Proportion College Educated Over Time by Gender}
+PropBachelorByGenderTidy <- pivot_longer(PropBachelorByGender[,1:3],!Year,names_to = 'Gender',values_to = 'Proportion')
+
+ggplot(PropBachelorByGenderTidy) + geom_line(aes(Year,Proportion,group = Gender, color = Gender), size = 1) + geom_point(aes(Year,Proportion,group = Gender, color = Gender), size = 5) + xlab('Year') + ylab('Proportion With Bachelors Degree') + scale_x_continuous(breaks = seq(2010,2019))
+
+ggplot(data = PropBachelorByGender,aes(Year,Difference)) + geom_line(size = 1, col = 'black') + xlab('Year') + ylab('Difference between Male and Female with Bachelors') + scale_x_continuous(breaks = seq(2010,2019)) + geom_point(size = 2.5, col = 'royalblue3')
+```
