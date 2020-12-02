@@ -10,40 +10,44 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(RCurl)
 ```
-
+# analysis on boroughs
+## percentages of numemp for different occupations in different boroughs
 ```{r Data}
-BoroughData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/OccupationByBorough.csv"))
-RaceData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/OccupationByRace.csv"))
+# calculate the percentages of numemp in different occupations for different boroughs
+BoroughData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/Occupation_County_Aggregate.csv"))
+RaceData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/Occupation_Race_Aggregate.csv"))
 ```
 
-```{r Barcharts for Different Boroughs, fig.height=20}
-BoroughData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/OccupationByBorough.csv"))
-
+```{r Barcharts for Different Boroughs}
 BoroughData$X <- NULL
-
-sum_bronx <- sum(BoroughData$Bronx_County)
-sum_kings <- sum(BoroughData$Kings)
-sum_Manhattan <- sum(BoroughData$Manhattan)
-sum_Queens <- sum(BoroughData$Queens)
-sum_Richmond <- sum(BoroughData$Richmond)
+BoroughData <- data.frame(lapply(BoroughData, function(x) {gsub(", New York", "", x)}))
+BoroughData <- BoroughData %>% pivot_wider(names_from = "County", values_from = "MeanNumEmpbyCounty")
+BoroughData$`Bronx County` <- as.numeric(BoroughData$`Bronx County`)
+BoroughData$`Kings County` <- as.numeric(BoroughData$`Kings County`)
+BoroughData$`New York County` <- as.numeric(BoroughData$`New York County`)
+BoroughData$`Queens County` <- as.numeric(BoroughData$`Queens County`)
+BoroughData$`Richmond County` <- as.numeric(BoroughData$`Richmond County`)
 
 BoroughData = mutate(BoroughData, 
-                Bronx_pct = Bronx_County / sum(Bronx_County),
-                Kings_pct = Kings / sum(Kings),
-                Manhattan_pct = Manhattan / sum(Manhattan),
-                Queens_pct = Queens / sum(Queens),
-                Richmond_pct = Richmond / sum(Richmond))
-BoroughData$Bronx_County <- NULL
-BoroughData$Kings <- NULL
-BoroughData$Manhattan <- NULL
-BoroughData$Queens <- NULL
-BoroughData$Richmond <- NULL
+                Bronx_pct = `Bronx County` / sum(`Bronx County`),
+                Kings_pct = `Kings County` / sum(`Kings County`),
+                New_York_County_pct = `New York County` / sum(`New York County`),
+                Queens_pct = `Queens County` / sum(`Queens County`),
+                Richmond_pct = `Richmond County` / sum(`Richmond County`))
+
+BoroughData <- BoroughData %>% select(1,7,8,9,10,11)
 
 tidy_BoroughData <- pivot_longer(BoroughData,cols = !c(Occupations), names_to = "boroughs", values_to = "PctEmps")
 tidy_BoroughData$boroughs <- as.factor(tidy_BoroughData$boroughs)
-tidy_BoroughData$boroughs <- factor(tidy_BoroughData$boroughs,levels = c("Kings_pct","Queens_pct","Manhattan_pct","Bronx_pct","Richmond_pct"))
+tidy_BoroughData$boroughs <- factor(tidy_BoroughData$boroughs,levels = c("Kings_pct","Queens_pct","New_York_County_pct","Bronx_pct","Richmond_pct"))
 
-ggplot(tidy_BoroughData,aes(x=fct_reorder2(Occupations, boroughs == "Kings_pct", PctEmps), y = PctEmps)) +
+# cleveland dot plot
+ggplot(tidy_BoroughData) +
+geom_point(aes(PctEmps, reorder(Occupations,PctEmps), color = boroughs)) + ylab('Occupations') + xlab('Percentages') + ggtitle('Percentages Employed by Occupations for Different Boroughs in NYC') 
+```
+```{r bar charts for different boroughs, fig.height=20}
+# bar chart
+ggplot(tidy_BoroughData,aes(x=fct_reorder2(Occupations, boroughs == "Kings_pct", PctEmps), y = PctEmps,color = boroughs)) +
   geom_col(fill = "light blue") +
   facet_wrap(~boroughs,ncol=1) +
     theme(axis.text=element_text(size=30,angle = 90, vjust = 0.5, hjust=1),
@@ -55,7 +59,7 @@ ggplot(tidy_BoroughData,aes(x=fct_reorder2(Occupations, boroughs == "Kings_pct",
         size = 35, color = "red", face = "bold.italic"
         ),
       plot.title = element_text(size = 50, face = "bold"))+
-  ylab('Percentages') + xlab('Occupations') + ggtitle('Percentages Employed by Occupations for Different Boroughs in NYC')
+  ylab('Percentages') + xlab('Occupations') + ggtitle('Percentages Employed by Occupations for Different Counties in NYC')
 ```
 As we can see from the picture above, we can discover the following things.
 
@@ -78,35 +82,33 @@ l) Manhattan has very small percentages of employees in Installation, maintenanc
 n) Manhattan has higher percentage of employees in Life, physical, and social science occupations.
 o) Law enforcement workers including supervisors: Richmond has a higher percentage in this occupation.
 
-# I also plan to analyze the relation between variables with a more rude category.
+## percentages of numemp in different boroughs for each occupation
 
+# race
 
-```{r Barcharts for Different Races, fig.height=20}
-RaceData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/OccupationByRace.csv"))
+```{r Barcharts for Different Races}
 RaceData$X <- NULL
-RaceData$Some_Other_Race_Alone <- NULL
-RaceData$Two_or_More_Races <- NULL
-RaceData$White_Alone_not_Hispanic_or_Latino <- NULL
-  
-sum_Asian <- sum(RaceData$Asian_Alone)
-sum_African <- sum(RaceData$Black_or_African_American_Alone)
-sum_HispanicOrLatino <- sum(RaceData$Hispanic_or_Latino)
-sum_White <- sum(RaceData$White_Alone)
+RaceData <- RaceData %>% pivot_wider(names_from = race, values_from = MeanNumEmpbyRace)
 
 RaceData = mutate(RaceData, 
-                Asian_pct = Asian_Alone / sum(Asian_Alone),
-                African_pct = Black_or_African_American_Alone / sum(Black_or_African_American_Alone),
-                Hispanic_Or_Latino_pct = Hispanic_or_Latino / sum(Hispanic_or_Latino),
-                White_pct = White_Alone / sum(White_Alone))
-RaceData$Asian_Alone <- NULL
-RaceData$Black_or_African_American_Alone <- NULL
-RaceData$Hispanic_or_Latino <- NULL
-RaceData$White_Alone <- NULL
+                Asian_pct = `Asian Alone` / sum(`Asian Alone`),
+                African_pct = `BLACK OR AFRICAN AMERICAN ALONE` / sum(`BLACK OR AFRICAN AMERICAN ALONE`),
+                Hispanic_pct = `HISPANIC OR LATINO` / sum(`HISPANIC OR LATINO`),
+                White_pct = `White Alone` / sum(`White Alone`))
+
+RaceData <- RaceData %>% select(1,9,10,11,12)
 
 tidy_RaceData <- pivot_longer(RaceData,cols = !c(Occupations), names_to = "races", values_to = "PctEmps")
 tidy_RaceData$races <- as.factor(tidy_RaceData$races)
-tidy_RaceData$races <- factor(tidy_RaceData$races,levels = c("White_pct","Hispanic_Or_Latino_pct","African_pct","Asian_pct"))
+tidy_RaceData$races <- factor(tidy_RaceData$races,levels = c("White_pct","Hispanic_pct","African_pct","Asian_pct"))
 
+# cleveland dot plot
+ggplot(tidy_RaceData) +
+geom_point(aes(PctEmps, reorder(Occupations,PctEmps), color = races)) + ylab('Occupations') + xlab('Percentages') + ggtitle('Percentages Employed by Occupations for Different Races in NYC') 
+```
+
+```{r, fig.height=20}
+# bar chart
 ggplot(tidy_RaceData,aes(x=fct_reorder2(Occupations, races == "White_pct", PctEmps), y = PctEmps)) +
   geom_col(fill = "light blue") +
   facet_wrap(~races,ncol=1) +
@@ -120,6 +122,5 @@ ggplot(tidy_RaceData,aes(x=fct_reorder2(Occupations, races == "White_pct", PctEm
         ),
       plot.title = element_text(size = 50, face = "bold"))+
   ylab('Percentages') + xlab('Occupations') + ggtitle('Percentages Employed by Occupations for Different Races in NYC')
-```
 ```
 
