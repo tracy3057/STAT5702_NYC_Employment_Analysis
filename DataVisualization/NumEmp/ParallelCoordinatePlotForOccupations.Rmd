@@ -26,7 +26,7 @@ PropsOfPropsRace <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Projec
 
 # Analyzing with 5 big occupation catogories
 ```{r,fig.width=6,fig.height=8}
-YearBoroughData <- read.csv("/Users/tracy/Desktop/columbia/5702/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/OccupationByYearBorough.csv")
+YearBoroughData <- read.csv("/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/numemp_big_category.csv")
 YearBoroughData$X <- NULL
 
 YearBoroughData.tidy <- pivot_longer(YearBoroughData,cols = !c("Occupations","year"), names_to = "boroughs", values_to = "NumEmp")
