@@ -11,11 +11,13 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(RCurl)
 
-AggregateData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/aggregate_cleveland.csv"))
+AggregateData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/Occupation_Aggregate.csv"))
 
-AggregateYearlyData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/yearly_cleveland.csv"))
+AggregateYearlyData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/Occupation_Yearly.csv"))
 
-GenderData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/gender_cleveland.csv"))
+GenderData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/Occupation_Gender_Aggregate.csv"))
+
+GenderData$X <- NULL
 ```
 
 
@@ -28,6 +30,12 @@ geom_point() + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Em
 
 <---Analysis--->
 
+```{r Aggregate Cleveland Dot Plot}
+# a general analysis with average numemp of all occupations by using cleveland dot plot
+ggplot(AggregateData, aes(MeanNumEmp, reorder(Occupations,MeanNumEmp))) +
+geom_point() + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation NYC')
+```
+
 ```{r Aggregate Yearly Cleveland Dot Plot}
 # plot by filtering 3 years
 AggregateYearlyData$Occupations <- as.factor(AggregateYearlyData$Occupations)
@@ -37,7 +45,7 @@ AggregateYearlyData$year <- as.ordered(AggregateYearlyData$year)
 TrimmedAggregateYearlyData <- AggregateYearlyData[AggregateYearlyData$year == "2010" | AggregateYearlyData$year == "2015" | AggregateYearlyData$year == "2019",]
 
 ggplot(TrimmedAggregateYearlyData) +
-geom_point(aes(NumEmps, reorder(Occupations,NumEmps), color = year)) + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation NYC') 
+geom_point(aes(YearlyNumEmp, reorder(Occupations,YearlyNumEmp), color = year)) + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation NYC') 
 ```
 
 ```{r Aggregate Yearly Cleveland Dot Plot}
@@ -56,7 +64,7 @@ RangedAggregateYearlyData[RangedAggregateYearlyData$year=="2017","year"] ="year2
 RangedAggregateYearlyData[RangedAggregateYearlyData$year=="2018","year"] ="year2018"
 RangedAggregateYearlyData[RangedAggregateYearlyData$year=="2019","year"] ="year2019"
 
-RangedAggregateYearlyData.wide <- pivot_wider(RangedAggregateYearlyData,names_from = "year",values_from = "NumEmps")
+RangedAggregateYearlyData.wide <- pivot_wider(RangedAggregateYearlyData,names_from = "year",values_from = "YearlyNumEmp")
 
 
 RangedAggregateYearlyData.wide  <- RangedAggregateYearlyData.wide %>%
@@ -78,29 +86,16 @@ geom_point(aes(NumEmps_avg, reorder(Occupations,NumEmps_avg), color = year_range
 ```
 
 
-```{r}
-# add variance to TrimmedAggregateYearlyData
-TrimmedAggregateYearlyData$X <- NULL
-TrimmedAggregateYearlyData.wide <- pivot_wider(TrimmedAggregateYearlyData,names_from = year, values_from = NumEmps)
+```{r,fig.height=18}
+# use a bar chart to order the percentage of range
+YearlyWithVariance <- read_csv("/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/Occupation_Yearly_withRange.csv")
 
-
-TrimmedAggregateYearlyData.wide$variance <- with(TrimmedAggregateYearlyData.wide, abs(TrimmedAggregateYearlyData.wide$'2019' - TrimmedAggregateYearlyData.wide$'2010'))
-
-TrimmedAggregateYearlyData.tidy <- pivot_longer(TrimmedAggregateYearlyData.wide, cols = c(2:4), names_to = "year", values_to = "NumEmps")
-
-write.csv(TrimmedAggregateYearlyData.tidy,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/TrimmedAggregateYearlyDataWithVariance.csv", row.names = FALSE)
-# draw cleveland dot plot according to variance
-
-YearlyDataWithVariance <- read_csv("/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/TrimmedAggregateYearlyDataWithVariance.csv")
-YearlyDataWithVariance$year <- as.factor(TrimmedAggregateYearlyData.tidy$year)
-YearlyDataWithVariance$Occupations <- as.factor(TrimmedAggregateYearlyData.tidy$Occupations)
-YearlyDataWithVariance <- YearlyDataWithVariance %>% 
-  group_by(Occupations) %>%
-  mutate(variance_pct = (variance/sum(NumEmps))/3)
-
-ggplot(YearlyDataWithVariance, aes(NumEmps, reorder(Occupations, variance_pct), color = year)) + geom_point()  +
-geom_point(aes(NumEmps, reorder(Occupations,NumEmps), color = year)) + ylab('Occupation') + xlab('Number Employed') + ggtitle('Number Employed by Occupation for differenyt years in NYC') 
+ggplot(YearlyWithVariance, aes(fct_reorder(Occupations, range_pct,.desc = T),range_pct)) + geom_col(fill = "light blue")+      theme(axis.text=element_text(size=30,angle = 90, vjust = 0.5, hjust=1),
+      axis.title=element_text(size=40,face="bold"),
+      plot.title = element_text(size = 50, face = "bold"))+
+ ylab('Ratio of Range and Average NumEmp') + xlab('Occupation') + ggtitle('Ratio of Range and Average NumEmp for Different Occupations in NYC') 
 ```
+
 ## Top 5 and Last 5 in variations of 2010 and 2019
 
 ### Top 5
@@ -190,7 +185,7 @@ NotMonotonous$Occupations <- factor(NotMonotonous$Occupations,levels = c("Office
                                                                          "Legal occupations",
                                                                          "Installation, maintenance, and repair occupations"))
 
-ggplot(NotMonotonous,aes(year,NumEmps)) +
+ggplot(NotMonotonous,aes(year,YearlyNumEmp)) +
   geom_point(color = "light blue", size = 10) +
   facet_wrap(~Occupations,ncol=2,scales = "free_y") +
     theme(axis.text=element_text(size=30),
@@ -227,17 +222,8 @@ Generally speaking, the number of employed for this group was relatively stable,
 The number of employed for this group was relatively stable as well and the changing pattern was also like the shape of a wave. The trough were in year 2016 and the two crests were in year 2013 and 2015.
 
 ## Boxplot
-In order to see the variance of the 25 occupations in detail, we draw boxplotx to make comparisions.
-```{r,fig.width=15,fig.height=15}
-ggplot(AggregateYearlyData) +
-  geom_boxplot(aes(x = reorder(Occupations, -NumEmps, FUN = median), y = NumEmps),
-               color = "black", fill = "dark red", alpha = 0.7) + 
-  ggtitle("Boxplots with Number of Employed for Different Occupations") +
-  xlab("occupations")+
-  theme(axis.text=element_text(size = 40, angle = 90, vjust = 0.5, hjust=1),
-        axis.title=element_text(size=50,face="bold"),
-        plot.title = element_text(size = 60, face = "bold"))
-```
+In order to see the variance of the 25 occupations in detail, we draw boxplot to make comparisons.
+
 From this boxplot, we notice that some occupations are with outliers, which means they have relatively large variations in number of employed. The occupations are as follows:
 1. Office and administrative support occupations
 2. Building and grounds cleaning and maintenance occupations
@@ -248,23 +234,21 @@ From this boxplot, we notice that some occupations are with outliers, which mean
 7. Farming, fishing and forestry occupations
 
 ```{r Gender Cleveland Dot Plot}
-GenderData <- GenderData %>% mutate(NumEmps_avg = NumEmps/10)
-
-ggplot(GenderData, aes(NumEmps_avg,fct_reorder2(Occupations,Gender=='Female',NumEmps_avg, .desc=FALSE),color = Gender)) + geom_point() +
+GenderData$Gender <- as.factor(GenderData$Gender)
+ggplot(GenderData, aes(MeanNumEmpbyGender,fct_reorder2(Occupations,Gender=='Female',MeanNumEmpbyGender, .desc=FALSE),color = Gender)) + 
+  geom_point() +
   ylab('NumEmps') + xlab('Occupations') + ggtitle('Nember Employed by Occupations for different genders in NYC')
 ```
+
 
 From the figure above, we can see that for some occupations, there are huge distinctions between male occupations and female occupations, while for other some other occupations, there is no huge difference between the number employed of male and female. Therefore, we draw a stacked bar chart with propositions of Male and Female in each occupation to see which occupations have huge relation to gender.
 
 ```{r,fig.height=18}
-GenderData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/gender_cleveland.csv"))
-GenderData$X <- NULL
-
 GenderData$Occupations <- as.factor(GenderData$Occupations)
 GenderData$Gender <- as.factor(GenderData$Gender)
 
-GenderData.wide <- pivot_wider(GenderData, names_from = "Gender", values_from = "NumEmps")
-GenderData.wide$variance <- with(GenderData.wide,abs(Male - Female))
+GenderData.wide <- pivot_wider(GenderData, names_from = "Gender", values_from = "MeanNumEmpbyGender")
+GenderData.wide$difference <- with(GenderData.wide,abs(Male - Female))
 GenderData.tidy <- pivot_longer(GenderData.wide, cols = c("Female","Male"), names_to = "Gender", values_to = "NumEmps")
 
 GenderData.tidy <- GenderData.tidy %>% 
@@ -272,7 +256,7 @@ GenderData.tidy <- GenderData.tidy %>%
   mutate(prop = NumEmps/sum(NumEmps)) %>%
   ungroup()
 
-GenderData.tidy <- GenderData.tidy %>% mutate(variance_pct = variance/sum(NumEmps))
+GenderData.tidy <- GenderData.tidy %>% mutate(difference_pct = difference/sum(NumEmps))
 
 ggplot(GenderData.tidy,aes(x = fct_reorder2(Occupations,Gender == "Female",prop,.desc=FALSE), y=prop,fill=Gender)) + 
   geom_bar(position='fill', stat='identity')+
@@ -280,7 +264,6 @@ ggplot(GenderData.tidy,aes(x = fct_reorder2(Occupations,Gender == "Female",prop,
   theme(axis.text=element_text(size = 40, angle = 90, vjust = 0.5, hjust=1),
         axis.title=element_text(size=50,face="bold"),
         plot.title = element_text(size = 60, face = "bold"))
-
 ```
 
 
@@ -322,7 +305,7 @@ GenderData.tidy$`Gender Distribution` <- ifelse(
 
 write.csv(GenderData.tidy,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/TidyGenderData.csv", row.names = FALSE)
 
-ggplot(GenderData.tidy,aes(x=fct_reorder(Occupations, variance_pct,.desc = T), y = variance_pct)) +
+ggplot(GenderData.tidy,aes(x=fct_reorder(Occupations, difference_pct,.desc = T), y = difference_pct)) +
   geom_col(fill = ifelse(GenderData.tidy$`Gender Distribution` == "Male-dominated","orange","green"))+
     theme(axis.text=element_text(size=30,angle = 90, vjust = 0.5, hjust=1),
       axis.title=element_text(size=40,face="bold"),
@@ -334,12 +317,12 @@ ggplot(GenderData.tidy,aes(x=fct_reorder(Occupations, variance_pct,.desc = T), y
 From this plot, we can discover that, for the top 10 occupations with greatest variances, there are 5 male-dominated occupations and 5 female-dominated occupations. However, for other occupations, the majority of them are male dominated.
 
 ```{r,fig.height=15}
-# the variance is the variance by year
-YearlyDataWithVariance <- YearlyDataWithVariance %>% select(1,5) %>% unique()
+# the range is the range by year
+YearlyWithVariance <- YearlyWithVariance %>% select(1,3)
 GenderData.tidy <- GenderData.tidy %>% select(1,7) %>% unique()
-TotalData <- merge(YearlyDataWithVariance,GenderData.tidy,by="Occupations")
+TotalData <- merge(YearlyWithVariance,GenderData.tidy,by="Occupations")
 
-ggplot(TotalData,aes(x=fct_reorder(Occupations, variance_pct, .desc = T), y = variance_pct)) +
+ggplot(TotalData,aes(x=fct_reorder(Occupations, range_pct, .desc = T), y = range_pct)) +
   geom_col(fill = ifelse(TotalData$`Gender Distribution` == "Male-dominated","orange","green"))+
     theme(axis.text=element_text(size=30,angle = 90, vjust = 0.5, hjust=1),
       axis.title=element_text(size=40,face="bold"),
