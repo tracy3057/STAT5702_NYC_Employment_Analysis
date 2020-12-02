@@ -1,0 +1,14 @@
+```{r}
+library(tidyverse)
+NumEmp_Data <- read_csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/numemp_filledMissings.csv')
+NumEmp_Data$X1 <- NULL
+
+```
+
+```{r}
+NumEmp_Data_tidy_filledna <- NumEmp_Data %>% pivot_longer(cols = !c("Occupations","year","race","Gender"), values_to = "NumEmp", names_to = "County")
+write_csv(NumEmp_Data_tidy_filledna,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/NumEmp_Data_tidy_filledna.csv")
+
+```
+
+
