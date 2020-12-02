@@ -13,7 +13,7 @@ library(RCurl)
 ```
 
 
-```{r visualizing missing data,fig.height=10}
+```{r visualizing missing data}
 # read in file with missing values and preprocess the dataset by setting categories
 Data_with_missings <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/numemp_occupations.csv"))
 
