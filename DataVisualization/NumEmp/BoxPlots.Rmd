@@ -14,16 +14,38 @@ library(RCurl)
 
 ```{r Data}
 
-YearlyCleveland <- read.csv(text = getURL('https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/Occupation_Yearly.csv'))
+YearlyNumEmps <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/Occupation_Yearly.csv"))
 
 ```
 
-```{r Yearly BoxPlots}
-YearlyCleveland
-ggplot(YearlyCleveland) +
-  geom_boxplot(aes(x = YearlyCleveland$NumEmps, y = reorder(x = YearlyCleveland$Occupations,YearlyCleveland$NumEmps)),
+```{r Yearly BoxPlot}
+YearlyNumEmps
+ggplot(YearlyNumEmps) +
+  geom_boxplot(aes(x = YearlyNumEmps$YearlyNumEmp, y = reorder(x = YearlyCleveland$Occupations,YearlyCleveland$YearlyNumEmp)),
                color = "black", fill = "dark red", alpha = 0.7) + 
-  ggtitle("Boxplot with different Species_size") +
-  xlab("Species_size") + ylab("Occupations")
+  ggtitle("Boxplot of number working per sector per year") +
+  xlab("Number Employed") + ylab("Occupations")
 
 ```
+Observations from Boxplot of number working in sector per year:
+
+Occupations that seem prone to dramatic fluctuation over time:
+Management occupations
+Office and administrative support occupations
+Health care support occupations
+Computer and Mathematical occupations
+
+Occupations where the number of employees has fluctuated very little:
+Law enforcement
+Fire fighting
+Building and grounds keeping occupations
+legal occupations
+
+Something to be noted when reading this plot is that the number of people working in any particular occupation may change the viewers perception as to what constitutes more variation. To address this, a second plot has been created in which the box plots are normalized by dividing the number employed in each year by the mean across this sector. While the variation in total number employed won't be apparent, the relative degrees of fluctuation will become more apparent.
+
+```{r Yearly Normalized BoxPlot}
+
+
+
+```
+
