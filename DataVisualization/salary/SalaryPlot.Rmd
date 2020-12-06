@@ -371,7 +371,10 @@ However, there's no clear connections between the size and stability of variance
 ## Relation between Number of Employed Difference and Salary Difference in Gender
 Intuitively, the gender composition of employees in a profession is related to the level of wages for changing gender. We want to analyze if this intuition makes sense. THerefore, we use two categorical variables to represent the two characteristics, namely "Gender Distribution" and "Salary Distribution". For the category of "Gender Distribution", there are two values, Male-dominated, which means there are more male employees in this occupation than female employees, and Female-dominated, which means there are more female employees in this occupation than male employees. For the category of "Salary Distribution", we also set two values, Male-higher, which means male employees have higher salary in this occupation, and Female-higher, which means female employees have higher salary in this occupation. Then, we draw a mosaic plot to measure the relation.
 ```{r}
-TidyGenderData <- read.csv('/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Salary/TidyGenderData.csv')
+TidyGenderData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/Salary/TidyGenderData.csv"))
+  
+  
+  
 TidyGenderData <- TidyGenderData %>% select(1,8) %>% unique()
 
 GenderSalary$Salary_Distribution <- ifelse(

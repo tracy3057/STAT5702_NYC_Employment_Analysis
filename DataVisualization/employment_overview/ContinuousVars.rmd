@@ -37,6 +37,14 @@ ggplot(data = employDisability,aes(year,Total)) + geom_line(size = 1, col = 'bla
 #Unemployment Rate over time for those with disability
 ggplot(data = employDisability,aes(x = year,y = UnemploymentRate)) + geom_line(size = 1, col = 'black') + xlab('Year') + ylab('Unemployment (Percent)') + scale_x_continuous(breaks = seq(2010,2019)) + scale_y_continuous(breaks = seq(20,0)) + geom_point(size = 2.5, col = 'royalblue3')
 ```
+Observations of number employed by disability:
+
+It seems that the total number of unemployed people with disabilities has no firm trend over the last 10 years. It seems to grow some years and shrink some years. 
+
+Observations of percent of people unemployed by disability:
+
+It seems that the total number of unemployed people with disabilities has been steadily trending down for the last 10 years. This might indicate that as a society we are getting better at finding opportunities for the disadvantaged.
+
 
 ```{r Employment by Education Plots}
 #Problem with Data Read
@@ -45,6 +53,11 @@ employEDUCATION
 employEDUCATION$Label = as.factor(employEDUCATION$Label)
 ggplot(data = employEDUCATION) + geom_line(aes(x = year, y = UnemploymentRate, group = Label, colour = Label),size = 1) + xlab('Year') + ylab('Unemployment (Percent)') + scale_x_continuous(breaks = seq(2010,2019)) + scale_y_continuous(breaks = seq(20,0)) 
 ```
+Observations from unemployment by education data over the years:
+
+It seems that in general, the percentage of people who are unemployed is going down over time. As would be expected, those who are more educated are more likely to have jobs, with the group that is unemployed at the lowest rate being those with a bachelor's degree or beyond, the next highest being some college or associates degree, then those with a high school diploma, and then those without high school completed.
+
+Since each level of further education seems to correspond to a lower chance of unemployment, the relationship between education and finding a job is clear.
 
 ```{r EmploymentByAge Plots}
 #Data error, 25-44 has 2 for 2018, one should be 2019.
@@ -54,6 +67,13 @@ employmentByAge
 employmentByAge$Label = as.factor(employmentByAge$Label)
 ggplot(data = employmentByAge) + geom_line(aes(x = year, y = UnemploymentRate, group = Label, colour = Label),size = 1) + xlab('Year') + ylab('Unemployment (Percent)') + scale_x_continuous(breaks = seq(2010,2019)) 
 ```
+Observations of unemployment by age plots:
+
+It seems that the younger a person is, the more difficult it will be to find a job. The four age groups  16-19 years of age, 20-24 years of age, 25-44 years of age, and 55-64 years of age seem to experience the most difficulty in finding jobs. The age groups that actually fall below the average unemployment rate of all people above 16 years of age are people 45 to 54 years of age, people 65 to 74 years of age, and those older than 75. 
+
+It is my suspicion that younger people tend to have more difficulty finding jobs due to inexperience. Also, at 55 to 64 years of age, perhaps the unemployment rate is higher than those who are 45 to 64 because this is an age at which job performance maybe begins to decline. At 65 years of age and older perhaps unemployment is lower because less people who don't have a job are looking for one as many people retire by this age.
+
+Something that is striking is that the unemployment rate of people from the ages to 25 to 44 years of age would be so much higher in recent years and that it would be higher than the unemployment rate of those between the ages of 20 to 24. It is also striking that this doesn't reflect in the average unemployment rate more and one would suspect that this group makes up potentially the largest group in the work force. May need to inspect the data further.
 
 ```{r employmentByRACE Plots}
 employmentByRACE
@@ -66,11 +86,16 @@ ggplot(data = employmentByRACE) + geom_line(aes(x = year,y = UnemploymentRate, g
 employPoverty
 
 #Total number unemployed over time of those below Poverty line
-ggplot(data = employPoverty,aes(year,Total)) + geom_line(size = 1, col = 'black') + xlab('Year') + ylab('Number Unemployed') + scale_x_continuous(breaks = seq(2010,2019)) + geom_point(size = 2.5, col = 'royalblue3')
+ggplot(data = employPoverty,aes(year,Total)) + geom_line(size = 1, col = 'black') + xlab('Year') + ylab('Number Unemployed') + scale_x_continuous(breaks = seq(2010,2019)) + geom_point(size = 2.5, col = 'royalblue3') + ylim(0,1800000)
 
 #Unemployment Rate over time for those below Poverty line
-ggplot(data = employPoverty,aes(x = year,y = UnemploymentRate)) + geom_line(size = 1, col = 'black') + xlab('Year') + ylab('Unemployment (Percent)') + scale_x_continuous(breaks = seq(2010,2019)) + geom_point(size = 2.5, col = 'royalblue3')
+ggplot(data = employPoverty,aes(x = year,y = UnemploymentRate)) + geom_line(size = 1, col = 'black') + xlab('Year') + ylab('Unemployment (Percent)') + scale_x_continuous(breaks = seq(2010,2019)) + geom_point(size = 2.5, col = 'royalblue3') + ylim(0,35)
 ```
+Observations of Number unemployed in poverty by year:
+It seems that over time, the number of people unemployed in poverty by year is going down steadily but perhaps in a manner that is relatively insignificant compared to the amount of people in poverty to begin with.
+
+Observations of Percent people unemployed in poverty by year:
+It seems that this number is going down at a relatively quick rate compared to the total number of people in poverty unemployed. However, this may not be a good sign, since it might imply that the number of people in poverty is growing.
 
 ```{r JobType Plots}
 #Interested in getting unemployment rates for this 

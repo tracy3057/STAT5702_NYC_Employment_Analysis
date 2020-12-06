@@ -76,7 +76,8 @@ parcoords(YearBoroughData.wide,
           withD3 = TRUE) 
 ```
 
-```{r Race and Gender by Occupation}
+```{r Race and Gender by Occupation Par Coords}
+
 PropsByOccupation <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/PropsByOccupation.csv"))
 
 parcoords(PropsByOccupation,
@@ -91,13 +92,7 @@ parcoords(PropsByOccupation,
           ),
           withD3 = TRUE) 
 
-PropsByOccupationRace <- PropsByOccupation[,1:5]
-PropsByOccupationRace
-PropsByOccupationRace %>% pivot_longer(!Occupation, names_to = 'race', values_to = 'proportion') %>%
-ggplot(., aes(fill = race, y = Occupation, x = proportion)) + geom_bar(position = 'stack',stat = 'identity')
-
-
-PropsOfGroupByOccupation <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/PropsOfGroupByOccupation.csv')
+PropsOfGroupByOccupation <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/PropsOfGroupByOccupation.csv')
 
 parcoords(PropsOfGroupByOccupation,
           rownames = F,
@@ -110,8 +105,36 @@ parcoords(PropsOfGroupByOccupation,
             colorScheme = "schemeCategory10"
           ),
           withD3 = TRUE) 
+```
+Observations from Parallel Coordinates plot of Proportions of Group by Occupation:
 
-PropsOfPropsRace <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Preprocess_ClevelandDotPlot/PropsOfPropsRace.csv')
+* Ask Tracy for help interpreting
+
+```{r Race and Gender by Occupation Stacked Bar Charts}
+PropsByOccupationRace <- PropsByOccupation[,1:5]
+PropsByOccupationRace
+PropsByOccupationRace %>% pivot_longer(!Occupation, names_to = 'race', values_to = 'proportion') %>%
+ggplot(., aes(fill = race, y = Occupation, x = proportion)) + geom_bar(position = 'stack',stat = 'identity')
+
+PropsOfPropsRace <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/PropsOfPropsRace.csv')
 
 PropsOfPropsRace %>% pivot_longer(!Occupation, names_to = 'race', values_to = 'proportion') %>%
 ggplot(., aes(fill = race, y = Occupation, x = proportion)) + geom_bar(position = 'stack',stat = 'identity')
+```
+
+Observations from Proportions of Proportions Stacked Barchart:
+
+1.) It seems that a typical white person is much more likely than persons of other races to work legal profession compared to other races. They are also quite likely compared to other races to engage in Management occupations, physical, life and social science occupations, and art, design, entertainment, sports and media occupations.
+2.) It seems that a typical white person is much less likely than persons of other races to work in health care support occupations, transportation occupations, production occupations, personal care and service occupations, material moving operations, and building and grounds cleaning and maintenance occupations
+3.) It seems that a typical Hispanic person is much more likely than person of other races to work in Farming, Fishing and forestry occupations. They are also quite likely compared to other races to engage in building and grounds cleaning and maintenance occupations, construction and extraction operations, and material moving operations.
+4.) It seems that a typical Hispanic person is much less likely than persons of other races to work in health diagnosing and treating practitioners and other technical occupations, business and financial operations, computer and mathematical occupations, legal occupations, art, design, entertainment, sports, and media occupations, architecture and engineering occupations, and life, physical, and social science occupations.
+5.) It seems that a typical Black person is much more likely than persons of other races to work in fire fighting and prevention and other protective services including supervisors, law enforcement workers including supervisors, healthcare and support occupations, and community and social service occupations.
+6.) It seems that a typical Black person is much less likely than persons of other races to work in architecture and engineering occupations, art, design, entertainment, sports and media occupations, farming, fishing, and forestry occupations, food preparation and serving occupations, life, physical and social science occupations, and legal occupations.
+7.) It seems that a typical Asian person is much more likely than persons of other races to work in computer and mathematical operations, architecture and engineering operations, business and financial operations, health diagnosing and treating practitioners and other technical occupations.
+8.) It seems that a typical Asian person is much less likely than persons of other races to work in Law enforcement occupations, fire fighting and prevention occupations, community and social service occupations, and building and grounds cleaning and maintenance occupations.
+
+
+
+
+
+
