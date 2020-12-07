@@ -1,14 +1,77 @@
 White Alone
-https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AOccupation%3ARace%20and%20Ethnicity&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2019.B24010A&hidePreview=false
-BLACK OR AFRICAN AMERICAN ALONE
-https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AOccupation%3ARace%20and%20Ethnicity&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2010.B24010B&hidePreview=false
-ASIAN ALONE
-https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AOccupation%3ARace%20and%20Ethnicity&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2019.B24010D&hidePreview=false
+2019: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2019.B24010A&hidePreview=false
+2018: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2018.B24010A&hidePreview=false
+2017: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2017.B24010A&hidePreview=false
+2016: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2016.B24010A&hidePreview=false
+2015: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2015.B24010A&hidePreview=false
+2014: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2014.B24010A&hidePreview=false
+2013: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2013.B24010A&hidePreview=false
+2012: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2012.B24010A&hidePreview=false
+2011: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2011.B24010A&hidePreview=false
+2010: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2010.B24010A&hidePreview=false
+Black or African American Alone
+2019: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2019.B24010B&hidePreview=false
+2018: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2018.B24010B&hidePreview=false
+2017: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2017.B24010B&hidePreview=false
+2016: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2016.B24010B&hidePreview=false
+2015: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2015.B24010B&hidePreview=false
+2014: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2014.B24010B&hidePreview=false
+2013: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2013.B24010B&hidePreview=false
+2010: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2012.B24010B&hidePreview=false
+2011: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2011.B24010B&hidePreview=false
+2010: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2010.B24010B&hidePreview=false
+Asian Alone
+2019: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2019.B24010D&hidePreview=false
+2018: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2018.B24010D&hidePreview=false
+2017: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2017.B24010D&hidePreview=false
+2016: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2016.B24010D&hidePreview=false
+2015: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2015.B24010D&hidePreview=false
+2014: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2014.B24010D&hidePreview=false
+2013: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2013.B24010D&hidePreview=false
+2012: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2012.B24010D&hidePreview=false
+2011: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2011.B24010D&hidePreview=false
+2010: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2010.B24010D&hidePreview=false
 Some Other Race Alone
-https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AOccupation%3ARace%20and%20Ethnicity&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2019.B24010F&hidePreview=false
-TWO OR MORE RACES
-https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AOccupation%3ARace%20and%20Ethnicity&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2019.B24010G&hidePreview=false
-WHITE ALONE, NOT HISPANIC OR LATINO
-https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AOccupation%3ARace%20and%20Ethnicity&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2010.B24010H&hidePreview=false
-HISPANIC OR LATINO
-https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AOccupation%3ARace%20and%20Ethnicity&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2019.B24010I&hidePreview=false
+2019: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2019.B24010F&hidePreview=false
+2018: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2018.B24010F&hidePreview=false
+2017: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2017.B24010F&hidePreview=false
+2016: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2016.B24010F&hidePreview=false
+2015: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2015.B24010F&hidePreview=false
+2014: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2014.B24010F&hidePreview=false
+2013: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2013.B24010F&hidePreview=false
+2012: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2012.B24010F&hidePreview=false
+2011: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2011.B24010F&hidePreview=false
+2010: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2010.B24010F&hidePreview=false
+Two or More Races
+2019: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2019.B24010G&hidePreview=false
+2018: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2018.B24010G&hidePreview=false
+2017: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2017.B24010G&hidePreview=false
+2016: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2016.B24010G&hidePreview=false
+2015: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2015.B24010G&hidePreview=false
+2014: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2014.B24010G&hidePreview=false
+2013: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2013.B24010G&hidePreview=false
+2012: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2012.B24010G&hidePreview=false
+2011: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2011.B24010G&hidePreview=false
+2010: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2010.B24010G&hidePreview=false
+White Alone Not Hispanic or Latino
+2019: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2019.B24010H&hidePreview=false
+2018: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2018.B24010H&hidePreview=false
+2017: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2017.B24010H&hidePreview=false
+2016: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2016.B24010H&hidePreview=false
+2015: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2015.B24010H&hidePreview=false
+2014: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2014.B24010H&hidePreview=false
+2013: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2013.B24010H&hidePreview=false
+2012: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2012.B24010H&hidePreview=false
+2011: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2011.B24010H&hidePreview=false
+2010: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2010.B24010H&hidePreview=false
+Hispanic or Latino
+2019: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2019.B24010I&hidePreview=false
+2018: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2018.B24010I&hidePreview=false
+2017: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2017.B24010I&hidePreview=false
+2016: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2016.B24010I&hidePreview=false
+2015: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2015.B24010I&hidePreview=false
+2014: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2014.B24010I&hidePreview=false
+2013: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2013.B24010I&hidePreview=false
+2012: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2012.B24010I&hidePreview=false
+2011: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2011.B24010I&hidePreview=false
+2010: https://data.census.gov/cedsci/table?t=Occupation&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2010.B24010I&hidePreview=false
