@@ -1,0 +1,10 @@
+2019: https://data.census.gov/cedsci/table?t=Education&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSST1Y2019.S1501&hidePreview=false
+2018: https://data.census.gov/cedsci/table?t=Education&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSST1Y2018.S1501&hidePreview=false
+2017: https://data.census.gov/cedsci/table?t=Education&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSST1Y2017.S1501&hidePreview=false
+2016: https://data.census.gov/cedsci/table?t=Education&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSST1Y2016.S1501&hidePreview=false
+2015: https://data.census.gov/cedsci/table?t=Education&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSST1Y2015.S1501&hidePreview=false
+2014: https://data.census.gov/cedsci/table?t=Education&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSST1Y2014.S1501&hidePreview=false
+2013: https://data.census.gov/cedsci/table?t=Education&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSST1Y2013.S1501&hidePreview=false
+2012: https://data.census.gov/cedsci/table?t=Education&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSST1Y2012.S1501&hidePreview=false
+2011: https://data.census.gov/cedsci/table?t=Education&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSST1Y2011.S1501&hidePreview=false
+2010: https://data.census.gov/cedsci/table?t=Education&g=0400000US36_0500000US36005,36047,36061,36081,36085&tid=ACSST1Y2010.S1501&hidePreview=false
