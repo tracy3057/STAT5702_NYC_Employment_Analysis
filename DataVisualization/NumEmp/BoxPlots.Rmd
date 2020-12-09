@@ -10,18 +10,21 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r Imports}
 library(tidyverse)
 library(RCurl)
+library(dplyr)
 ```
 
 ```{r Data}
 
 YearlyNumEmps <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/Occupation_Yearly.csv"))
 
+AverageEmpsByOccupation <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/AverageEmpsByOccupation.csv"))
+
 ```
 
 ```{r Yearly BoxPlot}
 YearlyNumEmps
 ggplot(YearlyNumEmps) +
-  geom_boxplot(aes(x = YearlyNumEmps$YearlyNumEmp, y = reorder(x = YearlyCleveland$Occupations,YearlyCleveland$YearlyNumEmp)),
+  geom_boxplot(aes(x = YearlyNumEmps$YearlyNumEmp, y = reorder(x = YearlyNumEmps$Occupations,YearlyNumEmps$YearlyNumEmp)),
                color = "black", fill = "dark red", alpha = 0.7) + 
   ggtitle("Boxplot of number working per sector per year") +
   xlab("Number Employed") + ylab("Occupations")
@@ -44,8 +47,19 @@ legal occupations
 Something to be noted when reading this plot is that the number of people working in any particular occupation may change the viewers perception as to what constitutes more variation. To address this, a second plot has been created in which the box plots are normalized by dividing the number employed in each year by the mean across this sector. While the variation in total number employed won't be apparent, the relative degrees of fluctuation will become more apparent.
 
 ```{r Yearly Normalized BoxPlot}
+AverageEmpsByOccupation <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/AverageEmpsByOccupation.csv"))
+AverageEmpsByOccupation <- AverageEmpsByOccupation[,2:3]
+AverageEmpsByOccupation <- rename(AverageEmpsByOccupation,NumEmp = X0)
 
+YearlyNumEmps$Average <- AverageEmpsByOccupation$NumEmp[AverageEmpsByOccupation$index == YearlyNumEmps$Occupations]
+YearlyNumEmps$Normalized <- YearlyNumEmps$YearlyNumEmp / YearlyNumEmps$Average
 
+YearlyNumEmps
 
+ggplot(YearlyNumEmps) +
+  geom_boxplot(aes(x = YearlyNumEmps$Normalized, y = reorder(x = YearlyNumEmps$Occupations,YearlyNumEmps$Normalized)),
+               color = "black", fill = "dark red", alpha = 0.7) + 
+  ggtitle("Boxplot of normalized working per sector per year") +
+  xlab("Number Employed") + ylab("Occupations")
 ```
 

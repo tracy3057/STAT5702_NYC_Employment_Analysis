@@ -110,6 +110,8 @@ Observations from Parallel Coordinates plot of Proportions of Group by Occupatio
 
 * Ask Tracy for help interpreting
 
+
+
 ```{r Race and Gender by Occupation Stacked Bar Charts}
 PropsByOccupationRace <- PropsByOccupation[,1:5]
 PropsByOccupationRace
