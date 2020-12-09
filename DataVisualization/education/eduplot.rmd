@@ -1,6 +1,7 @@
 ```{r}
 library(tidyverse)
 library(RCurl)
+library(dplyr)
 
 Education <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/education/Education.csv"))
 
@@ -9,6 +10,8 @@ Salary_edu <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy305
 NumEmp_edu <-read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/numemp_sum_races_combined.csv"))
 
 Education$X <- NULL
+Education$Education_Level <- as.factor(Education$Education_Level)
+revalue(Education$Education_Level, c("Bechelor's Degree or Higher" = "Bachelor's Degree or Higher"))
 NumEmp_edu$X <- NULL
 Salary_edu$X <- NULL
 ```
@@ -35,7 +38,7 @@ BronxEducation<-BronxEducation[!(BronxEducation$Gender=="Total"),]
 BronxNumEmp <- NumEmp_edu %>% select(1,2,3) %>% unique()
 BronxNumEmp$Gender <- sub("Total Male","Male",BronxNumEmp$Gender)
 BronxNumEmp$Gender <- sub("Total Female","Female",BronxNumEmp$Gender)
-BronxNumEmp <- BronxNumEmp %>% rename("NumEmp" = "Bronx")
+BronxNumEmp <- BronxNumEmp %>% dplyr::rename("NumEmp" = "Bronx")
 BronxNumEmp<-BronxNumEmp[!(BronxNumEmp$Gender=="Total"),]
 
 # merge

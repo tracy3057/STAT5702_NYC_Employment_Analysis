@@ -15,7 +15,7 @@ library(dplyr)
 
 ```{r Data}
 
-YearlyNumEmps <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/Occupation_Yearly.csv"))
+YearlyNumEmps <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/YearlyNumEmpsWithNorm.csv"))
 
 AverageEmpsByOccupation <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/AverageEmpsByOccupation.csv"))
 
@@ -24,9 +24,9 @@ AverageEmpsByOccupation <- read.csv(text = getURL("https://raw.githubusercontent
 ```{r Yearly BoxPlot}
 YearlyNumEmps
 ggplot(YearlyNumEmps) +
-  geom_boxplot(aes(x = YearlyNumEmps$YearlyNumEmp, y = reorder(x = YearlyNumEmps$Occupations,YearlyNumEmps$YearlyNumEmp)),
+  geom_boxplot(aes(x = YearlyNumEmps$YearlyNumEmp, y = reorder(x = YearlyNumEmps$Occupations,YearlyNumEmps$YearlyNumEmp, FUN = median)),
                color = "black", fill = "dark red", alpha = 0.7) + 
-  ggtitle("Boxplot of number working per sector per year") +
+  ggtitle("Number working in sector per year") +
   xlab("Number Employed") + ylab("Occupations")
 
 ```
@@ -48,18 +48,45 @@ Something to be noted when reading this plot is that the number of people workin
 
 ```{r Yearly Normalized BoxPlot}
 AverageEmpsByOccupation <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/AverageEmpsByOccupation.csv"))
+
 AverageEmpsByOccupation <- AverageEmpsByOccupation[,2:3]
-AverageEmpsByOccupation <- rename(AverageEmpsByOccupation,NumEmp = X0)
-
-YearlyNumEmps$Average <- AverageEmpsByOccupation$NumEmp[AverageEmpsByOccupation$index == YearlyNumEmps$Occupations]
-YearlyNumEmps$Normalized <- YearlyNumEmps$YearlyNumEmp / YearlyNumEmps$Average
-
-YearlyNumEmps
+AverageEmpsByOccupation <- dplyr::rename(AverageEmpsByOccupation,NumEmp = X0)
 
 ggplot(YearlyNumEmps) +
-  geom_boxplot(aes(x = YearlyNumEmps$Normalized, y = reorder(x = YearlyNumEmps$Occupations,YearlyNumEmps$Normalized)),
+  geom_boxplot(aes(x = YearlyNumEmps$Normalized, y = reorder(x = YearlyNumEmps$Occupations,YearlyNumEmps$Normalized, FUN = median)),
                color = "black", fill = "dark red", alpha = 0.7) + 
-  ggtitle("Boxplot of normalized working per sector per year") +
+  ggtitle("Normalized number working in sector per year") +
   xlab("Number Employed") + ylab("Occupations")
 ```
+
+Observations from number working in sector per year:
+
+In this plot, the total values of employees working in each field in each year are normalized by their averages. In doing this, changes in employment in a sector that on an absolute scale would be small, may be more pronounced as a function of variation relative to it's own size.
+
+In this plot, the average quantity across all years is normalized to one for illustrative purposes, which allows for new interpretations and findings:
+
+1.) Fields such as management which had a large absolute spread from the years 2010-2019 aren't necessarily the ones which seem to display the most variation with respect to themselves. While this field had the largest box in the previous plot, it is in the middle of the pack in this one.
+
+2.) Of the fields with the smallest numbers of workers: Farming, fishing and forestry occupations, Life, physical and social science occupations, Law enforcement occupations, firefighting occupations, and architecture and engineering occupations; The spreads across this decade were shown to be much more profound than in the previous plot, that is with the exception of law enforcement workers and firefighting workers. While the boxes grew somewhat in spread, the growth was not even nearly proportional to that of the other fields. 
+
+This indicates that the number of people working in law enforcement and firefighting is very stable, and this would make sense because a steady supply of people in these roles is necessary. With regards to the other occupations, it also makes sense that relatively unpopulated occupations would be more prone to greater variation as a percent of itself, since relatively few can leave or join, and a big impact can be had.
+
+3.) As a percent of the number of employees working in each sector, the following were most prone to large shifts in number employed:
+
+1.) Farming, fishing and forestry
+2.) Material moving occupations
+3.) Computer and mathematical occupations
+4.) Health technologists and technicians.
+5.) Healthcare support occupations
+
+By contrast, these professions were the most stable:
+
+1.) Legal occupations
+2.) Sales occupations
+3.) Law enforcement workers
+4.) Fire fighters
+5.) Construction and extraction occupations
+
+
+
 

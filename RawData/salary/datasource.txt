@@ -1,0 +1,10 @@
+2019: https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AIncome%20and%20Poverty%3AOccupation&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2019.B24012&hidePreview=false
+2018: https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AIncome%20and%20Poverty%3AOccupation&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2018.B24012&hidePreview=false
+2017: https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AIncome%20and%20Poverty%3AOccupation&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2017.B24012&hidePreview=false
+2016: https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AIncome%20and%20Poverty%3AOccupation&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2016.B24012&hidePreview=false
+2015: https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AIncome%20and%20Poverty%3AOccupation&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2015.B24012&hidePreview=false
+2014: https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AIncome%20and%20Poverty%3AOccupation&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2014.B24012&hidePreview=false
+2013: https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AIncome%20and%20Poverty%3AOccupation&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2013.B24012&hidePreview=false
+2012: https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AIncome%20and%20Poverty%3AOccupation&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2012.B24012&hidePreview=false
+2011: https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AIncome%20and%20Poverty%3AOccupation&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2011.B24012&hidePreview=false
+2010: https://data.census.gov/cedsci/table?q=quick%20facts%20NYC%20population&t=Age%20and%20Sex%3AIncome%20and%20Poverty%3AOccupation&g=0500000US36005,36047,36061,36081,36085&tid=ACSDT1Y2010.B24012&hidePreview=false
