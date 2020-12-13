@@ -27,7 +27,7 @@ ggplot(YearlyNumEmps) +
   geom_boxplot(aes(x = YearlyNumEmps$YearlyNumEmp, y = reorder(x = YearlyNumEmps$Occupations,YearlyNumEmps$YearlyNumEmp, FUN = median)),
                color = "black", fill = "dark red", alpha = 0.7) + 
   ggtitle("Number working in sector per year") +
-  xlab("Number Employed") + ylab("Occupations")
+  xlab("Number Employed") + ylab("Occupations") + scale_x_continuous(n.breaks = 13) 
 
 ```
 Observations from Boxplot of number working in sector per year:

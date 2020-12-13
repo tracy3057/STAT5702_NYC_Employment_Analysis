@@ -19,7 +19,7 @@ library(RCurl)
 
 ```{r Data}
 #YearBoroughData <- read.csv(text = #getURL('https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumE#mp/yearly_cleveland.csv'))
-PropsByOccupation <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/PropsByOccupation.csv"))
+PropsByOccupation <- read.csv("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/PropsByOccupation.csv")
 PropsOfGroupByOccupation <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/PropsOfGroupByOccupation.csv')
 PropsOfPropsRace <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/PropsOfPropsRace.csv')
 ```
@@ -121,7 +121,7 @@ ggplot(., aes(fill = race, y = Occupation, x = proportion)) + geom_bar(position 
 PropsOfPropsRace <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/PropsOfPropsRace.csv')
 
 PropsOfPropsRace %>% pivot_longer(!Occupation, names_to = 'race', values_to = 'proportion') %>%
-ggplot(., aes(fill = race, y = Occupation, x = proportion)) + geom_bar(position = 'stack',stat = 'identity')
+ggplot(., aes(fill = race, y = Occupation, x = proportion)) + geom_bar(position = 'stack',stat = 'identity') + ggtitle('Relative Likelihood of Sector Employment by Race') + theme(plot.title = element_text(size = 10, face = "bold"))
 ```
 
 Observations from Proportions of Proportions Stacked Barchart:
