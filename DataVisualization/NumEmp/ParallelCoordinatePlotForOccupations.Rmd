@@ -19,18 +19,33 @@ library(RCurl)
 
 ```{r Data}
 #YearBoroughData <- read.csv(text = #getURL('https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumE#mp/yearly_cleveland.csv'))
+YearBoroughData <- read.csv("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/numemp_big_category.csv")
 PropsByOccupation <- read.csv("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/PropsByOccupation.csv")
 PropsOfGroupByOccupation <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/PropsOfGroupByOccupation.csv')
 PropsOfPropsRace <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/PropsOfPropsRace.csv')
 ```
 
+```{r Data Cleaning}
+YearBoroughData$Occupations <- plyr::revalue(YearBoroughData$Occupations, c("Management, business, science, and arts occupations:" = "Management, business, science, and arts","Service occupations:" = "Service", "Sales and office occupations:" = "Sales and office", "Natural resources, construction, and maintenance occupations:" = "Natural resources, construction,maintenance", "Production, transportation, and material moving occupations:" = "Production, transportation,material moving"))
+
+YearBoroughData
+```
+
 # Analyzing with 5 big occupation catogories
 ```{r,fig.width=6,fig.height=8}
 YearBoroughData <- getURL('https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/numemp_big_category.csv'))
+```{r,fig.width=10,fig.height=15}
 YearBoroughData$X <- NULL
 
 YearBoroughData.tidy <- pivot_longer(YearBoroughData,cols = !c("Occupations","year"), names_to = "boroughs", values_to = "NumEmp")
+
+YearBoroughData.tidy$boroughs <- plyr::revalue(YearBoroughData.tidy$boroughs, c("Bronx.County..New.York" = "Bronx County", "Kings.County..New.York" = "Kings County", "New.York.County..New.York" = "New York County", "Queens.County..New.York" = "Queens County", "Richmond.County..New.York" = "Richmond County"))
+
 YearBoroughData.wide <- pivot_wider(YearBoroughData.tidy, names_from = Occupations, values_from = NumEmp)
+
+YearBoroughData.tidy
+
+
 
 YearBoroughData.wide$year <- NULL
 
@@ -51,6 +66,10 @@ From the plot above, we discover that
 2) Service occupations and Sales and office occupations: for Manhattan and Richmond, the two types of occupations are negatively corelated. For other boroughs, there are not significant relations.
 3) Sales and office occupations and Natural resources, construction, and maintenance occupations: all boroughs show a negative corelation.
 4) Natural resources, construction, and maintenance occupations and Production, transportation, and material moving occupations: all boroughs show a negative corelation.
+1) Management, business, science, and arts occupations and Service occupations: for Bronx, Queens and Manhattan, the two types of occupations are positively related with each other, while for Kings, the two types of occupations are negatively correlated.
+2) Service occupations and Sales and office occupations: for Manhattan and Richmond, the two types of occupations are negatively correlated. For other boroughs, there are not significant relations.
+3) Sales and office occupations and Natural resources, construction, and maintenance occupations: all boroughs show a negative correlation.
+4) Natural resources, construction, and maintenance occupations and Production, transportation, and material moving occupations: all boroughs show a negative correlation.
 
 # Analyzing with 25 small occupation catogories
   * There might be too many categories
