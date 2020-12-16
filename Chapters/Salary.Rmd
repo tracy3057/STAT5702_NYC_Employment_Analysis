@@ -81,7 +81,7 @@ ggplot(NewSalary) +
 
 2. Five clusters for salary distribution. 
 
-  * The **first** group is `Legal Occupations`, which has much higher average salary compare with all other occupations.
+  * The **first** group is `Legal`, which has much higher average salary compare with all other occupations.
   * The **second** group includes 7 different occupations, which ranks second in salary levels among all occupations. We can also divide the second group into four sub-groups according to the salary. 
     * The first sub-group only includes `Health diagnosing and treating practitioners and other technical`, which has the second largest salary.
     * The second sub-group includes `Computer and mathematical` and `Management`. They have very similar average salary, the difference in salary of the two occupations is only `r as.integer(NewSalary[21,13] - NewSalary[251,13])`.
@@ -89,13 +89,25 @@ ggplot(NewSalary) +
     * The fourth sub-group contains only one occupation, which is `Life, physical, and social science`
   * The **third** group contains `Arts, design, entertainment, sports, and media`, `Health technologists and technicians`, `Education, training, and library`, `Installation, maintenance, and repair`, `Community and social service` and `Construction and extraction`. The salary range of this group is `r as.integer(NewSalary[1334,13] - NewSalary[1704,13])`.
   * The **Fourth** group contains `Office and administrative support`, `Sales and related`, `Transportation` and `Fire fighting and prevention`. The salary range of this group is `r as.integer(NewSalary[1934,13] - NewSalary[1879,13])`.
-  * The **Fifth** group contains `Production`, ``
+  * The **Fifth** group contains `Production`, `Healthcare support`, `Building and grounds cleaning and maintenance`, `Material moving`, `Personal care and service`, `Farming, fishing, and forestry`, `Food preparation and serving related`. The salary range of this group is `r as.integer(NewSalary[974,13] - NewSalary[2144,13])`.
+
+3. Gaps between the five clusters.
+
+  * From the first group to the fifth group, the salary gap between groups is `r as.integer(NewSalary[818,13] - NewSalary[100,13])`, `r as.integer(NewSalary[41,13] - NewSalary[1334,13])`, `r as.integer(NewSalary[1704,13] - NewSalary[1934,13])`, `r as.integer(NewSalary[1879,13] - NewSalary[2144,13])`.
+  * Among all the gaps, the biggest one is between group 2 and group 3, and the gap is `r as.integer(NewSalary[41,13] - NewSalary[1334,13])`. The smallest gap is between gtoup 3 and group 4, and the gap is `r as.integer(NewSalary[1704,13] - NewSalary[1934,13])`.
   
-3. Top 3 and Last 3 Occupations in Salaries.
+4. Top 3 and Last 3 Occupations in Salaries.
 
   * Top 3
     * Legal
-    * 
+    * Health diagnosing and treating practitioners and other technical
+    * Computer and mathematical
+  * Last 3
+    * Personal care and service
+    * Farming, fishing, and forestry
+    * Food preparation and serving related
+  
+  * As can be seen from the plot, the salary range for the top 3 occupations are large. However, for the last 3 occupations, the salary range is relatively small.
 
 ### Analyze on salary variation according to different years
 ```{r,fig.width=10}
