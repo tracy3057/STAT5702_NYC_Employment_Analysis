@@ -34,9 +34,11 @@ YearBoroughData
 <<<<<<< HEAD
 ```{r,fig.width=6,fig.height=8}
 YearBoroughData <- getURL('https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/numemp_big_category.csv'))
-=======
+
+```
+
 ```{r,fig.width=10,fig.height=15}
->>>>>>> 286d2dd1c2dc9eb8118e294cab6e8504e1a40b9c
+
 YearBoroughData$X <- NULL
 
 YearBoroughData.tidy <- pivot_longer(YearBoroughData,cols = !c("Occupations","year"), names_to = "boroughs", values_to = "NumEmp")

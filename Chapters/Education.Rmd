@@ -30,9 +30,7 @@ Education$Education_Level <- as.factor(Education$Education_Level)
 Education$Education_Level <-plyr::revalue(Education$Education_Level, c("Bechelor's Degree or Higher" = "Bachelor's Degree or Higher"))
 NumEmp_edu$X <- NULL
 Salary_edu$X <- NULL
-```
 
-```{r NYC Salary by Education Level}
 # New York Analysis
 # New York Salary
 New_YorkSalary <- Salary_edu[which(Salary_edu$Boroughs=='New York County'), ]
@@ -65,37 +63,77 @@ Total_New_York$year <- as.factor(Total_New_York$year)
 Total_New_York$Gender <- as.factor(Total_New_York$Gender)
 Total_New_York$Education_Level <- as.factor(Total_New_York$Education_Level)
 
+```
 
-# plot
+```{r theme,include=FALSE}
+mytheme <- theme(axis.text=element_text(size = 10),
+  axis.title=element_text(size=12, face = "bold"),
+  plot.title = element_text(size = 14, face = "bold"),
+  legend.title = element_text(size = 12),
+  legend.text = element_text(size = 10))
+
+mytheme1 <- theme(axis.text=element_text(size = 10),
+  axis.title=element_text(size=12, face = "bold"),
+  plot.title = element_text(size = 18, face = "bold"),
+  legend.title = element_text(size = 12),
+  legend.text = element_text(size = 10))
+
+mytheme2 <- theme(axis.text=element_text(size = 10),
+  axis.title=element_text(size=12, face = "bold"),
+  plot.title = element_text(size = 15, face = "bold"),
+  legend.title = element_text(size = 12),
+  legend.text = element_text(size = 10))
+```
+
+```{r scale,include=FALSE}
+ks <- function (x) { number_format(accuracy = 1,
+                                   scale = 1/1000,
+                                   suffix = "k",
+                                   big.mark = ",")(x) }
+```
+
+```{r NYC Number Employed vs. Education Level}
 ggplot(Total_New_York,aes(NumEducated,NumEmp,color = Gender)) +
   geom_point()+
-  facet_wrap(~Education_Level,scales = "free_x",ncol = 2) + ggtitle("Number Educated vs Number Employed from 2010-2019")
-
+  facet_wrap(~Education_Level,scales = "free_x",ncol = 2) + ggtitle("Number Educated vs Number Employed from 2010-2019") +
+  scale_x_continuous(labels = ks)
+```
+```{r NYC Salary vs. Education Level}
 ggplot(Total_New_York,aes(NumEducated,Salary_CountyGender,color = Gender))+
   geom_point()+
-  facet_wrap(~Education_Level,scales = "free_x",ncol = 2) + ggtitle("Number Educated vs Salary from 2010-2019")
+  facet_wrap(~Education_Level,scales = "free_x",ncol = 2) + 
+  ggtitle("Number Educated vs Salary from 2010-2019") +
+  scale_x_continuous(labels = ks)
 ```
 ```{r NYC Salary vs Proportion College Educated Over Time}
-ggplot(data = SalaryByPropEdu,aes(PropEdu,Salary)) + geom_line(size = 1, col = 'black') + xlab('Proportion With Bachelors Degree') + ylab('Salary') + scale_x_continuous(breaks = breaks_width(0.01)) + geom_point(size = 2.5, col = 'royalblue3') + ylim(1000000,2000000) + ggtitle("Proportion with Bachelors Degree vs Average NYC Salary from 2010-2019")
+ggplot(data = SalaryByPropEdu,aes(PropEdu,Salary)) + 
+  geom_line(size = 1, col = 'black') + 
+  xlab('Proportion With Bachelors Degree') + 
+  ylab('Salary') + scale_x_continuous(breaks = breaks_width(0.01)) +
+  geom_point(size = 2.5, col = 'royalblue3') + 
+  ylim(30000,65000) + 
+  ggtitle("Proportion with Bachelors Degree vs Average NYC Salary from 2010-2019") +
+  scale_y_continuous(labels = ks)
 ```
 Observations from Proportion with Bachelors Degree vs Average NYC Salary from 2010-2019:
 
 It seems that in years where the Proportion of people with Bachelor's Degrees increases, that the average salary is higher. This would suggest that when there are more educated people, the typical person earns more.
 
-However, this relationship could very well be coincident and not causal and there is no way given this data to make a determination. It can be seen in the next plot that the total number of Bachelor's Degrees over time is steadily rising over time. Since salaries also tend to rise over time, it isn't clear that salaries would be rising if more people were not becoming more educated.
+It is worth noting that this linear relationship cannot be certified to be causal and there is no way given this data to make a determination. It can be seen in the next plot that the total number of Bachelor's Degrees over time is steadily rising over time. Since salaries also tend to rise over time, it isn't clear that salaries would stop rising if education levels stopped rising.
 
 ```{r Proportion College Educated Over Time}
 ggplot(data = PropBachelor,aes(Year,PropBachelor)) + geom_line(size = 1, col = 'black') + xlab('Year') + ylab('Proportion With Bachelors Degree') + scale_x_continuous(breaks = seq(2010,2019)) + geom_point(size = 2.5, col = 'royalblue3') + ylim(0.5,.65)
+PropBachelor
 ```
 
 Observation of Bachelor's proportions over time:
 
-It appears that the proportion of people with Bachelor's Degrees is steadily increasing over time. In the last 10 years the rate has increased from slightly below 55% to almost 60% which indicates an average increase of almost half a percent per year.
+It appears that the proportion of people with Bachelor's Degrees is steadily increasing over time. In the last 10 years the proportion of people with a bachelors has increased from slightly below 55% more than 59% which indicates an average increase of just under half a percent per year.
 
 ```{r Proportion College Educated Over Time by Gender}
 PropBachelorByGenderTidy <- pivot_longer(PropBachelorByGender[,1:3],!Year,names_to = 'Gender',values_to = 'Proportion')
 
-ggplot(PropBachelorByGenderTidy) + geom_line(aes(Year,Proportion,group = Gender, color = Gender), size = 1) + geom_point(aes(Year,Proportion,group = Gender, color = Gender), size = 5) + xlab('Year') + ylab('Proportion With Bachelors Degree') + scale_x_continuous(breaks = seq(2010,2019)) + ylim(.25,.75) + scale_color_manual(values=c('orange3','palegreen4'))
+ggplot(PropBachelorByGenderTidy) + geom_line(aes(Year,Proportion,group = Gender, color = Gender), size = 1) + geom_point(aes(Year,Proportion,group = Gender, color = Gender), size = 5) + xlab('Year') + ylab('Proportion With Bachelors Degree') + scale_x_continuous(breaks = seq(2010,2019)) + ylim(.25,.75) + scale_color_manual(values=c('orange','seagreen1'))
 
 ggplot(data = PropBachelorByGender,aes(Year,Difference)) + geom_line(size = 1, col = 'black') + xlab('Year') + ylab('Difference between Male and Female with Bachelors') + scale_x_continuous(breaks = seq(2010,2019)) + geom_point(size = 2.5, col = 'royalblue3') + ylim(-0.05,.05)
 ```
