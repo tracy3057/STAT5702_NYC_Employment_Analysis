@@ -75,7 +75,7 @@ ggplot(NewSalary) +
 
 **Observations on Average Salaries by Occupation in NYC:**
 
-1. Huge Difference in Salary for Different Occupations
+1. Huge Differences in Salary for Different Occupations.
 
   * There is a huge difference in salary for different kinds of occupations. The range is up to `r as.integer(max(NewSalary$Salary_occupation) - min(NewSalary$Salary_occupation))`, which is about `r as.integer((max(NewSalary$Salary_occupation) - min(NewSalary$Salary_occupation))/min(NewSalary$Salary_occupation))` times of minimum salary.
 
@@ -83,10 +83,19 @@ ggplot(NewSalary) +
 
   * The **first** group is `Legal Occupations`, which has much higher average salary compare with all other occupations.
   * The **second** group includes 7 different occupations, which ranks second in salary levels among all occupations. We can also divide the second group into four sub-groups according to the salary. 
-  * The first sub-group only includes `Health diagnosing and treating practitioners and other technical occupations`, which has the second largest salary.
-  * The second sub-group includes `Computer and mathematical occupations` and `Management occupations`. They have very similar average salary, the difference in salary of the two occupations is only `r as.integer(NewSalary[21,13] - NewSalary[251,13])`.
+    * The first sub-group only includes `Health diagnosing and treating practitioners and other technical`, which has the second largest salary.
+    * The second sub-group includes `Computer and mathematical` and `Management`. They have very similar average salary, the difference in salary of the two occupations is only `r as.integer(NewSalary[21,13] - NewSalary[251,13])`.
+    * The third sub-group includes `Law enforcement workers`, `Business and financial operations` and `Architecture and engineering`. The salary range of this sub-group is also small, it is `r as.integer(NewSalary[23861,13] - NewSalary[31,13])`.
+    * The fourth sub-group contains only one occupation, which is `Life, physical, and social science`
+  * The **third** group contains `Arts, design, entertainment, sports, and media`, `Health technologists and technicians`, `Education, training, and library`, `Installation, maintenance, and repair`, `Community and social service` and `Construction and extraction`. The salary range of this group is `r as.integer(NewSalary[1334,13] - NewSalary[1704,13])`.
+  * The **Fourth** group contains `Office and administrative support`, `Sales and related`, `Transportation` and `Fire fighting and prevention`. The salary range of this group is `r as.integer(NewSalary[1934,13] - NewSalary[1879,13])`.
+  * The **Fifth** group contains `Production`, ``
   
-3. 
+3. Top 3 and Last 3 Occupations in Salaries.
+
+  * Top 3
+    * Legal
+    * 
 
 ### Analyze on salary variation according to different years
 ```{r,fig.width=10}
