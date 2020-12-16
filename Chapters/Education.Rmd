@@ -76,7 +76,7 @@ ggplot(Total_New_York,aes(NumEducated,Salary_CountyGender,color = Gender))+
   facet_wrap(~Education_Level,scales = "free_x",ncol = 2) + ggtitle("Number Educated vs Salary from 2010-2019")
 ```
 ```{r NYC Salary vs Proportion College Educated Over Time}
-ggplot(data = SalaryByPropEdu,aes(PropEdu,Salary)) + geom_line(size = 1, col = 'black') + xlab('Proportion With Bachelors Degree') + ylab('Salary') + scale_x_continuous(breaks = breaks_width(0.01)) + geom_point(size = 2.5, col = 'royalblue3') + ylim(1000000,2000000) + ggtitle("Proportion with Bachelors Degree vs Average NYC Salary from 2010-2019")
+ggplot(data = SalaryByPropEdu,aes(PropEdu,Salary)) + geom_line(size = 1, col = 'black') + xlab('Proportion With Bachelors Degree') + ylab('Salary') + scale_x_continuous(breaks = breaks_width(0.01)) + geom_point(size = 2.5, col = 'royalblue3') + ylim(30000,65000) + ggtitle("Proportion with Bachelors Degree vs Average NYC Salary from 2010-2019")
 ```
 Observations from Proportion with Bachelors Degree vs Average NYC Salary from 2010-2019:
 
@@ -95,7 +95,7 @@ It appears that the proportion of people with Bachelor's Degrees is steadily inc
 ```{r Proportion College Educated Over Time by Gender}
 PropBachelorByGenderTidy <- pivot_longer(PropBachelorByGender[,1:3],!Year,names_to = 'Gender',values_to = 'Proportion')
 
-ggplot(PropBachelorByGenderTidy) + geom_line(aes(Year,Proportion,group = Gender, color = Gender), size = 1) + geom_point(aes(Year,Proportion,group = Gender, color = Gender), size = 5) + xlab('Year') + ylab('Proportion With Bachelors Degree') + scale_x_continuous(breaks = seq(2010,2019)) + ylim(.25,.75) + scale_color_manual(values=c('orange3','palegreen4'))
+ggplot(PropBachelorByGenderTidy) + geom_line(aes(Year,Proportion,group = Gender, color = Gender), size = 1) + geom_point(aes(Year,Proportion,group = Gender, color = Gender), size = 5) + xlab('Year') + ylab('Proportion With Bachelors Degree') + scale_x_continuous(breaks = seq(2010,2019)) + ylim(.25,.75) + scale_color_manual(values=c('orange','seagreen1'))
 
 ggplot(data = PropBachelorByGender,aes(Year,Difference)) + geom_line(size = 1, col = 'black') + xlab('Year') + ylab('Difference between Male and Female with Bachelors') + scale_x_continuous(breaks = seq(2010,2019)) + geom_point(size = 2.5, col = 'royalblue3') + ylim(-0.05,.05)
 ```
