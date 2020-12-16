@@ -7,14 +7,14 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r Imports}
+```{r Imports, include=FALSE,echo=FALSE}
 library(tidyverse)
 library(RCurl)
 library(dplyr)
 library(scales)
 ```
 
-```{r Data}
+```{r Data,include=FALSE,echo=FALSE}
 Education <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/education/Education.csv"))
 PropBachelor <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/education/PropBachelor.csv"))
 PropBachelorByGender <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/education/PropBachelorByGender.csv"))
@@ -24,7 +24,7 @@ NumEmp_edu <-read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057
 SalaryByPropEdu <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/education/PropEducatedBySalary.csv"))
 ```
 
-```{r Data Transformation or Cleaning}
+```{r Data Cleaning,include=FALSE,echo=FALSE}
 Education$X <- NULL
 Education$Education_Level <- as.factor(Education$Education_Level)
 Education$Education_Level <-plyr::revalue(Education$Education_Level, c("Bechelor's Degree or Higher" = "Bachelor's Degree or Higher"))
@@ -96,49 +96,77 @@ ks <- function (x) { number_format(accuracy = 1,
 ggplot(Total_New_York,aes(NumEducated,NumEmp,color = Gender)) +
   geom_point()+
   facet_wrap(~Education_Level,scales = "free_x",ncol = 2) + ggtitle("Number Educated vs Number Employed from 2010-2019") +
-  scale_x_continuous(labels = ks)
+  scale_x_continuous(labels = ks) +
+  scale_y_continuous(labels = ks) +
+  mytheme
 ```
 ```{r NYC Salary vs. Education Level}
 ggplot(Total_New_York,aes(NumEducated,Salary_CountyGender,color = Gender))+
   geom_point()+
   facet_wrap(~Education_Level,scales = "free_x",ncol = 2) + 
   ggtitle("Number Educated vs Salary from 2010-2019") +
-  scale_x_continuous(labels = ks)
+  scale_x_continuous(labels = ks) +
+  scale_y_continuous(labels = ks) +
+  mytheme
 ```
-```{r NYC Salary vs Proportion College Educated Over Time}
+```{r Proportion with Bachelors Degree vs Average NYC Salary}
 ggplot(data = SalaryByPropEdu,aes(PropEdu,Salary)) + 
   geom_line(size = 1, col = 'black') + 
   xlab('Proportion With Bachelors Degree') + 
   ylab('Salary') + scale_x_continuous(breaks = breaks_width(0.01)) +
   geom_point(size = 2.5, col = 'royalblue3') + 
-  ylim(30000,65000) + 
-  ggtitle("Proportion with Bachelors Degree vs Average NYC Salary from 2010-2019") +
-  scale_y_continuous(labels = ks)
+  ggtitle("Proportion with Bachelors Degree vs Average NYC Salary 2010-2019") +
+  scale_y_continuous(labels = ks) +
+  mytheme
 ```
-Observations from Proportion with Bachelors Degree vs Average NYC Salary from 2010-2019:
 
-It seems that in years where the Proportion of people with Bachelor's Degrees increases, that the average salary is higher. This would suggest that when there are more educated people, the typical person earns more.
+
+**Observations from Proportion with Bachelors Degree vs Average NYC Salary from 2010-2019:**
+
+It seems that in years where the Proportion of people with Bachelor's Degrees increases, that the average salary is higher. This would suggest that when there are more educated people, the typical person earns more. According to the trend observed in this plot, it seems that the average salary has risen by 1700 dollars for each percentage point increase in bachelors degree education proportion.
 
 It is worth noting that this linear relationship cannot be certified to be causal and there is no way given this data to make a determination. It can be seen in the next plot that the total number of Bachelor's Degrees over time is steadily rising over time. Since salaries also tend to rise over time, it isn't clear that salaries would stop rising if education levels stopped rising.
 
-```{r Proportion College Educated Over Time}
-ggplot(data = PropBachelor,aes(Year,PropBachelor)) + geom_line(size = 1, col = 'black') + xlab('Year') + ylab('Proportion With Bachelors Degree') + scale_x_continuous(breaks = seq(2010,2019)) + geom_point(size = 2.5, col = 'royalblue3') + ylim(0.5,.65)
-PropBachelor
+
+
+```{r Proportion with Bachelors Degree}
+ggplot(data = PropBachelor,aes(Year,PropBachelor)) + 
+geom_line(size = 1, col = 'black') + xlab('Year') + 
+ylab('Proportion with Bachelors Degree') + 
+scale_x_continuous(breaks = seq(2010,2019)) + 
+ylim(0.25,0.45) +
+ggtitle("Proportion with Bachelors Degree") +
+geom_point(size = 2.5, col = 'royalblue3') +
+mytheme
 ```
 
-Observation of Bachelor's proportions over time:
+**Observation of Bachelor's proportions over time:**
 
-It appears that the proportion of people with Bachelor's Degrees is steadily increasing over time. In the last 10 years the proportion of people with a bachelors has increased from slightly below 55% more than 59% which indicates an average increase of just under half a percent per year.
+It appears that the proportion of people with Bachelor's Degrees is steadily increasing over time. In the last 10 years the proportion of people with a bachelors has increased by roughly 5%, from around 32.5% to 37.5%. This indicates an average increase of just under half a percent per year.
 
-```{r Proportion College Educated Over Time by Gender}
+```{r Proportion Male and Female with Bachelors Degree}
 PropBachelorByGenderTidy <- pivot_longer(PropBachelorByGender[,1:3],!Year,names_to = 'Gender',values_to = 'Proportion')
 
-ggplot(PropBachelorByGenderTidy) + geom_line(aes(Year,Proportion,group = Gender, color = Gender), size = 1) + geom_point(aes(Year,Proportion,group = Gender, color = Gender), size = 5) + xlab('Year') + ylab('Proportion With Bachelors Degree') + scale_x_continuous(breaks = seq(2010,2019)) + ylim(.25,.75) + scale_color_manual(values=c('orange','seagreen1'))
-
-ggplot(data = PropBachelorByGender,aes(Year,Difference)) + geom_line(size = 1, col = 'black') + xlab('Year') + ylab('Difference between Male and Female with Bachelors') + scale_x_continuous(breaks = seq(2010,2019)) + geom_point(size = 2.5, col = 'royalblue3') + ylim(-0.05,.05)
+ggplot(PropBachelorByGenderTidy) + geom_line(aes(Year,Proportion,group = Gender, color = Gender), size = 1) +
+geom_point(aes(Year,Proportion,group = Gender, color = Gender), size = 5) + 
+xlab('Year') + ylab('Proportion With Bachelors Degree') + 
+scale_x_continuous(breaks = seq(2010,2019)) + ylim(.25,.75) + scale_color_manual(values=c('orange','seagreen1')) + 
+ggtitle("Proportion Male and Female with Bachelors Degree") +
+mytheme
 ```
 
-Observations from Proportion of Males and Females with Bachelors Degrees from 2010-2019:
+```{r Difference between Female and Male with Bachelors}
+ggplot(data = PropBachelorByGender,aes(Year,Difference)) + geom_line(size = 1, col = 'black') +
+xlab('Year') + 
+ylab('Difference between Male and Female with Bachelors') + 
+scale_x_continuous(breaks = seq(2010,2019)) + 
+geom_point(size = 2.5, col = 'royalblue3') + 
+ylim(-0.05,.05) +
+ggtitle("Difference between Female and Male with Bachelors") +
+mytheme
+```
+
+**Observations from Proportion of Males and Females with Bachelors Degrees from 2010-2019:**
 
 It seems that in 2010, a larger proportion of females than men had bachelor's degrees. While the proportions are increasing over time for both males and females, it seems that the rate at which a higher proportion of females have bachelors degree is actually faster than it is for males. 
 
