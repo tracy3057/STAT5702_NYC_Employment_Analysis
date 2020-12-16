@@ -229,3 +229,12 @@ ggplot(Total_New_York,aes(NumEducated,Salary_CountyGender,color = Gender))+
   facet_wrap(~Education_Level,scales = "free_x",ncol = 2)
 ```
 
+```{r}
+NYedu <-read.csv("/Users/tracy/Documents/GitHub/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/education/NY_Edu_tidy.csv")
+edu_salary <-read.csv("/Users/tracy/Documents/GitHub/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/education/NYsalary.csv")
+NYedu$X <- NULL
+edu_salary$X <-NULL 
+Total_NY <- merge(NYedu,edu_salary,by = c("year","Gender"))
+write.csv(Total_NY,"/Users/tracy/Documents/GitHub/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/education/Total_NY.csv",row.names = FALSE)
+```
+

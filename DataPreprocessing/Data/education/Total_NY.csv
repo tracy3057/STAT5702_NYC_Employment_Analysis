@@ -1,101 +1,101 @@
-year,Gender,Salary_CountyGender,NumEmp,Education_Level,NumEducated
-2010,Female,1032709,733682,Less Than High School,101911
-2010,Female,1032709,733682,High School Graduate,95307
-2010,Female,1032709,733682,"Some College, No Degree",65631
-2010,Female,1032709,733682,Some College or Associate's Degree,64453
-2010,Female,1032709,733682,Bechelor's Degree or Higher,399038
-2010,Male,1388041,748657,Less Than High School,85858
-2010,Male,1388041,748657,High School Graduate,89846
-2010,Male,1388041,748657,"Some College, No Degree",61724
-2010,Male,1388041,748657,Some College or Associate's Degree,45093
-2010,Male,1388041,748657,Bechelor's Degree or Higher,342961
-2011,Female,1138263,725265,Less Than High School,104382
-2011,Female,1138263,725265,High School Graduate,101957
-2011,Female,1138263,725265,"Some College, No Degree",66808
-2011,Female,1138263,725265,Some College or Associate's Degree,59171
-2011,Female,1138263,725265,Bechelor's Degree or Higher,397892
-2011,Male,1358638,763514,Less Than High School,86936
-2011,Male,1358638,763514,High School Graduate,90411
-2011,Male,1358638,763514,"Some College, No Degree",66363
-2011,Male,1358638,763514,Some College or Associate's Degree,40230
-2011,Male,1358638,763514,Bechelor's Degree or Higher,349864
-2012,Female,1190087,759434,Less Than High School,97036
-2012,Female,1190087,759434,High School Graduate,91303
-2012,Female,1190087,759434,"Some College, No Degree",67821
-2012,Female,1190087,759434,Some College or Associate's Degree,67934
-2012,Female,1190087,759434,Bechelor's Degree or Higher,412151
-2012,Male,1398456,768337,Less Than High School,85898
-2012,Male,1398456,768337,High School Graduate,93500
-2012,Male,1398456,768337,"Some College, No Degree",63623
-2012,Male,1398456,768337,Some College or Associate's Degree,40772
-2012,Male,1398456,768337,Bechelor's Degree or Higher,358698
-2013,Female,1155562,745047,Less Than High School,94468
-2013,Female,1155562,745047,High School Graduate,94602
-2013,Female,1155562,745047,"Some College, No Degree",61522
-2013,Female,1155562,745047,Some College or Associate's Degree,65214
-2013,Female,1155562,745047,Bechelor's Degree or Higher,425431
-2013,Male,1474685,773649,Less Than High School,86836
-2013,Male,1474685,773649,High School Graduate,94410
-2013,Male,1474685,773649,"Some College, No Degree",59298
-2013,Male,1474685,773649,Some College or Associate's Degree,39984
-2013,Male,1474685,773649,Bechelor's Degree or Higher,365474
-2014,Female,1227499,759242,Less Than High School,96876
-2014,Female,1227499,759242,High School Graduate,96234
-2014,Female,1227499,759242,"Some College, No Degree",59338
-2014,Female,1227499,759242,Some College or Associate's Degree,67155
-2014,Female,1227499,759242,Bechelor's Degree or Higher,425809
-2014,Male,1390985,772943,Less Than High School,82715
-2014,Male,1390985,772943,High School Graduate,88953
-2014,Male,1390985,772943,"Some College, No Degree",61991
-2014,Male,1390985,772943,Some College or Associate's Degree,48690
-2014,Male,1390985,772943,Bechelor's Degree or Higher,366746
-2015,Female,1190636,779512,Less Than High School,99048
-2015,Female,1190636,779512,High School Graduate,89113
-2015,Female,1190636,779512,"Some College, No Degree",66877
-2015,Female,1190636,779512,Some College or Associate's Degree,61601
-2015,Female,1190636,779512,Bechelor's Degree or Higher,431463
-2015,Male,1492317,814165,Less Than High School,83700
-2015,Male,1492317,814165,High School Graduate,83880
-2015,Male,1492317,814165,"Some College, No Degree",62998
-2015,Male,1492317,814165,Some College or Associate's Degree,46396
-2015,Male,1492317,814165,Bechelor's Degree or Higher,379649
-2016,Female,1271186,775583,Less Than High School,92397
-2016,Female,1271186,775583,High School Graduate,96678
-2016,Female,1271186,775583,"Some College, No Degree",63574
-2016,Female,1271186,775583,Some College or Associate's Degree,63964
-2016,Female,1271186,775583,Bechelor's Degree or Higher,428497
-2016,Male,1491534,813383,Less Than High School,80831
-2016,Male,1491534,813383,High School Graduate,87490
-2016,Male,1491534,813383,"Some College, No Degree",62430
-2016,Male,1491534,813383,Some College or Associate's Degree,48106
-2016,Male,1491534,813383,Bechelor's Degree or Higher,379090
-2017,Female,1311471,795779,Less Than High School,95771
-2017,Female,1311471,795779,High School Graduate,88602
-2017,Female,1311471,795779,"Some College, No Degree",62488
-2017,Female,1311471,795779,Some College or Associate's Degree,67472
-2017,Female,1311471,795779,Bechelor's Degree or Higher,442535
-2017,Male,1537626,824743,Less Than High School,94720
-2017,Male,1537626,824743,High School Graduate,93467
-2017,Male,1537626,824743,"Some College, No Degree",55829
-2017,Male,1537626,824743,Some College or Associate's Degree,43832
-2017,Male,1537626,824743,Bechelor's Degree or Higher,380958
-2018,Female,1460356,781976,Less Than High School,89150
-2018,Female,1460356,781976,High School Graduate,96285
-2018,Female,1460356,781976,"Some College, No Degree",59152
-2018,Female,1460356,781976,Some College or Associate's Degree,59939
-2018,Female,1460356,781976,Bechelor's Degree or Higher,438140
-2018,Male,1640505,793490,Less Than High School,75382
-2018,Male,1640505,793490,High School Graduate,92776
-2018,Male,1640505,793490,"Some College, No Degree",59715
-2018,Male,1640505,793490,Some College or Associate's Degree,46269
-2018,Male,1640505,793490,Bechelor's Degree or Higher,379162
-2019,Female,1440628,805032,Less Than High School,89504
-2019,Female,1440628,805032,High School Graduate,92540
-2019,Female,1440628,805032,"Some College, No Degree",66501
-2019,Female,1440628,805032,Some College or Associate's Degree,58333
-2019,Female,1440628,805032,Bechelor's Degree or Higher,435760
-2019,Male,1750050,810633,Less Than High School,74096
-2019,Male,1750050,810633,High School Graduate,95493
-2019,Male,1750050,810633,"Some College, No Degree",54156
-2019,Male,1750050,810633,Some College or Associate's Degree,40993
-2019,Male,1750050,810633,Bechelor's Degree or Higher,389459
+"year","Gender","Education_Level","NumEducated","NumEmp","Salary_CountyGender"
+2010,"Female","Less Than High School",675057,2873027,38683.441833337
+2010,"Female","High School Graduate",845334,2873027,38683.441833337
+2010,"Female","Some College, No Degree",422706,2873027,38683.441833337
+2010,"Female","Some College or Associate's Degree",381338,2873027,38683.441833337
+2010,"Female","Bechelor's Degree or Higher",1107193,2873027,38683.441833337
+2010,"Male","Less Than High School",618869,3096087,46858.5435039584
+2010,"Male","High School Graduate",763185,3096087,46858.5435039584
+2010,"Male","Some College, No Degree",402078,3096087,46858.5435039584
+2010,"Male","Some College or Associate's Degree",303360,3096087,46858.5435039584
+2010,"Male","Bechelor's Degree or Higher",899684,3096087,46858.5435039584
+2011,"Female","Less Than High School",681799,2884265,40466.0838303727
+2011,"Female","High School Graduate",827526,2884265,40466.0838303727
+2011,"Female","Some College, No Degree",434348,2884265,40466.0838303727
+2011,"Female","Some College or Associate's Degree",393398,2884265,40466.0838303727
+2011,"Female","Bechelor's Degree or Higher",1113998,2884265,40466.0838303727
+2011,"Male","Less Than High School",614957,3150482,46655.1633357309
+2011,"Male","High School Graduate",769369,3150482,46655.1633357309
+2011,"Male","Some College, No Degree",386230,3150482,46655.1633357309
+2011,"Male","Some College or Associate's Degree",310510,3150482,46655.1633357309
+2011,"Male","Bechelor's Degree or Higher",937249,3150482,46655.1633357309
+2012,"Female","Less Than High School",677035,2989940,41643.006999214
+2012,"Female","High School Graduate",821854,2989940,41643.006999214
+2012,"Female","Some College, No Degree",433775,2989940,41643.006999214
+2012,"Female","Some College or Associate's Degree",404139,2989940,41643.006999214
+2012,"Female","Bechelor's Degree or Higher",1153672,2989940,41643.006999214
+2012,"Male","Less Than High School",616467,3211351,47139.002377859
+2012,"Male","High School Graduate",753683,3211351,47139.002377859
+2012,"Male","Some College, No Degree",401326,3211351,47139.002377859
+2012,"Male","Some College or Associate's Degree",320141,3211351,47139.002377859
+2012,"Male","Bechelor's Degree or Higher",968848,3211351,47139.002377859
+2013,"Female","Less Than High School",660429,3011701,41947.3898122545
+2013,"Female","High School Graduate",830518,3011701,41947.3898122545
+2013,"Female","Some College, No Degree",416598,3011701,41947.3898122545
+2013,"Female","Some College or Associate's Degree",409356,3011701,41947.3898122545
+2013,"Female","Bechelor's Degree or Higher",1204272,3011701,41947.3898122545
+2013,"Male","Less Than High School",606087,3256769,48320.7367192576
+2013,"Male","High School Graduate",776799,3256769,48320.7367192576
+2013,"Male","Some College, No Degree",392398,3256769,48320.7367192576
+2013,"Male","Some College or Associate's Degree",322901,3256769,48320.7367192576
+2013,"Male","Bechelor's Degree or Higher",1000189,3256769,48320.7367192576
+2014,"Female","Less Than High School",675991,3103348,41276.3022431596
+2014,"Female","High School Graduate",834990,3103348,41276.3022431596
+2014,"Female","Some College, No Degree",414748,3103348,41276.3022431596
+2014,"Female","Some College or Associate's Degree",410919,3103348,41276.3022431596
+2014,"Female","Bechelor's Degree or Higher",1224787,3103348,41276.3022431596
+2014,"Male","Less Than High School",588986,3333473,46871.5963751199
+2014,"Male","High School Graduate",782452,3333473,46871.5963751199
+2014,"Male","Some College, No Degree",399003,3333473,46871.5963751199
+2014,"Male","Some College or Associate's Degree",327734,3333473,46871.5963751199
+2014,"Male","Bechelor's Degree or Higher",1030798,3333473,46871.5963751199
+2015,"Female","Less Than High School",654172,3183292,41495.7952738486
+2015,"Female","High School Graduate",830141,3183292,41495.7952738486
+2015,"Female","Some College, No Degree",437555,3183292,41495.7952738486
+2015,"Female","Some College or Associate's Degree",391097,3183292,41495.7952738486
+2015,"Female","Bechelor's Degree or Higher",1271439,3183292,41495.7952738486
+2015,"Male","Less Than High School",592837,3419593,49671.4592557185
+2015,"Male","High School Graduate",781545,3419593,49671.4592557185
+2015,"Male","Some College, No Degree",394822,3419593,49671.4592557185
+2015,"Male","Some College or Associate's Degree",323654,3419593,49671.4592557185
+2015,"Male","Bechelor's Degree or Higher",1068466,3419593,49671.4592557185
+2016,"Female","Less Than High School",634964,3165670,42506.7872582439
+2016,"Female","High School Graduate",838958,3165670,42506.7872582439
+2016,"Female","Some College, No Degree",427974,3165670,42506.7872582439
+2016,"Female","Some College or Associate's Degree",392448,3165670,42506.7872582439
+2016,"Female","Bechelor's Degree or Higher",1287645,3165670,42506.7872582439
+2016,"Male","Less Than High School",568016,3439473,50218.1657552819
+2016,"Male","High School Graduate",789222,3439473,50218.1657552819
+2016,"Male","Some College, No Degree",404210,3439473,50218.1657552819
+2016,"Male","Some College or Associate's Degree",328224,3439473,50218.1657552819
+2016,"Male","Bechelor's Degree or Higher",1066385,3439473,50218.1657552819
+2017,"Female","Less Than High School",635431,3236668,45126.215271384
+2017,"Female","High School Graduate",843784,3236668,45126.215271384
+2017,"Female","Some College, No Degree",428820,3236668,45126.215271384
+2017,"Female","Some College or Associate's Degree",403024,3236668,45126.215271384
+2017,"Female","Bechelor's Degree or Higher",1322375,3236668,45126.215271384
+2017,"Male","Less Than High School",565848,3452113,52052.2813121857
+2017,"Male","High School Graduate",829736,3452113,52052.2813121857
+2017,"Male","Some College, No Degree",393193,3452113,52052.2813121857
+2017,"Male","Some College or Associate's Degree",321846,3452113,52052.2813121857
+2017,"Male","Bechelor's Degree or Higher",1089614,3452113,52052.2813121857
+2018,"Female","Less Than High School",591887,3200372,47810.8859188578
+2018,"Female","High School Graduate",815108,3200372,47810.8859188578
+2018,"Female","Some College, No Degree",415332,3200372,47810.8859188578
+2018,"Female","Some College or Associate's Degree",369044,3200372,47810.8859188578
+2018,"Female","Bechelor's Degree or Higher",1351234,3200372,47810.8859188578
+2018,"Male","Less Than High School",525862,3377656,55420.1756446759
+2018,"Male","High School Graduate",792263,3377656,55420.1756446759
+2018,"Male","Some College, No Degree",383154,3377656,55420.1756446759
+2018,"Male","Some College or Associate's Degree",308674,3377656,55420.1756446759
+2018,"Male","Bechelor's Degree or Higher",1108186,3377656,55420.1756446759
+2019,"Female","Less Than High School",573846,3238872,49206.7061713255
+2019,"Female","High School Graduate",819549,3238872,49206.7061713255
+2019,"Female","Some College, No Degree",409080,3238872,49206.7061713255
+2019,"Female","Some College or Associate's Degree",370136,3238872,49206.7061713255
+2019,"Female","Bechelor's Degree or Higher",1346981,3238872,49206.7061713255
+2019,"Male","Less Than High School",501786,3395223,57281.9005836278
+2019,"Male","High School Graduate",809115,3395223,57281.9005836278
+2019,"Male","Some College, No Degree",378701,3395223,57281.9005836278
+2019,"Male","Some College or Associate's Degree",288877,3395223,57281.9005836278
+2019,"Male","Bechelor's Degree or Higher",1123669,3395223,57281.9005836278

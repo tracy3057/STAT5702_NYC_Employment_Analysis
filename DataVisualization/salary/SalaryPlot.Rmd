@@ -1,10 +1,15 @@
+## salary
+This sub-chapter shows an analysis of salary for different occupations in New York City, the values represent the salary of corresponding occupation per year.
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
 ```{r imports}
 library(tidyverse)
 library(mosaic)
 library(vcd)
 library(RCurl)
 ```
-
 ```{r Data}
 NewSalary <- RaceData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/Salary/NewSalary.csv"))
 
@@ -15,7 +20,22 @@ NewSalary$year <- as.factor(NewSalary$year)
 NewSalary$year_range <- as.factor(NewSalary$year_range)
 ```
 
-# Analyze on salary variation according to different years
+### Overview of Salary Distribution
+In order to have an overview of salary distribution according to different occupations in New York City, we draw a Cleveland Dot Plot to show the 10-year-average salary of different occupations first.
+```{r Overview of Salary Distribution}
+ggplot(NewSalary) +
+  geom_point(aes(Salary_occupation, reorder(Occupations,Salary_occupation))) + ylab('Occupation') + xlab('Salary') + 
+  ggtitle('Salaries of Different Occupations in NYC')
+```
+From the result, we discover three rules.
+1. There is a huge difference in salary for different kinds of occupations. The range is up to `r as.integer(max(NewSalary$Salary_occupation) - min(NewSalary$Salary_occupation))`, which is about `r as.integer((max(NewSalary$Salary_occupation) - min(NewSalary$Salary_occupation))/min(NewSalary$Salary_occupation))` times of minimum salary. 
+2. There are five clusters for salary distribution. 
+* The **first** group is `Legal Occupations`, which has much higher average salary compare with all other occupations.
+* The **second** group includes 7 different occupations, which ranks second in salary levels among all occupations. We can also divide the second group into four sub-groups according to the salary. 
+  * The first sub-group only includes `Health diagnosing and treating practitioners and other technical occupations`, which has the second largest salary.
+  * The second sub-group includes `Computer and mathematical occupations` and `Management occupations`. They have very similar average salary, the difference in salary of the two occupations is only `r as.integer(NewSalary[21,13] - NewSalary[251,13])`.
+
+### Analyze on salary variation according to different years
 ```{r}
 ggplot(NewSalary) +
   geom_point(aes(Salary_year, reorder(Occupations,Salary_avg), color = year_range)) + ylab('Occupation') + xlab('Salary') + 
