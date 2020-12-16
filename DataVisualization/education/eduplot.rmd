@@ -229,3 +229,7 @@ ggplot(Total_New_York,aes(NumEducated,Salary_CountyGender,color = Gender))+
   facet_wrap(~Education_Level,scales = "free_x",ncol = 2)
 ```
 
+```{r}
+
+```
+

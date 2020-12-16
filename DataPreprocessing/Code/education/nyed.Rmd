@@ -1,0 +1,16 @@
+```{r}
+library("tidyverse")
+```
+
+
+```{r}
+#NYedu <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/education/NY_Edu.csv"))
+NYedu<- read.csv("/Users/tracy/Documents/GitHub/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/education/NY_Edu.csv")
+NYedu$X <- NULL
+
+NYedu <- pivot_longer(NYedu, cols = c("Male","Female"),names_to = "Gender",values_to = "NumEducated")
+
+NYedu$year <- as.character(NYedu$year)
+write.csv(NYedu,"/Users/tracy/Documents/GitHub/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/education/NY_Edu_tidy.csv", row.names = FALSE)
+NYedu
+```

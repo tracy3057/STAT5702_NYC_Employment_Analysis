@@ -1,0 +1,3 @@
+USA GDP per capita: https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=US&name_desc=true
+NYC GDP per capital:
+https://www.statista.com/statistics/304629/new-york-gdp-per-capita/#:~:text=In%202019%2C%20the%20per%20capita,75%2C131%20chained%202012%20U.S.%20dollars.
