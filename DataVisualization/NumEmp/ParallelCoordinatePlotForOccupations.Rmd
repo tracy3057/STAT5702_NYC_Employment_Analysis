@@ -18,7 +18,6 @@ library(RCurl)
 ```
 
 ```{r Data}
-#YearBoroughData <- read.csv(text = #getURL('https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumE#mp/yearly_cleveland.csv'))
 YearBoroughData <- read.csv("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/numemp_big_category.csv")
 PropsByOccupation <- read.csv("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/PropsByOccupation.csv")
 PropsOfGroupByOccupation <- read.csv('C:/Users/eabea/Dropbox/Documents/STAT W5702/Project/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/PropsOfGroupByOccupation.csv')
@@ -32,9 +31,12 @@ YearBoroughData
 ```
 
 # Analyzing with 5 big occupation catogories
+<<<<<<< HEAD
 ```{r,fig.width=6,fig.height=8}
 YearBoroughData <- getURL('https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/numemp_big_category.csv'))
+=======
 ```{r,fig.width=10,fig.height=15}
+>>>>>>> 286d2dd1c2dc9eb8118e294cab6e8504e1a40b9c
 YearBoroughData$X <- NULL
 
 YearBoroughData.tidy <- pivot_longer(YearBoroughData,cols = !c("Occupations","year"), names_to = "boroughs", values_to = "NumEmp")
@@ -62,10 +64,6 @@ parcoords(YearBoroughData.wide,
           withD3 = TRUE) 
 ```
 From the plot above, we discover that
-1) Management, business, science, and arts occupations and Service occupations: for Bronx, Queens and Manhattan, the two types of occupations are positively related with each other, while for Kings, the two types of occupations are negatively corelated.
-2) Service occupations and Sales and office occupations: for Manhattan and Richmond, the two types of occupations are negatively corelated. For other boroughs, there are not significant relations.
-3) Sales and office occupations and Natural resources, construction, and maintenance occupations: all boroughs show a negative corelation.
-4) Natural resources, construction, and maintenance occupations and Production, transportation, and material moving occupations: all boroughs show a negative corelation.
 1) Management, business, science, and arts occupations and Service occupations: for Bronx, Queens and Manhattan, the two types of occupations are positively related with each other, while for Kings, the two types of occupations are negatively correlated.
 2) Service occupations and Sales and office occupations: for Manhattan and Richmond, the two types of occupations are negatively correlated. For other boroughs, there are not significant relations.
 3) Sales and office occupations and Natural resources, construction, and maintenance occupations: all boroughs show a negative correlation.
