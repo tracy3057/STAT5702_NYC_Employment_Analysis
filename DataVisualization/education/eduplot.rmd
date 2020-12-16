@@ -11,7 +11,7 @@ NumEmp_edu <-read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057
 
 Education$X <- NULL
 Education$Education_Level <- as.factor(Education$Education_Level)
-revalue(Education$Education_Level, c("Bechelor's Degree or Higher" = "Bachelor's Degree or Higher"))
+#revalue(Education$Education_Level, c("Bechelor's Degree or Higher" = "Bachelor's Degree or Higher"))
 NumEmp_edu$X <- NULL
 Salary_edu$X <- NULL
 ```
@@ -31,7 +31,7 @@ BronxEducation <- BronxEducation %>% pivot_longer(cols = !c(Education_Level,year
 BronxEducation$Gender <- ifelse(BronxEducation$Location_Gender == "Bronx.County..Total", "Total", 
                              ifelse(BronxEducation$Location_Gender == "Bronx.County..Female", "Female", "Male"))
 BronxEducation <- BronxEducation %>% pivot_wider(names_from = "Education_Level", values_from = "count")
-BronxEducation <- BronxEducation %>% select(1,3,4,5,6,7,8)
+BronxEducation <- BronxEducation %>% select(1,3,4,5,6,7)
 BronxEducation<-BronxEducation[!(BronxEducation$Gender=="Total"),]
 
 # BronxNumEmp
@@ -44,7 +44,7 @@ BronxNumEmp<-BronxNumEmp[!(BronxNumEmp$Gender=="Total"),]
 # merge
 Total_Bronx <- merge(BronxSalary,BronxEducation,by = c("year","Gender"))
 Total_Bronx <- merge(Total_Bronx,BronxNumEmp,by = c("year","Gender"))
-Total_Bronx <- Total_Bronx %>% pivot_longer(cols = c(4,5,6,7,8), names_to = "Education_Level",values_to = "NumEducated")
+Total_Bronx <- Total_Bronx %>% pivot_longer(cols = c(4,5,6,7), names_to = "Education_Level",values_to = "NumEducated")
 Total_Bronx$year <- as.factor(Total_Bronx$year)
 Total_Bronx$Gender <- as.factor(Total_Bronx$Gender)
 Total_Bronx$Education_Level <- as.factor(Total_Bronx$Education_Level)
@@ -74,7 +74,7 @@ KingsEducation <- KingsEducation %>% pivot_longer(cols = !c(Education_Level,year
 KingsEducation$Gender <- ifelse(KingsEducation$Location_Gender == "Kings.County..Total", "Total", 
                              ifelse(KingsEducation$Location_Gender == "Kings.County..Female", "Female", "Male"))
 KingsEducation <- KingsEducation %>% pivot_wider(names_from = "Education_Level", values_from = "count")
-KingsEducation <- KingsEducation %>% select(1,3,4,5,6,7,8)
+KingsEducation <- KingsEducation %>% select(1,3,4,5,6,7)
 KingsEducation<-KingsEducation[!(KingsEducation$Gender=="Total"),]
 
 # KingsNumEmp
@@ -87,7 +87,7 @@ KingsNumEmp<-KingsNumEmp[!(KingsNumEmp$Gender=="Total"),]
 # merge
 Total_Kings <- merge(KingsSalary,KingsEducation,by = c("year","Gender"))
 Total_Kings <- merge(Total_Kings,KingsNumEmp,by = c("year","Gender"))
-Total_Kings <- Total_Kings %>% pivot_longer(cols = c(4,5,6,7,8), names_to = "Education_Level",values_to = "NumEducated")
+Total_Kings <- Total_Kings %>% pivot_longer(cols = c(4,5,6,7), names_to = "Education_Level",values_to = "NumEducated")
 Total_Kings$year <- as.factor(Total_Kings$year)
 Total_Kings$Gender <- as.factor(Total_Kings$Gender)
 Total_Kings$Education_Level <- as.factor(Total_Kings$Education_Level)
@@ -117,7 +117,7 @@ QueensEducation <- QueensEducation %>% pivot_longer(cols = !c(Education_Level,ye
 QueensEducation$Gender <- ifelse(QueensEducation$Location_Gender == "Queens.County..Total", "Total", 
                              ifelse(QueensEducation$Location_Gender == "Queens.County..Female", "Female", "Male"))
 QueensEducation <- QueensEducation %>% pivot_wider(names_from = "Education_Level", values_from = "count")
-QueensEducation <- QueensEducation %>% select(1,3,4,5,6,7,8)
+QueensEducation <- QueensEducation %>% select(1,3,4,5,6,7)
 QueensEducation<-QueensEducation[!(QueensEducation$Gender=="Total"),]
 
 # QueensNumEmp
@@ -130,7 +130,7 @@ QueensNumEmp<-QueensNumEmp[!(QueensNumEmp$Gender=="Total"),]
 # merge
 Total_Queens <- merge(QueensSalary,QueensEducation,by = c("year","Gender"))
 Total_Queens <- merge(Total_Queens,QueensNumEmp,by = c("year","Gender"))
-Total_Queens <- Total_Queens %>% pivot_longer(cols = c(4,5,6,7,8), names_to = "Education_Level",values_to = "NumEducated")
+Total_Queens <- Total_Queens %>% pivot_longer(cols = c(4,5,6,7), names_to = "Education_Level",values_to = "NumEducated")
 Total_Queens$year <- as.factor(Total_Queens$year)
 Total_Queens$Gender <- as.factor(Total_Queens$Gender)
 Total_Queens$Education_Level <- as.factor(Total_Queens$Education_Level)
@@ -159,7 +159,7 @@ RichmondEducation <- RichmondEducation %>% pivot_longer(cols = !c(Education_Leve
 RichmondEducation$Gender <- ifelse(RichmondEducation$Location_Gender == "Richmond.County..Total", "Total", 
                              ifelse(RichmondEducation$Location_Gender == "Richmond.County..Female", "Female", "Male"))
 RichmondEducation <- RichmondEducation %>% pivot_wider(names_from = "Education_Level", values_from = "count")
-RichmondEducation <- RichmondEducation %>% select(1,3,4,5,6,7,8)
+RichmondEducation <- RichmondEducation %>% select(1,3,4,5,6,7)
 RichmondEducation<-RichmondEducation[!(RichmondEducation$Gender=="Total"),]
 
 # RichmondNumEmp
@@ -172,7 +172,7 @@ RichmondNumEmp<-RichmondNumEmp[!(RichmondNumEmp$Gender=="Total"),]
 # merge
 Total_Richmond <- merge(RichmondSalary,RichmondEducation,by = c("year","Gender"))
 Total_Richmond <- merge(Total_Richmond,RichmondNumEmp,by = c("year","Gender"))
-Total_Richmond <- Total_Richmond %>% pivot_longer(cols = c(4,5,6,7,8), names_to = "Education_Level",values_to = "NumEducated")
+Total_Richmond <- Total_Richmond %>% pivot_longer(cols = c(4,5,6,7), names_to = "Education_Level",values_to = "NumEducated")
 Total_Richmond$year <- as.factor(Total_Richmond$year)
 Total_Richmond$Gender <- as.factor(Total_Richmond$Gender)
 Total_Richmond$Education_Level <- as.factor(Total_Richmond$Education_Level)
@@ -201,7 +201,7 @@ New_YorkEducation <- New_YorkEducation %>% pivot_longer(cols = !c(Education_Leve
 New_YorkEducation$Gender <- ifelse(New_YorkEducation$Location_Gender == "New.York.County..Total", "Total", 
                              ifelse(New_YorkEducation$Location_Gender == "New.York.County..Female", "Female", "Male"))
 New_YorkEducation <- New_YorkEducation %>% pivot_wider(names_from = "Education_Level", values_from = "count")
-New_YorkEducation <- New_YorkEducation %>% select(1,3,4,5,6,7,8)
+New_YorkEducation <- New_YorkEducation %>% select(1,3,4,5,6,7)
 New_YorkEducation<-New_YorkEducation[!(New_YorkEducation$Gender=="Total"),]
 
 # New_YorkNumEmp
@@ -214,7 +214,7 @@ New_YorkNumEmp<-New_YorkNumEmp[!(New_YorkNumEmp$Gender=="Total"),]
 # merge
 Total_New_York <- merge(New_YorkSalary,New_YorkEducation,by = c("year","Gender"))
 Total_New_York <- merge(Total_New_York,New_YorkNumEmp,by = c("year","Gender"))
-Total_New_York <- Total_New_York %>% pivot_longer(cols = c(4,5,6,7,8), names_to = "Education_Level",values_to = "NumEducated")
+Total_New_York <- Total_New_York %>% pivot_longer(cols = c(4,5,6,7), names_to = "Education_Level",values_to = "NumEducated")
 Total_New_York$year <- as.factor(Total_New_York$year)
 Total_New_York$Gender <- as.factor(Total_New_York$Gender)
 Total_New_York$Education_Level <- as.factor(Total_New_York$Education_Level)
