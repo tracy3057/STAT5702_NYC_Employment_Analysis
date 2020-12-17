@@ -82,19 +82,19 @@ YearBoroughData.tidy <- pivot_longer(YearBoroughData,cols = !c("Occupations","ye
 
 YearBoroughData.tidy$County <- plyr::revalue(YearBoroughData.tidy$County, c("Bronx.County..New.York" = "Bronx County", "Kings.County..New.York" = "Kings County", "New.York.County..New.York" = "New York County", "Queens.County..New.York" = "Queens County", "Richmond.County..New.York" = "Richmond County"))
 
-YearBoroughData.tidy$Occupations <- plyr::revalue(YearBoroughData.tidy$Occupations, c("Management, business, science, and arts" = "MBSC", "Natural resources, construction,maintenance" = "NRCM", "Production, transportation,material moving" = "PTMM"))
+YearBoroughData.tidy$Occupations <- plyr::revalue(YearBoroughData.tidy$Occupations, c("Management, business, science, and arts" = "MBSA", "Natural resources, construction,maintenance" = "NRCM", "Production, transportation,material moving" = "PTMM"))
 
 YearBoroughData.wide <- pivot_wider(YearBoroughData.tidy, names_from = Occupations, values_from = NumEmp)
 
 
 YearBoroughData.wide$year<-NULL
-YearBoroughData.wide['sumnumemp'] <- YearBoroughData.wide['Management, business, science, and arts']+YearBoroughData.wide['Service']+YearBoroughData.wide['Sales and office']+YearBoroughData.wide['Natural resources, construction,maintenance']+YearBoroughData.wide['Production, transportation,material moving']
+YearBoroughData.wide['sumnumemp'] <- YearBoroughData.wide['MBSA']+YearBoroughData.wide['Service']+YearBoroughData.wide['Sales and office']+YearBoroughData.wide['NRCM']+YearBoroughData.wide['PTMM']
 
-YearBoroughData.wide['Management, business, science, and arts'] <- YearBoroughData.wide['Management, business, science, and arts']/YearBoroughData.wide['sumnumemp']
+YearBoroughData.wide['MBSA'] <- YearBoroughData.wide['MBSA']/YearBoroughData.wide['sumnumemp']
 YearBoroughData.wide['Service'] <- YearBoroughData.wide['Service']/YearBoroughData.wide['sumnumemp']
 YearBoroughData.wide['Sales and office'] <- YearBoroughData.wide['Sales and office']/YearBoroughData.wide['sumnumemp']
-YearBoroughData.wide['Natural resources, construction,maintenance'] <- YearBoroughData.wide['Natural resources, construction,maintenance']/YearBoroughData.wide['sumnumemp']
-YearBoroughData.wide['Production, transportation,material moving'] <- YearBoroughData.wide['Production, transportation,material moving']/YearBoroughData.wide['sumnumemp']
+YearBoroughData.wide['NRCM'] <- YearBoroughData.wide['NRCM']/YearBoroughData.wide['sumnumemp']
+YearBoroughData.wide['PTMM'] <- YearBoroughData.wide['PTMM']/YearBoroughData.wide['sumnumemp']
 
 YearBoroughData.wide$sumnumemp <- NULL
 YearBoroughData.wide$sum <- NULL
