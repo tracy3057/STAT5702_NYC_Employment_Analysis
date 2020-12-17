@@ -1,8 +1,5 @@
----
-title: "Employment"
-output: html_document
----
-
+## Employment
+This sub-chapter shows an analysis of employment for different occupations in New York City.
 ```{r Imports, include=FALSE,echo=FALSE}
 library(tidyverse)
 library(RCurl)
@@ -22,6 +19,7 @@ AggregateYearlyData <- read.csv(text = getURL("https://raw.githubusercontent.com
 
 GenderData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/Occupation_Gender_Aggregate.csv"))
 
+GenderData.tidy <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/TidyGenderData.csv"))
 
 YearlyNumEmps <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/YearlyNumEmpsWithNorm.csv"))
 
@@ -45,6 +43,9 @@ PropsOfPropsRace <- read.csv(text = getURL("https://raw.githubusercontent.com/tr
 
 
 YearBoroughData <- read.csv("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/numemp_big_category.csv")
+
+
+YearlyWithVariance <- read_csv("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/NumEmp/Occupation_Yearly_withRange.csv")
 ```
 
 ```{r Data Cleaning,include=FALSE}
@@ -177,7 +178,56 @@ ks <- function (x) { number_format(accuracy = 1,
                                    big.mark = ",")(x) }
 ```
 
+### Overview of Employment Distribution
 
+In order to have an overview of employment distribution according to different occupations in New York City, we draw a Cleveland Dot Plot to show the 10-year-average of number of employed first.\
+
+```{r Aggregate Cleveland Dot Plot,fig.width=10}
+# a general analysis with average numemp of all occupations by using cleveland dot plot
+
+ggplot(AggregateData) +
+  geom_point(aes(MeanNumEmp, reorder(Occupations,MeanNumEmp)),color = "royalblue3", size = 2, alpha = 0.75) + ylab('Occupation') + xlab('Number Employed') + 
+  ggtitle('Number Employed by Occupation NYC') +
+  scale_x_continuous(labels = ks)+
+  mytheme
+
+```
+
+**Observations on Number Employed by Occupation in NYC:**
+
+1. Huge Differences in Number of Employed in Different Occupations.\
+
+  * There is a huge difference in number of employed among occupations. The sector with the biggest number of employed is office and administrative support, and the number of employed is 757015. However, for farming, fishing and forestry, which has the smallest number of employed, there's only 4864 on average.
+
+2. Three clusters for employment. 
+
+  * The **first** group includes `Office and administrative support`, `Management`, `Sales and related`, which is a group with the biggest number of employed.
+  * The **second** group includes the majority of occupations and have relatively similar number of employed among occupations. 
+  * The **third** group contains `Farming, fishing, and forestry` only, which is the group with the smallest number of employed.
+
+3. Gaps between the three clusters.
+
+  * As can be seen from the plot, the gap between the first group and second group is very large, while the gap between the second and third group is relatively small.
+  
+4. Top 3 and Last 3 Occupations in Employment.
+
+  * Top 3
+    * Office and administrative support
+    * Management
+    * Sales and related
+    
+  * Last 3
+    * Farming, fishing, and forestry
+    * Life, physical, and social science
+    * Law enforcement workers
+\
+\
+
+### Analyze on Employment by Years
+
+One of the things that affects employment is time. So first, we have an analysis on employment in different years.
+
+#### General Trend of Employment by Years
 
 ```{r Aggregate Yearly Cleveland Dot Plot filtered into 3 years,fig.width=10}
 ggplot(TrimmedAggregateYearlyData) +
@@ -187,41 +237,21 @@ geom_point(aes(YearlyNumEmp, reorder(Occupations,YearlyNumEmp), color = year),si
 
 **Observations on Number Employed by Occupation NYC through 2010-2019:**
 
-The most striking observations from this Cleveland dot plot are where there are clear trends over the decade, that coincide with intuition about the general trend of a sector. Some of the most striking trends are:
+The most striking observations from this Cleveland dot plot are where there are clear trends over the decade, that coincide with intuition about the general trend of a sector. Some of the most striking trends are:\
 
-1.) Production occupations steadily decreasing over the course of the decade, the only sector where the number of employees for 2010 is lowest of the three years.
+1.) Production occupations steadily decreasing over the course of the decade, the only sector where the number of employees for 2010 is lowest of the three years.\
 
-2.) Material moving occupations steadily increasing over the course of the decade.
+2.) Material moving occupations steadily increasing over the course of the decade.\
 
-3.) Computer and mathematical as well as architecture and engineering occupations quite quickly increasing over the course of the decade especially relative to their size.
+3.) Computer and mathematical as well as architecture and engineering occupations quite quickly increasing over the course of the decade especially relative to their size.\
 
-4.) Health care support occupations growing at a stagnant rate from 2010 to 2015, but then growing rapidly from 2015 to 2019.
+4.) Health care support occupations growing at a stagnant rate from 2010 to 2015, but then growing rapidly from 2015 to 2019.\
 
-5.) Food preparation and serving related occupations growing steadily from 2010 to 2019.
+5.) Food preparation and serving related occupations growing steadily from 2010 to 2019.\
 \
-\
-\
-\
-```{r Gender Cleveland Dot Plot,fig.width=10}
-ggplot(GenderData, aes(MeanNumEmpbyGender,fct_reorder2(Occupations,Gender=='Female',MeanNumEmpbyGender, .desc=FALSE), color = Gender)) + 
-  geom_point(size = 2, alpha = 0.7) +
-  ylab('Occupations') + xlab('NumEmps') + ggtitle('Number Employed by Occupation and Gender in NYC') +
-scale_x_continuous(labels = ks) + scale_color_manual(values=c('seagreen3','mediumorchid')) +
-  mytheme
-```
-**Observations from Boxplot of number working in sector per year:**
 
-A broad takeaway from studying this plot is that generally men tend to dominate the majority of professions, with 17 occupations being majority male, and only 8 occupations being majority female.
-\
-\
-The occupations in which females account for the vast majority of employees are Office and administrative support, education, training, and library, healthcare support, and personal care and service.
-\
-\
-The occupations in which males account for the vast majority of employees are construction and extraction, transportation, and installation, maintenance and repair.
-\
-\
-\
-\
+In order to see the employment variances of the 25 occupations in detail, we draw boxplot for comparisons.\
+
 ```{r Yearly BoxPlot,fig.width=10,fig.height=6}
 ggplot(YearlyNumEmps) +
   geom_boxplot(aes(x = YearlyNumEmp, y = reorder(x = Occupations,YearlyNumEmp, FUN = median)),
@@ -297,8 +327,51 @@ By contrast, these professions were the most stable:
   * Construction and extraction occupations
 \
 \
-\
-\
+
+
+#### Monotonicity in Employment Trends
+
+From the plot above, we can divide all occupations into three catogories. The first group is in a monotonous increasing trend, the second group is in a monotonous decreasing trend, and the third group do not have a monotonous trend in number of employed people by years. 
+
+##### Monotonous Increasing
+We have 14 kinds of occupations in this group:\
+1. Management Occupations\
+2. Healthcare support occupations\
+3. Business and financial operations occupations\
+4. Computer and mathematical occupations\
+5. Education, training and library occupations\
+6. Art, design, entertainment, sports and media occupations\
+7. Health, design and treating practitioners and other technical occupations\
+8. Construction and extraction occupations\
+9. Architecture and engineering occupations\
+10. Fire fighting and prevention, and other protective service workers including supervisors\
+11. Community and social service occupations\
+12. Life, physical, and social service occupations\
+13. Law enforcement workers including supervisors\
+14. Farming, fishing and forestry occupations\
+
+##### Monotonous Decreasing
+We have only one kind of occupations in this group:\
+1. Production occupations\
+
+##### Not monotonous
+We have 10 kinds of occupations in this group:\
+1. Office and administrative support occupations\
+2. Food preparation and serving related occupations\
+3. Transportation occupations\
+4. Material moving occupations\
+5. Health technologists and technicians\
+6. Personal care and service occupations\
+7. Building and grounds cleaning and maintenance occupations\
+8. Sales and related occupations\
+9. Legal occupations\
+10. Installation, maintenance, and repair occupations\
+
+We further study on the group that does not a monotonous trend with line chart.
+
+
+##### Occupations without Monotonous Trend
+
 ```{r, fig.height=11,fig.width=10}
 ggplot(NotMonotonous,aes(year,YearlyNumEmp,group = Occupations)) +
   geom_line(size = 1,color = "black") +
@@ -352,6 +425,136 @@ Generally speaking, the number of employees for this group was relatively stable
 The number of employees in this group was relatively stable as well and the changing pattern was also like the shape of a wave. The trough were in year 2016 and the two crests were in year 2013 and 2015.\
 \
 \
+
+#### Percentage Difference by Years
+
+```{r,fig.height=6,fig.width=10}
+# use a bar chart to order the percentage of range
+
+ggplot(YearlyWithVariance,aes(x=fct_reorder(Occupations, range_pct),range_pct), y = range_pct) +
+  geom_col(fill = "royalblue3",alpha = 0.75)+
+  coord_flip()+
+    theme(axis.text=element_text(),
+      axis.title=element_text(face="bold"),
+      plot.title = element_text(face = "bold"))+ xlab('Occupations') + ylab('Percentage Difference') + ggtitle('Percentage Difference of Employment over Years')+
+  mytheme
+```
+**Observations on Percentage Difference of Employment over Years:**
+
+1. Top 5 and Last 5 in percentage difference in 2010 and 2019\
+
+Top 5\
+
+1.) Computer and mathematical occupations\
+
+This occupation type does not belong to the the group with most employed people among all the occupations. However, with in the past 10 years, this group has the biggest increase over the past 10 years.It is in a continuously increasing trend.\
+
+2.) Healthcare support occupations\
+
+This occupation has the second largest increase in number of employed, it is also in a continuously increasing trend.\
+
+3.) Architecture and engineering occupations\
+
+This occupation has also increased a lot in number of employed over the past 10 years, and in a continuously increasing trend.\
+
+4.) Farming, fishing, and forestry occupations\
+
+Surprisingly, this occupation ranks the fourth. This occupation has the least number of employed among all occupation types, and this might be one of the reasons that it can rank the fourth.\
+
+5.) Material moving occupations\
+
+This occupation type does not have a continuously increasing trend, the number of employed dropped a little from 2010 to 2015, then increased a lot from 2015 to 2019, which is different from other occupations that ranks top 5.\
+
+Last 5\
+
+1.) Installation, maintenance, and repair occupations\
+
+This group varied the least between 2010 and 2019. Although it was not the occupation with low number of employees, it had the smallest variation in number of employees. Also, this occupation increased in number of employed from 2010 to 2015, then dropped from 2015 to 2019.\
+
+2.) Sales and related occupations\
+
+Although this occupation has large number of employed, the number of employed has not increased a lot over the past 10 years. It is not in a monotonous trend as well, it increased a little from 2010 to 2015, then decreased a lot from 2015 to 2019.\
+
+3.) Legal occupations\
+
+This occupation is very stable in number of employed over the past 10 years. The number of employed increased from 2010 to 2015 and then decreased slightly from 2015 to 2019.\
+
+4.) Building and grounds cleaning and maintenance occupations\
+
+The number of employed for this group did not change a lot from 2010 to 2015, while dropped a little from 2015 to 2019.\
+
+5.) Personal care and service occupation\
+
+This occupation type is not very stable in number of employed compared with other occupations in the group of last 5. The number of employed people increased a lot from 2010 to 2015, and then decreased even more from 2015 to 2019, which makes the variance of number of employed between 2010 and 2019 in this occupation not very big.\
+
+### Analyze on Employment by Counties
+
+```{r,fig.height=6}
+parcoords(YearBoroughData.wide,
+          rownames = F,
+          brushMode = "1D-axes",
+          reorderable = T,
+          queue = T,
+          color = list(
+            colorBy = "County",
+            colorScale = "scaleOrdinal",
+            colorScheme = "schemeCategory10"
+          ),
+          withD3 = TRUE) 
+```
+
+**Plot abbreviations key:**
+
+MBSC: Management, business, science, and arts\
+NRCM: Natural resources, construction, maintenance\
+PTMM: Production, transportation, material moving\
+
+Note: Each line represents one year. The numbers on the axis represent the proportion of the working population of that county working in each of the categories for that year. The numbers across each sector for each year sum to one.
+
+
+**Observations from sector groups employment across counties:**
+\
+\
+Observing this plot is that certain counties stand out in terms of how many of their people work in certain areas:
+\
+\
+New York has great representation in Management, business, science, and arts with roughly 60% of its population routinely working in those fields across 2010-2019, which is at roughly 15% higher than for any other county. 
+\
+\
+Bronx County has great representation in service occupations, with roughly 35% of its population working routinely in this sector, which is at least 10% higher than for any other county.
+\
+\
+Richmond County and Queens County seem to have good representation in natural resources, construction, and maintenance occupations. 
+\
+\
+New York, perhaps because of the high representation in the management, business, science, and arts cluster has clearly the lowest representation in service, natural resources, construction and maintenance, and production, transportation, management and material moving. New York also has the lowest representation in several years in Sales and Office occupations.
+\
+\
+Of all the counties, Queens county, Kings county, and Richmond county seem to track each other most, and have the most similar levels of representation across the sector clusters.
+\
+\
+Of all the counties, New York county and Bronx county seem to be the most different. Across almost each sector, low values for one almost certainly means that high values will appear for the other.
+
+
+### Analyze on Employment by Genders
+
+```{r Gender Cleveland Dot Plot,fig.width=10}
+ggplot(GenderData, aes(MeanNumEmpbyGender,fct_reorder2(Occupations,Gender=='Female',MeanNumEmpbyGender, .desc=FALSE), color = Gender)) + 
+  geom_point(size = 2, alpha = 0.7) +
+  ylab('Occupations') + xlab('NumEmps') + ggtitle('Number Employed by Occupation and Gender in NYC') +
+scale_x_continuous(labels = ks) + scale_color_manual(values=c('seagreen3','mediumorchid')) +
+  mytheme
+```
+
+**Observations on Number Employed by Occupation NYC for different genders:**
+
+A broad takeaway from studying this plot is that generally men tend to dominate the majority of professions, with 17 occupations being majority male, and only 8 occupations being majority female.
+\
+\
+The occupations in which females account for the vast majority of employees are Office and administrative support, education, training, and library, healthcare support, and personal care and service.
+\
+\
+The occupations in which males account for the vast majority of employees are construction and extraction, transportation, and installation, maintenance and repair.
 \
 \
 ```{r Gender Composition by Occupation,fig.width=10,fig.height=6}
@@ -410,6 +613,41 @@ From this plot, we can list the top ten occupations with high percentages of mal
 10. Legal occupations\
 \
 \
+Besides, we want to see if there's a relation between gender and the variation of number employed by years. Therefore, we draw a bar chart of variance of different occupations in year 2010 and year 2019, and use different color of bars to represent whether this occupation is male-dominated or demale-dominated.
+```{r,fig.height=6}
+GenderData.tidy$`Gender Distribution` <- ifelse(
+  ( 
+        (GenderData.tidy$Gender == "Female" & GenderData.tidy$prop < 0.5) |
+        (GenderData.tidy$Gender == "Male" & GenderData.tidy$prop > 0.5)
+    ),
+  "Male-dominated",
+  "Female-dominated"
+)
+
+#write.csv(GenderData.tidy,"/Users/tracy/Documents/GitHub/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/TidyGenderData.csv", row.names = FALSE)
+
+ggplot(GenderData.tidy,aes(x=fct_reorder(Occupations, difference_pct,.desc = T), y = difference_pct)) +
+  geom_col(fill = ifelse(GenderData.tidy$`Gender Distribution` == "Male-dominated","orange","green"))+
+    mytheme+
+  ylab('variance_pct') + xlab('Occupations') + ggtitle('Variance of Number Employer by Occupations')
+```
+
+From this plot, we can discover that, for the top 10 occupations with greatest variances, there are 5 male-dominated occupations and 5 female-dominated occupations. However, for other occupations, the majority of them are male dominated.\
+
+```{r,fig.height=15}
+# the range is the range by year
+YearlyWithVariance <- YearlyWithVariance %>% select(1,3)
+GenderData.tidy <- GenderData.tidy %>% select(1,7) %>% unique()
+TotalData <- merge(YearlyWithVariance,GenderData.tidy,by="Occupations")
+
+ggplot(TotalData,aes(x=fct_reorder(Occupations, range_pct, .desc = T), y = range_pct)) +
+  geom_col(fill = ifelse(TotalData$`Gender Distribution` == "Male-dominated","orange","green"))+
+    theme(axis.text=element_text(size=30,angle = 90, vjust = 0.5, hjust=1),
+      axis.title=element_text(size=40,face="bold"),
+      plot.title = element_text(size = 50, face = "bold"))+
+  ylab('variance') + xlab('Occupations') + ggtitle('Variance of Number Employer by Occupations')
+```
+
 \
 \
 ```{r Race and Gender by Occupation Stacked Bar Charts,fig.width=10,fig.height=6}
@@ -444,50 +682,3 @@ Note: This plot was formed by comparing the proportions of each race group worki
 
 8.) It seems that a typical Asian person is much less likely than persons of other races to work in Law enforcement occupations, fire fighting and prevention occupations, community and social service occupations, and building and grounds cleaning and maintenance occupations.\\
 \
-\
-\
-\
-```{r,fig.height=6}
-parcoords(YearBoroughData.wide,
-          rownames = F,
-          brushMode = "1D-axes",
-          reorderable = T,
-          queue = T,
-          color = list(
-            colorBy = "County",
-            colorScale = "scaleOrdinal",
-            colorScheme = "schemeCategory10"
-          ),
-          withD3 = TRUE) 
-```
-**Plot abbreviations key:**
-
-MBSC: Management, business, science, and arts\
-NRCM: Natural resources, construction, maintenance\
-PTMM: Production, transportation, material moving\
-
-Note: Each line represents one year. The numbers on the axis represent the proportion of the working population of that county working in each of the categories for that year. The numbers across each sector for each year sum to one.
-
-
-**Observations from sector groups employment across counties:**
-\
-\
-Observing this plot is that certain counties stand out in terms of how many of their people work in certain areas:
-\
-\
-New York has great representation in Management, business, science, and arts with roughly 60% of its population routinely working in those fields across 2010-2019, which is at roughly 15% higher than for any other county. 
-\
-\
-Bronx County has great representation in service occupations, with roughly 35% of its population working routinely in this sector, which is at least 10% higher than for any other county.
-\
-\
-Richmond County and Queens County seem to have good representation in natural resources, construction, and maintenance occupations. 
-\
-\
-New York, perhaps because of the high representation in the management, business, science, and arts cluster has clearly the lowest representation in service, natural resources, construction and maintenance, and production, transportation, management and material moving. New York also has the lowest representation in several years in Sales and Office occupations.
-\
-\
-Of all the counties, Queens county, Kings county, and Richmond county seem to track each other most, and have the most similar levels of representation across the sector clusters.
-\
-\
-Of all the counties, New York county and Bronx county seem to be the most different. Across almost each sector, low values for one almost certainly means that high values will appear for the other.
