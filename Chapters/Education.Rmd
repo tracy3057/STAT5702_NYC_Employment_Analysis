@@ -97,17 +97,6 @@ ks <- function (x) { number_format(accuracy = 1,
                                    big.mark = ",")(x) }
 ```
 
-```{r NYC Number Employed vs. Education Level}
-ggplot(Total_New_York,aes(NumEducated,NumEmp,color = Gender)) +
-  geom_point()+
-  facet_wrap(~Education_Level,scales = "free_x",ncol = 2) + ggtitle("Number Educated vs Number Employed from 2010-2019") +
-  scale_x_continuous(labels = ks) +
-  scale_y_continuous(labels = ks) +
-  scale_color_manual(values=c('seagreen3','mediumorchid')) +
-  ylab('Employees') +
-  mytheme
-```
-
 
 ```{r NYC Salary vs. Education Level}
 ggplot(Total_New_York,aes(NumEducated,Salary,color = Gender))+
