@@ -84,11 +84,21 @@ YearBoroughData.tidy$County <- plyr::revalue(YearBoroughData.tidy$County, c("Bro
 
 YearBoroughData.wide <- pivot_wider(YearBoroughData.tidy, names_from = Occupations, values_from = NumEmp)
 
-YearBoroughData.wide$year <- NULL
 
-YearBoroughData.wide
+YearBoroughData.wide$year<-NULL
+YearBoroughData.wide['sumnumemp'] <- YearBoroughData.wide['Management, business, science, and arts']+YearBoroughData.wide['Service']+YearBoroughData.wide['Sales and office']+YearBoroughData.wide['Natural resources, construction,maintenance']+YearBoroughData.wide['Production, transportation,material moving']
+
+YearBoroughData.wide['Management, business, science, and arts'] <- YearBoroughData.wide['Management, business, science, and arts']/YearBoroughData.wide['sumnumemp']
+YearBoroughData.wide['Service'] <- YearBoroughData.wide['Service']/YearBoroughData.wide['sumnumemp']
+YearBoroughData.wide['Sales and office'] <- YearBoroughData.wide['Sales and office']/YearBoroughData.wide['sumnumemp']
+YearBoroughData.wide['Natural resources, construction,maintenance'] <- YearBoroughData.wide['Natural resources, construction,maintenance']/YearBoroughData.wide['sumnumemp']
+YearBoroughData.wide['Production, transportation,material moving'] <- YearBoroughData.wide['Production, transportation,material moving']/YearBoroughData.wide['sumnumemp']
+
+YearBoroughData.wide$sumnumemp <- NULL
+YearBoroughData.wide$sum <- NULL
 
 detach(package:plyr)
+
 
 #Number Employed by Occupation NYC 2010-2019
 
