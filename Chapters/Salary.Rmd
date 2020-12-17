@@ -14,6 +14,8 @@ library(scales)
 ```{r Data, include=FALSE,echo=FALSE}
 NewSalary <-read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/Salary/NewSalary.csv"))
 
+NewSalary$Occupations<- plyr::revalue(NewSalary$Occupations, c("Management occupations"="Management", "Business and financial operations occupations"="Business and financial operations","Computer and mathematical occupations" = "Computer and mathematical", "Architecture and engineering occupations" = "Architecture and engineering", "Life, physical, and social science occupations" = "Life, physical, and social science","Community and social service occupations" = "Community and social service", "Legal occupations" = "Legal", "Education, training, and library occupations" = "Education, training, and library", "Arts, design, entertainment, sports, and media occupations" = "Arts, design, entertainment, sports, and media", "Health diagnosing and treating practitioners and other technical occupations" = "Health diagnosing and treating practitioners and other technical", "Healthcare support occupations" = "Healthcare support", "Fire fighting and prevention, and other protective service workers including supervisors" = "Fire fighting and prevention", "Law enforcement workers including supervisors" = "Law enforcement workers", "Food preparation and serving related occupations" = "Food preparation and serving related", "Building and grounds cleaning and maintenance occupations" = "Building and grounds cleaning and maintenance", "Personal care and service occupations" = "Personal care and service", "Sales and related occupations" = "Sales and related", "Office and administrative support occupations" = "Office and administrative support", "Farming, fishing, and forestry occupations" = "Farming, fishing, and forestry", "Construction and extraction occupations" = "Construction and extraction","Installation, maintenance, and repair occupations" ="Installation, maintenance, and repair", "Production occupations" = "Production", "Transportation occupations" = "Transportation", "Material moving occupations" = "Material moving"))
+
 # occupation, year, Salary_YearlyAvg
 NewSalaryWithVariance <- NewSalary %>% select(1, 4, 11, 13)
 NewSalaryWithVariance <- unique(NewSalaryWithVariance)
@@ -24,9 +26,9 @@ NewSalaryWithVariance.wide$variance <- with(NewSalaryWithVariance.wide, year2019
 
 NewSalaryWithVariance.tidy <- pivot_longer(NewSalaryWithVariance.wide, cols = c(3:12), names_to = "year", values_to = "Salary_YearlyAvg")
 
-# write.csv(NewSalaryWithVariance.tidy,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Salary/NewSalaryWithVariance.csv", row.names = FALSE)
+write.csv(NewSalaryWithVariance.tidy,"/Users/tracy/Documents/GitHub/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Salary/NewSalaryWithVariance.csv", row.names = FALSE)
 
-NewSalaryWithVariance <- read.csv("/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Salary/NewSalaryWithVariance.csv")
+NewSalaryWithVariance <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/Salary/NewSalaryWithVariance.csv"))
 RaceData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/Salary/NewSalary.csv"))
 TidyGenderData <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/Salary/TidyGenderData.csv"))
 NewSalaryWithVariance <- read_csv("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/Salary/NewSalaryWithVariance.csv")
@@ -39,8 +41,6 @@ NewSalary$year_range <- as.factor(NewSalary$year_range)
 
 ```{r Data Cleaning,include=FALSE,echo=FALSE}
 RaceData$Occupations<- plyr::revalue(RaceData$Occupations, c("Management occupations"="Management", "Business and financial operations occupations"="Business and financial operations","Computer and mathematical occupations" = "Computer and mathematical", "Architecture and engineering occupations" = "Architecture and engineering", "Life, physical, and social science occupations" = "Life, physical, and social science","Community and social service occupations" = "Community and social service", "Legal occupations" = "Legal", "Education, training, and library occupations" = "Education, training, and library", "Arts, design, entertainment, sports, and media occupations" = "Arts, design, entertainment, sports, and media", "Health diagnosing and treating practitioners and other technical occupations" = "Health diagnosing and treating practitioners and other technical", "Healthcare support occupations" = "Healthcare support", "Fire fighting and prevention, and other protective service workers including supervisors" = "Fire fighting and prevention", "Law enforcement workers including supervisors" = "Law enforcement workers", "Food preparation and serving related occupations" = "Food preparation and serving related", "Building and grounds cleaning and maintenance occupations" = "Building and grounds cleaning and maintenance", "Personal care and service occupations" = "Personal care and service", "Sales and related occupations" = "Sales and related", "Office and administrative support occupations" = "Office and administrative support", "Farming, fishing, and forestry occupations" = "Farming, fishing, and forestry", "Construction and extraction occupations" = "Construction and extraction","Installation, maintenance, and repair occupations" ="Installation, maintenance, and repair", "Production occupations" = "Production", "Transportation occupations" = "Transportation", "Material moving occupations" = "Material moving"))
-
-NewSalary$Occupations<- plyr::revalue(NewSalary$Occupations, c("Management occupations"="Management", "Business and financial operations occupations"="Business and financial operations","Computer and mathematical occupations" = "Computer and mathematical", "Architecture and engineering occupations" = "Architecture and engineering", "Life, physical, and social science occupations" = "Life, physical, and social science","Community and social service occupations" = "Community and social service", "Legal occupations" = "Legal", "Education, training, and library occupations" = "Education, training, and library", "Arts, design, entertainment, sports, and media occupations" = "Arts, design, entertainment, sports, and media", "Health diagnosing and treating practitioners and other technical occupations" = "Health diagnosing and treating practitioners and other technical", "Healthcare support occupations" = "Healthcare support", "Fire fighting and prevention, and other protective service workers including supervisors" = "Fire fighting and prevention", "Law enforcement workers including supervisors" = "Law enforcement workers", "Food preparation and serving related occupations" = "Food preparation and serving related", "Building and grounds cleaning and maintenance occupations" = "Building and grounds cleaning and maintenance", "Personal care and service occupations" = "Personal care and service", "Sales and related occupations" = "Sales and related", "Office and administrative support occupations" = "Office and administrative support", "Farming, fishing, and forestry occupations" = "Farming, fishing, and forestry", "Construction and extraction occupations" = "Construction and extraction","Installation, maintenance, and repair occupations" ="Installation, maintenance, and repair", "Production occupations" = "Production", "Transportation occupations" = "Transportation", "Material moving occupations" = "Material moving"))
 
 TidyGenderData$Occupations<- plyr::revalue(TidyGenderData$Occupations, c("Management occupations"="Management", "Business and financial operations occupations"="Business and financial operations","Computer and mathematical occupations" = "Computer and mathematical", "Architecture and engineering occupations" = "Architecture and engineering", "Life, physical, and social science occupations" = "Life, physical, and social science","Community and social service occupations" = "Community and social service", "Legal occupations" = "Legal", "Education, training, and library occupations" = "Education, training, and library", "Arts, design, entertainment, sports, and media occupations" = "Arts, design, entertainment, sports, and media", "Health diagnosing and treating practitioners and other technical occupations" = "Health diagnosing and treating practitioners and other technical", "Healthcare support occupations" = "Healthcare support", "Fire fighting and prevention, and other protective service workers including supervisors" = "Fire fighting and prevention", "Law enforcement workers including supervisors" = "Law enforcement workers", "Food preparation and serving related occupations" = "Food preparation and serving related", "Building and grounds cleaning and maintenance occupations" = "Building and grounds cleaning and maintenance", "Personal care and service occupations" = "Personal care and service", "Sales and related occupations" = "Sales and related", "Office and administrative support occupations" = "Office and administrative support", "Farming, fishing, and forestry occupations" = "Farming, fishing, and forestry", "Construction and extraction occupations" = "Construction and extraction","Installation, maintenance, and repair occupations" ="Installation, maintenance, and repair", "Production occupations" = "Production", "Transportation occupations" = "Transportation", "Material moving occupations" = "Material moving"))
 
@@ -142,7 +142,8 @@ ggplot(NewSalary1) +
   mytheme
 ```
 
-**Observations on Salaries by Occupation NYC through 2010-2019:**
+**Observations on Salaries by Occupation NYC through 2010-2019:**\
+
 
 1. Salary Trends for Top 3 and Last 3 Occupations\
 
@@ -182,8 +183,9 @@ ggplot(NewSalaryWithVariance) +
   geom_boxplot(aes(y = reorder(x = Occupations, Salary_YearlyAvg, FUN = median), x = Salary_YearlyAvg),
                color = "black", fill = "dark red", alpha = 0.7) + 
   scale_x_continuous(labels = ks)+
-  ggtitle("Boxplots with Number of Employed for Different Occupations") +
-  xlab("occupations")+
+  ggtitle("Boxplots with Salaries for Different Occupations") +
+  xlab("Salary")+
+  ylab("Occupations")
   mytheme2
 ```
 
@@ -381,6 +383,7 @@ As we can see from the above plot, we can discover that the majority of these oc
 ```{r,fig.width=10}
 ggplot(NewSalary) +
   geom_point(aes(Salary_county, reorder(Occupations,Salary_county), color = Boroughs),size = 2, alpha = 0.75) + ylab('Occupation') + xlab('Salary') + 
+  scale_x_continuous(labels = ks)+
   ggtitle('Salaries of Different Occupations of Different Counties in NYC')+
   mytheme
 ```
@@ -421,6 +424,8 @@ ylab("Count")+
 ggtitle("Distribution of the Highest and Lowest wages in Different Counties") + 
   mytheme
 ```
+
+\
 **Observations on the Distribution of the Highest and Lowest wages in Different Counties:**
 
 As can be seen from this plot, many occupations have the lowest salaries in Bronx County, some of them are in Kings County and New York County, but none of them appears in Queens County and Richmond County.\
@@ -530,6 +535,7 @@ ggplot(CountySalary3,aes(x=fct_reorder(Occupations, variance_pct), y = variance_
 ```{r, fig.width=10}
 ggplot(NewSalary) +
   geom_point(aes(Salary_gender, reorder(Occupations,Salary_gender), color = Gender),size = 2, alpha = 0.75) + ylab('Occupation') + xlab('Salary') + 
+  scale_x_continuous(labels = ks)+
   ggtitle('Salaries of Different Occupations of Different Genders in NYC') +
   scale_color_manual(values=c('seagreen3','mediumorchid'))+
   mytheme
@@ -603,7 +609,7 @@ For most of the occupations, male employees have higher salaries than female emp
 Intuitively, the gender composition of employees in a profession is related to the level of wages for gender. We want to analyze if this intuition makes sense. Therefore, we use two categorical variables to represent the two characteristics, namely "Gender Distribution" and "Salary Distribution". For the category of "Gender Distribution", there are two values, Male-dominated, which means there are more male employees in this occupation than female employees, and Female-dominated, which means there are more female employees in this occupation than male employees. For the category of "Salary Distribution", we also set two values, Male-higher, which means male employees have higher salary in this occupation, and Female-higher, which means female employees have higher salary in this occupation. Then, we draw a mosaic plot to measure the relation.\
 
 ```{r,fig.width=6,echo=FALSE}
-TidyGenderData <- TidyGenderData %>% select(1,2) %>% unique()
+TidyGenderData <- TidyGenderData %>% select(1,8) %>% unique()
 
 GenderSalary$Salary_Distribution <- ifelse(
   ( 
