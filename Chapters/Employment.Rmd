@@ -77,6 +77,8 @@ PropsOfGroupByOccupation$Occupation <- plyr::revalue(AggregateData$Occupations, 
 
 PropsOfPropsRace$Occupation <- plyr::revalue(AggregateData$Occupations, c("Management occupations"="Management", "Business and financial operations occupations"="Business and financial operations","Computer and mathematical occupations" = "Computer and mathematical", "Architecture and engineering occupations" = "Architecture and engineering", "Life, physical, and social science occupations" = "Life, physical, and social science","Community and social service occupations" = "Community and social service", "Legal occupations" = "Legal", "Education, training, and library occupations" = "Education, training, and library", "Arts, design, entertainment, sports, and media occupations" = "Arts, design, entertainment, sports, and media", "Health diagnosing and treating practitioners and other technical occupations" = "Health diagnosing and treating practitioners and other technical", "Healthcare support occupations" = "Healthcare support", "Fire fighting and prevention, and other protective service workers including supervisors" = "Fire fighting and prevention", "Law enforcement workers including supervisors" = "Law enforcement workers", "Food preparation and serving related occupations" = "Food preparation and serving related", "Building and grounds cleaning and maintenance occupations" = "Building and grounds cleaning and maintenance", "Personal care and service occupations" = "Personal care and service", "Sales and related occupations" = "Sales and related", "Office and administrative support occupations" = "Office and administrative support", "Farming, fishing, and forestry occupations" = "Farming, fishing, and forestry", "Construction and extraction occupations" = "Construction and extraction","Installation, maintenance, and repair occupations" ="Installation, maintenance, and repair", "Production occupations" = "Production", "Transportation occupations" = "Transportation", "Material moving occupations" = "Material moving"))
 
+YearlyWithVariance$Occupation <- plyr::revalue(YearlyWithVariance$Occupations, c("Management occupations"="Management", "Business and financial operations occupations"="Business and financial operations","Computer and mathematical occupations" = "Computer and mathematical", "Architecture and engineering occupations" = "Architecture and engineering", "Life, physical, and social science occupations" = "Life, physical, and social science","Community and social service occupations" = "Community and social service", "Legal occupations" = "Legal", "Education, training, and library occupations" = "Education, training, and library", "Arts, design, entertainment, sports, and media occupations" = "Arts, design, entertainment, sports, and media", "Health diagnosing and treating practitioners and other technical occupations" = "Health diagnosing and treating practitioners and other technical", "Healthcare support occupations" = "Healthcare support", "Fire fighting and prevention, and other protective service workers including supervisors" = "Fire fighting and prevention", "Law enforcement workers including supervisors" = "Law enforcement workers", "Food preparation and serving related occupations" = "Food preparation and serving related", "Building and grounds cleaning and maintenance occupations" = "Building and grounds cleaning and maintenance", "Personal care and service occupations" = "Personal care and service", "Sales and related occupations" = "Sales and related", "Office and administrative support occupations" = "Office and administrative support", "Farming, fishing, and forestry occupations" = "Farming, fishing, and forestry", "Construction and extraction occupations" = "Construction and extraction","Installation, maintenance, and repair occupations" ="Installation, maintenance, and repair", "Production occupations" = "Production", "Transportation occupations" = "Transportation", "Material moving occupations" = "Material moving"))
+
 #Sector groups employment across counties cleaning 
 
 YearBoroughData.tidy <- pivot_longer(YearBoroughData,cols = !c("Occupations","year"), names_to = "County", values_to = "NumEmp")
@@ -611,45 +613,10 @@ From this plot, we can list the top ten occupations with high percentages of mal
 9. Business and financial operations occupations\
 
 10. Legal occupations\
-\
-\
-Besides, we want to see if there's a relation between gender and the variation of number employed by years. Therefore, we draw a bar chart of variance of different occupations in year 2010 and year 2019, and use different color of bars to represent whether this occupation is male-dominated or demale-dominated.
-```{r,fig.height=6}
-GenderData.tidy$`Gender Distribution` <- ifelse(
-  ( 
-        (GenderData.tidy$Gender == "Female" & GenderData.tidy$prop < 0.5) |
-        (GenderData.tidy$Gender == "Male" & GenderData.tidy$prop > 0.5)
-    ),
-  "Male-dominated",
-  "Female-dominated"
-)
-
-#write.csv(GenderData.tidy,"/Users/tracy/Documents/GitHub/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/NumEmp/TidyGenderData.csv", row.names = FALSE)
-
-ggplot(GenderData.tidy,aes(x=fct_reorder(Occupations, difference_pct,.desc = T), y = difference_pct)) +
-  geom_col(fill = ifelse(GenderData.tidy$`Gender Distribution` == "Male-dominated","orange","green"))+
-    mytheme+
-  ylab('variance_pct') + xlab('Occupations') + ggtitle('Variance of Number Employer by Occupations')
-```
-
-From this plot, we can discover that, for the top 10 occupations with greatest variances, there are 5 male-dominated occupations and 5 female-dominated occupations. However, for other occupations, the majority of them are male dominated.\
-
-```{r,fig.height=15}
-# the range is the range by year
-YearlyWithVariance <- YearlyWithVariance %>% select(1,3)
-GenderData.tidy <- GenderData.tidy %>% select(1,7) %>% unique()
-TotalData <- merge(YearlyWithVariance,GenderData.tidy,by="Occupations")
-
-ggplot(TotalData,aes(x=fct_reorder(Occupations, range_pct, .desc = T), y = range_pct)) +
-  geom_col(fill = ifelse(TotalData$`Gender Distribution` == "Male-dominated","orange","green"))+
-    theme(axis.text=element_text(size=30,angle = 90, vjust = 0.5, hjust=1),
-      axis.title=element_text(size=40,face="bold"),
-      plot.title = element_text(size = 50, face = "bold"))+
-  ylab('variance') + xlab('Occupations') + ggtitle('Variance of Number Employer by Occupations')
-```
 
 \
-\
+### Analyze on Salary by Races
+
 ```{r Race and Gender by Occupation Stacked Bar Charts,fig.width=10,fig.height=6}
 PropsOfPropsRace$Occupation <- as.factor(PropsOfPropsRace$Occupation)
 PropsOfPropsRace$Occupation <- fct_reorder(PropsOfPropsRace$Occupation, PropsOfPropsRace$White, .desc = FALSE)
@@ -661,7 +628,6 @@ ggplot(PropsOfPropsRaceTidy, aes(fill = race, y = Occupation, x = Proportion)) +
 ```
 
 **Observations from Relative Likelihood of Sector Employment by Race:**
-\
 \
 Note: This plot was formed by comparing the proportions of each race group working in each sector. If for a particular sector each group accounts for 0.25 in this plot, then each race group has the same percentage of its people working in that sector. This has the effect of displaying what the race demographics of a sector would look like assuming all races had the same population.
 \

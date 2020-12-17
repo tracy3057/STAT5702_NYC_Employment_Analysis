@@ -1,0 +1,78 @@
+```{r,include=FALSE,echo=FALSE}
+library(tidyverse)
+library(RCurl)
+library(scales)
+Salary_NumEmp <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/gdp/NYCSalary_gdp.csv"))
+Salary_NumEmp$X <- NULL
+```
+
+```{r,include=FALSE,echo=FALSE}
+# NumEmp
+Salary_NumEmp <- Salary_NumEmp %>% select(1,2,5)
+```
+
+```{r,include=FALSE,echo=FALSE}
+Salary_NumEmp[Salary_NumEmp$Earning_category=="FULL-TIME YEAR-ROUND WORKERS WITH EARNINGS","Earning_category"] <- "Full-time year-round workers with earnings"
+
+Salary_NumEmp[Salary_NumEmp$Earning_category=="Mean earnings (dollars) for full-time year-round workers with earnings","Earning_category"] = "Mean earnings (dollars)"
+
+Salary_NumEmp$Earning_category <- as.factor(Salary_NumEmp$Earning_category)
+
+Salary_NumEmp <- Salary_NumEmp %>% pivot_wider(names_from = "Earning_category", values_from = "New.York..Total")
+# add GDP values
+Salary_NumEmp$NYCGDP <- c(65438,65092,67565,67227,68661,69814,70781,72434,73508,75131)
+Salary_NumEmp$GDP <- c(48468,49887,51611,53118,55048,56823,57928,59958,62840,65118)
+
+Salary_NumEmp <- Salary_NumEmp %>% pivot_longer(cols = c(5:13),names_to = "Earning_Category", values_to = "Value")
+
+Salary_NumEmp$Earning_Category = factor(Salary_NumEmp$Earning_Category, levels=c('$1 to $9999 or loss','$10000 to $14999','$15000 to $24999','$25000 to $34999','$35000 to $49999','$50000 to $64999','$65000 to $74999','$75000 to $99999','$100000 or more'))
+```
+
+```{r scale,include=FALSE,echo=FALSE}
+ks <- function (x) { number_format(accuracy = 1,
+                                   scale = 1/1000,
+                                   suffix = "k",
+                                   big.mark = ",")(x) }
+```
+
+```{r,fig.width=14,fig.height=9}
+# plot
+ggplot(Salary_NumEmp,aes(NYCGDP,Value))+
+  geom_point(color = "royalblue3", size = 2, alpha = 0.75)+
+  scale_x_continuous(labels = ks)+
+  xlab("NYC GDP Per Capita")+
+  ylab("NumEmp")+
+  ggtitle("NumEmp vs NYC GDP Per Capita")+
+    theme(axis.text=element_text(size=8),
+      axis.title=element_text(size=15,face="bold"),
+        strip.text.x = element_text(
+        size = 12, face = "bold.italic"
+        ),
+      strip.text.y = element_text(
+        size = 12, color = "red", face = "bold.italic"
+        ),
+      plot.title = element_text(size = 18, face = "bold"))+
+  facet_wrap(~Earning_Category,scales = "free_y")
+```
+
+```{r,fig.width=14,fig.height=9}
+ggplot(Salary_NumEmp,aes(GDP,Value))+
+  geom_point(color = "royalblue3", size = 2, alpha = 0.75)+
+  scale_x_continuous(labels = ks)+
+  xlab("GDP Per Capita")+
+  ylab("NumEmp")+
+  ggtitle("NumEmp vs GDP Per Capita")+
+      theme(axis.text=element_text(size=8),
+      axis.title=element_text(size=15,face="bold"),
+        strip.text.x = element_text(
+        size = 12, face = "bold.italic"
+        ),
+      strip.text.y = element_text(
+        size = 12, color = "red", face = "bold.italic"
+        ),
+      plot.title = element_text(size = 18, face = "bold"))+
+  facet_wrap(~Earning_Category,scales = "free_y")
+```
+
+
+
