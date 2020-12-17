@@ -111,8 +111,10 @@ ggplot(NewSalary) +
 
 ### Analyze on salary variation according to different years
 ```{r,fig.width=10}
+NewSalary <- NewSalary[NewSalary$year == "year2010" | NewSalary$year == "year2015" | NewSalary$year == "year2019",]
+
 ggplot(NewSalary) +
-  geom_point(aes(Salary_year, reorder(Occupations,Salary_avg), color = year_range),size = 2, alpha = 0.75) + ylab('Occupation') + xlab('Salary') + 
+  geom_point(aes(Salary_year, reorder(Occupations,Salary_avg), color = year),size = 2, alpha = 0.75) + ylab('Occupation') + xlab('Salary') + 
   ggtitle('Salaries of Different Occupations of Different Times in NYC')+
   scale_x_continuous(labels = ks)+
   mytheme
