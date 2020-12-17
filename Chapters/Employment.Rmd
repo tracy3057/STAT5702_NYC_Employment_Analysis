@@ -82,6 +82,8 @@ YearBoroughData.tidy <- pivot_longer(YearBoroughData,cols = !c("Occupations","ye
 
 YearBoroughData.tidy$County <- plyr::revalue(YearBoroughData.tidy$County, c("Bronx.County..New.York" = "Bronx County", "Kings.County..New.York" = "Kings County", "New.York.County..New.York" = "New York County", "Queens.County..New.York" = "Queens County", "Richmond.County..New.York" = "Richmond County"))
 
+YearBoroughData.tidy$Occupations <- plyr::revalue(YearBoroughData.tidy$Occupations, c("Management, business, science, and arts" = "MBSC", "Natural resources, construction,maintenance" = "NRCM", "Production, transportation,material moving" = "PTMM"))
+
 YearBoroughData.wide <- pivot_wider(YearBoroughData.tidy, names_from = Occupations, values_from = NumEmp)
 
 YearBoroughData.wide$year <- NULL
@@ -193,11 +195,19 @@ The most striking observations from this Cleveland dot plot are where there are 
 ```{r Gender Cleveland Dot Plot,fig.width=10}
 ggplot(GenderData, aes(MeanNumEmpbyGender,fct_reorder2(Occupations,Gender=='Female',MeanNumEmpbyGender, .desc=FALSE), color = Gender)) + 
   geom_point(size = 2, alpha = 0.7) +
-  ylab('NumEmps') + xlab('Occupations') + ggtitle('Number Employed by Occupation and Gender in NYC') +
+  ylab('Occupations') + xlab('NumEmps') + ggtitle('Number Employed by Occupation and Gender in NYC') +
 scale_x_continuous(labels = ks) + scale_color_manual(values=c('seagreen3','mediumorchid')) +
   mytheme
 ```
-From the figure above, we can see that for some occupations, there are huge distinctions between male occupations and female occupations, while for other some other occupations, there is no huge difference between the number employed of male and female. Therefore, we draw a stacked bar chart with propositions of Male and Female in each occupation to see which occupations have huge relation to gender.
+**Observations from Boxplot of number working in sector per year:**
+
+A broad takeaway from studying this plot is that generally men tend to dominate the majority of professions, with 17 occupations being majority male, and only 8 occupations being majority female.
+\
+\
+The occupations in which females account for the vast majority of employees are Office and administrative support, education, training, and library, healthcare support, and personal care and service.
+\
+\
+The occupations in which males account for the vast majority of employees are construction and extraction, transportation, and installation, maintenance and repair.
 \
 \
 \
@@ -397,13 +407,17 @@ PropsOfPropsRace$Occupation <- as.factor(PropsOfPropsRace$Occupation)
 PropsOfPropsRace$Occupation <- fct_reorder(PropsOfPropsRace$Occupation, PropsOfPropsRace$White, .desc = FALSE)
 PropsOfPropsRaceTidy <- pivot_longer(PropsOfPropsRace, cols = c('White','Asian','Hispanic','Black'), names_to = 'race', values_to = 'Proportion') 
 PropsOfPropsRaceTidy$Occupation <- as.factor(PropsOfPropsRaceTidy$Occupation)
-ggplot(PropsOfPropsRaceTidy, aes(fill = race, y = Occupation, x = Proportion)) + geom_bar(position = 'stack',stat = 'identity') + ggtitle('Relative Likelihood of Sector Employment by Race') + 
+ggplot(PropsOfPropsRaceTidy, aes(fill = race, y = Occupation, x = Proportion)) + geom_bar(position = 'stack',stat = 'identity') + ggtitle('Race Proportions by Sector Given Equal Populations') + 
   mytheme2
 
 ```
 
 **Observations from Relative Likelihood of Sector Employment by Race:**
-
+\
+\
+Note: This plot was formed by comparing the proportions of each race group working in each sector. If for a particular sector each group accounts for 0.25 in this plot, then each race group has the same percentage of its people working in that sector. This has the effect of displaying what the race demographics of a sector would look like assuming all races had the same population.
+\
+\
 1.) It seems that a typical white person is much more likely than persons of other races to work legal profession compared to other races. They are also quite likely compared to other races to engage in Management occupations, physical, life and social science occupations, and art, design, entertainment, sports and media occupations.\ \
 
 2.) It seems that a typical white person is much less likely than persons of other races to work in health care support occupations, transportation occupations, production occupations, personal care and service occupations, material moving operations, and building and grounds cleaning and maintenance occupations\ \
@@ -436,6 +450,12 @@ parcoords(YearBoroughData.wide,
           ),
           withD3 = TRUE) 
 ```
+**Plot abbreviations key:**
+
+MBSC: Management, business, science, and arts\
+NRCM: Natural resources, construction, maintenance\
+PTMM: Production, transportation, material moving\
+
 
 **Observations from sector groups employment across counties:**
 
