@@ -3,7 +3,7 @@ title: "Education.Rmd"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup,  include=FALSE,echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -24,7 +24,7 @@ NumEmp_edu <-read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057
 SalaryByPropEdu <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/education/PropEducatedBySalary.csv"))
 ```
 
-```{r Data Cleaning}
+```{r Data Cleaning,include=FALSE,echo=FALSE}
 Education$X <- NULL
 Education$Education_Level <- as.factor(Education$Education_Level)
 Education$Education_Level <-plyr::revalue(Education$Education_Level, c("Bechelor's Degree or Higher" = "Bachelor's Degree or Higher"))
@@ -67,10 +67,11 @@ Total_New_York$year <- as.factor(Total_New_York$year)
 Total_New_York$Gender <- as.factor(Total_New_York$Gender)
 Total_New_York$Education_Level <- as.factor(Total_New_York$Education_Level)
 Total_New_York <- dplyr::rename(Total_New_York,"Salary" = "Salary_CountyGender")
+Total_New_York$Education_Level <- factor(Total_New_York$Education_Level, c("Less Than High School","High School Graduate","Some College or Associate's Degree", "Bachelor's Degree or Higher"))
 Total_New_York
 ```
 
-```{r theme,include=FALSE}
+```{r theme, include=FALSE,echo=FALSE}
 mytheme <- theme(axis.text=element_text(size = 10),
   axis.title=element_text(size=12, face = "bold"),
   plot.title = element_text(size = 14, face = "bold"),
@@ -97,19 +98,7 @@ ks <- function (x) { number_format(accuracy = 1,
                                    big.mark = ",")(x) }
 ```
 
-```{r NYC Number Employed vs. Education Level}
-ggplot(Total_New_York,aes(NumEducated,NumEmp,color = Gender)) +
-  geom_point()+
-  facet_wrap(~Education_Level,scales = "free_x",ncol = 2) + ggtitle("Number Educated vs Number Employed from 2010-2019") +
-  scale_x_continuous(labels = ks) +
-  scale_y_continuous(labels = ks) +
-  scale_color_manual(values=c('seagreen3','mediumorchid')) +
-  ylab('Employees') +
-  mytheme
-```
-
-
-```{r NYC Salary vs. Education Level}
+```{r NYC Salary vs. Education Level,echo=FALSE}
 ggplot(Total_New_York,aes(NumEducated,Salary,color = Gender))+
   geom_point()+
   facet_wrap(~Education_Level,scales = "free_x",ncol = 2) + 
@@ -119,15 +108,29 @@ ggplot(Total_New_York,aes(NumEducated,Salary,color = Gender))+
   scale_color_manual(values=c('seagreen3','mediumorchid')) +
   mytheme
 ```
+
+\
 **Observations from Number Educated vs Salary from 2010-2019**
 \
 \
 A broad take away that can be observed from this plot is that as the number of people becoming more highly educated increases, the number of people earning more increases. Also, as the number of people with lower educational credentials increases, the number of people with increasingly lower salaries also increases.
 \
 \
-Considering the plot for Bachelors degree and up, there is a clear and strong relationship that as the number of people educated increase, that the average salary
-
-```{r Proportion with Bachelors Degree vs Average NYC Salary}
+Considering the plot concerning those with less education than high school, it is clear to see that in years where the number of employees is higher, that the average salary is lower.
+\
+\
+Considering the plot concerning high school graduates, it seems that there exists no clear relationship.
+\
+\
+Considering the plot for those who have completed some college or an associates degree, it seems that for years in which the number of people in this category is higher, the average salary in those years is lower. This relationship appears as a line upon which both males and females lie, however it may be worth noting that they are on opposite sides.
+\
+\
+Considering the plot for Bachelors degree and up, there is a clear and strong relationship. As the number of people educated increase, the average salary in that year will also be higher. This plot is distinct from the one for some college or associates degree because males and females in this case both lie upon their line, which in this plot are both upsloping.
+\
+\
+\
+\
+```{r Proportion with Bachelors Degree vs Average NYC Salary,echo=FALSE}
 ggplot(data = SalaryByPropEdu,aes(PropEdu,Salary)) + 
   geom_line(size = 1, col = 'black') + 
   xlab('Proportion With Bachelors Degree') + 
@@ -137,17 +140,20 @@ ggplot(data = SalaryByPropEdu,aes(PropEdu,Salary)) +
   scale_y_continuous(labels = ks) +
   mytheme
 ```
-
-
+\
 **Observations from Proportion with Bachelors Degree vs Average NYC Salary from 2010-2019:**
-
+\
+\
 It seems that in years where the Proportion of people with Bachelor's Degrees increases, that the average salary is higher. This would suggest that when there are more educated people, the typical person earns more. According to the trend observed in this plot, it seems that the average salary has risen by 1700 dollars for each percentage point increase in bachelors degree education proportion.
-
+\
+\
 It is worth noting that this linear relationship cannot be certified to be causal and there is no way given this data to make a determination. It can be seen in the next plot that the total number of Bachelor's Degrees over time is steadily rising over time. Since salaries also tend to rise over time, it isn't clear that salaries would stop rising if education levels stopped rising.
+\
+\
+\
+\
 
-
-
-```{r Proportion with Bachelors Degree}
+```{r Proportion with Bachelors Degree,echo=FALSE}
 ggplot(data = PropBachelor,aes(Year,PropBachelor)) + 
 geom_line(size = 1, col = 'black') + xlab('Year') + 
 ylab('Proportion with Bachelors Degree') + 
@@ -159,10 +165,14 @@ mytheme
 ```
 
 **Observation of Bachelor's proportions over time:**
-
+\
+\
 It appears that the proportion of people with Bachelor's Degrees is steadily increasing over time. In the last 10 years the proportion of people with a bachelors has increased by roughly 5%, from around 32.5% to 37.5%. This indicates an average increase of just under half a percent per year.
-
-```{r Proportion Male and Female with Bachelors Degree}
+\
+\
+\
+\
+```{r Proportion Male and Female with Bachelors Degree, echo=FALSE}
 PropBachelorByGenderTidy <- pivot_longer(PropBachelorByGender[,1:3],!Year,names_to = 'Gender',values_to = 'Proportion')
 
 ggplot(PropBachelorByGenderTidy) + geom_line(aes(Year,Proportion,group = Gender, color = Gender), size = 1) +
@@ -172,8 +182,18 @@ scale_x_continuous(breaks = seq(2010,2019)) + ylim(.25,.75) + scale_color_manual
 ggtitle("Proportion Male and Female with Bachelors Degree") +
 mytheme
 ```
-
-```{r Difference between Female and Male with Bachelors}
+**Observations from Proportion of Males and Females with Bachelors Degrees from 2010-2019:**
+\
+\
+It seems that in 2010, a larger proportion of females than men had bachelor's degrees, and this trend maintains throughout the entirety of the decade. While the proportions are increasing over time for both males and females, it seems that the rate of increase for both genders is relatively equal.
+\
+\
+This is confirmed by the gap between the male and female dots on the graph fluctuating in distance from each other but remaining relatively equally spaced apart. It seems that in NYC, while females have more bachelors degrees, both males and females are becoming more well educated at a similar rate.
+\
+\
+\
+\
+```{r Difference between Female and Male with Bachelors, echo=FALSE}
 ggplot(data = PropBachelorByGender,aes(Year,Difference)) + geom_line(size = 1, col = 'black') +
 xlab('Year') + 
 ylab('Difference between Male and Female with Bachelors') + 
@@ -183,13 +203,8 @@ ylim(-0.05,.05) +
 ggtitle("Difference between Female and Male with Bachelors") +
 mytheme
 ```
-
-**Observations from Proportion of Males and Females with Bachelors Degrees from 2010-2019:**
-
-It seems that in 2010, a larger proportion of females than men had bachelor's degrees. While the proportions are increasing over time for both males and females, it seems that the rate at which a higher proportion of females have bachelors degree is actually faster than it is for males. 
-
-This is confirmed by the gap between the male and female dots on the graph continuing to grow over the course of this decade, and the next plot confirms this.
-
-Observations from Difference in Proportion of Females and Males with a Bachelor's Degree from 2010-2019:
-
-As was able to be seen from the previous plot, the gap between female and male education proportion is growing over time. If trends continue we may see a future where females are significantly more educated than males, even more than they currently are.
+\
+**Observations from Difference in Proportion of Females and Males with a Bachelor's Degree from 2010-2019:**
+\
+\
+Confirming the observation from the last graph, the difference between the proportion of females and males with a bachelors degree over the decade has seen some minor fluctuation, but overall has remained relatively unchanged. Females have had throughout the course 1.25% to 2.5% higher of a proportion of bachelors degree than men.
