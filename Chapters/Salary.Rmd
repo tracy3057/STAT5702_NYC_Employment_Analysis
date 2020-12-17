@@ -111,8 +111,10 @@ ggplot(NewSalary) +
 
 ### Analyze on salary variation according to different years
 ```{r,fig.width=10}
-ggplot(NewSalary) +
-  geom_point(aes(Salary_year, reorder(Occupations,Salary_avg), color = year_range),size = 2, alpha = 0.75) + ylab('Occupation') + xlab('Salary') + 
+NewSalary1 <- NewSalary[NewSalary$year == "year2010" | NewSalary$year == "year2015" | NewSalary$year == "year2019",]
+
+ggplot(NewSalary1) +
+  geom_point(aes(Salary_year, reorder(Occupations,Salary_avg), color = year),size = 2, alpha = 0.75) + ylab('Occupation') + xlab('Salary') + 
   ggtitle('Salaries of Different Occupations of Different Times in NYC')+
   scale_x_continuous(labels = ks)+
   mytheme
@@ -189,9 +191,10 @@ NotMonotonous$Occupations <- factor(NotMonotonous$Occupations,levels = c("Law en
                                                                          "Healthcare support",
                                                                          "Personal care and service",
                                                                          "Farming, fishing, and forestry"))
-NotMonotonous$year<- plyr::revalue(NotMonotonous$year, c("year2010" = "2010","year2011"="2011","year2012"="2012","year2013"="2013","year2014"="2014","year2015"="2015","year2016"="2016","year2017"="2017","year2018"="2018","year2019"="2019"))
+NotMonotonous1 <- NotMonotonous
+NotMonotonous1$year<- plyr::revalue(NotMonotonous1$year, c("year2010" = "2010","year2011"="2011","year2012"="2012","year2013"="2013","year2014"="2014","year2015"="2015","year2016"="2016","year2017"="2017","year2018"="2018","year2019"="2019"))
 
-ggplot(NotMonotonous,aes(year,Salary_YearlyAvg)) +
+ggplot(NotMonotonous1,aes(year,Salary_YearlyAvg)) +
   geom_point(color = "light blue", size = 2) +
   facet_wrap(~Occupations,ncol=2,scales = "free_y") +
   scale_y_continuous(labels = ks)+
@@ -319,11 +322,13 @@ CountySalary$index <- ifelse(CountySalary$Salary_county == CountySalary$MaxValue
 CountySalary2 <- CountySalary[CountySalary$index == "Max Salary" | CountySalary$index == "Min Salary",]
 CountySalary2 <- CountySalary2 %>% select(1,2,6) 
 
+CountySalary2$index <- as.factor(CountySalary2$index)
 CountySalary2 %>%
 group_by(Boroughs, index) %>%
 summarize(count=n()) %>%
+  ungroup() %>%
 ggplot(aes(fill=index,y=count, x=Boroughs)) +
-geom_bar(position="dodge2",stat="identity") +
+geom_bar(position=position_dodge2(padding = 0.1),stat="identity") +
 xlab("Boroughs")+
 ylab("Count")+
 ggtitle("Distribution of the Highest and Lowest wages in different Counties") + 
