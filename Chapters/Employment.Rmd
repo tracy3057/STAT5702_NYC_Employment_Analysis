@@ -246,7 +246,7 @@ Occupations that seem prone to dramatic fluctuation over time:\
 
 Occupations where the number of employees has fluctuated very little:\
 
-1.) Law enforcement\
+1.)Law enforcement\
 
 2.)Fire fighting\
 
@@ -466,10 +466,28 @@ MBSC: Management, business, science, and arts\
 NRCM: Natural resources, construction, maintenance\
 PTMM: Production, transportation, material moving\
 
+Note: Each line represents one year. The numbers on the axis represent the proportion of the working population of that county working in each of the categories for that year. The numbers across each sector for each year sum to one.
+
 
 **Observations from sector groups employment across counties:**
-
-1) Management, business, science, and arts occupations and Service occupations: for Bronx, Queens and Manhattan, the two types of occupations have a positive relationship with each other, while for Kings, the two types of occupations are negatively correlated.\
-2) Service occupations and Sales and office occupations: for Manhattan and Richmond, the two types of occupations are negatively correlated. For other boroughs, there are not significant relations.\
-3) Sales and office occupations and Natural resources, construction, and maintenance occupations: all boroughs show a negative correlation.\
-4) Natural resources, construction, and maintenance occupations and Production, transportation, and material moving occupations: all boroughs show a negative correlation.\
+\
+\
+Observing this plot is that certain counties stand out in terms of how many of their people work in certain areas:
+\
+\
+New York has great representation in Management, business, science, and arts with roughly 60% of its population routinely working in those fields across 2010-2019, which is at roughly 15% higher than for any other county. 
+\
+\
+Bronx County has great representation in service occupations, with roughly 35% of its population working routinely in this sector, which is at least 10% higher than for any other county.
+\
+\
+Richmond County and Queens County seem to have good representation in natural resources, construction, and maintenance occupations. 
+\
+\
+New York, perhaps because of the high representation in the management, business, science, and arts cluster has clearly the lowest representation in service, natural resources, construction and maintenance, and production, transportation, management and material moving. New York also has the lowest representation in several years in Sales and Office occupations.
+\
+\
+Of all the counties, Queens county, Kings county, and Richmond county seem to track each other most, and have the most similar levels of representation across the sector clusters.
+\
+\
+Of all the counties, New York county and Bronx county seem to be the most different. Across almost each sector, low values for one almost certainly means that high values will appear for the other.

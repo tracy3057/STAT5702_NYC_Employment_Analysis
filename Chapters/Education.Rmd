@@ -24,12 +24,16 @@ NumEmp_edu <-read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057
 SalaryByPropEdu <- read.csv(text = getURL("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/education/PropEducatedBySalary.csv"))
 ```
 
-```{r Data Cleaning,include=FALSE,echo=FALSE}
+```{r Data Cleaning}
 Education$X <- NULL
 Education$Education_Level <- as.factor(Education$Education_Level)
 Education$Education_Level <-plyr::revalue(Education$Education_Level, c("Bechelor's Degree or Higher" = "Bachelor's Degree or Higher"))
 NumEmp_edu$X <- NULL
 Salary_edu$X <- NULL
+
+
+
+
 
 # New York Analysis
 # New York Salary
@@ -62,7 +66,8 @@ Total_New_York <- Total_New_York %>% pivot_longer(cols = c(4,5,6,7), names_to = 
 Total_New_York$year <- as.factor(Total_New_York$year)
 Total_New_York$Gender <- as.factor(Total_New_York$Gender)
 Total_New_York$Education_Level <- as.factor(Total_New_York$Education_Level)
-
+Total_New_York <- dplyr::rename(Total_New_York,"Salary" = "Salary_CountyGender")
+Total_New_York
 ```
 
 ```{r theme,include=FALSE}
@@ -99,10 +104,13 @@ ggplot(Total_New_York,aes(NumEducated,NumEmp,color = Gender)) +
   scale_x_continuous(labels = ks) +
   scale_y_continuous(labels = ks) +
   scale_color_manual(values=c('seagreen3','mediumorchid')) +
+  ylab('Employees') +
   mytheme
 ```
+
+
 ```{r NYC Salary vs. Education Level}
-ggplot(Total_New_York,aes(NumEducated,Salary_CountyGender,color = Gender))+
+ggplot(Total_New_York,aes(NumEducated,Salary,color = Gender))+
   geom_point()+
   facet_wrap(~Education_Level,scales = "free_x",ncol = 2) + 
   ggtitle("Number Educated vs Salary from 2010-2019") +
@@ -111,6 +119,14 @@ ggplot(Total_New_York,aes(NumEducated,Salary_CountyGender,color = Gender))+
   scale_color_manual(values=c('seagreen3','mediumorchid')) +
   mytheme
 ```
+**Observations from Number Educated vs Salary from 2010-2019**
+\
+\
+A broad take away that can be observed from this plot is that as the number of people becoming more highly educated increases, the number of people earning more increases. Also, as the number of people with lower educational credentials increases, the number of people with increasingly lower salaries also increases.
+\
+\
+Considering the plot for Bachelors degree and up, there is a clear and strong relationship that as the number of people educated increase, that the average salary
+
 ```{r Proportion with Bachelors Degree vs Average NYC Salary}
 ggplot(data = SalaryByPropEdu,aes(PropEdu,Salary)) + 
   geom_line(size = 1, col = 'black') + 
