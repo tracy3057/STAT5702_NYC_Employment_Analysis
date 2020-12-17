@@ -121,7 +121,7 @@ NewSalary1$year<- plyr::revalue(NewSalary1$year, c("year2010" = "2010","year2015
 
 ggplot(NewSalary1) +
   geom_point(aes(Salary_year, reorder(Occupations,Salary_avg), color = year),size = 2, alpha = 0.75) + ylab('Occupation') + xlab('Salary') + 
-  ggtitle('Salaries of Different Occupations of Different Times in NYC')+
+  ggtitle('Salaries of Different Occupations NYC')+
   scale_x_continuous(labels = ks)+
   mytheme
 ```
@@ -269,26 +269,6 @@ In this category, the salaries of some occupations decreased a lot and then incr
 ##### Detailed Analysis on "First Decrease Then Increase" Occupations
 
 ```{r,fig.height=11,fig.width=10}
-NotMonotonous <- NewSalary[NewSalary$Occupations == "Law enforcement workers" |
-                                    NewSalary$Occupations == "Life, physical, and social science"|
-                                    NewSalary$Occupations == "Health technologists and technicians"|
-                                    NewSalary$Occupations == "Fire fighting and prevention"|
-                                    NewSalary$Occupations == "Healthcare support"|
-                                    NewSalary$Occupations == "Personal care and service"|
-                                    NewSalary$Occupations == "Farming, fishing, and forestry",]
-
-NotMonotonous$year <- as.character(NotMonotonous$year)
-
-NotMonotonous$Occupations <- factor(NotMonotonous$Occupations,levels = c("Law enforcement workers",
-                                                                         "Life, physical, and social science",
-                                                                         "Health technologists and technicians",
-                                                                         "Fire fighting and prevention",
-                                                                         "Healthcare support",
-                                                                         "Personal care and service",
-                                                                         "Farming, fishing, and forestry"))
-NotMonotonous1 <- NotMonotonous
-NotMonotonous1$year<- plyr::revalue(NotMonotonous1$year, c("year2010" = "2010","year2011"="2011","year2012"="2012","year2013"="2013","year2014"="2014","year2015"="2015","year2016"="2016","year2017"="2017","year2018"="2018","year2019"="2019"))
-
 ggplot(NotMonotonous1,aes(year,Salary_YearlyAvg,group = Occupations)) +
   geom_line(size = 1,color = "black") +
   geom_point(color = "royalblue3", size = 2) +
@@ -343,14 +323,18 @@ NewSalaryWithVariance.wide$variance <- with(NewSalaryWithVariance.wide, year2019
 
 NewSalaryWithVariance.tidy <- pivot_longer(NewSalaryWithVariance.wide, cols = c(3:12), names_to = "year", values_to = "Salary_YearlyAvg")
 
+<<<<<<< HEAD
 # write.csv(NewSalaryWithVariance.tidy,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Salary/NewSalaryWithVariance.csv", row.names = FALSE)
+=======
+#write.csv(NewSalaryWithVariance.tidy,"/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Salary/NewSalaryWithVariance.csv", row.names = FALSE)
+>>>>>>> 7828a252610b57fb1a827ae0095de1d232b0f23b
 ```
 
 
 ```{r,fig.height=6,fig.width=10}
 # draw cleveland dot plot according to variance
 
-NewSalaryWithVariance <- read_csv("/Users/tracy/Desktop/STAT5702_NYC_Employment_Analysis/DataPreprocessing/Data/Salary/NewSalaryWithVariance.csv")
+NewSalaryWithVariance <- read_csv("https://raw.githubusercontent.com/tracy3057/STAT5702_NYC_Employment_Analysis/main/DataPreprocessing/Data/Salary/NewSalaryWithVariance.csv")
 NewSalaryWithVariance$year <- as.factor(NewSalaryWithVariance$year)
 NewSalaryWithVariance$Occupations <- as.factor(NewSalaryWithVariance$Occupations)
 
@@ -360,7 +344,7 @@ NewSalaryWithVariance1 <- NewSalaryWithVariance1 %>%
   mutate(variance_pct = (variance/Salary_YearlyAvg))
 
 NewSalaryWithVariance1 <- NewSalaryWithVariance1
-NewSalaryWithVariance1 <- NewSalaryWithVariance1%>%select(1,6) %>% unique()
+NewSalaryWithVariance1 <- NewSalaryWithVariance1%>%select(1,5) %>% unique()
 
 ggplot(NewSalaryWithVariance1,aes(x=fct_reorder(Occupations, abs(variance_pct)), y = variance_pct)) +
   geom_col(fill = "royalblue3",alpha = 0.75)+
@@ -371,7 +355,66 @@ ggplot(NewSalaryWithVariance1,aes(x=fct_reorder(Occupations, abs(variance_pct)),
   mytheme
 ```
 
+<<<<<<< HEAD
 **Observations from percentage difference of salary via gender:**
+=======
+## Boxplot
+In order to see the salary variances of the 25 occupations in detail, we draw boxplot for comparisons.
+```{r,fig.width=10,fig.height=6}
+ggplot(NewSalaryWithVariance) +
+  geom_boxplot(aes(y = reorder(x = Occupations, Salary_YearlyAvg, FUN = median), x = Salary_YearlyAvg),
+               color = "black", fill = "dark red", alpha = 0.7) + 
+  scale_x_continuous(labels = ks)+
+  ggtitle("Boxplots with Number of Employed for Different Occupations") +
+  xlab("occupations")+
+  mytheme2
+```
+**Observations from Boxplot of salaries per year:**
+
+Salaries that seem prone to dramatic fluctuation over time:\
+
+1.) Legal occupations\
+
+2.) Computer and Mathematical occupations\
+
+3.) Architecture and engineering occupations\
+
+4.) Life, physical, and social science\
+
+5.) Farming, fishing, and forestry occupations\
+
+Salaries where the number of employees has fluctuated very little:\
+
+1.) Law enforcement\
+
+2.) Health technologists and technicians\
+
+3.) Installation, maintenance, and repair\
+
+4.) Community and social service\
+
+5.) Healthcare support\
+
+6.) Material moving\
+
+When reading this plot is that the salaries in any particular occupation may change the viewers perception as to what constitutes more variation. To address this, a second plot has been created in which the box plots are normalized by dividing the salaries in each year by the mean across this sector. While the variation won't be apparent, the relative degrees of fluctuation will become more apparent.
+\
+
+```{r Yearly Normalized BoxPlot,fig.width=10,fig.height=6}
+NewSalaryWithVariance
+NewSalaryWithVariance2 <- NewSalaryWithVariance %>% select(1,2,5)%>%unique()
+NewSalaryWithVariance2$Normalized<-NewSalaryWithVariance2$Salary_YearlyAvg/NewSalaryWithVariance2$Salary_occupation
+  
+ggplot(NewSalaryWithVariance2) +
+  geom_boxplot(aes(x = Normalized, y = reorder(x = Occupations,Normalized, FUN = median)),
+               color = "black", fill = "dark red", alpha = 0.7) + 
+  ggtitle("Normalized salary in sector per year") +
+  xlab("Salary") + ylab("Occupations") +
+  mytheme1
+```
+
+**Observations from salaries in sector per year:**
+>>>>>>> 7828a252610b57fb1a827ae0095de1d232b0f23b
 
 As we can see from the above plot, we can discover that the majority of these occupations have increased in salaries in the past decade. Only two of these categories have decreased in salaries. Among all occupations, the occupation of Construction and extraction occupations has the biggest Percentage Difference  in salary in 2010 and 2019, and the occupation of Healthcare support occupations have the smallest.\
 
