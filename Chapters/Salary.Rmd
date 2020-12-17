@@ -47,7 +47,7 @@ TidyGenderData$Occupations<- plyr::revalue(TidyGenderData$Occupations, c("Manage
 detach(package:plyr)
 ```
 
-```{r theme,include=FALSE}
+```{r theme,include=FALSE,echo=FALSE}
 mytheme <- theme(axis.text=element_text(size = 10),
   axis.title=element_text(size=12, face = "bold"),
   plot.title = element_text(size = 14, face = "bold"),
@@ -69,7 +69,7 @@ mytheme2 <- theme(axis.text=element_text(size = 10),
 ```
 
 
-```{r scale,include=FALSE}
+```{r scale,include=FALSE,echo=FALSE}
 ks <- function (x) { number_format(accuracy = 1,
                                    scale = 1/1000,
                                    suffix = "k",
@@ -81,7 +81,7 @@ ks <- function (x) { number_format(accuracy = 1,
 
 In order to have an overview of salary distribution according to different occupations in New York City, we draw a Cleveland Dot Plot to show the 10-year-average salary of different occupations first.
 
-```{r Overview of Salary Distribution,fig.width=10}
+```{r Overview of Salary Distribution,fig.width=10,include=FALSE,fig.align='center'}
 ggplot(NewSalary) +
   geom_point(aes(Salary_occupation, reorder(Occupations,Salary_occupation)),color = "royalblue3", size = 2, alpha = 0.75) + ylab('Occupation') + xlab('Salary') + 
   ggtitle('Average Salaries of Different Occupations in NYC') +
@@ -131,7 +131,7 @@ One of the things that affects salary is time. So first, we have an analysis on 
 
 #### General Trend of Salary by Years
 
-```{r,fig.width=10}
+```{r,fig.width=10,include=FALSE,fig.align='center'}
 NewSalary1 <- NewSalary[NewSalary$year == "year2010" | NewSalary$year == "year2015" | NewSalary$year == "year2019",]
 NewSalary1$year<- plyr::revalue(NewSalary1$year, c("year2010" = "2010","year2015"="2015","year2019"="2019"))
 
@@ -139,6 +139,7 @@ ggplot(NewSalary1) +
   geom_point(aes(Salary_year, reorder(Occupations,Salary_avg), color = year),size = 2, alpha = 0.75) + ylab('Occupation') + xlab('Salary') + 
   ggtitle('Salaries of Different Occupations of Different Times in NYC')+
   scale_x_continuous(labels = ks)+
+  scale_fill_manual(values=c('purple','green','yellow')) +
   mytheme
 ```
 
@@ -178,14 +179,14 @@ The salary trend for this occupation also decreased first and then increased. Di
 
 In order to see the salary variances of the 25 occupations in detail, we draw boxplot for comparisons.\
 
-```{r,fig.width=10,fig.height=6}
+```{r,fig.width=10,fig.height=6,include=FALSE,fig.align='center'}
 ggplot(NewSalaryWithVariance) +
   geom_boxplot(aes(y = reorder(x = Occupations, Salary_YearlyAvg, FUN = median), x = Salary_YearlyAvg),
                color = "black", fill = "dark red", alpha = 0.7) + 
   scale_x_continuous(labels = ks)+
   ggtitle("Boxplots with Salaries for Different Occupations") +
   xlab("Salary")+
-  ylab("Occupations")
+  ylab("Occupations")+
   mytheme2
 ```
 
@@ -220,7 +221,7 @@ Salaries where the number of employees has fluctuated very little:\
 When reading this plot is that the salaries in any particular occupation may change the viewers perception as to what constitutes more variation. To address this, a second plot has been created in which the box plots are normalized by dividing the salaries in each year by the mean across this sector. While the variation won't be apparent, the relative degrees of fluctuation will become more apparent.
 \
 
-```{r Yearly Normalized BoxPlot,fig.width=10,fig.height=6}
+```{r Yearly Normalized BoxPlot,fig.width=10,fig.height=6,include=FALSE,fig.align='center'}
 NewSalaryWithVariance2 <- NewSalaryWithVariance %>% select(1,2,5)%>%unique()
 NewSalaryWithVariance2$Normalized<-NewSalaryWithVariance2$Salary_YearlyAvg/NewSalaryWithVariance2$Salary_occupation
   
@@ -286,7 +287,7 @@ In this category, the salaries of some occupations decreased a lot and then incr
 
 ##### Detailed Analysis on "First Decrease Then Increase" Occupations
 
-```{r,fig.height=11,fig.width=10}
+```{r,fig.height=11,fig.width=10,include=FALSE,fig.align='center'}
 NotMonotonous <- NewSalary[NewSalary$Occupations == "Law enforcement workers" |
                                     NewSalary$Occupations == "Life, physical, and social science"|
                                     NewSalary$Occupations == "Health technologists and technicians"|
@@ -350,7 +351,7 @@ For this occupation, it salary increased a little from 2011 to 2012, and then be
 It is also very important to analyze on the variations of salaries of different occupations. Because different occupations have different base wages, sometimes it might be more meaningful to calculate the percentage of wage fluctuations in wages. Here, we use the average wages to represent the wage of different occupations.
 
 
-```{r,fig.height=6,fig.width=10}
+```{r,fig.height=6,fig.width=10,include=FALSE,fig.align='center'}
 # draw cleveland dot plot according to variance
 
 NewSalaryWithVariance$year <- as.factor(NewSalaryWithVariance$year)
@@ -380,7 +381,7 @@ As we can see from the above plot, we can discover that the majority of these oc
 
 ### Analyze on Salary by Counties
 
-```{r,fig.width=10}
+```{r,fig.width=10,include=FALSE,fig.align='center'}
 ggplot(NewSalary) +
   geom_point(aes(Salary_county, reorder(Occupations,Salary_county), color = Boroughs),size = 2, alpha = 0.75) + ylab('Occupation') + xlab('Salary') + 
   scale_x_continuous(labels = ks)+
@@ -396,7 +397,7 @@ As can be seen in this plot, for different occupations, the counties with the hi
 
 We draw a dodged bar chart to reflect the specific distribution data of the highest and lowest wages in different counties.\
 
-```{r,fig.width=8,echo=FALSE}
+```{r,fig.width=8,include=FALSE,fig.align='center'}
 # use 0 or 1 to mark the boroughs with min and max
 CountySalary <- NewSalary %>% select(1, 3, 9,13)
 CountySalary <- unique(CountySalary)
@@ -434,7 +435,7 @@ For the occupations with highest salaries, the majority of them are in New York 
 
 To see whether there are changes of the distribution of highest and lowest wages in different countries, we draw a stacked bar chart by years. We use different colors to represent different counties.
 
-```{r,fig.width=9,echo=FALSE}
+```{r,fig.width=9,include=FALSE,fig.align='center'}
 CountyYearlySalary <- NewSalary %>% select(1, 3, 4, 12)
 CountyYearlySalary <- unique(CountyYearlySalary)
 
@@ -486,7 +487,7 @@ We also discover that the variations among different boroughs for different occu
 #### Percentage Difference of Salaries in Different Counties
 
 
-```{r,fig.height=6, fig.width=10}
+```{r,fig.height=6, fig.width=10,include=FALSE,fig.align='center'}
 CountySalary3 <- CountySalary %>% select(1:5)
 CountySalary3$variance <- with(CountySalary3, Salary_county - MinValue)
 
@@ -532,7 +533,7 @@ ggplot(CountySalary3,aes(x=fct_reorder(Occupations, variance_pct), y = variance_
 
 ### Analyze on Salary by Genders
 
-```{r, fig.width=10}
+```{r, fig.width=10,include=FALSE,fig.align='center'}
 ggplot(NewSalary) +
   geom_point(aes(Salary_gender, reorder(Occupations,Salary_gender), color = Gender),size = 2, alpha = 0.75) + ylab('Occupation') + xlab('Salary') + 
   scale_x_continuous(labels = ks)+
@@ -549,7 +550,7 @@ As can be seen in this Cleveland dot plot, the salaries of some occupations vari
 
 We use a bar chart to order the salary variance between genders for different occupations. To quantify the difference, we divide the income difference between male and female by the average salary of the occupation.\
 
-```{r,fig.height=6,fig.width=10}
+```{r,fig.height=6,fig.width=10,include=FALSE,fig.align='center'}
 GenderSalary <- NewSalary %>% select(1, 2, 10,13)
 GenderSalary <- unique(GenderSalary)
 
@@ -608,7 +609,7 @@ For most of the occupations, male employees have higher salaries than female emp
 
 Intuitively, the gender composition of employees in a profession is related to the level of wages for gender. We want to analyze if this intuition makes sense. Therefore, we use two categorical variables to represent the two characteristics, namely "Gender Distribution" and "Salary Distribution". For the category of "Gender Distribution", there are two values, Male-dominated, which means there are more male employees in this occupation than female employees, and Female-dominated, which means there are more female employees in this occupation than male employees. For the category of "Salary Distribution", we also set two values, Male-higher, which means male employees have higher salary in this occupation, and Female-higher, which means female employees have higher salary in this occupation. Then, we draw a mosaic plot to measure the relation.\
 
-```{r,fig.width=6,echo=FALSE}
+```{r,fig.width=6,include=FALSE,fig.align='center'}
 TidyGenderData <- TidyGenderData %>% select(1,8) %>% unique()
 
 GenderSalary$Salary_Distribution <- ifelse(

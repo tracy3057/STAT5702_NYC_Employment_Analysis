@@ -1,3 +1,5 @@
+## GDP
+
 ```{r,include=FALSE,echo=FALSE}
 library(tidyverse)
 library(RCurl)
@@ -35,11 +37,12 @@ ks <- function (x) { number_format(accuracy = 1,
                                    big.mark = ",")(x) }
 ```
 
-```{r,fig.width=14,fig.height=9}
+```{r,fig.width=14,fig.height=9,include=FALSE,echo=FALSE}
 # plot
 ggplot(Salary_NumEmp,aes(NYCGDP,Value))+
   geom_point(color = "royalblue3", size = 2, alpha = 0.75)+
   scale_x_continuous(labels = ks)+
+  scale_y_continuous(labels = ks)+
   xlab("NYC GDP Per Capita")+
   ylab("NumEmp")+
   ggtitle("NumEmp vs NYC GDP Per Capita")+
@@ -59,6 +62,7 @@ ggplot(Salary_NumEmp,aes(NYCGDP,Value))+
 ggplot(Salary_NumEmp,aes(GDP,Value))+
   geom_point(color = "royalblue3", size = 2, alpha = 0.75)+
   scale_x_continuous(labels = ks)+
+  scale_y_continuous(labels = ks)+
   xlab("GDP Per Capita")+
   ylab("NumEmp")+
   ggtitle("NumEmp vs GDP Per Capita")+
@@ -74,5 +78,8 @@ ggplot(Salary_NumEmp,aes(GDP,Value))+
   facet_wrap(~Earning_Category,scales = "free_y")
 ```
 
+**Observations on NumEmp vs GDP/NYC GDP Per Capita:**
+
+The scatter dot plots above show us the relationship between employment and GDP/NYC GDP per capita in different salary categories. From the plots, we can see clearly that there is a turning point in the categories of '\$25000 to \$34999','\$35000 to \$49999'. Before the two categories, the number of employed is in a decreasing trend when GDP/NYC GDP per capita goes up. However, in the groups with higher salaries, the number of employed is in a increasing trend when GDP/NYC GDP per capita goes up.
 
 
